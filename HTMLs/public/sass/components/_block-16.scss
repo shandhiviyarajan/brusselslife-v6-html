@@ -1,0 +1,29 @@
+#block-16 {
+
+  a {
+    &:hover {
+      h5 {
+        color: #000;
+      }
+    }
+  }
+
+  ul.list-unstyled {
+    li:hover {
+      h5 {
+        color: #000;
+      }
+    }
+  }
+  h5 {
+    color: $primary-blue;
+    font-weight: bold;
+    font-size: ($font-size-14);
+    line-height: 1.5em;
+  }
+
+  @media(max-width: 980px) {
+
+  }
+
+}

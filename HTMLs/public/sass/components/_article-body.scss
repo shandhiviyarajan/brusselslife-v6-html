@@ -1,0 +1,143 @@
+#article-page {
+
+  .col-md-7,
+  .col-md-5 {
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    div.block-title-mini {
+      h2 {
+        font-size: 28px;
+        color: #000;
+      }
+    }
+  }
+  .col-md-7 {
+    padding-left: 15px;
+  }
+  div.filters {
+    a.blife-filter {
+      bottom: 0px;
+      left: 0px;
+      height: 32px;
+      padding: 7px 10px;
+      color: $content-color-dark;
+      margin-left: 15px;
+      position: relative;
+    }
+  }
+}
+
+.article-title {
+
+  background: #2b2b2b;
+  padding: 10px 15px 0px 15px;
+  margin: 0px -20px;
+
+  h1 {
+    font-size: $h1 +15;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+    font-family: sans-serif;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  h2,
+  p.publish-date,
+  p.author-name {
+    font-family: sans-serif;
+    font-size: ($h2)-4;
+
+  }
+
+  p.publish-date,
+  p.author-name {
+    color: $content-color-light;
+    font-size: ($h5);
+    line-height: 46px;
+    margin-left: $gutter;
+    a {
+      color: $primary-cayan;
+      text-decoration: underline;
+
+      &:hover {
+        color: #d4d2d2;
+      }
+    }
+
+  }
+}
+
+#article-comments {
+  form {
+    button.btn {
+      width: 200px;
+      font-size: $h5;
+    }
+  }
+
+  ul {
+    li {
+      margin-top: -1px;
+      .posted-date {
+        p.date {
+          color: #666;
+          font-size: 12px;
+        }
+      }
+      .user {
+        .user-profile-empty {
+          i.fa {
+            font-size: 44px;
+          }
+        }
+      }
+
+      p {
+        font-family: sans-serif;
+        font-size: $h5;
+        color: #000;
+      }
+      .card-body {
+        p {
+          color: #454545;
+        }
+      }
+
+      .comment-feedback {
+        margin: 0px -20px;
+        padding-top: $gutter/2;
+        border-top: thin solid #eee;
+        opacity: 0;
+        display: none;
+
+        div.like, .btn {
+          padding: 7px 15px;
+          border-radius: 100px;
+          cursor: pointer;
+          font-size: 13px;
+
+          &:hover {
+            background: $primary-cayan-dark;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+          }
+          &:active {
+            background: $content-color-light;
+          }
+        }
+      }
+
+      &:hover {
+        .comment-feedback {
+          display: block;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

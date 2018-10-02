@@ -1,0 +1,770 @@
+---
+layout : default-search.html
+title : Brusselslife Search | Brusselslife.be
+---
+
+
+<!-- desktop -->
+<div id="search-page" class="pt-4">
+    <div class="container bg-transparent p-0">
+        <div class="row">
+            <div class="col-md-3" id="search_filters">
+
+                <div class="filter mb-4 border-bottom">
+                    <h4 class="pl-2">
+                        <strong>
+                            Location
+                        </strong>
+                    </h4>
+
+                    <div class="choose-location">
+                        <div class="locations">
+                            <input type="text" class="form-control" placeholder="Choose Location">
+                        </div>
+
+                        <div class="checkbox custom-checkbox active">
+                            <input type="checkbox" id="show_near_by">
+                            <label for="show_near_by">Show near by</label>
+                        </div>
+                        <button class="btn btn-info-dark btn-choose-radius">
+                            ~2km
+                        </button>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+
+                <div class="filter mb-4 border-bottom">
+                    <h4 class="pl-2">
+                        <strong>
+                            Cuisines
+                        </strong>
+                    </h4>
+                    <ul class="p-0 m-0 list-unstyled">
+                        <li class="">
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_italian">
+                                <label for="c_italian">Italian</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox ">
+                                <input type="checkbox" id="c_german">
+                                <label for="c_german">German</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_indian">
+                                <label for="c_indian">Indian</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_french">
+                                <label for="c_french">French</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_belgian">
+                                <label for="c_belgian">Belgian</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_usa">
+                                <label for="c_belgian">American</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#"
+                       class="btn btn-link btn-see-more"
+                       data-toggle="modal"
+                       data-target="#more-filters-2">
+                        See more
+                    </a>
+
+                    <div class="modal" id="more-filters-2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5>
+                                        <strong>
+                                            Cuisines
+                                        </strong>
+                                    </h5>
+
+                                    <button type="button" class="close"
+                                            data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <ul class="list-unstyled m-0 p-0 row no-gutters">
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_9">
+                                                <label for="c_9">Arabic</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_8">
+                                                <label for="c_8">Spain</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_7">
+                                                <label for="c_7">Thailand</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_6">
+                                                <label for="c_6">Austrian</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_10">
+                                                <label for="c_10">Chinese</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_2">
+                                                <label for="c_2">Australian</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_3">
+                                                <label for="c_3">New zeland</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_4">
+                                                <label for="c_4">Japanese</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_5">
+                                                <label for="c_5">Viatnam</label>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary  btn-sm btn-info-blue"
+                                            data-dismiss="modal">
+                                        Apply filter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="filter mb-4 pb-2 border-bottom">
+                    <h4 class="pl-2">
+                        <strong>
+                            Hours
+                        </strong>
+                    </h4>
+                    <ul class="p-0 m-0 list-unstyled">
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_open_now">
+                                <label for="c_open_now">Open Now</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_open_weekend">
+                                <label for="c_open_now">Open this weekend</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_open_tomorrow">
+                                <label for="c_open_now">Open tomorrow</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter mb-4 pb-2 border-bottom">
+                    <h4 class="pl-2 pb-2">
+                        <strong>
+                            <img src="{{assets}}svg/promotion.svg" alt=""> Promotions
+                        </strong>
+                    </h4>
+                    <ul class="p-0 m-0 list-unstyled">
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_show_promotions">
+                                <label for="c_open_now"> Show promotions</label>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="filter mb-4 border-bottom">
+                    <h4 class="pl-2">
+                        <strong>
+                            Facilities
+                        </strong>
+                    </h4>
+                    <ul class="p-0 m-0 list-unstyled">
+                        <li class="">
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="f_wifi">
+                                <label for="c_italian">WiFi</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox ">
+                                <input type="checkbox" id="f_reservation">
+                                <label for="c_german">Reservation</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="f_parking">
+                                <label for="c_indian">Parking</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="c_pay_by_card">
+                                <label for="c_french">Pay by card</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="f_delivery">
+                                <label for="c_belgian">Delivery</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox custom-checkbox">
+                                <input type="checkbox" id="f_takeaway">
+                                <label for="c_belgian">Takeaway</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#"
+                       class="btn btn-link btn-see-more"
+                       data-toggle="modal"
+                       data-target="#more-filters-3">
+                        See more
+                    </a>
+
+                    <div class="modal" id="more-filters-3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5>
+                                        <strong>
+                                            Facilities
+                                        </strong>
+                                    </h5>
+
+                                    <button type="button" class="close"
+                                            data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <ul class="list-unstyled m-0 p-0 row no-gutters">
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_9">
+                                                <label for="c_9">Arabic</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_8">
+                                                <label for="c_8">Spain</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_7">
+                                                <label for="c_7">Thailand</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_6">
+                                                <label for="c_6">Austrian</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_10">
+                                                <label for="c_10">Chinese</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_2">
+                                                <label for="c_2">Australian</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_3">
+                                                <label for="c_3">New zeland</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_4">
+                                                <label for="c_4">Japanese</label>
+                                            </div>
+                                        </li>
+                                        <li class="col-md-4 col-sm-6">
+                                            <div class="checkbox custom-checkbox">
+                                                <input type="checkbox" id="c_5">
+                                                <label for="c_5">Viatnam</label>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary  btn-sm btn-info-blue"
+                                            data-dismiss="modal">
+                                        Apply filter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="search_results">
+                <h3 class="pb-2">
+                    Results for
+                    <strong>
+                        Short eats
+                    </strong>
+                </h3>
+
+                <!-- Content tabs -->
+                <ul class="nav nav-tabs pb-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Address</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Articles</a>
+                    </li>
+                </ul>
+
+                <!-- Search results list-->
+                <div class="search-results-list">
+                    <ul class="list-unstyled m-0 p-0">
+                        <li>
+                            <div class="card rounded-0 mb-2">
+                                <div class="card-body p-2">
+                                    <div class="gallery row no-gutters">
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/1.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/2.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <p>
+                                                        See more
+                                                    </p>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/3.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="info d-flex pt-2">
+                                        <div class="logo-review mr-2">
+                                            <img src="{{assets}}images/search/s-logo.png" alt="">
+                                            <div class="review">
+                                                3.5 <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="#">
+                                                <h3 class="title"><span>1</span> Aux Bons Enfants</h3>
+                                                <address>Place du Grand Sablon, 49 Sablon 1000</address>
+                                                <p class="tag-line">Aux Bons Enfants, ses vraies frites, et pas qu’une
+                                                    fois !</p>
+                                            </a>
+                                            <div class="sub-filters">
+                                                <a href="#">
+                                                    RESTAURANT
+                                                </a>
+                                                <a href="#">
+                                                    ITALIAN
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card rounded-0 mb-2">
+                                <div class="card-body p-2">
+                                    <div class="gallery row no-gutters">
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/4.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/5.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <p>
+                                                        See more
+                                                    </p>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/6.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="info d-flex pt-2">
+                                        <div class="logo-review mr-2">
+                                            <img src="{{assets}}images/search/s-logo.png" alt="">
+                                            <div class="review">
+                                                3.5 <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="#">
+                                                <h3 class="title"><span>1</span> Aux Bons Enfants</h3>
+                                                <address>Place du Grand Sablon, 49 Sablon 1000</address>
+                                                <p class="tag-line">Aux Bons Enfants, ses vraies frites, et pas qu’une
+                                                    fois !</p>
+                                            </a>
+                                            <div class="sub-filters">
+                                                <a href="#">
+                                                    RESTAURANT
+                                                </a>
+                                                <a href="#">
+                                                    ITALIAN
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card rounded-0 mb-2">
+                                <div class="card-body p-2">
+                                    <div class="gallery row no-gutters">
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/7.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/8.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <p>
+                                                        See more
+                                                    </p>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/9.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="info d-flex pt-2">
+                                        <div class="logo-review mr-2">
+                                            <img src="{{assets}}images/search/s-logo.png" alt="">
+                                            <div class="review">
+                                                3.5 <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="#">
+                                                <h3 class="title"><span>1</span> Aux Bons Enfants</h3>
+                                                <address>Place du Grand Sablon, 49 Sablon 1000</address>
+                                                <p class="tag-line">Aux Bons Enfants, ses vraies frites, et pas qu’une
+                                                    fois !</p>
+                                            </a>
+                                            <div class="sub-filters">
+                                                <a href="#">
+                                                    RESTAURANT
+                                                </a>
+                                                <a href="#">
+                                                    ITALIAN
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card rounded-0 mb-2">
+                                <div class="card-body p-2">
+                                    <div class="gallery row no-gutters">
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/10.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/11.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4 m-0 p-0">
+                                            <a href="#">
+                                                <figure>
+                                                    <p>
+                                                        See more
+                                                    </p>
+                                                    <img class="sombal"
+                                                         data-src="{{assets}}images/search/12.jpg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="info d-flex pt-2">
+                                        <div class="logo-review mr-2">
+                                            <img src="{{assets}}images/search/s-logo.png" alt="">
+                                            <div class="review">
+                                                3.5 <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="#">
+                                                <h3 class="title"><span>1</span> Aux Bons Enfants</h3>
+                                                <address>Place du Grand Sablon, 49 Sablon 1000</address>
+                                                <p class="tag-line">Aux Bons Enfants, ses vraies frites, et pas qu’une
+                                                    fois !</p>
+                                            </a>
+                                            <div class="sub-filters">
+                                                <a href="#">
+                                                    RESTAURANT
+                                                </a>
+                                                <a href="#">
+                                                    ITALIAN
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-md-3" id="search_map">
+                <div class="card p-2 mb-4">
+                    <div id="google-map">
+                    </div>
+                </div>
+                <div class="other-categories  card">
+                    <div class="card-body">
+                        <h4>
+                            <strong>
+                                Other categories
+                            </strong>
+                        </h4>
+                        <ul class="p-0 m-0 list-unstyled">
+                            <li>
+                                <a href="#">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="#">Bars</a>
+                            </li>
+                            <li>
+                                <a href="#">Pubs</a>
+                            </li>
+                            <li>
+                                <a href="#">Wine shops</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Fast food</a>
+                            </li>
+                            <li>
+                                <a href="#">Food trucks</a>
+                            </li>
+                            <li>
+                                <a href="#">Coffee & Tea</a>
+                            </li>
+                            <li>
+                                <a href="#">Catering</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ipad -->
+
+<!-- mobile -->
+
+<!-- scripts -->
+
+
+<script type="text/javascript">
+    'use strict';
+
+    var center;
+
+
+    (function (window, $) {
+
+        //Brusselslife Search
+
+
+        var search_input = document.getElementById("search_input");
+        var s_len = search_input.value.length;
+        var btn_clear = document.getElementById("btn_clear");
+
+        BrusselslifeSearch = (function ($) {
+            function BrusselslifeSearch() {
+                return {
+                    init: function () {
+                        _load();
+                        //_loadmap();
+                    }
+                };
+            }
+
+            function _load() {
+                console.log("Brusselslife - Search v6.0 HTML");
+                $(".filter div.checkbox").on('click', function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass("active");
+                });
+
+
+
+
+                if (s_len) {
+                    btn_clear.style.display = "block";
+                }
+                search_input.addEventListener('keyup', function () {
+                    s_len = this.value.trim().length;
+                    btn_clear.style.display = "block";
+                });
+
+                btn_clear.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    this.style.display = "none";
+                    search_input.value = "";
+                });
+            }
+
+
+            function _loadmap() {
+
+                if (false) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        center = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    });
+                }
+
+                var mapOptions = {
+                    center: {lat: -50.839383500000, lng: 4.349299900000},
+                    zoom: 15,
+                    zoomControl: true,
+                    navigationControl: false,
+                    scaleControl: true,
+                    scrollwheel: true,
+                    mapTypeControl: true
+                };
+
+                var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
+            }
+
+            return BrusselslifeSearch;
+        })(jQuery);
+
+        var BrusselslifeSearch = new BrusselslifeSearch();
+        BrusselslifeSearch.init();
+    })(window, jQuery);
+
+
+</script>
+

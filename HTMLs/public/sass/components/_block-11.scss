@@ -1,0 +1,28 @@
+#block-11 {
+  .block-title-mini {
+    background-color: #eeeeee;
+  }
+
+  .card-body {
+
+    a {
+      &:hover {
+        h5, p {
+          color: #000;
+        }
+      }
+    }
+    h5 {
+      font-family: sans-serif;
+      color: #000;
+      font-size: $h5;
+    }
+    p {
+      color: $primary-blue;
+      font-size: $h5;
+      font-style: italic;
+      margin: 0px;
+      font-weight: bold;
+    }
+  }
+}

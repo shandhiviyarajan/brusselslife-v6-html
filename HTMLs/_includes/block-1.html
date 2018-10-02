@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-12 col-md-7">
+        <div id="block-1" class="position-relative">
+            {{#parseJSON '{"name": "BLOCK 1"}'}}
+            {{> block-edit}}
+            {{/parseJSON}}
+            <div class="block-content">
+                <div class="block-article">
+                    <div class="card border-0 rounded-0 mb-3 bg-grey-alpha">
+                        <a href="#">
+                            <figure>
+                                <img src="{{assets}}images/blur.jpg" class="sombal rounded-0 card-img-top"
+                                     data-src="{{image}}" title="Article block 01" alt="Article block 1">
+                            </figure>
+                        </a>
+                        <div class="card-body">
+
+                            <a href="#">
+                                <h2 class="mb-2">
+                                    <strong>
+                                        UNE TOILE SOUS LES ÉTOILES : CINÉMA PLEIN AIR À WOLUBILIS
+                                    </strong>
+                                </h2>
+                                <p class="m-0">
+                                    L'Abbaye de Villers-la-Ville accueille le magnifique spectacle "Nuit Des Chœurs"
+                                    les
+                                    24 et 25
+                                    août. Découvrez le très beau programme de l'événement:
+                                </p>
+                            </a>
+                            <div class="category pt-2">
+                                <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
+                                    SPORTS INDIVIDUALS <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="float-right btn btn-link text-muted p-0"><i class="fa fa-comment"
+                                                                                               aria-hidden="true"></i><span
+                                        class="comments-count">10</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> block-16}}
+</div>

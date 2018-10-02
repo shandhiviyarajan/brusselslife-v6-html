@@ -1,0 +1,10 @@
+#block-17 {
+
+  div.card {
+    &:hover {
+      h2,p {
+        color: #000;
+      }
+    }
+  }
+}

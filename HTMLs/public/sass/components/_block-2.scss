@@ -1,0 +1,66 @@
+#block-2 {
+  margin: 0px -20px;
+  .block-content {
+    padding: $gutter;
+    margin: 0px -10px;
+    background-color: #3f3f3f;
+  }
+
+  div.card {
+    background-color: #000;
+    width: 275px;
+    margin-right: $gutter;
+
+    img {
+      height: 175px;
+    }
+    h3 {
+      font-family: $secondary-title-font;
+      color: #fff;
+      font-size: $h3+4;
+      font-weight: bold;
+    }
+    .date-time {
+      font-family: $secondary-title-font;
+      color: $content-color-light;
+      font-size: $h6+2;
+      position: absolute;
+      bottom: $gutter;
+      left: $gutter;
+      font-weight: 300;
+    }
+    div.card-body {
+      min-height: 175px;
+    }
+
+    &:hover {
+      .date-time,
+      h3 {
+        color: $content-color-light;
+      }
+    }
+  }
+
+  .block-title-full {
+    margin: 0px -35px 0px 0px;
+    h3 {
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      float: right;
+      padding: 3px;
+    }
+  }
+
+  @include bl-sm {
+    .block-title-full {
+      h3 {
+        width: 185px;
+        font-size: 20px;
+      }
+
+    }
+  }
+}

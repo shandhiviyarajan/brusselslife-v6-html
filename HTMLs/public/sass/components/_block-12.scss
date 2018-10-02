@@ -1,0 +1,53 @@
+#block-12 {
+  .blife-filter {
+    position: relative;
+    font-family: $base-font-family;
+    bottom: 0px;
+
+  }
+  h3 {
+    font-family: $title-font;
+    font-size: $h1;
+    color: #000;
+    font-weight: bold;
+  }
+  .carousel-cell {
+    width: 100%;
+  }
+  .flickity-page-dots .dot {
+    background-color: #5D9536;
+    width: 20px;
+    height: 20px;
+  }
+  .flickity-viewport {
+    min-height: 508px !important;
+  }
+  .address-tag-line {
+    color: $primary-blue;
+    font-style: italic;
+    font-size: $h4;
+    font-weight: bold;
+  }
+  address {
+    cursor: pointer;
+    display: block;
+    color: $content-color-light;
+    font-size: $h5;
+  }
+  button#fork-reservation {
+    position: absolute;
+    width: 240px;
+    left: 50%;
+    margin-left: -120px;
+    height: 44px;
+    border: none;
+    font-size: $h3;
+    bottom: 9px;
+    background: #5D9536;
+    font-family: $base-font-family;
+    font-weight: bold;
+
+  }
+
+
+}

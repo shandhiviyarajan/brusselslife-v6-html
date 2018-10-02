@@ -1,0 +1,67 @@
+/*
+Brusselslife v5.3 components
+--------------------------------------------
+*/
+@import 'components/skeleon';
+@import 'components/masthead';
+@import 'components/nav';
+@import 'components/sidebar';
+@import 'components/home-search';
+@import 'components/section-search';
+@import 'components/newsletter';
+@import 'components/right_imu';
+@import 'components/address-body';
+@import 'components/address-client-message';
+@import 'components/address-comments-rating';
+@import 'components/address-events';
+@import 'components/address-gallery';
+@import 'components/address-products';
+@import 'components/address-service-list';
+@import 'components/article-body';
+@import 'components/article-comments';
+@import 'components/full-news-block';
+@import "components/quick-3-blocks";
+@import 'components/block-1';
+@import 'components/block-2';
+@import 'components/block-3';
+@import 'components/block-4';
+@import 'components/block-5';
+@import 'components/block-6';
+@import 'components/block-7';
+@import 'components/block-8';
+@import 'components/block-9';
+@import 'components/block-10';
+@import 'components/block-11';
+@import 'components/block-12';
+@import 'components/block-13';
+@import 'components/block-14';
+@import 'components/block-15';
+@import 'components/block-16';
+@import 'components/block-17';
+@import 'components/block-18';
+@import 'components/block-19';
+@import 'components/block-20';
+@import 'components/block-22';
+@import 'components/search-page';
+@import 'components/footer';
+
+.block-edit {
+  width: 100%;
+  z-index: ($zindex)+1000;
+  padding: $gutter/2;
+
+  .block-info {
+    .badge.block-name {
+      padding: $gutter/2;
+      font-size: $h2;
+      font-family: $secondary-title-font;
+    }
+  }
+
+}
+
+.block-edit.hide {
+  display: block !important;
+}
+
+

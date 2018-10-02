@@ -1,0 +1,38 @@
+.block-address-list {
+
+  a.more-addresses {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    border: 10px solid #d8d8d8;
+
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+
+    p {
+      font-family: sans-serif;
+      width: 240px;
+      color: #666;
+      background: #fff;
+      border: thin solid #fff;
+      margin: 0px;
+    }
+
+    &:hover {
+      border: 10px solid #4A90E2;
+      p {
+        background: #4A90E2;
+        color: #fff;
+        border: thin solid #4A90E2;
+      }
+    }
+  }
+
+}

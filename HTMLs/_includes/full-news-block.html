@@ -1,0 +1,52 @@
+<full-news-block>
+    <div class="row no-gutters">
+        <div id="full-news-block" class="position-relative border-bottom mb-3">
+            {{#parseJSON '{"name": "FULL NEWS BLOCK"}'}}
+            {{> block-edit}}
+            {{/parseJSON}}
+            <div class="block-content">
+                <div class="block-article">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <div class="card border-0 rounded-0">
+                                <a href="#">
+                                    <figure>
+                                        <img class="sombal rounded-0 card-img-top d-none d-sm-block"
+                                             data-src="{{assets}}images/article_1.jpg" src="{{assets}}images/blur.jpg" alt="">
+                                        <img class="sombal rounded-0 card-img-top d-block d-sm-none"
+                                             data-src="{{assets}}images/article_1_mobile.jpg" src="{{assets}}images/blur.jpg" alt="">
+                                    </figure>
+                                </a>
+                                <div class="card-body p-0">
+                                    <a href="#">
+                                        <h2 class="mt-3 mb-2">
+                                            <strong>
+                                                Nuit Des Chœurs 2018: un spectacle au cœur de la nuit
+                                            </strong>
+                                        </h2>
+                                        <p class="mb-0">
+                                            L'Abbaye de Villers-la-Ville accueille le magnifique spectacle "Nuit Des
+                                            Chœurs"
+                                            les
+                                            24 et 25
+                                            août. Découvrez le très beau programme de l'événement:
+                                        </p>
+                                    </a>
+                                    <div class="category py-2">
+                                        <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUALS">
+                                            SPORTS INDIVIDUALS <i class="fa fa-angle-right"></i>
+                                        </a>
+                                        <a href="#" class="float-right btn btn-link text-muted"><i
+                                                class="fa fa-comment"
+                                                aria-hidden="true"></i><span
+                                                class="comments-count">10</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</full-news-block>

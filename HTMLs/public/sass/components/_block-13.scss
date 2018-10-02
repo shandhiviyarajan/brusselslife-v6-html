@@ -1,0 +1,31 @@
+#block-13 {
+
+  .section-content-carousel {
+    .carousel-cell {
+      width: 280px;
+      margin: 0px $gutter $gutter 0px;
+
+      a {
+        display: block;
+        img {
+          border: none;
+        }
+
+        &:hover {
+          h4 {
+            color: red;
+          }
+        }
+      }
+
+      h4 {
+        font-family: $secondary-title-font;
+        font-size: $h3;
+        color: #000;
+
+      }
+
+    }
+  }
+
+}

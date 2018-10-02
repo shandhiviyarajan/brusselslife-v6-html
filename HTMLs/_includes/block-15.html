@@ -1,0 +1,53 @@
+<blife-block>
+    <div class="row">
+        <div class="col-12 col-md-7">
+            <div id="block-15" class="position-relative">
+                {{#parseJSON '{"name": "BLOCK 15"}'}}
+                {{> block-edit}}
+                {{/parseJSON}}
+                <div class="block-content">
+                    <div class="block-address mt-3">
+                        <div class="home-block-3-carousel">
+                            <div class="carousel-cell">
+                                <div class="card border-0 rounded-0">
+                                    <figure class="position-relative">
+                                        <a href="#">
+                                            <img class="rounded-0 card-img-top"
+                                                 src="{{assets}}images/address_block_3.jpg" alt="Address block 3">
+                                        </a>
+                                        <button id="fork-reservation" class="btn btn-primary position-absolute">
+                                            <img src="{{assets}}images/fork_icon.png" alt="Fork Reservations">Reservations
+                                        </button>
+                                    </figure>
+                                    <div class="card-body pb-3 pl-0 px-3 bg-grey-alpha">
+                                        <a href="#" class="float-left">
+                                            <h3>La Maroquinerie <span class="badge">
+                            <img data-toggle="tooltip" data-placement="top" data-title="Promotion"
+                                 src="{{assets}}svg/promotion.svg" alt="">
+                                    </span></h3>
+                                        </a>
+                                        <a href="#" class="btn btn-light blife-filter"> ITALIAN</a>
+                                        <div class="clearfix"></div>
+                                        <address class="my-2" data-toggle="tooltip" data-placement="left"
+                                                 data-title="Show map">
+                                            <i class="fa fa-map-marker"></i> Rue Washington, 174 - 1050 Ixelles
+                                            Châtelain
+                                        </address>
+                                        <a href="#">
+                                            <p class="address-tag-line  mb-0">
+                                                Atelier spécialisé dans la restauration, la réparation et la confection
+                                                d'articles de luxe en cuir.
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{> block-21}}
+    </div>
+</blife-block>

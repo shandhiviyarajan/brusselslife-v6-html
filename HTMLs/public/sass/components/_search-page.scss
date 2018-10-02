@@ -1,0 +1,224 @@
+#search-page {
+
+  h4, h2, h3, h4, h5 {
+    color: #000;
+    font-family: $base-font-family;
+  }
+
+  .choose-location {
+    height: 100px;
+    div.checkbox {
+      float: left;
+      width: 100%;
+      margin-top: 10px;
+      background: transparent !important;
+
+    }
+    .btn-choose-radius {
+      border-radius: 100px;
+      background: $blue-info-dark;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 0px;
+      width: 48px;
+      height: 48px;
+      margin-top: -34px;
+      float: right;
+      outline: 0;
+      &:hover {
+        -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      //-webkit-box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.15);
+      //-moz-box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.15);
+      //box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.15);
+    }
+  }
+
+  .other-categories {
+    ul li {
+      display: inline-block;
+      width: 45%;
+      a {
+        font-size: 14px;
+        color: #3974B9;
+        font-weight: bold;
+        padding: 5px 0px;
+        display: block;
+
+        &:hover {
+          color: #666;
+        }
+      }
+    }
+  }
+
+  #search_filters {
+    max-width: 24%;
+    flex: 0 0 24%;
+
+  }
+  #search_results {
+    max-width: 46%;
+    flex: 0 0 46%;
+
+    ul.nav-tabs {
+      border-bottom: none;
+      li {
+        a {
+          font-size: 14px;
+          padding: 5px 10px;
+          color: #505050;
+          border-radius: 4px 4px 4px 4px;
+          margin-right: 1px;
+
+          &:hover,
+          &.active {
+            background: $blue-info-dark;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    div.card {
+
+      border: thin solid #BEBEBE;
+
+      &:hover {
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+      }
+
+      div.card-body {
+        background: #fff;
+      }
+      div.gallery {
+        figure {
+          position: relative;
+        }
+
+        div.col-sm-4:last-child {
+          figure {
+            p {
+              margin: 0px;
+              top: 50%;
+              margin-top: -10px;
+              color: #fff;
+              position: absolute;
+              z-index: 2;
+              font-family: sans-serif;
+              font-size: 12px;
+              width: 100%;
+              text-align: center;
+              font-weight: bold;
+
+            }
+            &:before {
+              position: absolute;
+              width: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              height: 100%;
+              z-index: 1;
+              top: 0px;
+              left: 0px;
+              content: '';
+            }
+          }
+
+          &:hover {
+            figure {
+              &:before {
+                background: rgba(0, 0, 0, 0.25);
+              }
+            }
+          }
+        }
+
+      }
+      div.info {
+
+      }
+      h3.title {
+        font-size: 16px;
+        font-weight: bold;
+
+        span {
+          display: inline-block;
+          width: 19px;
+          height: 26px;
+          text-align: center;
+          padding-top: 4px;
+          font-size: 13px;
+          color: #fff;
+          background: url('../svg/marker-red.svg') center center no-repeat;
+        }
+      }
+      p.tag-line {
+        font-family: $content-font;
+        color: $primary-blue;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+      div.sub-filters {
+
+        a {
+          color: #777777;
+          border: thin solid #D5D5D5;
+          font-size: 11px;
+          margin-right: 10px;
+          display: inline-block;
+          padding: 5px 7px;
+          border-radius: 4px;
+
+          &:hover {
+            background: $blue-info-dark;
+            color: #fff;
+            border: thin solid $blue-info-dark;
+          }
+        }
+
+      }
+      div.info address {
+        color: #777777;
+        font-size: 14px;
+        margin: 0px;
+      }
+      div.logo-review {
+        div.review {
+          background: $blue-info-dark;
+          color: #fff;
+          border-radius: 100px;
+          padding: 2px 5px;
+          font-size: 12px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+      }
+    }
+
+  }
+  div.modal-header {
+    padding: 10px 10px 10px 10px;
+    h5 {
+      margin: 0px;
+    }
+    button {
+      padding: 0px;
+      margin: -5px 0px 0px 0px;
+    }
+  }
+  #search_map {
+    max-width: 30%;
+    flex: 0 0 30%;
+
+  }
+
+  #google-map {
+    height: 540px;
+  }
+
+}

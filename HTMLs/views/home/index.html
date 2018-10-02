@@ -1,0 +1,49 @@
+---
+layout : default.html
+title : Home page | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events & happenings.
+script : home.js
+---
+
+<!-- home search -->
+{{> home-search }}
+
+{{> quick-3-blocks}}
+
+<!-- leader board advertisement -->
+{{> leader-board }}
+
+<article class="page-home">
+    <section class="container">
+
+        {{> skeleton}}
+
+        {{> full-news-block}}
+        <!-- Block 1 | 16  -->
+
+        {{> block-22 }}
+
+        {{#parseJSON '{"image": "/public/images/article_b1.jpg"}'}}
+        {{> block-1}}
+        {{/parseJSON}}
+
+        <!-- Block 2 | Agenda -->
+        {{> block-2}}
+
+        <!-- Block 17  -->
+        {{> block-17}}
+
+        <!-- Block 3 section  -->
+        {{> block-3}}
+
+        <!-- Block 4 | Full block image  -->
+
+        {{> block-4}}
+
+        <!-- Block 5 | Interviews  -->
+        {{> block-5}}
+        <!-- Block 6 | Interviews  -->
+        {{> block-6}}
+        <!-- Block 7 | Near by address -->
+        {{> block-7}}
+    </section>
+</article>

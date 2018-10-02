@@ -1,0 +1,57 @@
+#block-20 {
+  .block-address {
+
+    border: 10px solid #d8d8d8;
+    margin-bottom: 20px;
+
+    .block-title-mini {
+      background: #000;
+
+      h2 {
+        color: #fff;
+      }
+    }
+
+    > section {
+      background: #000;
+      a.address-info {
+        display: block;
+        padding-bottom: 15px;
+        h5 {
+          font-family: sans-serif;
+          color: #fff;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        address {
+          color: #fff;
+          font-size: 14px;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          font-weight: bold;
+          font-size: 13px;
+          font-style: italic;
+          color: $primary-cayan;
+        }
+      }
+
+      &:hover {
+        background: #232323;
+      }
+    }
+  }
+
+  .list-unstyled {
+    li h5 {
+      line-height: 1.4em;
+    }
+    li:hover {
+      h5 {
+        color: #000;
+      }
+    }
+  }
+}

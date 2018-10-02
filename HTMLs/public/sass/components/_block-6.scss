@@ -1,0 +1,32 @@
+#block-6 {
+  h3 {
+    font-size: $h4;
+    font-weight: bold;
+  }
+
+  a:hover {
+    h3 {
+      color: #000;
+    }
+  }
+
+  .author-block {
+    .media-body {
+      font-family: $title-font;
+      color: $content-color-dark;
+      font-size: $h6;
+
+      a {
+        font-family: $title-font;
+        color: $content-color-dark;
+        font-size: $h5;
+
+        &:hover {
+          color: $primary-cayan-dark;
+          text-decoration: underline;
+
+        }
+      }
+    }
+  }
+}

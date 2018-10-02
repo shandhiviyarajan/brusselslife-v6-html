@@ -1,0 +1,47 @@
+<div class="row">
+
+    <div class="col-12 col-md-7">
+        <div id="block-17" class="position-relative">
+            {{#parseJSON '{"name": "BLOCK 2"}'}}
+            {{> block-edit}}
+            {{/parseJSON}}
+            <div class="block-content">
+                <div class="block-article">
+                    <div class="card border-0 rounded-0 mb-4 bg-grey-alpha">
+                        <a href="#">
+                            <figure>
+                                <img class="sombal rounded-0 card-img-top"
+                                     data-src="{{assets}}images/article_b1.jpg" alt="Article block 1">
+                            </figure>
+                        </a>
+                        <div class="card-body">
+                            <a href="#">
+                                <h2 class="mb-2">
+                                    <strong>
+                                        Les cafés bruxellois pour étudier
+                                    </strong>
+                                </h2>
+                                <p class="mb-0">
+                                    L'Abbaye de Villers-la-Ville accueille le magnifique spectacle "Nuit Des Chœurs"
+                                    les
+                                    24 et 25
+                                    août. Découvrez le très beau programme de l'événement:
+                                </p>
+                            </a>
+                            <div class="category pb-0 pt-2">
+                                <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
+                                    SPORTS INDIVIDUELS <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="float-right btn btn-link text-muted p-0"><i class="fa fa-comment"
+                                                                                               aria-hidden="true"></i><span
+                                        class="comments-count ">10</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> block-20}}
+
+</div>

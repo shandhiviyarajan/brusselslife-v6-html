@@ -1,0 +1,134 @@
+//Components
+
+.footer-img {
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.footer-logo {
+  img {
+    width: 240px;
+    margin: 0 auto;
+    display: block;
+    background-color: #101e27;
+    z-index: 400;
+    padding: 15px 60px;
+    position: relative;
+  }
+
+  &:after {
+    content: '';
+    border-bottom: thin solid #4c7f90;
+    width: 100%;
+    display: block;
+    height: 1px;
+    margin: -40px auto auto auto;
+  }
+}
+
+footer {
+  background-color: #101e27;
+  .container {
+    background-color: #101e27;
+  }
+
+  ul {
+    padding: 0px;
+    position: relative;
+    margin: 0px 0px 40px 0px;
+    li {
+      list-style: none;
+
+      a {
+        color: #d8d8d8;
+        font-size: 16px;
+        display: block;
+        padding: 3px 0px;
+        font-family: $secondary-title-font;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    li:first-child {
+      font-weight: bold;
+
+      span {
+        display: block;
+        height: 2px;
+        width: 10%;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        -webkit-transition: width .3s ease;
+        -moz-transition: width .3s ease;
+        -ms-transition: width .3s ease;
+        -o-transition: width .3s ease;
+        transition: width .3s ease;
+      }
+
+    }
+
+    &:hover {
+      li:first-child {
+        span {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.about-site {
+  font-family: $title-font;
+  color: #fff;
+  margin-bottom: 30px;
+
+  div.col-md-4 {
+    p {
+      font-family: sans-serif;
+      font-size: $h3;
+      font-weight: bold;
+      color: $primary-white;
+      margin: 30px 0px 15px 0px;
+    }
+  }
+  div.col-md-8 {
+    p {
+      color: $primary-cayan-dark;
+      font-style: italic;
+      margin: 40px 0px 30px 0px;
+    }
+  }
+}
+
+.footer_social_links {
+  background: darken($primary-blue, 18%);
+  padding: 30px 0px;
+  .social_links {
+    text-align: center;
+    margin: 30px 0px;
+    a {
+      border-radius: 4px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: $primary-blue;
+      color: #fff;
+      font-size: 18px;
+      padding-top: 5px;
+      margin: 0px 7px;
+
+      &:hover {
+        background: $primary-cayan-dark;
+      }
+    }
+  }
+  .copy_right, .crafted {
+    color: #fff;
+    font-family: $base-font-family;
+    text-align: center;
+  }
+}

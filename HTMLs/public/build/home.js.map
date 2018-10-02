@@ -1,0 +1,1 @@
+{"version":3,"sources":["../es6/home.js"],"names":["name","foo","x","console","log"],"mappings":";;AAAA,IAAIA,OAAO,SAAX;;AAEA,IAAIC,MAAM,SAANA,GAAM,CAACC,CAAD;AAAA,SAAK,KAAGA,CAAR;AAAA,CAAV;AACAC,QAAQC,GAAR,CAAYH,IAAI,EAAJ,CAAZ","file":"home.js","sourcesContent":["let name = \"Shanboy\";\n\nvar foo = (x)=>10+x\nconsole.log(foo(10))"]}

@@ -1,0 +1,54 @@
+<blife-block>
+    <div id="home-search"
+         style="background:url('{{assets}}images/home.jpg') bottom center no-repeat; background-size:cover;">
+        <section class="container form-wrapper bg-transparent ">
+            <div class="row align-items-center justify-content-center no-gutters">
+                <div class="col-12 col-lg-10">
+                    <form id="search-form">
+                        <label class="sr-only" for="search_input">{{__.search_input}}</label>
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend d-none d-sm-block">
+                                <div class="input-group-text">
+                                    <img src="{{assets}}svg/bl-icon-search.svg" alt="">
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="search_input"
+                                   placeholder="{{__.search_placeholder}}">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-lg btn-primary">
+                               <span class="d-none d-sm-inline">
+                                    {{__.search}}
+                               </span>
+
+                                    <i class="fa fa-search d-inline d-sm-none"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                        <div class="your-location"
+                             data-toggle="tooltip"
+                             data-placement="top"
+                             title="{{__.choose_your_location}}">
+                            <a href="#" class="btn btn-dark">
+                                <img src="{{assets}}svg/bl-icon-your-location.svg" alt="">
+                            </a>
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutter colour-bars">
+            <div class="col-4 bg-orange"></div>
+            <div class="col-4 bg-blue"></div>
+            <div class="col-4 bg-light-blue"></div>
+        </div>
+    </div>
+</blife-block>
+

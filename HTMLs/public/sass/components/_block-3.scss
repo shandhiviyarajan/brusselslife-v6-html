@@ -1,0 +1,62 @@
+#block-3,
+#block-3-1 {
+  .blife-filter {
+    position: relative;
+    font-family: $base-font-family;
+    bottom: 0px;
+
+  }
+  h3 {
+    font-family: $title-font;
+    font-size: $h1;
+    color: #000;
+    font-weight: bold;
+  }
+  .carousel-cell {
+    width: 100%;
+  }
+  .flickity-page-dots .dot {
+    background-color: #5D9536;
+    width: 20px;
+    height: 20px;
+  }
+  .flickity-viewport {
+    min-height: 508px !important;
+  }
+  .address-tag-line {
+    color: $primary-blue;
+    font-style: italic;
+    font-size: $h4;
+    font-weight: bold;
+  }
+  address {
+    cursor: pointer;
+    display: block;
+    color: $content-color-light;
+    font-size: $h5;
+  }
+  button.fork-reservation {
+    width: 200px;
+    float: right;
+    margin: -5px -20px 0px 0px;
+    height: 44px;
+    border: none;
+    font-size: $h4;
+    background: #5D9536;
+    font-family: $base-font-family;
+    font-weight: normal;
+
+    &:hover {
+      background: darken(#5D9536, 5%);
+    }
+  }
+
+  .block-article{
+    a:hover{
+      h2,p{
+        color:#000;
+      }
+    }
+  }
+
+}
