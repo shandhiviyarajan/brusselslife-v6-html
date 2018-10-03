@@ -14,17 +14,11 @@ UI_Designs
 /.idea
 .idea
 
-
-
-
-
 # misc
-/.sass-cache
 /connect.lock
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
-
 
 # System Files
 .DS_Store
