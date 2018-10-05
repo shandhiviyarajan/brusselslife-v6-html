@@ -3,6 +3,7 @@ layout : default-search.html
 title : Brusselslife Search | Brusselslife.be
 ---
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+<script type="text/javascript" src="{{assets}}libs/bootstrap-datepicker/js/bootstrap.datepicker.min.js"></script>
 <!-- desktop -->
 <div id="search-page" class="pt-4">
     <div class="container bg-transparent p-0">
@@ -303,7 +304,7 @@ title : Brusselslife Search | Brusselslife.be
                         </li>
 
                         <li>
-                            <input type="text" class="form-control" placeholder="Choose Dates">
+                            <input id="event-choose-date" type="text" class="form-control" placeholder="Choose Dates">
                         </li>
                     </ul>
                 </div>

@@ -20,6 +20,7 @@ var center;
                     _loadmap();
                     _search_results();
                     _select_location();
+                    _datepicker();
                 }
             };
         }
@@ -123,6 +124,15 @@ var center;
             });
 
 
+        }
+
+        function _datepicker(){
+
+            $('#event-choose-date').datepicker({
+                autoclose:true,
+                multidate:true,
+                todayHighlight:true
+            });
         }
 
         return BrusselslifeSearch;
