@@ -1,3 +1,4 @@
+
 <header class="header-search">
     <div class="container bg-transparent p-0">
         <div class="row no-gutters">
@@ -14,8 +15,6 @@
                          alt="Brusselslife.be">
                 </a>
             </div>
-
-
             <div class="col-sm-6">
                 <form action="/search">
                     <button class="btn btn-clear btn-info-blue " id="btn_clear"
@@ -30,12 +29,105 @@
                             title="Share results">
                         <i class="fa fa-share"></i>
                     </button>
-                    <input type="text" class="form-control " value="Short eats" id="search_input">
+                    <input type="text" class="form-control" placeholder="Search..." autofocus value="Short eats"
+                           id="search_input">
                 </form>
 
             </div>
+            <div class="col-sm-3 d-flex justify-content-end news-login-lan">
+                <a class="btn btn-primary btn-newsletter mx-2"
+                   data-toggle="tooltip"
+                   data-placement="top"
+                   data-original-title="Newsletter"
+                   href="/newsletter" target="_blank">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+                <span>
+                    <div class="dropdown mr-2"
+                         data-toggle="dropdown"
+                         id="login-register">
 
-            <div class="col-sm-2">
+
+                    <a class="btn btn-primary show-ov"
+                       href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+
+                    <div class="dropdown-menu stop-closing">
+                        <div class="form-title">
+                            Sign in to Brusselslife
+                        </div>
+                        <div class="error-message">
+                            <div class="alert alert-danger">
+                                Please enter the correct username & password
+                            </div>
+                        </div>
+                        <form action="">
+                            <div class="input-element mb-4">
+                                <label for="username">Email address </label>
+                                <input id="username"
+                                       type="text" placeholder="" class="form-control">
+                            </div>
+
+                            <div class="input-element mb-4">
+                                <label for="password">Password</label>
+                                <input id="password"
+                                       type="password" placeholder="Password" class="form-control">
+                            </div>
+
+                            <div class="input-element  mb-4">
+                                <div class="checkbox custom-checkbox">
+                                    <input type="checkbox" id="keep_logged_in">
+                                    <label for="keep_logged_in">Keep me logged in</label>
+                                </div>
+
+                                <a href="#" class="forgot-pass pull-left">
+                                    Forgot password ?
+                                </a>
+                            </div>
+                            <button class="btn btn-primary" id="login-button">
+                                Login
+                            </button>
+
+
+                            <p class="mt-4 mb-0 text-center">Not a member ? &nbsp; <a href="#"
+                                                                                      class="btn btn-link btn-create-acc">Create
+                                a new account</a></p>
+
+                        </form>
+
+                        <div class="social-logins row pt-4">
+                            <div class="col-6">
+                                <a class="btn btn-link btn-google">Google</a>
+                            </div>
+                           <div class="col-6">
+                                <a class="btn btn-link btn-fb">Facebook</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+              </span>
+                <span>
+                    <div class="dropdown"
+                         data-toggle="dropdown">
+                    <a class="btn btn-primary"
+                       id="switch-language"
+                       href="#">
+                        <span>FR</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#">
+                            FR
+                        </a>
+                        <a href="#">
+                            NL
+                        </a>
+                        <a href="#">
+                            EN
+                        </a>
+                    </div>
+                </div>
+             </span>
 
             </div>
         </div>

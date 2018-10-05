@@ -189,22 +189,22 @@ module.exports = function (grunt) {
                     ext: '.min.css'
                 }]
             }
-        },
-
-        babel: {
-            options: {
-                sourceMap: true,
-                presets: ['babel-preset-es2015']
-            },
-            build: {
-                files: [{
-                    expand: true,
-                    cwd: 'public/es6',
-                    src: ["**/**.js"],
-                    dest: "public/build/"
-                }]
-            }
         }
+
+        // babel: {
+        //     // options: {
+        //     //     sourceMap: true,
+        //     //     presets: ['babel-preset-es2015']
+        //     // },
+        //     // build: {
+        //     //     files: [{
+        //     //         expand: true,
+        //     //         cwd: 'public/es6',
+        //     //         src: ["**/**.js"],
+        //     //         dest: "public/build/"
+        //     //     }]
+        //     // }
+        // }
     });
 
 
@@ -220,9 +220,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ftp-diff-deployer');
     grunt.loadNpmTasks('grunt-sftp-deploy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-babel');
+    // grunt.loadNpmTasks('grunt-babel');
 
-    grunt.registerTask('default', ['babel', 'clean', 'sass', 'assemble', 'copy']);
+    grunt.registerTask('default', ['clean', 'sass', 'assemble', 'copy']);
     grunt.registerTask('ftp', ['clean', 'sass', 'assemble', 'copy', 'ftp-diff-deployer']);
     grunt.registerTask('email', ['inlinecss', 'watch:inlinecss', 'newer:copy']);
     grunt.registerTask('server', ['express', 'watch']);

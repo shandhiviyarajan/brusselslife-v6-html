@@ -9,12 +9,12 @@ UI_Designs
 /node_modules
 */node_modules
 
-
 # IDEs and editors
 /.idea
 .idea
 
 # misc
+/.sass-cache
 /connect.lock
 /libpeerconnection.log
 npm-debug.log

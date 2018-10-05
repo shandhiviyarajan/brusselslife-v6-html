@@ -261,7 +261,7 @@
         </p>
     </div>
 </footer>
-
+<div id="overlay"></div>
 <script src="{{assets}}libs/bootstrap-4/bootstrap-4-native.min.js"></script>
 
 <script src="{{assets}}libs/flick/flick.js"></script>
@@ -280,6 +280,8 @@
 
         var header = document.querySelector("header");
         var body = document.querySelector("body");
+        var overlay = document.getElementById("overlay");
+        var arrow = document.getElementsByClassName("arrow-top")[0];
         var screen = $(window);
 
         //Brusselslife Front End jQuery
@@ -289,6 +291,7 @@
                     init: function () {
                         _load();
                         _common();
+                        _side_menu();
                     }
                 };
             }
@@ -298,8 +301,6 @@
             }
 
             function _common() {
-
-
 
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
@@ -314,12 +315,38 @@
                 });
 
 
-                $(".arrow-top").css({
-                    'right': ((screen.width() - 1024) / 2) - 52
-                }).click(function () {
-                    $("body,html").stop().animate({
-                        scrollTop: 0
-                    }, 350, 'swing');
+                if (arrow) {
+                    arrow.style.right = (((screen.width() - 1024) / 2) - 52) + "px";
+                    arrow.addEventListener('click', function () {
+                        $("body,html").stop().animate({
+                            scrollTop: 0
+                        }, 350, 'swing');
+                    });
+                }
+
+                var sc = document.getElementsByClassName("stop-closing");
+                var i = sc.length;
+                while (i--) {
+                    sc[i].addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    });
+                }
+                overlay.addEventListener('click', function () {
+                    this.classList.remove('show');
+                });
+                $(".show-ov").on('click', function () {
+                    overlay.classList.add("show");
+
+                    $(".dropdown-menu").removeClass("show");
+
+                });
+
+            }
+
+            function _side_menu() {
+                $("#left_menu").find("i.fa-angle-down").on('click', function () {
+                    $(this).next().slideToggle(100);
+                    $(".left-menu-level-1").not($(this).next()).slideUp(100);
                 });
 
             }
