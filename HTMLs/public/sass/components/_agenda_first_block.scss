@@ -1,0 +1,154 @@
+#agenda_first_block {
+
+
+  .block-title-full {
+    margin: 0px 0px;
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  div.float-card {
+    background: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 75%;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.90);
+    }
+  }
+
+  p.event-date-sm {
+    color: #fff;
+  }
+}
+
+#agenda_3_blocks {
+  div.media {
+    padding: 5px;
+    border: thin solid #fff;
+    background: #fff;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      border: thin solid #d8d8d8;
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      -o-transform: translateY(-10px);
+      transform: translateY(-10px);
+
+      h3.title {
+        color: #252525;
+      }
+    }
+
+    h3.title {
+      font-weight: bold;
+      font-size: 15px;
+      color: #000;
+      line-height: 1.4em;
+    }
+    p {
+      margin: 0px;
+      font-family: $base-font-family;
+      span {
+        display: inline-block;
+      }
+      span.event-location {
+        color: #666;
+        padding-left: 15px;
+      }
+    }
+
+  }
+}
+
+#ag_block_3 {
+
+  .event-date-lg a,
+  h3.event-title {
+    color: #000;
+  }
+
+  .btn-addto-cal {
+    padding: 0px;
+    box-shadow: none !important;
+    width: 44px;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px 15px 0px 15px;
+  }
+
+  .event-location {
+    color: $blue-info-dark;
+  }
+
+}
+
+#ag_block_3_1 {
+  a.submit_event_link {
+    background: url('../images/submit_event.jpg') center center no-repeat;
+    height: 240px;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      font-weight: bold;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 10px 0px 0px 0px;
+    }
+    .block-info {
+      width: 220px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1em;
+    }
+    &:hover {
+      button {
+        background: darken($secondary-orange, 5%);
+      }
+    }
+  }
+  a.single-event {
+
+    img {
+      width: 100%;
+    }
+
+    display: block;
+    h3.title {
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    span.event-location {
+      font-family: $base-font-family;
+      color: #666;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+}
+
+#agenda_discovered{
+  .block-title-full {
+    margin: 0px 0px;
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

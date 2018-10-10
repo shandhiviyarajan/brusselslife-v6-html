@@ -1,52 +1,32 @@
 #home-search {
-  min-height: 260px;
-
-  .your-location {
-    position: absolute;
-    top: 9px;
-    right: 170px;
-    z-index: $zindex;
-  }
+  min-height: 280px;
 
   .form-wrapper {
     div.row {
-      min-height: 260px;
+      min-height: 280px;
     }
   }
-  #search-form {
-    box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.77);
-  }
+
   .input-group-prepend,
   .input-group-text {
     background-color: $primary-white;
     border: none;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 6px 0px 0px 6px;
     height: $form-height;
   }
-  input[type="text"] {
+  button#btn_submit {
+    background-color: $blue-info-dark;
+    color: #fff;
     border: none;
-    outline: 0;
+    border-radius: 0px 6px 6px 0px;
     height: $form-height;
-    background: #FFFFFF;
-    padding-left: 0px;
-    border-radius: 0px 0px;
-    &:focus {
-      outline: 0;
-      box-shadow: none;
-    }
-  }
-  button {
-    background-color: $primary-cayan;
-    color: $primary-white;
-    border: none;
-    border-radius: 0px 4px 4px 0px;
-    height: $form-height;
-    font-size: ($h5)-1;
+    font-size: 14px;
+    font-weight: bold;
     padding: 7px 30px;
     text-transform: uppercase;
 
     &:hover, &:focus {
-      background-color: $primary-blue;
+      background-color: darken($blue-info-dark, 15%);
     }
 
     &:active {
@@ -54,16 +34,235 @@
     }
   }
 
-  @include bl-sm {
+  div.tag-line {
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+  }
+  ul.nav-tabs {
+    position: relative;
+    margin-bottom: 15px;
+    border: none;
 
-    input[type="text"] {
-      font-size: 14px;
-      padding-left: 15px;
+    li {
+      a {
+        border-radius: 4px 4px 4px 4px;
+        margin-right: 10px;
+        color: #fff;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.11);
+        padding: 5px 20px;
+        font-size: 16px;
+        outline: 0;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 12px solid #fff;
+          bottom: -18px;
+          left: 50%;
+          margin-left: -8px;
+          -webkit-transition: 0.1s ease;
+          -moz-transition: 0.1s ease;
+          -ms-transition: 0.1s ease;
+          -o-transition: 0.1s ease;
+          transition: 0.1s ease;
+          transform: scale(0);
+          -webkit-transform-origin: bottom center;
+          -moz-transform-origin: bottom center;
+          -ms-transform-origin: bottom center;
+          -o-transform-origin: bottom center;
+          transform-origin: bottom center;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:hover {
+          background: $blue-info-dark;
+          color: #fff;
+        }
+
+        &:active {
+          background: darken($blue-info-dark, 15%);
+        }
+      }
+
     }
-    .your-location {
-      right: 60px;
+    li.active {
+      a {
+        background: $blue-info-dark;
+        color: #fff;
+
+        &:after {
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1);
+        }
+
+      }
     }
 
   }
 
+}
+
+#search_input {
+  border: none;
+  outline: 0;
+  height: $form-height;
+  background: #FFFFFF;
+  padding-left: 0px;
+  border-radius: 0px 0px;
+  color: #000;
+  font-size: 16px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+#search_location {
+
+  a.btn-default {
+    font-weight: bold;
+    background: #fff;
+    height: 52px;
+    border-radius: 0px;
+    line-height: 38px;
+    color: #4A4A4A;
+    padding: 7px 20px;
+    border-left: thin solid #d8d8d8;
+
+    img {
+      width: 16px;
+    }
+
+    &:hover {
+      background: #eee;
+    }
+  }
+  div.dropdown-menu {
+    top: 49px;
+    border-radius: 0px 0px 4px 4px;
+    min-height: 100px;
+    width: 580px;
+    right: -1px;
+    left: auto;
+
+    -webkit-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+
+    input[type="text"] {
+      background: #eee;
+      height: 44px;
+      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+      font-size: 16px;
+      letter-spacing: 0;
+      color: #000;
+
+      &:focus {
+        background: #fff;
+        border: 2px solid $blue-info-dark;
+      }
+    }
+
+    #l_current {
+      p {
+        font-family: $base-font-family;
+      }
+      p small {
+        font-size: 10px;
+        color: #999;
+      }
+      div.alert {
+        display: none;
+      }
+    }
+  }
+}
+
+#search_form {
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+#btn_relocate {
+  border: thin solid #d8d8d8;
+
+  &:hover {
+    background: #f1f1f1;
+  }
+  &:focus {
+    outline: 0 !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  &:active {
+    -webkit-box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.category-icons {
+  text-align: center;
+  > div {
+    display: inline-block;
+  }
+  a {
+    img {
+      display: block;
+      margin: 0px auto;
+      padding-bottom: 10px;
+      -webkit-transition: 0s ease;
+      -moz-transition: 0s ease;
+      -ms-transition: 0s ease;
+      -o-transition: 0s ease;
+      transition: 0s ease;
+    }
+    display: block;
+    width: 86px;
+    height: 86px;
+    text-align: center;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    margin: 0px 5px;
+    padding-top: 15px;
+    font-weight: bold;
+
+    &:hover {
+      img {
+        -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+        filter: invert(100%);
+      }
+      background: $blue-info-dark;
+      color: #fff;
+    }
+
+    &:active {
+      background: darken($blue-info-dark, 15%);
+    }
+  }
+}
+
+@include bl-sm {
+  #search_input {
+    font-size: 14px;
+    padding-left: 15px;
+  }
 }

@@ -1,5 +1,7 @@
 #block-17 {
-
+  h2 {
+    text-transform: uppercase;
+  }
   div.card {
     &:hover {
       h2,p {

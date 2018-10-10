@@ -1,22 +1,79 @@
 <blife-block>
     <div id="home-search"
          style="background:url('{{assets}}images/home.jpg') bottom center no-repeat; background-size:cover;">
-        <section class="container form-wrapper bg-transparent ">
+        <section class="container form-wrapper bg-transparent">
             <div class="row align-items-center justify-content-center no-gutters">
-                <div class="col-12 col-lg-10">
-                    <form id="search-form">
-                        <label class="sr-only" for="search_input">{{__.search_input}}</label>
+                <div class="col-12 col-lg-12">
+                    <ul class="nav nav-tabs" id="search_tabs">
+                        <li class="active">
+                            <a href="#" class="btn btn-default btn-md" data-href="/search">
+                                All
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-md" data-href="/search">
+                                Place
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-md" data-href="/search/articles">
+                                Article
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-md" data-href="/search/events">
+                                Events
+                            </a>
+                        </li>
+
+                    </ul>
+                    <form id="search_form" action="/search">
+                        <label class="sr-only" for="search_input">
+                            {{__.search_input}}</label>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend d-none d-sm-block">
                                 <div class="input-group-text">
                                     <img src="{{assets}}svg/bl-icon-search.svg" alt="">
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="search_input"
+                            <input type="text" autofocus="true" autocomplete="off" class="form-control"
+                                   id="search_input"
                                    placeholder="{{__.search_placeholder}}">
+                            <div id="search_location" class="dropdown"
+                                 data-toggle="dropdown">
 
+                                <a href="#" class="btn btn-default" id="get_user_location">
+
+                                    <img src="{{assets}}svg/my-location-marker.svg" alt=""> Choose location
+                                </a>
+                                <div class="dropdown-menu p-4 stop-closing">
+
+                                    <div class="l-title">
+                                        <img src="{{assets}}svg/my-location-active.svg" alt=""> My location
+                                        <button class="btn btn-sm btn-default" id="btn_relocate">Relocate</button>
+                                    </div>
+
+                                    <div class="l-input py-4">
+                                        <input type="text" id="pac-input" placeholder="Choose location"
+                                               class="form-control">
+                                    </div>
+
+                                    <div id="l_current">
+
+                                        <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                            <small>Current location</small>
+                                        </p>
+                                        <div class="alert alert-warning"></div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
                             <div class="input-group-btn">
-                                <button class="btn btn-lg btn-primary">
+                                <button class="btn btn-lg btn-primary" id="btn_submit">
                                <span class="d-none d-sm-inline">
                                     {{__.search}}
                                </span>
@@ -26,18 +83,43 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="your-location"
-                             data-toggle="tooltip"
-                             data-placement="top"
-                             title="{{__.choose_your_location}}">
-                            <a href="#" class="btn btn-dark">
-                                <img src="{{assets}}svg/bl-icon-your-location.svg" alt="">
+                    </form>
+
+
+                    <div class="category-icons mt-4">
+                        <div>
+                            <a href="/section">
+                                <img src="{{assets}}svg/categories/restaurant.svg" alt="">
+                                Eat & Drink
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/section">
+                                <img src="{{assets}}svg/categories/sports.svg" alt="">
+                                Sports
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/section">
+                                <img src="{{assets}}svg/categories/beauty.svg" alt="">
+                                Beauty
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/section">
+                                <img src="{{assets}}svg/categories/shopping.svg" alt="">
+                                Shopping
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/section">
+                                <img src="{{assets}}svg/categories/night_life.svg" alt="">
+                                Night Life
                             </a>
                         </div>
 
+                    </div>
 
-
-                    </form>
 
                 </div>
             </div>
@@ -51,4 +133,6 @@
         </div>
     </div>
 </blife-block>
+
+
 

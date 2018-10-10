@@ -306,7 +306,6 @@
 
     }
   }
-
   h3.event-title {
     font-size: 16px;
     font-weight: bold;
@@ -319,7 +318,6 @@
 
     }
   }
-
   .event-cat {
     font-family: $secondary-title-font;
     font-weight: bold;
@@ -331,7 +329,6 @@
     color: #666;
     font-size: 14px;
   }
-
   .btn-addto-cal {
     z-index: 1000 !important;
     color: #000;
@@ -344,7 +341,7 @@
     height: 60px;
     margin: 20px 0px 0px 10px;
     &:focus {
-      outilne: 0;
+      outline: 0;
     }
 
     .addeventatc_icon {

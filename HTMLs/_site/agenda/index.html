@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Address Paid | Brusselslife.be Brusselslife.be | version 5.3</title>
+    <title> Agenda Home | Brusselslife.be Brusselslife.be | version 5.3</title>
     <meta property="og:image" content=""/>
     <meta property="og:title" content=""/>
     <meta property="og:url" content=""/>
@@ -13,7 +13,7 @@
           content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no shrink-to-fit=no">
     <meta name="google-site-verification" content="AIzaSyD6yRFelNfJlGThrXJ70o1Rpvp18DaSmyA"/>
     <link rel="icon" type="image/png" href="../public/favicon.png"/>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -21,7 +21,8 @@
 
     <link rel="stylesheet" href="../public/libs/select-2/css/select2.min.css"/>
 
-    <link rel="stylesheet" href="../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css">
+    <link rel="stylesheet" href="../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css"/>
+    <link rel="stylesheet" href="../public/libs/flick/flick.css"/>
     <!-- custom-css -->
     <link rel="stylesheet" href="../public/css/app.css"/>
     <!--[if lt IE 9]>
@@ -32,235 +33,844 @@
     <!-- jquery-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
+
 </head>
+
 <body>
-<div id="left_menu">
-    <ul class="list-unstyled">
-        <li id="menu-item-0">
-            <a href="#">BRUXELLES PRATIQUE</a>
-            <i class="fa fa-angle-down"></i>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="active" id="menu-item-1">
-            <a href="#">EAT &amp; DRINK</a>
-            <i class="fa fa-angle-down"></i>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-2">
-            <a href="#">BARS</a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-3">
-            <a href="#">SPORTS</a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-4">
-            <a href="#">LOISIRS </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-5">
-            <a href="#">BEAUTÉ </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-6">
-            <a href="#">MEDICAL </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class=" item-agenda" id="menu-item-7">
-            <a href="#"><i class="fa fa-calendar"></i> AGENDA </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-
-    </ul>
-</div>
-
-
-
-<header>
-
-    <section class="bg-transparent">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <button class="side-menu-trigger btn btn-dark bg-transparent rounded-0 border-0 p-0">
-                    <img src="../public/svg/menu-bar.svg" alt="">
-                </button>
-            </div>
-            <div class="col-md-4">
-
-                <a href="/" class="logo">
-                    <img src="../public/images/brusselslife_logo.png"
-                         title="Brusselslife.be"
-                         name="Brusselslife.be"
-                         alt="Brusselslife.be">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <div class="d-flex flex-row-reverse nav-right">
-                    <div id="lan-dropdown" data-toggle="dropdown">
-                        <div class="dropdown">
-                            <span>FR</span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">EN</a>
-                                </li>
-                                <li>
-                                    <a href="#">FR</a>
-                                </li>
-                                <li>
-                                    <a href="#">NL</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="#">Sign In <i class="fa fa-user"></i></a>
-                    <a href="#">Newsletter <i class="fa fa-envelope" aria-hidden="true"></i></a>
+<main>
+    <header>
+        <section class="bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <!--<button class="side-menu-trigger btn btn-dark bg-transparent rounded-0 border-0 p-0">-->
+                    <!--<img src="../public/svg/menu-bar.svg" alt="">-->
+                    <!--</button>-->
                 </div>
+                <div class="col-md-4">
 
-            </div>
-        </div>
-
-    </section>
-    <section class="main-navigation">
-        <nav>
-            <div class="" id="blifeNavBar">
-                <div class="main-menu-wrapper d-flex">
-                    <a href="/" class="small-logo">
+                    <a href="/" class="logo">
                         <img src="../public/images/brusselslife_logo.png"
                              title="Brusselslife.be"
                              name="Brusselslife.be"
                              alt="Brusselslife.be">
                     </a>
-                    <ul class="main-menu">
-                        <li id="menu-item-0">
-                            <a href="#">BRUXELLES PRATIQUE</a>
-                        </li>
-                        <li class="active" id="menu-item-1">
-                            <a href="#">EAT & DRINK</a>
-                        </li>
-                        <li class="" id="menu-item-2">
-                            <a href="#">BARS</a>
-                        </li>
-                        <li class="" id="menu-item-3">
-                            <a href="#">SPORTS</a>
-                        </li>
-                        <li class="" id="menu-item-4">
-                            <a href="#">LOISIRS </a>
-                        </li>
-                        <li class="" id="menu-item-5">
-                            <a href="#">BEAUTÉ </a>
-                        </li>
-                        <li class="" id="menu-item-6">
-                            <a href="#">MEDICAL </a>
-                        </li>
-                        <li class=" item-agenda" id="menu-item-7">
-                            <a href="#"><i class="fa fa-calendar"></i> AGENDA </a>
-                        </li>
+                </div>
+                <div class="col-md-4 news-login-lan">
+                    <div class="d-flex flex-row-reverse nav-right">
+                        <div id="lan-dropdown" data-toggle="dropdown">
+                            <div class="dropdown">
+                                <span>FR</span>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">EN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FR</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">NL</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span>
+                    <div class="dropdown mr-2"
+                         data-toggle="dropdown"
+                         id="login-register">
+
+
+                    <a class="btn btn-primary show-ov"
+                       href="#"><span> Sign in</span>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+
+                    <div class="dropdown-menu stop-closing">
+                        <div class="form-title">
+                            Sign in to Brusselslife
+                        </div>
+                        <div class="error-message">
+                            <div class="alert alert-danger">
+                                Please enter the correct username & password
+                            </div>
+                        </div>
+                        <form action="">
+                            <div class="input-element mb-4">
+                                <label for="username">Email address </label>
+                                <input id="username"
+                                       type="text" placeholder="" class="form-control">
+                            </div>
+
+                            <div class="input-element mb-4">
+                                <label for="password">Password</label>
+                                <input id="password"
+                                       type="password" placeholder="Password" class="form-control">
+                            </div>
+
+                            <div class="input-element  mb-4">
+                                <div class="checkbox custom-checkbox">
+                                    <input type="checkbox" id="keep_logged_in">
+                                    <label for="keep_logged_in">Keep me logged in</label>
+                                </div>
+
+                                <a href="#" class="forgot-pass pull-left">
+                                    Forgot password ?
+                                </a>
+                            </div>
+                            <button class="btn btn-primary" id="login-button">
+                                Login
+                            </button>
+
+
+                            <p class="mt-4 mb-0 text-center">Not a member ? &nbsp; <a href="#"
+                                                                                      class="btn btn-link btn-create-acc">Create
+                                a new account</a></p>
+
+                        </form>
+
+                        <div class="social-logins row pt-4">
+                            <div class="col-6">
+                                <a class="btn btn-link btn-google">Google</a>
+                            </div>
+                           <div class="col-6">
+                                <a class="btn btn-link btn-fb">Facebook</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+              </span>
+
+                        <a class="btn btn-primary" target="_blank" href="/newsletter">Newsletter <i class="fa fa-envelope"
+                                                                                                    aria-hidden="true"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="main-navigation">
+            <nav>
+                <div class="" id="blifeNavBar">
+                    <div class="main-menu-wrapper d-flex">
+                        <a href="/" class="small-logo">
+                            <img src="../public/images/brusselslife_logo.png"
+                                 title="Brusselslife.be"
+                                 name="Brusselslife.be"
+                                 alt="Brusselslife.be">
+                        </a>
+                        <ul class="main-menu">
+                            <li id="menu-item-0">
+                                <a href="#">BRUXELLES PRATIQUE</a>
+                            </li>
+                            <li id="menu-item-1">
+                                <a href="#">EAT & DRINK</a>
+                            </li>
+                            <li class="" id="menu-item-2">
+                                <a href="#">BARS</a>
+                            </li>
+                            <li class="" id="menu-item-3">
+                                <a href="#">SPORTS</a>
+                            </li>
+                            <li class="" id="menu-item-4">
+                                <a href="#">LOISIRS </a>
+                            </li>
+                            <li class="" id="menu-item-5">
+                                <a href="#">BEAUTÉ </a>
+                            </li>
+                            <li class="" id="menu-item-6">
+                                <a href="#">MEDICAL </a>
+                            </li>
+                            <li class="item-agenda active" id="menu-item-7">
+                                <a href="/agenda"><i class="fa fa-calendar"></i> AGENDA </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="sub-nav-wrapper" id="sub-menu-7">
+                <div class="sub-menu-wrapper d-lg-flex">
+                    <div class="sub-menu-titles d-lg-none d-sm-block">
+                       AGENDA <i class="fa fa-angle-right"></i>
+                    </div>
+
+                    <ul class="sub-level-1">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Concerts</a></li>
+                        <li><a href="#">Shows</a></li>
+                        <li><a href="#">Exhibitions</a></li>
+                        <li><a href="#">Theater</a></li>
+                        <li><a href="#">Nightlife</a></li>
+                        <li><a href="#">Cinema</a></li>
+                        <li><a href="#">Traiteurs</a></li>
                     </ul>
+                    <div class="clearfix"></div>
+
                 </div>
             </div>
-        </nav>
-        <div class="sub-nav-wrapper" id="sub-menu-1">
-            <div class="sub-menu-wrapper d-lg-flex">
-                <div class="sub-menu-titles d-lg-none d-sm-block">
-                    ALL EAT & DRINK <i class="fa fa-angle-right"></i>
-                </div>
-
-                <ul class="sub-level-1">
-                    <li><a href="#">Restaurants</a></li>
-                    <li><a href="#">Friteries</a></li>
-                    <li><a href="#">Sur Le Pouce</a></li>
-                    <li><a href="#">Food Trucks</a></li>
-                    <li><a href="#">Bars & Cafes</a></li>
-                    <li><a href="#">Tea & Coffee time</a></li>
-                    <li><a href="#">Traiteurs</a></li>
-
-                </ul>
-                <div class="clearfix"></div>
-
-            </div>
-        </div>
-    </section>
-    <div class="arrow-top bg-danger position-fixed text-center text-white">
-        <i class="fa fa-arrow-up"></i>
-        <span>
+        </section>
+        <div class="arrow-top bg-danger position-fixed text-center text-white">
+            <i class="fa fa-arrow-up"></i>
+            <span>
            <strong>TOP</strong>
       </span>
-    </div>
-</header>
-<main>
+        </div>
+    </header>
+
     
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+<!-- agenda search -->
+<blife-block>
+    <div id="home-search"
+         style="background:url('../public/images/agenda_bg.jpg') bottom center no-repeat; background-size:cover;">
+        <section class="container form-wrapper bg-transparent">
+            <div class="row align-items-center justify-content-center no-gutters">
+                <div class="col-12 col-lg-12">
 
-<!-- address page paid-->
+                    <div class="tag-line">
+                        Find events happenings around Brussels
+                    </div>
+
+                    <ul class="nav nav-tabs" id="search_tabs">
+                        <li>
+                            <a href="#" class="btn btn-default btn-md" data-href="/search">
+                                All
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-md" data-href="/search">
+                                Place
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-md" data-href="/search/articles">
+                                Article
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" class="btn btn-default btn-md" data-href="/search/events">
+                                Events
+                            </a>
+                        </li>
+
+                    </ul>
+                    <form id="search_form" action="/search/events">
+                        <label class="sr-only" for="search_input">
+                            Search events</label>
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend d-none d-sm-block">
+                                <div class="input-group-text">
+                                    <img src="../public/svg/bl-icon-search.svg" alt="">
+                                </div>
+                            </div>
+                            <input type="text" autofocus="true" autocomplete="off" class="form-control"
+                                   id="search_input"
+                                   placeholder="Search events">
+                            <div id="when">
+                                    <button class="btn btn-default stop-closing">
+                                        When <i class="fa fa-calendar"></i>
+                                    </button>
+                            </div>
+
+                            <div id="what">
+                                <select name="" id="event_categories" class="event-category form-control">
+                                    <option value="-1">What</option>
+                                    <option value="1">All</option>
+                                    <option value="1">Concerts</option>
+                                    <option value="1">Shows</option>
+                                    <option value="1">Exhibition</option>
+                                    <option value="1">Theater</option>
+                                    <option value="1">Nightlife</option>
+                                    <option value="1">Cinema</option>
+                                    <option value="1">Other</option>
+                                </select>
+                            </div>
+                            <div id="search_location" class="dropdown"
+                                 data-toggle="dropdown">
+
+                                <a href="#" class="btn btn-default" id="get_user_location"><img src="../public/svg/my-location-marker.svg" alt=""> Where ?</a><div class="dropdown-menu p-4 stop-closing">
+                                    <div class="l-title">
+                                        <img src="../public/svg/my-location-active.svg" alt=""> My location
+                                        <button class="btn btn-sm btn-default" id="btn_relocate">Relocate</button>
+                                    </div>
+
+                                    <div class="l-input py-4">
+                                        <input type="text" id="pac-input" placeholder="Choose location"
+                                               class="form-control">
+                                    </div>
+
+                                    <div id="l_current">
+
+                                        <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                            <small>Current location</small>
+                                        </p>
+                                        <div class="alert alert-warning"></div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="input-group-btn">
+                                <button class="btn btn-lg btn-primary" id="btn_submit">
+                               <span class="d-none d-sm-inline">
+                                    Rechercher
+                               </span>
+
+                                    <i class="fa fa-search d-inline d-sm-none"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutter colour-bars">
+            <div class="col-4 bg-orange"></div>
+            <div class="col-4 bg-blue"></div>
+            <div class="col-4 bg-light-blue"></div>
+        </div>
+    </div>
+</blife-block>
+
+<div id="leader-board">
+    <a href="#">
+        <img class="img-fluid" src="../public/images/leaderboard.jpg" alt="">
+    </a>
+</div>
 <section>
+    <div class="container">
+        <agenda-full-block>
+            <div id="agenda_first_block" class="position-relative border-bottom mb-3">
+                
+                <block-edit class="block-edit hide position-absolute">
+    <div class="row">
+        <div class="col">
+            <div class="block-info">
+                <span class="badge badge-dark block-name rounded-0">AGENDA FULL</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="edit-block float-right">
+                <div class="dropdown">
+                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu">
 
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Address</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Agenda</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Folder</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
+                                                             aria-hidden="true"></i> Article</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block-edit>
+                
+                <div class="row no-gutters">
+                    <div class="block-content">
+                        <div class="block-agenda">
+                            <div class="row row-20">
+                                <div class="col-12 bg-warning-2 block-title-full">
+                                    <h3 class="text-center py-2">
+                                        AGENDA DON’T MISS
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <div class="card border-0 rounded-0 pt-4">
+                                        <a href="#to_event">
+                                            <figure>
+                                                <img class="sombal rounded-0 d-block"
+                                                     data-src="../public/images/agenda_full.jpg"
+                                                     src="../public/images/blur.jpg"
+                                                     alt="">
+                                            </figure>
+                                        </a>
+                                        <div class="float-card p-2 pr-4 d-flex">
+                                            <div class="event-date-lg ">
+                                                <a href="#to_event">
+                                                  <span>
+                                                Apr
+                                            </span>
+                                                    14
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#to_event">
+                                                    <h3 class="event-title mt-2">
+                                                        Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                                    </h3>
+                                                </a>
+                                                <p class="event-date-sm">
+                                                    14 Apr 2018 - 15 May 2018
+                                                    &nbsp;
+                                                    <a class="btn btn-warning">
+                                                        Buy Tickets
+                                                    </a>
+                                                </p>
+                                                <a href="#" class="event-cat">MUSIC</a> <a href="#"
+                                                                                           class="event-location">|
+                                                Ixelles</a>
+                                            </div>
+                                            <!--<div title="Add to Calendar" class="addeventatc btn-addto-cal">
+    <p>+</p>
+    <small>
+        Add to <br>
+        Calendar
+    </small>
+    <span class="start">10/19/2018 08:00 AM</span>
+    <span class="end">10/19/2018 10:00 AM</span>
+    <span class="timezone">America/Los_Angeles</span>
+    <span class="title">Summary of the event</span>
+    <span class="description">Description of the event</span>
+</div>-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </agenda-full-block>
+
+        <agenda-3-block>
+            <div id="agenda_3_blocks">
+                <div class="row">
+                    <div class="col-12">
+                        
+                        <block-edit class="block-edit hide position-absolute">
+    <div class="row">
+        <div class="col">
+            <div class="block-info">
+                <span class="badge badge-dark block-name rounded-0">AGENDA 3 BLOCKS</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="edit-block float-right">
+                <div class="dropdown">
+                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Address</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Agenda</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Folder</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
+                                                             aria-hidden="true"></i> Article</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block-edit>
+                        
+                    </div>
+                </div>
+                <div class="block-content">
+                    <div class="agenda-content">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <a href="#">
+                                    <div class="media">
+                                        <img src="../public/images/agenda_1.jpg" alt="">
+                                        <div class="media-body ml-2">
+                                            <h3 class="title">
+                                                Brighten Skin Up Dull Tired Skin
+                                            </h3>
+                                            <p class="event-date-sm">21 Oct 2018</p>
+                                            <p>
+                                                <span class="event-cat">SPORTS</span><span class="event-location">Brussels</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+
+                                <a href="#">
+                                    <div class="media">
+                                        <img src="../public/images/agenda_2.jpg" alt="">
+                                        <div class="media-body ml-2">
+                                            <h3 class="title">
+                                                The Luxury Of Traveling With Yacht Charter
+                                            </h3>
+                                            <p class="event-date-sm">25 Nov 2018</p>
+                                            <p>
+                                                <span class="event-cat">SPORTS</span><span class="event-location">Brussels</span>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+
+                                <a href="#">
+                                    <div class="media">
+                                        <img src="../public/images/agenda_3.jpg" alt="">
+                                        <div class="media-body ml-2">
+                                            <h3 class="title">
+                                                10 Best fashion festiveal
+                                                around Brussels
+                                            </h3>
+                                            <p class="event-date-sm">22 Dec 2018</p>
+                                            <p>
+                                                <span class="event-cat">SPORTS</span><span class="event-location">Brussels</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </agenda-3-block>
+
+        <agenda-block>
+            <div class="row no-gutters mt-4 border-top"></div>
+            <div class="row">
+                <div class="col-12 col-md-7 pr-4">
+                    <div id="ag_block_3" class="position-relative mt-4">
+                        
+                        <block-edit class="block-edit hide position-absolute">
+    <div class="row">
+        <div class="col">
+            <div class="block-info">
+                <span class="badge badge-dark block-name rounded-0">AG BLOCK 3</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="edit-block float-right">
+                <div class="dropdown">
+                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Address</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Agenda</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Folder</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
+                                                             aria-hidden="true"></i> Article</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block-edit>
+                        
+                        <div class="block-content">
+                            <div class="block-agenda">
+                                <div class="card border-0 rounded-0 mb-4 bg-grey-alpha">
+                                    <a href="#to_event">
+                                        <figure>
+                                            <img class="sombal rounded-0 card-img-top"
+                                                 data-src="../public/images/agenda_left.jpg"
+                                                 alt="Agenda block 3">
+                                        </figure>
+                                    </a>
+                                    <div class="card-body pb-4 pl-0 pr-0 pt-2">
+                                        <div class="d-flex">
+                                            <div class="event-date-lg">
+                                                <a href="#to_event">
+                                                  <span>
+                                                Apr
+                                            </span>
+                                                    14
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#to_event">
+                                                    <h3 class="event-title my-2">
+                                                        Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                                    </h3>
+                                                </a>
+                                                <p class="event-date-sm">
+                                                    14 Apr 2018 - 15 May 2018
+
+                                                    <button class="btn btn-warning">
+                                                        Buy Tickets
+                                                    </button>
+                                                </p>
+                                                <a href="#" class="event-cat">MUSIC</a> <a href="#"
+                                                                                           class="event-location">Ixelles</a>
+                                            </div>
+                                            <div title="Add to Calendar" class="addeventatc btn-addto-cal">
+    <p>+</p>
+    <small>
+        Add to <br>
+        Calendar
+    </small>
+    <span class="start">10/19/2018 08:00 AM</span>
+    <span class="end">10/19/2018 10:00 AM</span>
+    <span class="timezone">America/Los_Angeles</span>
+    <span class="title">Summary of the event</span>
+    <span class="description">Description of the event</span>
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 pl-4 border-left">
+                    <blife-block>
+                        <div id="ag_block_3_1" class="position-relative mt-4">
+                            
+                            <block-edit class="block-edit hide position-absolute">
+    <div class="row">
+        <div class="col">
+            <div class="block-info">
+                <span class="badge badge-dark block-name rounded-0">AG BLOCK 3_1</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="edit-block float-right">
+                <div class="dropdown">
+                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Address</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Agenda</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Folder</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
+                                                             aria-hidden="true"></i> Article</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block-edit>
+                            
+                            <div class="block-content">
+                                <div class="agenda-content">
+
+                                    <a href="#submit-event" class="submit_event_link" title="Submit your event">
+                                        <div class="block-info">
+                                            Let us help you to spread the world
+                                            <button class="btn bg-warning-2">
+                                                Submit your event <img src="../public/svg/arrow-right.svg" alt="">
+                                            </button>
+                                        </div>
+
+                                    </a>
+
+                                    <a href="#" class="single-event pt-4 mt-4 border-top">
+                                        <figure>
+                                            <img src="../public/images/single_event.jpg" alt="">
+                                        </figure>
+                                        <h3 class="title mt-2">
+                                            Le Parvis de Saint-Gilles récupère son grand marché du week-end</h3>
+
+                                        <p class="event-date-sm">
+                                            14 Apr 2018
+                                        </p>
+                                        <p>
+                                            <span class="event-cat">MUSIC</span>
+                                            <span class="event-location">| Ixelles</span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </blife-block>
+                </div>
+
+            </div>
+        </agenda-block>
+
+        <agenda-block>
+            <div id="agenda_discovered">
+                
+                <block-edit class="block-edit hide position-absolute">
+    <div class="row">
+        <div class="col">
+            <div class="block-info">
+                <span class="badge badge-dark block-name rounded-0">AGENDA DISCOVERED</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="edit-block float-right">
+                <div class="dropdown">
+                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Address</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Agenda</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Folder</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
+                                                             aria-hidden="true"></i> Article</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block-edit>
+                
+
+                <div class="row row-20">
+                    <div class="block-content">
+                        <div class="block-agenda">
+                            <div class="col-12 bg-warning-2 block-title-full">
+                                <h3 class="text-center py-2">
+                                    AGENDA DON’T MISS
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </agenda-block>
+
+
+    </div>
 </section>
 
-
+<script src="../public/libs/select-2/select2.full.min.js"></script>
 <script type="text/javascript">
+
+    /**
+     * Brusselslife 7.0 Agenda
+     */
+    (function (window, $) {
+        'use strict';
+
+        var BrusselslifeAgenda = (function ($) {
+
+            function BrusselslifeAgenda() {
+
+                return {
+                    init: function () {
+                        _what();
+
+                    }
+                }
+            };
+
+
+            function _what() {
+                var ec = $("#event_categories");
+                ec.select2();
+//        ec.on('select2:select', function (e) {
+//
+//        });
+            }
+
+
+            return BrusselslifeAgenda;
+        })(jQuery);
+
+
+        var BA = new BrusselslifeAgenda();
+        BA.init();
+
+
+    })(jQuery);
 
 </script>
 </main>
@@ -528,27 +1138,32 @@
     </div>
 </footer>
 <div id="overlay"></div>
+<!-- bootstrap -->
 <script src="../public/libs/bootstrap-4/bootstrap-4-native.min.js"></script>
-
+<!-- scroll bar -->
 <script src="../public/libs/flick/flick.js"></script>
-<!--add this social sharing tool -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8d05b1d7183391"></script>
-
-
+<!-- slideout menu -->
+<script src="../public/libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
 <script type="text/javascript" src="../public/libs/sombal.js"></script>
 
+<!-- google maps -->
+
+
 <script type="text/javascript">
-
-    'use strict';
     (function (window, $) {
-
+        'use strict';
 
         var header = document.querySelector("header");
         var body = document.querySelector("body");
         var overlay = document.getElementById("overlay");
         var arrow = document.getElementsByClassName("arrow-top")[0];
+        var search_tabs = $("#search_tabs");
+        var search_form = $("search-form");
+        var l_current = $("#l_current ");
         var screen = $(window);
+        var geocoder;
+        var cl = localStorage.getItem('current_location');
 
         //Brusselslife Front End jQuery
         BrusselslifeFE = (function ($) {
@@ -557,17 +1172,19 @@
                     init: function () {
                         _load();
                         _common();
-                        _side_menu();
+                        _search_tabs();
+                        _get_user_location();
                     }
                 };
             }
 
             function _load() {
-                console.log("Brusselslife v6.0 HTML");
+                console.log("Brusselslife v7.0 HTML");
             }
 
             function _common() {
 
+                //screen scroll functions
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
                         header.classList.add("shrink-header");
@@ -580,7 +1197,7 @@
                     }
                 });
 
-
+                //move top arrow
                 if (arrow) {
                     arrow.style.right = (((screen.width() - 1024) / 2) - 52) + "px";
                     arrow.addEventListener('click', function () {
@@ -590,48 +1207,118 @@
                     });
                 }
 
+                //stop closing the dropdown
                 var sc = document.getElementsByClassName("stop-closing");
                 var i = sc.length;
                 while (i--) {
                     sc[i].addEventListener('click', function (e) {
                         e.stopPropagation();
+                        e.preventDefault();
+                        return false;
                     });
                 }
                 overlay.addEventListener('click', function () {
                     this.classList.remove('show');
                 });
+
                 $(".show-ov").on('click', function () {
                     overlay.classList.add("show");
-
                     $(".dropdown-menu").removeClass("show");
-
                 });
+            }
+
+            function _login() {
+
 
             }
 
-            function _side_menu() {
-                $("#left_menu").find("i.fa-angle-down").on('click', function () {
-                    $(this).next().slideToggle(100);
-                    $(".left-menu-level-1").not($(this).next()).slideUp(100);
+            function _user_location() {
+                geocoder = new google.maps.Geocoder;
+                if (navigator.geolocation) {
+                    cl = localStorage.getItem('current_location');
+                    if (cl == null || cl == '') {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            geocoder.geocode({
+                                'location': {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude
+                                }
+                            }, function (results, status) {
+                                if (status === 'OK') {
+
+                                    l_current.find("span").text(results[0].formatted_address);
+                                    localStorage.setItem('current_location', results[0].formatted_address);
+
+
+                                } else {
+                                    l_current.find("alert").fadeIn().text("Location not found. Please refresh your browser, or enable geo location");
+                                }
+                            });
+                        });
+                    } else {
+                        l_current.find("span").text(cl);
+                    }
+                }
+                var input = document.getElementById('pac-input');
+                var autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.addListener('place_changed', function () {
+                    var p = autocomplete.getPlace();
+                    l_current.find("span").text(p.formatted_address);
+                    localStorage.setItem('current_location', p.formatted_address);
                 });
+            }
+
+            function _get_user_location() {
+
+                document.getElementById("get_user_location").addEventListener('click', function () {
+                    _user_location();
+
+                });
+
+                $("#btn_relocate").on('click', function (e) {
+                    e.preventDefault();
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        geocoder.geocode({
+                            'location': {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            }
+                        }, function (results, status) {
+                            if (status === 'OK') {
+
+                                l_current.find("span").text(results[0].formatted_address);
+                                localStorage.setItem('current_location', results[0].formatted_address);
+
+
+                            } else {
+                                l_current.find("alert").fadeIn().text("Location not found. Please refresh your browser, or enable geo location");
+                            }
+                        });
+                    });
+                })
+
 
             }
 
+            function _search_tabs() {
+                var li = search_tabs.find("li");
+
+                li.on('click', function () {
+                    var eli = $(this);
+                    li.removeClass("active");
+                    eli.addClass("active");
+                    search_form.attr("action", eli.find("a").data("href") + "");
+                });
+            }
 
             return BrusselslifeFE;
         })(jQuery);
-
         var BrusselslifeFE = new BrusselslifeFE();
         BrusselslifeFE.init();
-
-
     })(window, jQuery);
-
 </script>
-
 
 <script type="text/javascript" src="../public/build/app.js?v5.3.0"></script>
 
 </body>
 </html>
-

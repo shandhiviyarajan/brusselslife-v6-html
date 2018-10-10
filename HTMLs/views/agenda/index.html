@@ -1,14 +1,311 @@
 ---
-layout : default.html
-title : Address Paid | Brusselslife.be
+layout : default_agenda.html
+title : Agenda Home | Brusselslife.be
 ---
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+<!-- agenda search -->
+{{> agenda-search }}
 
-<!-- address page paid-->
+{{> leader-board }}
 <section>
+    <div class="container">
+        <agenda-full-block>
+            <div id="agenda_first_block" class="position-relative border-bottom mb-3">
+                {{#parseJSON '{"name": "AGENDA FULL"}'}}
+                {{> block-edit}}
+                {{/parseJSON}}
+                <div class="row no-gutters">
+                    <div class="block-content">
+                        <div class="block-agenda">
+                            <div class="row row-20">
+                                <div class="col-12 bg-warning-2 block-title-full">
+                                    <h3 class="text-center py-2">
+                                        AGENDA DON’T MISS
+                                    </h3>
+                                </div>
+                            </div>
 
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <div class="card border-0 rounded-0 pt-4">
+                                        <a href="#to_event">
+                                            <figure>
+                                                <img class="sombal rounded-0 d-block"
+                                                     data-src="{{assets}}images/agenda_full.jpg"
+                                                     src="{{assets}}images/blur.jpg"
+                                                     alt="">
+                                            </figure>
+                                        </a>
+                                        <div class="float-card p-2 pr-4 d-flex">
+                                            <div class="event-date-lg ">
+                                                <a href="#to_event">
+                                                  <span>
+                                                Apr
+                                            </span>
+                                                    14
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#to_event">
+                                                    <h3 class="event-title mt-2">
+                                                        Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                                    </h3>
+                                                </a>
+                                                <p class="event-date-sm">
+                                                    14 Apr 2018 - 15 May 2018
+                                                    &nbsp;
+                                                    <a class="btn btn-warning">
+                                                        Buy Tickets
+                                                    </a>
+                                                </p>
+                                                <a href="#" class="event-cat">MUSIC</a> <a href="#"
+                                                                                           class="event-location">|
+                                                Ixelles</a>
+                                            </div>
+                                            <!--{{> add-to-calendar}}-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </agenda-full-block>
+
+        <agenda-3-block>
+            <div id="agenda_3_blocks">
+                <div class="row">
+                    <div class="col-12">
+                        {{#parseJSON '{"name": "AGENDA 3 BLOCKS"}'}}
+                        {{> block-edit}}
+                        {{/parseJSON}}
+                    </div>
+                </div>
+                <div class="block-content">
+                    <div class="agenda-content">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <a href="#">
+                                    <div class="media">
+                                        <img src="{{assets}}images/agenda_1.jpg" alt="">
+                                        <div class="media-body ml-2">
+                                            <h3 class="title">
+                                                Brighten Skin Up Dull Tired Skin
+                                            </h3>
+                                            <p class="event-date-sm">21 Oct 2018</p>
+                                            <p>
+                                                <span class="event-cat">SPORTS</span><span class="event-location">Brussels</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+
+                                <a href="#">
+                                    <div class="media">
+                                        <img src="{{assets}}images/agenda_2.jpg" alt="">
+                                        <div class="media-body ml-2">
+                                            <h3 class="title">
+                                                The Luxury Of Traveling With Yacht Charter
+                                            </h3>
+                                            <p class="event-date-sm">25 Nov 2018</p>
+                                            <p>
+                                                <span class="event-cat">SPORTS</span><span class="event-location">Brussels</span>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+
+                                <a href="#">
+                                    <div class="media">
+                                        <img src="{{assets}}images/agenda_3.jpg" alt="">
+                                        <div class="media-body ml-2">
+                                            <h3 class="title">
+                                                10 Best fashion festiveal
+                                                around Brussels
+                                            </h3>
+                                            <p class="event-date-sm">22 Dec 2018</p>
+                                            <p>
+                                                <span class="event-cat">SPORTS</span><span class="event-location">Brussels</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </agenda-3-block>
+
+        <agenda-block>
+            <div class="row no-gutters mt-4 border-top"></div>
+            <div class="row">
+                <div class="col-12 col-md-7 pr-4">
+                    <div id="ag_block_3" class="position-relative mt-4">
+                        {{#parseJSON '{"name": "AG BLOCK 3"}'}}
+                        {{> block-edit}}
+                        {{/parseJSON}}
+                        <div class="block-content">
+                            <div class="block-agenda">
+                                <div class="card border-0 rounded-0 mb-4 bg-grey-alpha">
+                                    <a href="#to_event">
+                                        <figure>
+                                            <img class="sombal rounded-0 card-img-top"
+                                                 data-src="{{assets}}images/agenda_left.jpg"
+                                                 alt="Agenda block 3">
+                                        </figure>
+                                    </a>
+                                    <div class="card-body pb-4 pl-0 pr-0 pt-2">
+                                        <div class="d-flex">
+                                            <div class="event-date-lg">
+                                                <a href="#to_event">
+                                                  <span>
+                                                Apr
+                                            </span>
+                                                    14
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#to_event">
+                                                    <h3 class="event-title my-2">
+                                                        Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                                    </h3>
+                                                </a>
+                                                <p class="event-date-sm">
+                                                    14 Apr 2018 - 15 May 2018
+
+                                                    <button class="btn btn-warning">
+                                                        Buy Tickets
+                                                    </button>
+                                                </p>
+                                                <a href="#" class="event-cat">MUSIC</a> <a href="#"
+                                                                                           class="event-location">Ixelles</a>
+                                            </div>
+                                            {{> add-to-calendar}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 pl-4 border-left">
+                    <blife-block>
+                        <div id="ag_block_3_1" class="position-relative mt-4">
+                            {{#parseJSON '{"name": "AG BLOCK 3_1"}'}}
+                            {{> block-edit}}
+                            {{/parseJSON}}
+                            <div class="block-content">
+                                <div class="agenda-content">
+
+                                    <a href="#submit-event" class="submit_event_link" title="Submit your event">
+                                        <div class="block-info">
+                                            Let us help you to spread the world
+                                            <button class="btn bg-warning-2">
+                                                Submit your event <img src="{{assets}}svg/arrow-right.svg" alt="">
+                                            </button>
+                                        </div>
+
+                                    </a>
+
+                                    <a href="#" class="single-event pt-4 mt-4 border-top">
+                                        <figure>
+                                            <img src="{{assets}}images/single_event.jpg" alt="">
+                                        </figure>
+                                        <h3 class="title mt-2">
+                                            Le Parvis de Saint-Gilles récupère son grand marché du week-end</h3>
+
+                                        <p class="event-date-sm">
+                                            14 Apr 2018
+                                        </p>
+                                        <p>
+                                            <span class="event-cat">MUSIC</span>
+                                            <span class="event-location">| Ixelles</span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </blife-block>
+                </div>
+
+            </div>
+        </agenda-block>
+
+        <agenda-block>
+            <div id="agenda_discovered">
+                {{#parseJSON '{"name": "AGENDA DISCOVERED"}'}}
+                {{> block-edit}}
+                {{/parseJSON}}
+
+                <div class="row row-20">
+                    <div class="block-content">
+                        <div class="block-agenda">
+                            <div class="col-12 bg-warning-2 block-title-full">
+                                <h3 class="text-center py-2">
+                                    AGENDA DON’T MISS
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </agenda-block>
+
+
+    </div>
 </section>
 
-
+<script src="{{assets}}libs/select-2/select2.full.min.js"></script>
 <script type="text/javascript">
+
+    /**
+     * Brusselslife 7.0 Agenda
+     */
+    (function (window, $) {
+        'use strict';
+
+        var BrusselslifeAgenda = (function ($) {
+
+            function BrusselslifeAgenda() {
+
+                return {
+                    init: function () {
+                        _what();
+
+                    }
+                }
+            };
+
+
+            function _what() {
+                var ec = $("#event_categories");
+                ec.select2();
+//        ec.on('select2:select', function (e) {
+//
+//        });
+            }
+
+
+            return BrusselslifeAgenda;
+        })(jQuery);
+
+
+        var BA = new BrusselslifeAgenda();
+        BA.init();
+
+
+    })(jQuery);
 
 </script>

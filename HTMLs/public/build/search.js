@@ -1,9 +1,9 @@
-'use strict';
-var center;
+/**
+ * Brusselslife 7.0 Search
+ */
+
 (function (window, $) {
-
-    //Brusselslife Search
-
+    'use strict';
 
     var search_input = document.getElementById("search_input");
     var s_len = search_input.value.length;
@@ -11,7 +11,7 @@ var center;
     var logged_in = false;
     var google_map = document.getElementById("google-map");
 
-    BrusselslifeSearch = (function ($) {
+    var BrusselslifeSearch = (function ($) {
         function BrusselslifeSearch() {
 
             return {
@@ -21,6 +21,7 @@ var center;
                     _search_results();
                     _select_location();
                     _datepicker();
+                    _side_menu();
                 }
             };
         }
@@ -35,6 +36,7 @@ var center;
                     this.classList.toggle("active");
                 });
             }
+
 
             if (s_len) {
                 btn_clear.style.display = "block";
@@ -68,14 +70,7 @@ var center;
         }
 
         function _loadmap() {
-
-            // if (false) {
-            //     navigator.geolocation.getCurrentPosition(function (position) {
-            //         center = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            //     });
-            // }
-
-            if(google_map){
+            if (google_map) {
                 var center = new google.maps.LatLng(50.839383500000, 4.349299900000);
 
                 var mapOptions = {
@@ -103,14 +98,37 @@ var center;
                     });
                 });
             }
+        }
 
+
+        function _side_menu() {
+            $("#left_menu").find("i.fa-angle-down").on('click', function () {
+                $(this).next().slideToggle(100);
+                $(".left-menu-level-1").not($(this).next()).slideUp(100);
+            });
+
+
+            var left_slide_out = new Slideout({
+                'panel': document.getElementById('panel'),
+                'menu': document.getElementById('left_menu'),
+                'side': 'left'
+            });
+
+            document.getElementsByClassName("side-menu-trigger")[0].addEventListener('click', function () {
+                left_slide_out.toggle();
+            });
+
+            left_slide_out.on('open', function () {
+                console.log(0);
+            });
 
 
         }
 
+
         function _select_location() {
 
-            var bs = $(".belgium-states");
+            var bs = $("#belgium-states");
             bs.select2();
             bs.on('select2:select', function (e) {
 
@@ -123,21 +141,21 @@ var center;
                 window.location = window.location.origin + window.location.pathname + "?venue=" + e.params.data.text;
             });
 
-
         }
 
-        function _datepicker(){
-
-            $('#event-choose-date').datepicker({
-                autoclose:true,
-                multidate:true,
-                todayHighlight:true
+        function _datepicker() {
+            $('#event-choose-date').each(function () {
+                $(this).datepicker({
+                    autoclose: true,
+                    multidate: true,
+                    todayHighlight: true
+                });
             });
         }
 
         return BrusselslifeSearch;
     })(jQuery);
 
-    var BrusselslifeSearch = new BrusselslifeSearch();
-    BrusselslifeSearch.init();
+    var BS = new BrusselslifeSearch();
+    BS.init();
 })(window, jQuery);

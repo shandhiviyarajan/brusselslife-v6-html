@@ -13,7 +13,7 @@
           content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no shrink-to-fit=no">
     <meta name="google-site-verification" content="AIzaSyD6yRFelNfJlGThrXJ70o1Rpvp18DaSmyA"/>
     <link rel="icon" type="image/png" href="../../public/favicon.png"/>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -21,7 +21,8 @@
 
     <link rel="stylesheet" href="../../public/libs/select-2/css/select2.min.css"/>
 
-    <link rel="stylesheet" href="../../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css">
+    <link rel="stylesheet" href="../../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css"/>
+    <link rel="stylesheet" href="../../public/libs/flick/flick.css"/>
     <!-- custom-css -->
     <link rel="stylesheet" href="../../public/css/app.css"/>
     <!--[if lt IE 9]>
@@ -32,10 +33,119 @@
     <!-- jquery-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
+
 </head>
 <body>
 
-<header class="header-search">
+
+<div id="left_menu" class="slideout-menu-left">
+    <ul class="list-unstyled">
+        <li id="menu-item-0">
+            <a href="#">BRUXELLES PRATIQUE</a>
+            <i class="fa fa-angle-down"></i>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li class="active" id="menu-item-1">
+            <a href="#">EAT &amp; DRINK</a>
+            <i class="fa fa-angle-down"></i>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li id="menu-item-2">
+            <a href="#">BARS</a>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li id="menu-item-3">
+            <a href="#">SPORTS</a>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li id="menu-item-4">
+            <a href="#">LOISIRS </a>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li id="menu-item-5">
+            <a href="#">BEAUTÉ </a>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li id="menu-item-6">
+            <a href="#">MEDICAL </a>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+        <li class="item-agenda" id="menu-item-7">
+            <a href="#"><i class="fa fa-calendar"></i> AGENDA </a>
+            <ul class="left-menu-level-1">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Friteries</a></li>
+                <li><a href="#">Sur Le Pouce</a></li>
+                <li><a href="#">Food Trucks</a></li>
+                <li><a href="#">Bars &amp; Cafes</a></li>
+                <li><a href="#">Tea &amp; Coffee time</a></li>
+                <li><a href="#">Traiteurs</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<main id="panel">
+    <header class="header-search">
     <div class="container bg-transparent p-0">
         <div class="row no-gutters">
 
@@ -65,7 +175,7 @@
                             title="Share results">
                         <i class="fa fa-share"></i>
                     </button>
-                    <input type="text" class="form-control" placeholder="Search..." autofocus value="Short eats"
+                    <input type="text" class="form-control" placeholder="Search..." autofocus value="Short eats" name="q" autocomplete="off"
                            id="search_input">
                 </form>
 
@@ -82,8 +192,6 @@
                     <div class="dropdown mr-2"
                          data-toggle="dropdown"
                          id="login-register">
-
-
                     <a class="btn btn-primary show-ov"
                        href="#">
                         <i class="fa fa-user" aria-hidden="true"></i>
@@ -169,7 +277,6 @@
         </div>
     </div>
 </header>
-<main>
     
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 <script type="text/javascript" src="../../public/libs/bootstrap-datepicker/js/bootstrap.datepicker.min.js"></script>
@@ -185,10 +292,9 @@
                             Location
                         </strong>
                     </h4>
-
                     <div class="choose-location">
                         <div class="locations">
-                            <select class="belgium-states form-control">
+                            <select id="belgium-states" class=" form-control">
                                 <option value="AK">Alaska</option>
                                 <option value="HI">Hawaii</option>
 
@@ -256,7 +362,6 @@
                         </button>
                         <div class="clearfix"></div>
                     </div>
-
                 </div>
 
                 <div class="filter mb-4 border-bottom">
@@ -690,14 +795,18 @@
                             <div class="card rounded-0 mb-4">
                                 <div class="card-body p-0 pb-2">
                                     <figure>
-                                        <a href="#" class="btn btn-link">
+                                        <a href="http://swipebox.csag.co/images/image-1.jpg" class="paid-gallery btn btn-link" rel="e_1">
                                             <i class="fa fa-camera" aria-hidden="true"></i>
                                         </a>
                                         <a href="#to_event">
                                             <img src="../../public/images/search/e-1.jpg" alt="">
                                         </a>
                                     </figure>
-                                    <div>
+                                    <a href="http://swipebox.csag.co/images/image-2.jpg" class="paid-gallery" rel="e_1">
+                                    </a>
+                                    <a href="http://swipebox.csag.co/images/image-3.jpg" class="paid-gallery" rel="e_1">
+                                    </a>
+                                    <div >
                                         <div class="event-date-lg ">
                                             <a href="#to_event">
                                                   <span>
@@ -1322,27 +1431,32 @@
     </div>
 </footer>
 <div id="overlay"></div>
+<!-- bootstrap -->
 <script src="../../public/libs/bootstrap-4/bootstrap-4-native.min.js"></script>
-
+<!-- scroll bar -->
 <script src="../../public/libs/flick/flick.js"></script>
-<!--add this social sharing tool -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8d05b1d7183391"></script>
-
-
+<!-- slideout menu -->
+<script src="../../public/libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
 <script type="text/javascript" src="../../public/libs/sombal.js"></script>
 
+<!-- google maps -->
+
+
 <script type="text/javascript">
-
-    'use strict';
     (function (window, $) {
-
+        'use strict';
 
         var header = document.querySelector("header");
         var body = document.querySelector("body");
         var overlay = document.getElementById("overlay");
         var arrow = document.getElementsByClassName("arrow-top")[0];
+        var search_tabs = $("#search_tabs");
+        var search_form = $("search-form");
+        var l_current = $("#l_current ");
         var screen = $(window);
+        var geocoder;
+        var cl = localStorage.getItem('current_location');
 
         //Brusselslife Front End jQuery
         BrusselslifeFE = (function ($) {
@@ -1351,17 +1465,19 @@
                     init: function () {
                         _load();
                         _common();
-                        _side_menu();
+                        _search_tabs();
+                        _get_user_location();
                     }
                 };
             }
 
             function _load() {
-                console.log("Brusselslife v6.0 HTML");
+                console.log("Brusselslife v7.0 HTML");
             }
 
             function _common() {
 
+                //screen scroll functions
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
                         header.classList.add("shrink-header");
@@ -1374,7 +1490,7 @@
                     }
                 });
 
-
+                //move top arrow
                 if (arrow) {
                     arrow.style.right = (((screen.width() - 1024) / 2) - 52) + "px";
                     arrow.addEventListener('click', function () {
@@ -1384,45 +1500,116 @@
                     });
                 }
 
+                //stop closing the dropdown
                 var sc = document.getElementsByClassName("stop-closing");
                 var i = sc.length;
                 while (i--) {
                     sc[i].addEventListener('click', function (e) {
                         e.stopPropagation();
+                        e.preventDefault();
+                        return false;
                     });
                 }
                 overlay.addEventListener('click', function () {
                     this.classList.remove('show');
                 });
+
                 $(".show-ov").on('click', function () {
                     overlay.classList.add("show");
-
                     $(".dropdown-menu").removeClass("show");
-
                 });
+            }
+
+            function _login() {
+
 
             }
 
-            function _side_menu() {
-                $("#left_menu").find("i.fa-angle-down").on('click', function () {
-                    $(this).next().slideToggle(100);
-                    $(".left-menu-level-1").not($(this).next()).slideUp(100);
+            function _user_location() {
+                geocoder = new google.maps.Geocoder;
+                if (navigator.geolocation) {
+                    cl = localStorage.getItem('current_location');
+                    if (cl == null || cl == '') {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            geocoder.geocode({
+                                'location': {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude
+                                }
+                            }, function (results, status) {
+                                if (status === 'OK') {
+
+                                    l_current.find("span").text(results[0].formatted_address);
+                                    localStorage.setItem('current_location', results[0].formatted_address);
+
+
+                                } else {
+                                    l_current.find("alert").fadeIn().text("Location not found. Please refresh your browser, or enable geo location");
+                                }
+                            });
+                        });
+                    } else {
+                        l_current.find("span").text(cl);
+                    }
+                }
+                var input = document.getElementById('pac-input');
+                var autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.addListener('place_changed', function () {
+                    var p = autocomplete.getPlace();
+                    l_current.find("span").text(p.formatted_address);
+                    localStorage.setItem('current_location', p.formatted_address);
                 });
+            }
+
+            function _get_user_location() {
+
+                document.getElementById("get_user_location").addEventListener('click', function () {
+                    _user_location();
+
+                });
+
+                $("#btn_relocate").on('click', function (e) {
+                    e.preventDefault();
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        geocoder.geocode({
+                            'location': {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            }
+                        }, function (results, status) {
+                            if (status === 'OK') {
+
+                                l_current.find("span").text(results[0].formatted_address);
+                                localStorage.setItem('current_location', results[0].formatted_address);
+
+
+                            } else {
+                                l_current.find("alert").fadeIn().text("Location not found. Please refresh your browser, or enable geo location");
+                            }
+                        });
+                    });
+                })
+
 
             }
 
+            function _search_tabs() {
+                var li = search_tabs.find("li");
+
+                li.on('click', function () {
+                    var eli = $(this);
+                    li.removeClass("active");
+                    eli.addClass("active");
+                    search_form.attr("action", eli.find("a").data("href") + "");
+                });
+            }
 
             return BrusselslifeFE;
         })(jQuery);
-
         var BrusselslifeFE = new BrusselslifeFE();
         BrusselslifeFE.init();
-
-
     })(window, jQuery);
-
 </script>
-
 
 <script type="text/javascript" src="../../public/build/app.js?v5.3.0"></script>
 

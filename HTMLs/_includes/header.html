@@ -1,117 +1,7 @@
-<div id="left_menu">
-    <ul class="list-unstyled">
-        <li id="menu-item-0">
-            <a href="#">BRUXELLES PRATIQUE</a>
-            <i class="fa fa-angle-down"></i>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="active" id="menu-item-1">
-            <a href="#">EAT &amp; DRINK</a>
-            <i class="fa fa-angle-down"></i>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-2">
-            <a href="#">BARS</a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-3">
-            <a href="#">SPORTS</a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-4">
-            <a href="#">LOISIRS </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-5">
-            <a href="#">BEAUTÉ </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class="" id="menu-item-6">
-            <a href="#">MEDICAL </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-        <li class=" item-agenda" id="menu-item-7">
-            <a href="#"><i class="fa fa-calendar"></i> AGENDA </a>
-            <ul class="left-menu-level-1">
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Friteries</a></li>
-                <li><a href="#">Sur Le Pouce</a></li>
-                <li><a href="#">Food Trucks</a></li>
-                <li><a href="#">Bars &amp; Cafes</a></li>
-                <li><a href="#">Tea &amp; Coffee time</a></li>
-                <li><a href="#">Traiteurs</a></li>
-            </ul>
-        </li>
-
-    </ul>
-</div>
-
-
-
 <header>
-
     <section class="bg-transparent">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <button class="side-menu-trigger btn btn-dark bg-transparent rounded-0 border-0 p-0">
-                    <img src="{{assets}}svg/menu-bar.svg" alt="">
-                </button>
             </div>
             <div class="col-md-4">
 
@@ -122,7 +12,7 @@
                          alt="Brusselslife.be">
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 news-login-lan">
                 <div class="d-flex flex-row-reverse nav-right">
                     <div id="lan-dropdown" data-toggle="dropdown">
                         <div class="dropdown">
@@ -140,8 +30,10 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="#">Sign In <i class="fa fa-user"></i></a>
-                    <a href="#">Newsletter <i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    {{>login-form}}
+
+                    <a class="btn btn-primary" target="_blank" href="/newsletter">Newsletter <i class="fa fa-envelope"
+                                                                                                aria-hidden="true"></i></a>
                 </div>
 
             </div>
@@ -181,7 +73,7 @@
                             <a href="#">MEDICAL </a>
                         </li>
                         <li class=" item-agenda" id="menu-item-7">
-                            <a href="#"><i class="fa fa-calendar"></i> AGENDA </a>
+                            <a href="/agenda"><i class="fa fa-calendar"></i> AGENDA </a>
                         </li>
                     </ul>
                 </div>

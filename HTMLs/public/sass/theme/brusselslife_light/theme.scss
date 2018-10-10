@@ -110,7 +110,6 @@ a, .btn-link {
   .container {
     width: 1024px;
     max-width: 1024px;
-    background: #fff;
   }
 }
 
@@ -126,6 +125,14 @@ a, .btn-link {
 
 .bg-warning {
   background-color: $primary-orange;
+}
+
+.bg-warning-2 {
+  background-color: #EA9C1E;
+}
+
+.row-20 {
+  margin: 0px -20px;
 }
 
 .bg-danger {
@@ -440,7 +447,8 @@ footer {
     }
   }
 }
-#overlay{
+
+#overlay {
   display: none;
   position: fixed;
   width: 100%;
@@ -454,11 +462,11 @@ footer {
     display: block;
   }
 }
-.modal{
+
+.modal {
   background: #25475a91;
   z-index: 100001;
 }
-
 
 #bl-intro {
   background: $primary-color;
@@ -493,12 +501,6 @@ footer {
       display: block;
       margin: 0 auto;
     }
-  }
-}
-
-#block-17 {
-  h2 {
-    text-transform: uppercase;
   }
 }
 
@@ -708,11 +710,7 @@ div.checkbox {
     background-color: #e5e5e5;
   }
 
-  input[type="checkbox"] {
-    float: left;
-    margin: 2px 5px 3px 0px;
-  }
-
+  input[type="checkbox"],
   label {
     cursor: pointer;
     margin: 0px;
@@ -744,7 +742,8 @@ div.checkbox.custom-checkbox {
     font-family: FontAwesome;
 
   }
-  input[type ="checkbox"] {
+  input[type ="checkbox"],
+  input[type ="radio"] {
     float: left;
     margin: 3px 5px 3px 0px;
     position: absolute;
@@ -762,8 +761,14 @@ div.checkbox.custom-checkbox {
       background: $primary-green;
       color: #fff;
       border: none;
-
     }
+  }
+}
+
+div.radio.custom-radio {
+  padding-left: 10px;
+  label {
+    cursor: pointer;
   }
 }
 
@@ -834,6 +839,118 @@ button.btn-book-mark {
 }
 
 
+//event date, category, location, title, add to cal button
+div.event-date-lg {
+  a {
+    line-height: 0.85em;
+    text-align: center;
+    display: block;
+    color: #fff;
+    position: relative;
+    padding: 10px 15px 0px 15px;
+    margin-right: 10px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      border-right: thin solid #d4d4d4;
+      position: absolute;
+      top: 18px;
+      right: 0px;
+    }
+
+  }
+  span {
+    font-size: 13px;
+    display: block;
+    text-transform: uppercase;
+    color: red;
+    font-weight: 400;
+  }
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+}
+p.event-date-sm {
+  font-family: sans-serif;
+  margin: 0px;
+  color: #777777;
+  button,
+  a.btn {
+    color: #000;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 2px;
+
+  }
+}
+h3.event-title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3em;
+  color: #fff;
+  span {
+    float: left;
+    padding-top: 2px;
+    font-size: 14px;
+    margin: 0px 10px 14px 0px;
+
+  }
+}
+.event-cat {
+  font-family: $secondary-title-font;
+  font-weight: bold;
+  font-size: 14px;
+  color: $primary-red;
+  margin-right: 0px;
+}
+.event-location {
+  color: #fff;
+  font-size: 14px;
+}
+.btn-addto-cal {
+  z-index: 1000 !important;
+  color: #000;
+  font-size: 9px;
+  border-left: thin solid #DEDEDE;
+  padding: 0px 10px;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  height: 60px;
+  margin: 20px 0px 0px 10px;
+  background:transparent !important;
+
+
+  &:focus {
+    outline: 0;
+  }
+
+  .addeventatc_icon {
+    display: none !important;
+  }
+  small {
+    display: block;
+    text-align: center;
+  }
+
+  p {
+    display: block;
+    height: 36px;
+    text-align: center;
+    width: 36px;
+    background: #D8D8D8;
+    font-size: 20px;
+    line-height: 36px;
+    border-radius: 4px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+}
 
 
 

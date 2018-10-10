@@ -262,27 +262,32 @@
     </div>
 </footer>
 <div id="overlay"></div>
+<!-- bootstrap -->
 <script src="{{assets}}libs/bootstrap-4/bootstrap-4-native.min.js"></script>
-
+<!-- scroll bar -->
 <script src="{{assets}}libs/flick/flick.js"></script>
-<!--add this social sharing tool -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8d05b1d7183391"></script>
-
-
+<!-- slideout menu -->
+<script src="{{assets}}libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
 <script type="text/javascript" src="{{assets}}libs/sombal.js"></script>
 
+<!-- google maps -->
+
+
 <script type="text/javascript">
-
-    'use strict';
     (function (window, $) {
-
+        'use strict';
 
         var header = document.querySelector("header");
         var body = document.querySelector("body");
         var overlay = document.getElementById("overlay");
         var arrow = document.getElementsByClassName("arrow-top")[0];
+        var search_tabs = $("#search_tabs");
+        var search_form = $("search-form");
+        var l_current = $("#l_current ");
         var screen = $(window);
+        var geocoder;
+        var cl = localStorage.getItem('current_location');
 
         //Brusselslife Front End jQuery
         BrusselslifeFE = (function ($) {
@@ -291,17 +296,19 @@
                     init: function () {
                         _load();
                         _common();
-                        _side_menu();
+                        _search_tabs();
+                        _get_user_location();
                     }
                 };
             }
 
             function _load() {
-                console.log("Brusselslife v6.0 HTML");
+                console.log("Brusselslife v7.0 HTML");
             }
 
             function _common() {
 
+                //screen scroll functions
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
                         header.classList.add("shrink-header");
@@ -314,7 +321,7 @@
                     }
                 });
 
-
+                //move top arrow
                 if (arrow) {
                     arrow.style.right = (((screen.width() - 1024) / 2) - 52) + "px";
                     arrow.addEventListener('click', function () {
@@ -324,44 +331,115 @@
                     });
                 }
 
+                //stop closing the dropdown
                 var sc = document.getElementsByClassName("stop-closing");
                 var i = sc.length;
                 while (i--) {
                     sc[i].addEventListener('click', function (e) {
                         e.stopPropagation();
+                        e.preventDefault();
+                        return false;
                     });
                 }
                 overlay.addEventListener('click', function () {
                     this.classList.remove('show');
                 });
+
                 $(".show-ov").on('click', function () {
                     overlay.classList.add("show");
-
                     $(".dropdown-menu").removeClass("show");
-
                 });
+            }
+
+            function _login() {
+
 
             }
 
-            function _side_menu() {
-                $("#left_menu").find("i.fa-angle-down").on('click', function () {
-                    $(this).next().slideToggle(100);
-                    $(".left-menu-level-1").not($(this).next()).slideUp(100);
+            function _user_location() {
+                geocoder = new google.maps.Geocoder;
+                if (navigator.geolocation) {
+                    cl = localStorage.getItem('current_location');
+                    if (cl == null || cl == '') {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            geocoder.geocode({
+                                'location': {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude
+                                }
+                            }, function (results, status) {
+                                if (status === 'OK') {
+
+                                    l_current.find("span").text(results[0].formatted_address);
+                                    localStorage.setItem('current_location', results[0].formatted_address);
+
+
+                                } else {
+                                    l_current.find("alert").fadeIn().text("Location not found. Please refresh your browser, or enable geo location");
+                                }
+                            });
+                        });
+                    } else {
+                        l_current.find("span").text(cl);
+                    }
+                }
+                var input = document.getElementById('pac-input');
+                var autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.addListener('place_changed', function () {
+                    var p = autocomplete.getPlace();
+                    l_current.find("span").text(p.formatted_address);
+                    localStorage.setItem('current_location', p.formatted_address);
                 });
+            }
+
+            function _get_user_location() {
+
+                document.getElementById("get_user_location").addEventListener('click', function () {
+                    _user_location();
+
+                });
+
+                $("#btn_relocate").on('click', function (e) {
+                    e.preventDefault();
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        geocoder.geocode({
+                            'location': {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            }
+                        }, function (results, status) {
+                            if (status === 'OK') {
+
+                                l_current.find("span").text(results[0].formatted_address);
+                                localStorage.setItem('current_location', results[0].formatted_address);
+
+
+                            } else {
+                                l_current.find("alert").fadeIn().text("Location not found. Please refresh your browser, or enable geo location");
+                            }
+                        });
+                    });
+                })
+
 
             }
 
+            function _search_tabs() {
+                var li = search_tabs.find("li");
+
+                li.on('click', function () {
+                    var eli = $(this);
+                    li.removeClass("active");
+                    eli.addClass("active");
+                    search_form.attr("action", eli.find("a").data("href") + "");
+                });
+            }
 
             return BrusselslifeFE;
         })(jQuery);
-
         var BrusselslifeFE = new BrusselslifeFE();
         BrusselslifeFE.init();
-
-
     })(window, jQuery);
-
 </script>
-
 
 <script type="text/javascript" src="{{assets}}build/app.js?v5.3.0"></script>

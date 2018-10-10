@@ -1,0 +1,19 @@
+
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="0.0507692308 0.286 21.3165192 0.286 21.3165192 17.99825 0.0507692308 17.99825"></polygon>
+    </defs>
+    <g id="Brusselslife-agenda" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Brusselslife-Agenda-home" transform="translate(-1112.000000, -1119.000000)">
+            <g id="Group-4" transform="translate(933.000000, 1106.000000)">
+                <g id="right-arrow-(1)" transform="translate(179.000000, 13.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M14.355,0.552 C14.0639231,0.197 13.5816154,0.197 13.2803846,0.552 C12.9901538,0.896 12.9901538,1.466 13.2803846,1.81 L18.7279231,8.247 L0.753923077,8.247 C0.334230769,8.247 0,8.642 0,9.138 C0,9.63 0.334230769,10.04 0.753923077,10.04 L18.7279231,10.04 L13.2803846,16.462 C12.9901538,16.818 12.9901538,17.392 13.2803846,17.732 C13.5816154,18.087 14.0639231,18.087 14.355,17.732 L21.0912308,9.771 C21.3916154,9.427 21.3916154,8.857 21.0912308,8.517 L14.355,0.552 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
