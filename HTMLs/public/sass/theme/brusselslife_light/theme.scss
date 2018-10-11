@@ -838,7 +838,6 @@ button.btn-book-mark {
   right: 10px;
 }
 
-
 //event date, category, location, title, add to cal button
 div.event-date-lg {
   a {
@@ -873,10 +872,12 @@ div.event-date-lg {
   font-size: 28px;
   font-weight: bold;
 }
+
 p.event-date-sm {
   font-family: sans-serif;
   margin: 0px;
   color: #777777;
+  line-height: 1em;
   button,
   a.btn {
     color: #000;
@@ -887,10 +888,11 @@ p.event-date-sm {
 
   }
 }
+
 h3.event-title {
   font-size: 22px;
   font-weight: bold;
-  line-height: 1.3em;
+  line-height: 1.5em;
   color: #fff;
   span {
     float: left;
@@ -900,6 +902,7 @@ h3.event-title {
 
   }
 }
+
 .event-cat {
   font-family: $secondary-title-font;
   font-weight: bold;
@@ -907,10 +910,12 @@ h3.event-title {
   color: $primary-red;
   margin-right: 0px;
 }
+
 .event-location {
   color: #fff;
   font-size: 14px;
 }
+
 .btn-addto-cal {
   z-index: 1000 !important;
   color: #000;
@@ -922,8 +927,7 @@ h3.event-title {
   box-shadow: none !important;
   height: 60px;
   margin: 20px 0px 0px 10px;
-  background:transparent !important;
-
+  background: transparent !important;
 
   &:focus {
     outline: 0;

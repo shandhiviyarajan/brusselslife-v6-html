@@ -45,9 +45,11 @@
                                    id="search_input"
                                    placeholder="Search events">
                             <div id="when">
-                                    <button class="btn btn-default stop-closing">
-                                        When <i class="fa fa-calendar"></i>
-                                    </button>
+                                <button id="date_range_picker" class="btn btn-default stop-closing" data-toggle="tooltip"
+                                        data-placement="top"
+                                        data-original-title="Choose date or date range">
+                                    When <i class="fa fa-calendar"></i>
+                                </button>
                             </div>
 
                             <div id="what">
@@ -66,7 +68,9 @@
                             <div id="search_location" class="dropdown"
                                  data-toggle="dropdown">
 
-                                <a href="#" class="btn btn-default" id="get_user_location"><img src="{{assets}}svg/my-location-marker.svg" alt=""> Where ?</a><div class="dropdown-menu p-4 stop-closing">
+                                <a href="#" class="btn btn-default" id="get_user_location"><img
+                                        src="{{assets}}svg/my-location-marker.svg" alt=""> Where ?</a>
+                                <div class="dropdown-menu p-4 stop-closing">
                                     <div class="l-title">
                                         <img src="{{assets}}svg/my-location-active.svg" alt=""> My location
                                         <button class="btn btn-sm btn-default" id="btn_relocate">Relocate</button>

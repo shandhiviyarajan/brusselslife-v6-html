@@ -1,6 +1,5 @@
 #agenda_first_block {
 
-
   .block-title-full {
     margin: 0px 0px;
     h3 {
@@ -19,7 +18,6 @@
       background: rgba(0, 0, 0, 0.90);
     }
   }
-
   p.event-date-sm {
     color: #fff;
   }
@@ -47,15 +45,16 @@
       transform: translateY(-10px);
 
       h3.title {
-        color: #252525;
+        color: #000;
       }
     }
 
     h3.title {
       font-weight: bold;
-      font-size: 15px;
-      color: #000;
+      font-size: 14px;
+      color: #3F3F3F;
       line-height: 1.4em;
+      margin-bottom: 10px;
     }
     p {
       margin: 0px;
@@ -68,7 +67,9 @@
         padding-left: 15px;
       }
     }
-
+    p.event-date-sm {
+      margin: 0px 0px 5px 0px;
+    }
   }
 }
 
@@ -130,9 +131,15 @@
 
     display: block;
     h3.title {
-      color: #000;
+      color: #3F3F3F;
+      line-height: 1.5em;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 14px;
+
+    }
+
+    p.event-date-sm {
+      margin: 5px 0px 5px 0px;
     }
 
     span.event-location {
@@ -144,11 +151,133 @@
   }
 }
 
-#agenda_discovered{
+#agenda_discovered {
   .block-title-full {
     margin: 0px 0px;
     h3 {
       font-size: 20px;
     }
   }
+
+  .block-content {
+    margin: 0px -10px;
+    background-color: #fff;
+  }
+
+  div.card {
+    background-color: #fff;
+    width: 275px;
+    margin-right: $gutter;
+
+    &:hover {
+      h3 {
+        color: #252525;
+      }
+    }
+
+    img {
+      height: 175px;
+    }
+
+    h3 {
+      font-family: $content-font;
+      color: #000;
+      line-height: 1.5em;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .event-location {
+      color: #666;
+    }
+
+    .event-date-sm {
+      margin: 5px 0px 5px 0px;
+    }
+
+    div.card-body {
+      min-height: 100px;
+    }
+  }
+
+  .block-title-full {
+    h3 {
+      font-size: 20px;
+    }
+  }
 }
+
+#agenda_started {
+  .block-title-full {
+    margin: 0px 0px;
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  div.media-version,
+  div.card-version {
+
+    h3.event-title {
+      color: #3F3F3F;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .event-date-sm {
+      margin: 5px 0px 5px 0px;
+    }
+    .event-location {
+      color: #666;
+    }
+
+    div.card {
+      padding: 5px 5px;
+      div.card-body {
+        padding: 0px;
+      }
+    }
+    div.media {
+      padding: 5px;
+      margin-bottom: 20px;
+
+      p.event-date-sm {
+        margin: 0px 0px 5px 0px;
+      }
+    }
+
+    div.card,
+    div.media {
+      cursor: pointer;
+      -webkit-transition: 0.2s ease;
+      -moz-transition: 0.2s ease;
+      -ms-transition: 0.2s ease;
+      -o-transition: 0.2s ease;
+      transition: 0.2s ease;
+
+      &:active {
+        -webkit-transition: 0s ease;
+        -moz-transition: 0s ease;
+        -ms-transition: 0s ease;
+        -o-transition: 0s ease;
+        transition: 0s ease;
+        background: #f1f1f1;
+      }
+      &:hover {
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+        transform: translateY(-5px);
+        -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+
+        h3.event-title {
+          color: #000;
+        }
+      }
+    }
+  }
+
+}
+

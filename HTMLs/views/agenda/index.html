@@ -2,13 +2,14 @@
 layout : default_agenda.html
 title : Agenda Home | Brusselslife.be
 ---
-<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+<link rel="stylesheet" href="{{assets}}libs/daterangepicker/daterangepicker.css"/>
 <!-- agenda search -->
 {{> agenda-search }}
 
 {{> leader-board }}
 <section>
     <div class="container">
+
         <agenda-full-block>
             <div id="agenda_first_block" class="position-relative border-bottom mb-3">
                 {{#parseJSON '{"name": "AGENDA FULL"}'}}
@@ -245,17 +246,205 @@ title : Agenda Home | Brusselslife.be
 
         <agenda-block>
             <div id="agenda_discovered">
-                {{#parseJSON '{"name": "AGENDA DISCOVERED"}'}}
-                {{> block-edit}}
-                {{/parseJSON}}
-
                 <div class="row row-20">
-                    <div class="block-content">
-                        <div class="block-agenda">
-                            <div class="col-12 bg-warning-2 block-title-full">
-                                <h3 class="text-center py-2">
-                                    AGENDA DON’T MISS
-                                </h3>
+                    <div class="col-12 bg-warning-2 block-title-full">
+                        <h3 class="text-center py-2">
+                            TO BE DISCOVERED ALSO
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="position-relative mb-4">
+                        {{#parseJSON '{"name": "TO BE DISCOVERED"}'}}
+                        {{> block-edit}}
+                        {{/parseJSON}}
+                        <div class="block-content">
+                            <div class="home-carousel-agenda">
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-1.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-2.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                                    lorem ipsum...
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-3.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-4.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-1.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-2.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-3.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="card border-0 rounded-0 mt-4">
+                                        <a href="#">
+                                            <img class="card-img-top rounded-0"
+                                                 data-flickity-lazyload="{{assets}}images/ag-carousel-4.jpg" alt="">
+                                        </a>
+                                        <div class="card-body position-relative p-0">
+                                            <a href="#">
+                                                <h3 class="title mt-2">
+                                                    The Luxury Of Traveling With Yacht Charter
+                                                </h3>
+                                                <p class="event-date-sm">25 Nov 2018</p>
+                                            </a>
+                                            <a href="#" class="event-cat">
+                                                <span>SPORTS</span>
+                                            </a>
+                                            &nbsp;
+                                            <a href="#" class="event-location">
+                                                Brussels
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -263,10 +452,469 @@ title : Agenda Home | Brusselslife.be
             </div>
         </agenda-block>
 
+        <agenda-block>
+            <div id="agenda_started">
+                <div class="row row-20">
+                    <div class="col-12 bg-warning-2 block-title-full">
+                        <h3 class="text-center py-2">
+                            EVENTS ALREADY STARTED
+                        </h3>
+                    </div>
+                </div>
 
+                <div class="row card-version">
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-0 my-4">
+                            <a href="#">
+                                <img class="sombal card-img-top rounded-0"
+                                     data-src="{{assets}}images/event_s_1.jpg" alt="">
+                            </a>
+                            <div class="card-body position-relative">
+                                <a href="#">
+                                    <h3 class="event-title mt-2">
+                                        The Luxury Of Traveling With Yacht Charter
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-0 my-4">
+                            <a href="#">
+                                <img class="sombal card-img-top rounded-0"
+                                     data-src="{{assets}}images/event_s_2.jpg" alt="">
+                            </a>
+                            <div class="card-body position-relative">
+                                <a href="#">
+                                    <h3 class="event-title mt-2">
+                                        Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-0 my-4">
+                            <a href="#">
+                                <img class="sombal card-img-top rounded-0"
+                                     data-src="{{assets}}images/event_s_3.jpg" alt="">
+                            </a>
+                            <div class="card-body position-relative">
+                                <a href="#">
+                                    <h3 class="event-title mt-2">
+                                        Always Look On The Bright Side Of Life
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row media-version">
+
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_7.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_8.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_9.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_4.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_5.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_6.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row card-version">
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-0 my-4">
+                            <a href="#">
+                                <img class="sombal card-img-top rounded-0"
+                                     data-src="{{assets}}images/event_s_1.jpg" alt="">
+                            </a>
+                            <div class="card-body position-relative">
+                                <a href="#">
+                                    <h3 class="event-title mt-2">
+                                        The Luxury Of Traveling With Yacht Charter
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-0 my-4">
+                            <a href="#">
+                                <img class="sombal card-img-top rounded-0"
+                                     data-src="{{assets}}images/event_s_2.jpg" alt="">
+                            </a>
+                            <div class="card-body position-relative">
+                                <a href="#">
+                                    <h3 class="event-title mt-2">
+                                        Le Parvis de Saint-Gilles récupère son grand marché du week-end
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-0 my-4">
+                            <a href="#">
+                                <img class="sombal card-img-top rounded-0"
+                                     data-src="{{assets}}images/event_s_3.jpg" alt="">
+                            </a>
+                            <div class="card-body position-relative">
+                                <a href="#">
+                                    <h3 class="event-title mt-2">
+                                        Always Look On The Bright Side Of Life
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row media-version">
+
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_7.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_8.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_9.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_4.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_5.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <figure>
+                                <a href="#">
+                                    <img src="{{assets}}images/agenda_6.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="media-body ml-2">
+                                <a href="#">
+                                    <h3 class="event-title mb-2">
+                                        Brighten Skin Up Dull Tired Skin
+                                    </h3>
+                                    <p class="event-date-sm">14 Apr 2018 - 14 Apr 2018</p>
+                                </a>
+                                <a href="#" class="event-cat">
+                                    <span>SPORTS</span>
+                                </a>
+                                &nbsp;
+                                <a href="#" class="event-location">
+                                    Brussels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </agenda-block>
     </div>
 </section>
 
+<script type="text/javascript" src="{{assets}}libs/daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="{{assets}}libs/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js"
+        async defer></script>
 <script src="{{assets}}libs/select-2/select2.full.min.js"></script>
 <script type="text/javascript">
 
@@ -283,7 +931,7 @@ title : Agenda Home | Brusselslife.be
                 return {
                     init: function () {
                         _what();
-
+                        _when();
                     }
                 }
             };
@@ -295,6 +943,49 @@ title : Agenda Home | Brusselslife.be
 //        ec.on('select2:select', function (e) {
 //
 //        });
+            }
+
+
+            function _when() {
+
+                var start = moment().subtract(0, 'days');
+                var end = moment();
+
+                function cb(start, end) {
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                }
+
+                $("#date_range_picker").daterangepicker({
+                    startDate: start,
+                    endDate: end,
+                    autoApply: true,
+                    alwaysShowCalendars: true,
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+                }, cb);
+
+                cb(start, end);
+                var date_range_picker = $("#date_range_picker");
+
+                date_range_picker.on('apply.daterangepicker', function (dr, picker) {
+
+
+                    if (picker.startDate.format('YYYY-MM-DD') == picker.endDate.format('YYYY-MM-DD')) {
+                        date_range_picker.attr('data-original-title', picker.startDate.format('YYYY-MM-DD'));
+                    }else{
+                        date_range_picker.attr('data-original-title', picker.startDate.format('YYYY-MM-DD')+"  -  "+picker.startDate.format('YYYY-MM-DD'));
+                    }
+
+
+                });
+
+
             }
 
 

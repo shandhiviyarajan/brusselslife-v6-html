@@ -337,8 +337,8 @@
                 while (i--) {
                     sc[i].addEventListener('click', function (e) {
                         e.stopPropagation();
-                        e.preventDefault();
-                        return false;
+                       e.preventDefault();
+//                        return false;
                     });
                 }
                 overlay.addEventListener('click', function () {
@@ -396,7 +396,6 @@
 
                 document.getElementById("get_user_location").addEventListener('click', function () {
                     _user_location();
-
                 });
 
                 $("#btn_relocate").on('click', function (e) {
@@ -419,7 +418,7 @@
                             }
                         });
                     });
-                })
+                });
 
 
             }

@@ -23,6 +23,8 @@
 
     <link rel="stylesheet" href="../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css"/>
     <link rel="stylesheet" href="../public/libs/flick/flick.css"/>
+
+
     <!-- custom-css -->
     <link rel="stylesheet" href="../public/css/app.css"/>
     <!--[if lt IE 9]>
@@ -31,9 +33,10 @@
     <![endif]-->
     <script src="../public/libs/bootstrap-4/polyfill.min.js"></script>
     <!-- jquery-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!--<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
 
@@ -588,8 +591,8 @@
                 while (i--) {
                     sc[i].addEventListener('click', function (e) {
                         e.stopPropagation();
-                        e.preventDefault();
-                        return false;
+                       e.preventDefault();
+//                        return false;
                     });
                 }
                 overlay.addEventListener('click', function () {
@@ -647,7 +650,6 @@
 
                 document.getElementById("get_user_location").addEventListener('click', function () {
                     _user_location();
-
                 });
 
                 $("#btn_relocate").on('click', function (e) {
@@ -670,7 +672,7 @@
                             }
                         });
                     });
-                })
+                });
 
 
             }

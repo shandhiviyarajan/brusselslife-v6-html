@@ -849,7 +849,8 @@ div.event-date-lg {
 p.event-date-sm {
   font-family: sans-serif;
   margin: 0px;
-  color: #777777; }
+  color: #777777;
+  line-height: 1em; }
   p.event-date-sm button,
   p.event-date-sm a.btn {
     color: #000;
@@ -861,7 +862,7 @@ p.event-date-sm {
 h3.event-title {
   font-size: 22px;
   font-weight: bold;
-  line-height: 1.3em;
+  line-height: 1.5em;
   color: #fff; }
   h3.event-title span {
     float: left;
@@ -1846,6 +1847,39 @@ div.error-message {
         -ms-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1); }
+  #home-search #when button {
+    border-radius: 0px;
+    height: 52px;
+    font-weight: bold;
+    border-left: thin solid #d8d8d8; }
+    #home-search #when button:hover, #home-search #when button:focus, #home-search #when button:active {
+      background: #f1f1f1; }
+  #home-search #what {
+    background: #fff;
+    border-left: thin solid #d8d8d8; }
+    #home-search #what:hover, #home-search #what:focus, #home-search #what:active {
+      background: #f1f1f1; }
+    #home-search #what select {
+      width: 200px;
+      border: none;
+      background: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
+    #home-search #what .select2-container--default .select2-selection--single .select2-selection__arrow b {
+      border-color: #000 transparent transparent transparent;
+      border-width: 8px 6px 0 6px; }
+    #home-search #what .select2-container--default .select2-selection--single .select2-selection__rendered {
+      height: 52px !important;
+      color: #030303;
+      line-height: 52px;
+      padding-left: 20px;
+      font-weight: bold; }
+    #home-search #what .select2-container .select2-selection--single {
+      height: 52px;
+      background: transparent; }
+    #home-search #what .select2-container--default .select2-selection--single {
+      border: none; }
 
 #search_input {
   border: none;
@@ -1866,11 +1900,13 @@ div.error-message {
   height: 52px;
   border-radius: 0px;
   line-height: 38px;
-  color: #4A4A4A;
+  color: #000;
   padding: 7px 20px;
   border-left: thin solid #d8d8d8; }
   #search_location a.btn-default img {
-    width: 16px; }
+    width: 14px;
+    -webkit-filter: brightness(0%);
+    filter: brightness(0%); }
   #search_location a.btn-default:hover {
     background: #eee; }
 #search_location div.dropdown-menu {
@@ -2943,12 +2979,13 @@ div.error-message {
     -o-transform: translateY(-10px);
     transform: translateY(-10px); }
     #agenda_3_blocks div.media:hover h3.title {
-      color: #252525; }
+      color: #000; }
   #agenda_3_blocks div.media h3.title {
     font-weight: bold;
-    font-size: 15px;
-    color: #000;
-    line-height: 1.4em; }
+    font-size: 14px;
+    color: #3F3F3F;
+    line-height: 1.4em;
+    margin-bottom: 10px; }
   #agenda_3_blocks div.media p {
     margin: 0px;
     font-family: sans-serif; }
@@ -2957,6 +2994,8 @@ div.error-message {
     #agenda_3_blocks div.media p span.event-location {
       color: #666;
       padding-left: 15px; }
+  #agenda_3_blocks div.media p.event-date-sm {
+    margin: 0px 0px 5px 0px; }
 
 #ag_block_3 .event-date-lg a,
 #ag_block_3 h3.event-title {
@@ -2996,9 +3035,12 @@ div.error-message {
   #ag_block_3_1 a.single-event img {
     width: 100%; }
   #ag_block_3_1 a.single-event h3.title {
-    color: #000;
+    color: #3F3F3F;
+    line-height: 1.5em;
     font-weight: bold;
-    font-size: 16px; }
+    font-size: 14px; }
+  #ag_block_3_1 a.single-event p.event-date-sm {
+    margin: 5px 0px 5px 0px; }
   #ag_block_3_1 a.single-event span.event-location {
     font-family: sans-serif;
     color: #666;
@@ -3009,6 +3051,97 @@ div.error-message {
   margin: 0px 0px; }
   #agenda_discovered .block-title-full h3 {
     font-size: 20px; }
+#agenda_discovered .block-content {
+  margin: 0px -10px;
+  background-color: #fff; }
+#agenda_discovered div.card {
+  background-color: #fff;
+  width: 275px;
+  margin-right: 20px; }
+  #agenda_discovered div.card:hover h3 {
+    color: #252525; }
+  #agenda_discovered div.card img {
+    height: 175px; }
+  #agenda_discovered div.card h3 {
+    font-family: Merriweather, serif;
+    color: #000;
+    line-height: 1.5em;
+    font-size: 14px;
+    font-weight: bold; }
+  #agenda_discovered div.card .event-location {
+    color: #666; }
+  #agenda_discovered div.card .event-date-sm {
+    margin: 5px 0px 5px 0px; }
+  #agenda_discovered div.card div.card-body {
+    min-height: 100px; }
+#agenda_discovered .block-title-full h3 {
+  font-size: 20px; }
+
+#agenda_started .block-title-full {
+  margin: 0px 0px; }
+  #agenda_started .block-title-full h3 {
+    font-size: 20px; }
+#agenda_started div.media-version h3.event-title,
+#agenda_started div.card-version h3.event-title {
+  color: #3F3F3F;
+  font-weight: bold;
+  font-size: 14px; }
+#agenda_started div.media-version .event-date-sm,
+#agenda_started div.card-version .event-date-sm {
+  margin: 5px 0px 5px 0px; }
+#agenda_started div.media-version .event-location,
+#agenda_started div.card-version .event-location {
+  color: #666; }
+#agenda_started div.media-version div.card,
+#agenda_started div.card-version div.card {
+  padding: 5px 5px; }
+  #agenda_started div.media-version div.card div.card-body,
+  #agenda_started div.card-version div.card div.card-body {
+    padding: 0px; }
+#agenda_started div.media-version div.media,
+#agenda_started div.card-version div.media {
+  padding: 5px;
+  margin-bottom: 20px; }
+  #agenda_started div.media-version div.media p.event-date-sm,
+  #agenda_started div.card-version div.media p.event-date-sm {
+    margin: 0px 0px 5px 0px; }
+#agenda_started div.media-version div.card,
+#agenda_started div.media-version div.media,
+#agenda_started div.card-version div.card,
+#agenda_started div.card-version div.media {
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease; }
+  #agenda_started div.media-version div.card:active,
+  #agenda_started div.media-version div.media:active,
+  #agenda_started div.card-version div.card:active,
+  #agenda_started div.card-version div.media:active {
+    -webkit-transition: 0s ease;
+    -moz-transition: 0s ease;
+    -ms-transition: 0s ease;
+    -o-transition: 0s ease;
+    transition: 0s ease;
+    background: #f1f1f1; }
+  #agenda_started div.media-version div.card:hover,
+  #agenda_started div.media-version div.media:hover,
+  #agenda_started div.card-version div.card:hover,
+  #agenda_started div.card-version div.media:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15); }
+    #agenda_started div.media-version div.card:hover h3.event-title,
+    #agenda_started div.media-version div.media:hover h3.event-title,
+    #agenda_started div.card-version div.card:hover h3.event-title,
+    #agenda_started div.card-version div.media:hover h3.event-title {
+      color: #000; }
 
 .footer-img img {
   margin: 0 auto;
@@ -3113,6 +3246,6 @@ footer {
     font-family: "Roboto Condensed", sans-serif; }
 
 .block-edit.hide {
-  display: none; }
+  display: block; }
 
 /*# sourceMappingURL=app.css.map */
