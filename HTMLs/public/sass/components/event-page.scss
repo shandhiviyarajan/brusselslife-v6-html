@@ -1,0 +1,147 @@
+#event_page {
+  .event-info-block {
+    background: darken($primary-blue, 10%);
+    h2 {
+      font-weight: bold;
+      color: #fff;
+      font-size: 24px;
+    }
+    div.event-date-sm {
+      margin-left: 0px;
+      padding: 10px 0px;
+      color: #fff;
+    }
+    div.event-cat-loc {
+      margin-left: 0px;
+      padding: 0px 0px 10px 0;
+      a.event-cat {
+        position: relative;
+        padding-right: 30px;
+        &:after {
+          content: '';
+          border: thin solid #fff;
+          position: absolute;
+          height: 90%;
+          right: 15px;
+          top: 1px;
+        }
+      }
+      a.event-location {
+        color: #fff;
+      }
+    }
+    div.event-date-lg {
+      color: #fff;
+      line-height: 1em;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 66px;
+        border-right: thin solid lighten($primary-blue, 2%);
+      }
+    }
+  }
+  .event-main-image {
+    position: relative;
+    a.gallery-link {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.25);
+      padding: 5px 10px;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      font-weight: bold;
+
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+  }
+  .event-additional-info {
+    div.col-md-4 {
+      font-family: $content-font;
+      font-weight: bold;
+      color: #000;
+      font-size: 14px;
+    }
+
+    i.fa {
+      margin-right: 5px;
+      font-size: 15px;
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      background: #000;
+      border-radius: 100px;
+      text-align: center;
+      padding-top: 3px;
+    }
+
+    p,
+    address {
+      font-family: $base-font-family;
+      font-weight: bold;
+      color: #000;
+      font-size: 14px;
+    }
+    address {
+      font-weight: normal;
+
+    }
+  }
+
+  a.more-events {
+    padding: 10px 30px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    background: $blue-info-dark;
+  }
+
+  .event-date-time-table {
+    tr {
+      td {
+        font-size: 15px;
+        padding: 0px 20px 10px 0px;
+        text-align: left;
+      }
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .other-events {
+    a {
+      display: block;
+    }
+    figure {
+      img {
+        width: 110px;
+      }
+    }
+    .event-date-sm {
+      color: #424242;
+      margin-bottom: 10px;
+    }
+    h3.event-title {
+      color: #424242;
+      font-size: 15px;
+    }
+    span.event-location {
+      color: #000;
+    }
+
+    a:hover {
+      .event-date-sm,
+      h3.event-title {
+        color: #000;
+      }
+    }
+  }
+}
+

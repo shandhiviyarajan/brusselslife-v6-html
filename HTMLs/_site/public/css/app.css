@@ -912,6 +912,52 @@ h3.event-title {
     font-weight: 300;
     margin-bottom: 5px; }
 
+.action_buttons {
+  background: #f8f8f8;
+  margin-bottom: 20px; }
+  .action_buttons a.btn {
+    display: inline-block;
+    background: #ff732b;
+    color: #fff;
+    padding: 12px 30px;
+    margin: 0px 10px;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    -webkit-transition: 0s ease;
+    -moz-transition: 0s ease;
+    -ms-transition: 0s ease;
+    -o-transition: 0s ease;
+    transition: 0s ease; }
+    .action_buttons a.btn:hover {
+      -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      background: #f75400; }
+    .action_buttons a.btn:active {
+      -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      background: #000; }
+
+.event-filters a {
+  font-size: 13px;
+  background: #0069FF;
+  color: #fff;
+  margin-right: 10px; }
+  .event-filters a:hover {
+    color: #0069FF;
+    background: #eee; }
+
+.content-summary {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Merriweather, serif;
+  border-left: 5px solid #000;
+  padding: 0px 0px 0px 40px;
+  margin: 20px 0px 20px -20px; }
+
 /*
 Brusselslife v5.3 components
 --------------------------------------------
@@ -2397,28 +2443,38 @@ div.error-message {
 #block-9 li:hover h5, #block-9 .card:hover h5 {
   color: #000; }
 
-#block-10 {
+#block-10,
+#block-23 {
   background: #BCBABD;
   padding: 10px;
   margin: 0px -32px 0px -20px; }
-  #block-10 .block-content {
+  #block-10 .block-content,
+  #block-23 .block-content {
     background: #fff;
     padding: 15px; }
-  #block-10 .address-list-carousel .carousel-cell {
+  #block-10 .address-list-carousel .carousel-cell,
+  #block-23 .address-list-carousel .carousel-cell {
     opacity: .25;
     width: 250px;
     margin-right: 20px; }
-    #block-10 .address-list-carousel .carousel-cell:hover h5, #block-10 .address-list-carousel .carousel-cell:hover p {
+    #block-10 .address-list-carousel .carousel-cell:hover h5, #block-10 .address-list-carousel .carousel-cell:hover p,
+    #block-23 .address-list-carousel .carousel-cell:hover h5,
+    #block-23 .address-list-carousel .carousel-cell:hover p {
       color: #000; }
-  #block-10 .address-list-carousel .carousel-cell.is-selected {
+  #block-10 .address-list-carousel .carousel-cell.is-selected,
+  #block-23 .address-list-carousel .carousel-cell.is-selected {
     opacity: 1; }
-  #block-10 .address-list-carousel a:hover h5, #block-10 .address-list-carousel a:hover p {
+  #block-10 .address-list-carousel a:hover h5, #block-10 .address-list-carousel a:hover p,
+  #block-23 .address-list-carousel a:hover h5,
+  #block-23 .address-list-carousel a:hover p {
     color: #000; }
-  #block-10 .address-list-carousel h5 {
+  #block-10 .address-list-carousel h5,
+  #block-23 .address-list-carousel h5 {
     font-family: sans-serif;
     color: #000;
     font-size: 14px; }
-  #block-10 .address-list-carousel p {
+  #block-10 .address-list-carousel p,
+  #block-23 .address-list-carousel p {
     font-family: Merriweather, serif;
     font-size: 14px;
     font-style: italic;
@@ -2427,11 +2483,12 @@ div.error-message {
     margin-bottom: 15px; }
 
 @media (max-width: 1023px) {
-  #block-10 {
+  #block-10, #block-23 {
     margin: 0px -5px 0px -25px;
     padding: 10px; } }
 @media (max-width: 767px) {
-  #block-10 {
+  #block-10,
+  #block-23 {
     margin: 0px -5px 0px -25px;
     padding: 10px; }
 
@@ -2684,6 +2741,39 @@ div.error-message {
           border: thin solid #4A90E2; }
 #block-22 div.imu-block {
   padding-top: 30px; }
+
+#block-23 {
+  background: #000;
+  margin: 0px -20px 0px -20px; }
+  #block-23 .block-title-mini {
+    background: #000;
+    margin: -10px -10px 0px -10px; }
+    #block-23 .block-title-mini h2 {
+      color: #ff732b;
+      font-size: 16px; }
+      #block-23 .block-title-mini h2 span {
+        text-transform: uppercase;
+        display: block;
+        font-size: 20px; }
+  #block-23 .block-content {
+    background: #fff;
+    padding: 10px; }
+  #block-23 .block-address h3 {
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold; }
+  #block-23 a.see-all {
+    width: 100%;
+    background: #000;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    display: block;
+    height: 40px;
+    font-weight: bold;
+    line-height: 28px; }
 
 #search-page h4, #search-page h2, #search-page h3, #search-page h4, #search-page h5 {
   color: #000;
@@ -3143,6 +3233,105 @@ div.error-message {
     #agenda_started div.card-version div.media:hover h3.event-title {
       color: #000; }
 
+#event_page .event-info-block {
+  background: #172c3a; }
+  #event_page .event-info-block h2 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px; }
+  #event_page .event-info-block div.event-date-sm {
+    margin-left: 0px;
+    padding: 10px 0px;
+    color: #fff; }
+  #event_page .event-info-block div.event-cat-loc {
+    margin-left: 0px;
+    padding: 0px 0px 10px 0; }
+    #event_page .event-info-block div.event-cat-loc a.event-cat {
+      position: relative;
+      padding-right: 30px; }
+      #event_page .event-info-block div.event-cat-loc a.event-cat:after {
+        content: '';
+        border: thin solid #fff;
+        position: absolute;
+        height: 90%;
+        right: 15px;
+        top: 1px; }
+    #event_page .event-info-block div.event-cat-loc a.event-location {
+      color: #fff; }
+  #event_page .event-info-block div.event-date-lg {
+    color: #fff;
+    line-height: 1em;
+    position: relative; }
+    #event_page .event-info-block div.event-date-lg:after {
+      content: '';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 66px;
+      border-right: thin solid #284c66; }
+#event_page .event-main-image {
+  position: relative; }
+  #event_page .event-main-image a.gallery-link {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 5px 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-weight: bold; }
+    #event_page .event-main-image a.gallery-link:hover {
+      color: #f1f1f1; }
+#event_page .event-additional-info div.col-md-4 {
+  font-family: Merriweather, serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 14px; }
+#event_page .event-additional-info i.fa {
+  margin-right: 5px;
+  font-size: 15px;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  background: #000;
+  border-radius: 100px;
+  text-align: center;
+  padding-top: 3px; }
+#event_page .event-additional-info p,
+#event_page .event-additional-info address {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 14px; }
+#event_page .event-additional-info address {
+  font-weight: normal; }
+#event_page a.more-events {
+  padding: 10px 30px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  background: #0069FF; }
+#event_page .event-date-time-table tr td {
+  font-size: 15px;
+  padding: 0px 20px 10px 0px;
+  text-align: left; }
+#event_page .event-date-time-table a {
+  display: inline-block; }
+#event_page .other-events a {
+  display: block; }
+#event_page .other-events figure img {
+  width: 110px; }
+#event_page .other-events .event-date-sm {
+  color: #424242;
+  margin-bottom: 10px; }
+#event_page .other-events h3.event-title {
+  color: #424242;
+  font-size: 15px; }
+#event_page .other-events span.event-location {
+  color: #000; }
+#event_page .other-events a:hover .event-date-sm,
+#event_page .other-events a:hover h3.event-title {
+  color: #000; }
+
 .footer-img img {
   margin: 0 auto;
   display: block; }
@@ -3246,6 +3435,6 @@ footer {
     font-family: "Roboto Condensed", sans-serif; }
 
 .block-edit.hide {
-  display: block; }
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

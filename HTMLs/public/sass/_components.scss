@@ -42,8 +42,10 @@ Brusselslife v5.3 components
 @import 'components/block-19';
 @import 'components/block-20';
 @import 'components/block-22';
+@import 'components/block-23';
 @import 'components/search-page';
 @import 'components/agenda_first_block';
+@import 'components/event-page';
 @import 'components/footer';
 
 .block-edit {
@@ -62,7 +64,7 @@ Brusselslife v5.3 components
 }
 
 .block-edit.hide {
-  display: block;
+  display: none;
 }
 
 

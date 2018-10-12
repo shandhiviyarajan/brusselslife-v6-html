@@ -46,17 +46,7 @@ class Brusselslife {
                 pageDots: false
             });
         }
-        if (document.querySelector(".address-list-carousel")) {
-            let addressListCarousel = new Flickity('.address-list-carousel', {
-                cellAlign: 'left',
-                contain: true,
-                wrapAround: false,
-                draggable: '>1',
-                groupCells: 1,
-                lazyLoad: 0,
-                pageDots: false
-            });
-        }
+
         if (document.querySelector(".home-block-3-carousel")) {
             let homeBlock3Carousel = new Flickity('.home-block-3-carousel', {
                 cellAlign: 'center',

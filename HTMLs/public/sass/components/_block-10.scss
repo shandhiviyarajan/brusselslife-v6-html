@@ -1,4 +1,5 @@
-#block-10 {
+#block-10,
+#block-23{
   background: #BCBABD;
   padding: 10px;
   margin: 0px -32px 0px -20px;
@@ -49,14 +50,15 @@
 }
 
 @include bl-sm {
-  #block-10 {
+  #block-10,#block-23 {
     margin: 0px -5px 0px -25px;
     padding: 10px;
   }
 }
 
 @include bl-xs {
-  #block-10 {
+  #block-10,
+  #block-23{
     margin: 0px -5px 0px -25px;
     padding: 10px;
   }

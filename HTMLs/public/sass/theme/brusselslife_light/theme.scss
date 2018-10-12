@@ -956,6 +956,65 @@ h3.event-title {
 
 }
 
+.action_buttons {
+  background: #f8f8f8;
+  margin-bottom: 20px;
+  a.btn {
+    display: inline-block;
+    background: $secondary-orange;
+    color: #fff;
+    padding: 12px 30px;
+    margin: 0px 10px;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    -webkit-transition: 0s ease;
+    -moz-transition: 0s ease;
+    -ms-transition: 0s ease;
+    -o-transition: 0s ease;
+    transition: 0s ease;
+    &:hover {
+      -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      background: darken($secondary-orange, 10%);
+    }
+
+    &:active {
+      -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, .25);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, .25);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, .25);
+      background: #000;
+
+    }
+  }
+}
+
+.event-filters {
+  a {
+    font-size: 13px;
+    background: $blue-info-dark;
+    color: #fff;
+    margin-right: 10px;
+
+    &:hover {
+      color: $blue-info-dark;
+      background: #eee;
+    }
+  }
+}
+
+.content-summary {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: $content-font;
+  border-left: 5px solid #000;
+  padding: 0px 0px 0px 40px;
+  margin: 20px 0px 20px -20px;
+
+}
+
 
 
 

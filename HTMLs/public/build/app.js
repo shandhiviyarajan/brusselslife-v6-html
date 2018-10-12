@@ -15,25 +15,7 @@ var Brusselslife = function () {
     _createClass(Brusselslife, [{
         key: 'createCustomElements',
         value: function createCustomElements() {
-            // let full_news_block = document.registerElement('full-news-block', {
-            //     extends: 'div'
-            // });
-            // let blife_block = document.registerElement('blife-block', {
-            //     extends: 'div'
-            // });
-            //
-            var block_edit = document.registerElement('block-edit', {
-                extends: 'div'
-            });
-            document.body.appendChild(new block_edit());
-            //
-            // let author_block = document.registerElement('author-block', {
-            //     extends: 'div'
-            // });
-            //
-            // document.body.appendChild(new full_news_block());
-            // document.body.appendChild(new blife_block());
-            // document.body.appendChild(new author_block());
+
         }
     }, {
         key: 'enablePlugins',
@@ -60,6 +42,20 @@ var Brusselslife = function () {
                     pageDots: false
                 });
             }
+
+
+            if (document.querySelector(".address-list-carousel-2")) {
+                var addressListCarousel = new Flickity('.address-list-carousel-2', {
+                    cellAlign: 'left',
+                    contain: true,
+                    wrapAround: false,
+                    draggable: '>1',
+                    groupCells: 1,
+                    lazyLoad: 0,
+                    pageDots: false
+                });
+            }
+
             if (document.querySelector(".home-block-3-carousel")) {
                 var homeBlock3Carousel = new Flickity('.home-block-3-carousel', {
                     cellAlign: 'center',
