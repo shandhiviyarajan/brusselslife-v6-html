@@ -12,7 +12,7 @@
     border-radius: 6px 0px 0px 6px;
     height: $form-height;
   }
-  button#btn_submit {
+  button.btn_submit {
     background-color: $blue-info-dark;
     color: #fff;
     border: none;
@@ -88,25 +88,19 @@
           color: #fff;
         }
 
-        &:active {
-          background: darken($blue-info-dark, 15%);
+        &:active{
+          background: darken($blue-info-dark,15%);
         }
-      }
-
-    }
-    li.active {
-      a {
-        background: $blue-info-dark;
-        color: #fff;
-
-        &:after {
-          -webkit-transform: scale(1);
-          -moz-transform: scale(1);
-          -ms-transform: scale(1);
-          -o-transform: scale(1);
-          transform: scale(1);
+        &.active{
+          background: $blue-info-dark; color: #fff;
+          &:after {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+          }
         }
-
       }
     }
 
@@ -166,10 +160,10 @@
   }
 }
 
-#search_input {
+.search_input {
   border: none;
   outline: 0;
-  height: $form-height;
+  height: 52px !important;
   background: #FFFFFF;
   padding-left: 0px;
   border-radius: 0px 0px;
@@ -182,7 +176,7 @@
   }
 }
 
-#search_location {
+.search_location {
 
   a.btn-default {
     font-weight: bold;
@@ -206,12 +200,12 @@
     }
   }
   div.dropdown-menu {
-    top: 49px;
+    top: -3px !important;
     border-radius: 0px 0px 4px 4px;
     min-height: 100px;
     width: 580px;
-    right: -1px;
-    left: auto;
+    right: -1px !important;
+    left: auto !important;
 
     -webkit-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
@@ -231,7 +225,7 @@
       }
     }
 
-    #l_current {
+    .l_current {
       p {
         font-family: $base-font-family;
       }
@@ -246,11 +240,14 @@
   }
 }
 
-#search_form {
+#article_search_form,
+#address_search_form,
+#all_search_form,
+#events_search_form {
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
-#btn_relocate {
+button.btn_relocate {
   border: thin solid #d8d8d8;
 
   &:hover {

@@ -1823,7 +1823,7 @@ div.error-message {
     border: none;
     border-radius: 6px 0px 0px 6px;
     height: 52px; }
-  #home-search button#btn_submit {
+  #home-search button.btn_submit {
     background-color: #0069FF;
     color: #fff;
     border: none;
@@ -1833,7 +1833,7 @@ div.error-message {
     font-weight: bold;
     padding: 7px 30px;
     text-transform: uppercase; }
-    #home-search button#btn_submit:hover, #home-search button#btn_submit:focus {
+    #home-search button.btn_submit:hover, #home-search button.btn_submit:focus {
       background-color: #004ab3; }
   #home-search div.tag-line {
     color: #fff;
@@ -1884,15 +1884,15 @@ div.error-message {
         color: #fff; }
       #home-search ul.nav-tabs li a:active {
         background: #004ab3; }
-    #home-search ul.nav-tabs li.active a {
-      background: #0069FF;
-      color: #fff; }
-      #home-search ul.nav-tabs li.active a:after {
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1); }
+      #home-search ul.nav-tabs li a.active {
+        background: #0069FF;
+        color: #fff; }
+        #home-search ul.nav-tabs li a.active:after {
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1); }
   #home-search #when button {
     border-radius: 0px;
     height: 52px;
@@ -1927,20 +1927,20 @@ div.error-message {
     #home-search #what .select2-container--default .select2-selection--single {
       border: none; }
 
-#search_input {
+.search_input {
   border: none;
   outline: 0;
-  height: 52px;
+  height: 52px !important;
   background: #FFFFFF;
   padding-left: 0px;
   border-radius: 0px 0px;
   color: #000;
   font-size: 16px; }
-  #search_input:focus {
+  .search_input:focus {
     outline: 0;
     box-shadow: none; }
 
-#search_location a.btn-default {
+.search_location a.btn-default {
   font-weight: bold;
   background: #fff;
   height: 52px;
@@ -1949,53 +1949,56 @@ div.error-message {
   color: #000;
   padding: 7px 20px;
   border-left: thin solid #d8d8d8; }
-  #search_location a.btn-default img {
+  .search_location a.btn-default img {
     width: 14px;
     -webkit-filter: brightness(0%);
     filter: brightness(0%); }
-  #search_location a.btn-default:hover {
+  .search_location a.btn-default:hover {
     background: #eee; }
-#search_location div.dropdown-menu {
-  top: 49px;
+.search_location div.dropdown-menu {
+  top: -3px !important;
   border-radius: 0px 0px 4px 4px;
   min-height: 100px;
   width: 580px;
-  right: -1px;
-  left: auto;
+  right: -1px !important;
+  left: auto !important;
   -webkit-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5); }
-  #search_location div.dropdown-menu input[type="text"] {
+  .search_location div.dropdown-menu input[type="text"] {
     background: #eee;
     height: 44px;
     box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     font-size: 16px;
     letter-spacing: 0;
     color: #000; }
-    #search_location div.dropdown-menu input[type="text"]:focus {
+    .search_location div.dropdown-menu input[type="text"]:focus {
       background: #fff;
       border: 2px solid #0069FF; }
-  #search_location div.dropdown-menu #l_current p {
+  .search_location div.dropdown-menu .l_current p {
     font-family: sans-serif; }
-  #search_location div.dropdown-menu #l_current p small {
+  .search_location div.dropdown-menu .l_current p small {
     font-size: 10px;
     color: #999; }
-  #search_location div.dropdown-menu #l_current div.alert {
+  .search_location div.dropdown-menu .l_current div.alert {
     display: none; }
 
-#search_form {
+#article_search_form,
+#address_search_form,
+#all_search_form,
+#events_search_form {
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5); }
 
-#btn_relocate {
+button.btn_relocate {
   border: thin solid #d8d8d8; }
-  #btn_relocate:hover {
+  button.btn_relocate:hover {
     background: #f1f1f1; }
-  #btn_relocate:focus {
+  button.btn_relocate:focus {
     outline: 0 !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-  #btn_relocate:active {
+  button.btn_relocate:active {
     -webkit-box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.5); }

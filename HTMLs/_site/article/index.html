@@ -18,13 +18,10 @@
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../public/libs/swipebox/css/swipebox.min.css"/>
-
     <link rel="stylesheet" href="../public/libs/select-2/css/select2.min.css"/>
-
     <link rel="stylesheet" href="../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css"/>
     <link rel="stylesheet" href="../public/libs/flick/flick.css"/>
-
-
+    <link rel="stylesheet" href="../public/libs/daterangepicker/daterangepicker.css"/>
     <!-- custom-css -->
     <link rel="stylesheet" href="../public/css/app.css"/>
     <!--[if lt IE 9]>
@@ -33,9 +30,7 @@
     <![endif]-->
     <script src="../public/libs/bootstrap-4/polyfill.min.js"></script>
     <!-- jquery-->
-
     <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
     <!--<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
@@ -228,87 +223,275 @@
             <div class="row align-items-center justify-content-center no-gutters">
                 <div class="col-12 col-lg-12">
                     <ul class="nav nav-tabs" id="search_tabs">
-                        <li class="active">
-                            <a href="#" class="btn btn-default btn-md" data-href="/search">
+                        <li>
+                            <a href="#all_search" data-toggle="tab" class="btn btn-default active " data-href="/search">
                                 All
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-default btn-md" data-href="/search">
+                            <a href="#address_search" data-toggle="tab" class="btn btn-default " data-href="/search">
                                 Place
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-default btn-md" data-href="/search/articles">
+                            <a href="#article_search" data-toggle="tab" class="btn btn-default" data-href="/search/articles">
                                 Article
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-default btn-md" data-href="/search/events">
+                            <a href="#event_search" id="btn_events_search" data-toggle="tab" class="btn btn-default" data-href="/search/events">
                                 Events
                             </a>
                         </li>
-
                     </ul>
-                    <form id="search_form" action="/search">
-                        <label class="sr-only" for="search_input">
-                            Rechercher une entrée</label>
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend d-none d-sm-block">
-                                <div class="input-group-text">
-                                    <img src="../public/svg/bl-icon-search.svg" alt="">
-                                </div>
-                            </div>
-                            <input type="text" autofocus="true" autocomplete="off" class="form-control"
-                                   id="search_input"
-                                   placeholder="Adresse, article, évènement">
-                            <div id="search_location" class="dropdown"
-                                 data-toggle="dropdown">
-
-                                <a href="#" class="btn btn-default" id="get_user_location">
-
-                                    <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
-                                </a>
-                                <div class="dropdown-menu p-4 stop-closing">
-
-                                    <div class="l-title">
-                                        <img src="../public/svg/my-location-active.svg" alt=""> My location
-                                        <button class="btn btn-sm btn-default" id="btn_relocate">Relocate</button>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="all_search">
+                            <form id="all_search_form" action="/search">
+                                <label class="sr-only">
+                                    Rechercher une entrée</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="../public/svg/bl-icon-search.svg" alt="">
+                                        </div>
                                     </div>
+                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
+                                           placeholder="Discover Brussels">
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
 
-                                    <div class="l-input py-4">
-                                        <input type="text" id="pac-input" placeholder="Choose location"
-                                               class="form-control">
-                                    </div>
+                                        <a href="#" class="btn btn-default get_user_location">
 
-                                    <div id="l_current">
+                                            <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
+                                        </a>
+                                        <div class="dropdown-menu p-4 stop-closing">
 
-                                        <p><i class="fa fa-map-marker"></i> <span>
+                                            <div class="l-title">
+                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate" >Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
                                             Belgium Brussels
                                         </span>
-                                            <small>Current location</small>
-                                        </p>
-                                        <div class="alert alert-warning"></div>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
+
+
+                                        </div>
+
                                     </div>
-
-
-                                </div>
-
-                            </div>
-                            <div class="input-group-btn">
-                                <button class="btn btn-lg btn-primary" id="btn_submit">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
                                <span class="d-none d-sm-inline">
                                     Rechercher
                                </span>
 
-                                    <i class="fa fa-search d-inline d-sm-none"></i>
+                                            <i class="fa fa-search d-inline d-sm-none"></i>
 
-                                </button>
-                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                        <div class="tab-pane" id="address_search">
+                            <form id="address_search_form" action="/search">
+                                <label class="sr-only">
+                                    Rechercher une entrée</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="../public/svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
+                                           placeholder="Search address">
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
+
+                                        <a href="#" class="btn btn-default get_user_location">
+
+                                            <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
+                                        </a>
+                                        <div class="dropdown-menu p-4 stop-closing">
+
+                                            <div class="l-title">
+                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate" >Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
 
 
+                                        </div>
+
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
+                               <span class="d-none d-sm-inline">
+                                    Rechercher
+                               </span>
+
+                                            <i class="fa fa-search d-inline d-sm-none"></i>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="article_search">
+                            <form id="article_search_form" action="/search/article">
+                                <label class="sr-only">
+                                    Rechercher une entrée</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="../public/svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
+                                           placeholder="Search articles">
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
+
+                                        <a href="#" class="btn btn-default get_user_location">
+
+                                            <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
+                                        </a>
+                                        <div class="dropdown-menu p-4 stop-closing">
+
+                                            <div class="l-title">
+                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
+                               <span class="d-none d-sm-inline">
+                                    Rechercher
+                               </span><i class="fa fa-search d-inline d-sm-none"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="event_search">
+                            <form id="events_search_form" action="/search/events">
+                                <label class="sr-only">
+                                    Search events</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="../public/svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
+                                           placeholder="Search events">
+                                    <div id="when">
+                                        <button id="date_range_picker" class="btn btn-default stop-closing" data-toggle="tooltip"
+                                                data-placement="top"
+                                                data-original-title="Choose date or date range">
+                                            When <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </div>
+                                    <div id="what">
+                                        <select name="" id="event_categories" class="event-category form-control">
+                                            <option value="-1">What</option>
+                                            <option value="1">All</option>
+                                            <option value="1">Concerts</option>
+                                            <option value="1">Shows</option>
+                                            <option value="1">Exhibition</option>
+                                            <option value="1">Theater</option>
+                                            <option value="1">Nightlife</option>
+                                            <option value="1">Cinema</option>
+                                            <option value="1">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
+
+                                        <a href="#" class="btn btn-default get_user_location"><img
+                                                src="../public/svg/my-location-marker.svg" alt=""> Where ?</a>
+                                        <div class="dropdown-menu p-4 stop-closing">
+                                            <div class="l-title">
+                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
+                               <span class="d-none d-sm-inline">
+                                    Rechercher
+                               </span>
+
+                                            <i class="fa fa-search d-inline d-sm-none"></i>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <div class="category-icons mt-4">
                         <div>
                             <a href="/section">
@@ -342,8 +525,6 @@
                         </div>
 
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -1554,10 +1735,20 @@
     </div>
 </footer>
 <div id="overlay"></div>
+<!-- popper js // bootstrap drop down required popper js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- bootstrap -->
-<script src="../public/libs/bootstrap-4/bootstrap-4-native.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!--<script src="../public/libs/bootstrap-4/bootstrap-4-native.min.js"></script>-->
 <!-- scroll bar -->
 <script src="../public/libs/flick/flick.js"></script>
+<!-- momentjs-->
+<script type="text/javascript" src="../public/libs/daterangepicker/moment.min.js"></script>
+<!-- date range picker-->
+<script type="text/javascript" src="../public/libs/daterangepicker/daterangepicker.js"></script>
+<!-- select2-->
+<script src="../public/libs/select-2/select2.full.min.js"></script>
+
 <!-- slideout menu -->
 <script src="../public/libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
@@ -1575,8 +1766,8 @@
         var overlay = document.getElementById("overlay");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var search_tabs = $("#search_tabs");
-        var search_form = $("search-form");
-        var l_current = $("#l_current ");
+
+        var l_current = $(".l_current ");
         var screen = $(window);
         var geocoder;
         var cl = localStorage.getItem('current_location');
@@ -1587,8 +1778,10 @@
                 return {
                     init: function () {
                         _load();
-                        _common();
-                        _search_tabs();
+                        _header();
+                        _what();
+                        _when();
+
                         _get_user_location();
                     }
                 };
@@ -1598,7 +1791,7 @@
                 console.log("Brusselslife v7.0 HTML");
             }
 
-            function _common() {
+            function _header() {
 
                 //screen scroll functions
                 screen.scroll(function () {
@@ -1629,7 +1822,7 @@
                 while (i--) {
                     sc[i].addEventListener('click', function (e) {
                         e.stopPropagation();
-                       e.preventDefault();
+                        e.preventDefault();
 //                        return false;
                     });
                 }
@@ -1643,9 +1836,48 @@
                 });
             }
 
-            function _login() {
+            function _what() {
+                var ec = $("#event_categories");
+                ec.select2();
+//        ec.on('select2:select', function (e) {
+//
+//        });
+            }
 
+            function _when() {
 
+                var start = moment().subtract(0, 'days');
+                var end = moment();
+                //set variables according to the language
+
+                function cb(start, end) {
+                    $('#reportrange').find("span").html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                }
+
+                var date_range_picker = $("#date_range_picker");
+                date_range_picker.daterangepicker({
+                    startDate: start,
+                    endDate: end,
+                    autoApply: true,
+                    alwaysShowCalendars: true,
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+                }, cb);
+
+                cb(start, end);
+                date_range_picker.on('apply.daterangepicker', function (dr, picker) {
+                    if (picker.startDate.format('YYYY-MM-DD') == picker.endDate.format('YYYY-MM-DD')) {
+                        date_range_picker.attr('data-original-title', picker.startDate.format('YYYY-MM-DD'));
+                    } else {
+                        date_range_picker.attr('data-original-title', picker.startDate.format('YYYY-MM-DD') + "  -  " + picker.startDate.format('YYYY-MM-DD'));
+                    }
+                });
             }
 
             function _user_location() {
@@ -1675,22 +1907,26 @@
                         l_current.find("span").text(cl);
                     }
                 }
-                var input = document.getElementById('pac-input');
-                var autocomplete = new google.maps.places.Autocomplete(input);
-                autocomplete.addListener('place_changed', function () {
-                    var p = autocomplete.getPlace();
-                    l_current.find("span").text(p.formatted_address);
-                    localStorage.setItem('current_location', p.formatted_address);
-                });
+                var input = document.getElementsByClassName('pac-input');
+                var ip = input.length;
+                while (ip--) {
+                    var autocomplete = new google.maps.places.Autocomplete(input[ip]);
+                    autocomplete.addListener('place_changed', function () {
+                        var p = autocomplete.getPlace();
+                        l_current.find("span").text(p.formatted_address);
+                        localStorage.setItem('current_location', p.formatted_address);
+                    });
+                }
+
             }
 
             function _get_user_location() {
 
-                document.getElementById("get_user_location").addEventListener('click', function () {
+                $(".get_user_location").on('click', function () {
                     _user_location();
                 });
 
-                $("#btn_relocate").on('click', function (e) {
+                $(".btn_relocate").on('click', function (e) {
                     e.preventDefault();
                     navigator.geolocation.getCurrentPosition(function (position) {
                         geocoder.geocode({
@@ -1713,17 +1949,6 @@
                 });
 
 
-            }
-
-            function _search_tabs() {
-                var li = search_tabs.find("li");
-
-                li.on('click', function () {
-                    var eli = $(this);
-                    li.removeClass("active");
-                    eli.addClass("active");
-                    search_form.attr("action", eli.find("a").data("href") + "");
-                });
             }
 
             return BrusselslifeFE;
