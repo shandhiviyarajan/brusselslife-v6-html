@@ -217,7 +217,7 @@
 
     
 <blife-block>
-    <div id="home-search"
+    <div id="home_search"
          style="background:url('../public/images/agenda_bg.jpg') bottom center no-repeat; background-size:cover;">
         <section class="container form-wrapper bg-transparent">
             <div class="row align-items-center justify-content-center no-gutters">
@@ -229,22 +229,34 @@
 
                     <ul class="nav nav-tabs" id="search_tabs">
                         <li>
-                            <a href="#all_search" class="btn btn-default btn-md" data-href="/search">
+                            <a href="#all_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                               data-href="/search">
                                 All
                             </a>
                         </li>
                         <li>
-                            <a href="#address_search" class="btn btn-default btn-md" data-href="/search">
-                                Place
+                            <a href="#address_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                              >
+                                Address
                             </a>
                         </li>
                         <li>
-                            <a href="#article_search" class="btn btn-default btn-md" data-href="/search/articles">
+                            <a href="#article_search"
+                               data-toggle="tab"
+                               class="btn btn-default">
                                 Article
                             </a>
                         </li>
                         <li>
-                            <a href="#events_search" id="btn_events_search" class="btn btn-default active" data-href="/search/events">
+                            <a href="#events_search"
+                               data-toggle="tab"
+                               id="btn_events_search"
+                               class="btn btn-default active"
+                            >
                                 Events
                             </a>
                         </li>
@@ -519,7 +531,6 @@
         <img class="img-fluid" src="../public/images/leaderboard.jpg" alt="">
     </a>
 </div>
-<link rel="stylesheet" href="../public/libs/daterangepicker/daterangepicker.css"/>
 
 <div class="clearfix"></div>
 <div class="container border-bottom breadcrumb_wrapper">
@@ -650,10 +661,18 @@
                         <a href="#" class="event-location">Ixelles</a>
                     </div>
                     <div class="addthis_inline_share_toolbox"></div>
+                    <div class="write-comments-count d-flex">
+                        <p>
+                            Write Comments
+                        </p>
+                        <div>
+                            <div class="comments-count">03</div>
+                        </div>
+                    </div>
                 </div>
                 <figure class="event-main-image">
 
-                    <a href="#" class="swipebox gallery-link" data-toggle="tooltip" data-original-title="Event gallery"
+                    <a href="#" class="swipebox gallery-link" data-toggle="tooltip" data-title="Event gallery"
                        data-placement="top">
                         <i class="fa fa-camera" aria-hidden="true"></i>
                         <span class="count">03</span>
@@ -684,7 +703,7 @@
                         <div class="col-md-4"><i class="fa fa-map-marker"></i> Address</div>
                         <div class="col-md-8">
                             <address>
-                                BRASS - Centre Culturel de Forest Avenue Van Volxem 364 Forest , 1190
+                                BRASS - Centre Cultural de Forest Avenue Van Volxem 364 Forest , 1190
                             </address>
                         </div>
                     </div>
@@ -1005,7 +1024,7 @@
             </div>
             <div class="col-md-5 pl-4 pt-4">
 
-                <agenda-block>
+                <blife-block>
                     <div id="agenda_other_events">
                         
                         <block-edit class="block-edit hide position-absolute">
@@ -1184,7 +1203,7 @@
                             </div>
                         </div>
                     </div>
-                </agenda-block>
+                </blife-block>
 
                 <blife-block>
                     <div id="block-23" class="position-relative mb-4">
@@ -1242,9 +1261,7 @@
                                 </h2>
                             </div>
                             <div class="block-address pt-2">
-                                <h3>
-                                    Où dîner après l'événement ?
-                                </h3>
+
                                 <div id="carousel_eat" class="address-list-carousel mb-4 pt-2">
                                     <div class="carousel-cell">
                                         <a href="#">
@@ -1312,9 +1329,7 @@
                                 </a>
                             </div>
                             <div class="block-address pt-2">
-                                <h3>
-                                    Où dîner après l'événement ?
-                                </h3>
+
                                 <div id="carousel_drink" class="address-list-carousel address-list-carousel-2 mb-4 pt-2">
                                     <div class="carousel-cell">
                                         <a href="#">
@@ -1384,18 +1399,12 @@
                         </div>
                     </div>
                 </blife-block>
-
-
             </div>
         </div>
     </div>
 </section>
-
-<script type="text/javascript" src="../public/libs/daterangepicker/moment.min.js"></script>
-<script type="text/javascript" src="../public/libs/daterangepicker/daterangepicker.js"></script>
-<script src="../public/libs/select-2/select2.full.min.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8d05b1d7183391"></script>
-<script type="text/javascript" src="../public/build/agenda.js"></script>
+
 </main>
 <div class="footer-img">
     <img src="../public/images/footer_img.png" alt="">
@@ -1687,9 +1696,10 @@
     (function (window, $) {
         'use strict';
 
-        var header = document.querySelector("header");
-        var body = document.querySelector("body");
+        var header = document.getElementsByTagName("header")[0];
+        var body = document.getElementsByTagName("body")[0];
         var overlay = document.getElementById("overlay");
+        var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var search_tabs = $("#search_tabs");
 
@@ -1718,17 +1728,18 @@
             }
 
             function _header() {
-
                 //screen scroll functions
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
+                        home_search.classList.add('shrink');
                         body.classList.add("fixed-header");
 
                     } else {
                         header.classList.remove("shrink-header", "move");
                         body.classList.remove("fixed-header");
+                        home_search.classList.remove('shrink');
                     }
                 });
 

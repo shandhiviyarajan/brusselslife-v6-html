@@ -5,7 +5,6 @@ title : Agenda single page | Brusselslife.be
 {{> agenda-search }}
 
 {{> leader-board }}
-<link rel="stylesheet" href="{{assets}}libs/daterangepicker/daterangepicker.css"/>
 
 {{> breadcrumb}}
 <section id="event_page">
@@ -38,10 +37,18 @@ title : Agenda single page | Brusselslife.be
                         <a href="#" class="event-location">Ixelles</a>
                     </div>
                     <div class="addthis_inline_share_toolbox"></div>
+                    <div class="write-comments-count d-flex">
+                        <p>
+                            Write Comments
+                        </p>
+                        <div>
+                            <div class="comments-count">03</div>
+                        </div>
+                    </div>
                 </div>
                 <figure class="event-main-image">
 
-                    <a href="#" class="swipebox gallery-link" data-toggle="tooltip" data-original-title="Event gallery"
+                    <a href="#" class="swipebox gallery-link" data-toggle="tooltip" data-title="Event gallery"
                        data-placement="top">
                         <i class="fa fa-camera" aria-hidden="true"></i>
                         <span class="count">03</span>
@@ -72,7 +79,7 @@ title : Agenda single page | Brusselslife.be
                         <div class="col-md-4"><i class="fa fa-map-marker"></i> Address</div>
                         <div class="col-md-8">
                             <address>
-                                BRASS - Centre Culturel de Forest Avenue Van Volxem 364 Forest , 1190
+                                BRASS - Centre Cultural de Forest Avenue Van Volxem 364 Forest , 1190
                             </address>
                         </div>
                     </div>
@@ -195,7 +202,7 @@ title : Agenda single page | Brusselslife.be
             </div>
             <div class="col-md-5 pl-4 pt-4">
 
-                <agenda-block>
+                <blife-block>
                     <div id="agenda_other_events">
                         {{#parseJSON '{"name": "OTHER EVENTS"}'}}
                         {{> block-edit}}
@@ -333,7 +340,7 @@ title : Agenda single page | Brusselslife.be
                             </div>
                         </div>
                     </div>
-                </agenda-block>
+                </blife-block>
 
                 <blife-block>
                     <div id="block-23" class="position-relative mb-4">
@@ -350,9 +357,7 @@ title : Agenda single page | Brusselslife.be
                                 </h2>
                             </div>
                             <div class="block-address pt-2">
-                                <h3>
-                                    Où dîner après l'événement ?
-                                </h3>
+
                                 <div id="carousel_eat" class="address-list-carousel mb-4 pt-2">
                                     <div class="carousel-cell">
                                         <a href="#">
@@ -420,9 +425,7 @@ title : Agenda single page | Brusselslife.be
                                 </a>
                             </div>
                             <div class="block-address pt-2">
-                                <h3>
-                                    Où dîner après l'événement ?
-                                </h3>
+
                                 <div id="carousel_drink" class="address-list-carousel address-list-carousel-2 mb-4 pt-2">
                                     <div class="carousel-cell">
                                         <a href="#">
@@ -492,15 +495,8 @@ title : Agenda single page | Brusselslife.be
                         </div>
                     </div>
                 </blife-block>
-
-
             </div>
         </div>
     </div>
 </section>
-
-<script type="text/javascript" src="{{assets}}libs/daterangepicker/moment.min.js"></script>
-<script type="text/javascript" src="{{assets}}libs/daterangepicker/daterangepicker.js"></script>
-<script src="{{assets}}libs/select-2/select2.full.min.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8d05b1d7183391"></script>
-<script type="text/javascript" src="{{assets}}build/agenda.js"></script>

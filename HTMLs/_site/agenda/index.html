@@ -219,7 +219,7 @@
 
 <!-- agenda search -->
 <blife-block>
-    <div id="home-search"
+    <div id="home_search"
          style="background:url('../public/images/agenda_bg.jpg') bottom center no-repeat; background-size:cover;">
         <section class="container form-wrapper bg-transparent">
             <div class="row align-items-center justify-content-center no-gutters">
@@ -231,22 +231,34 @@
 
                     <ul class="nav nav-tabs" id="search_tabs">
                         <li>
-                            <a href="#all_search" class="btn btn-default btn-md" data-href="/search">
+                            <a href="#all_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                               data-href="/search">
                                 All
                             </a>
                         </li>
                         <li>
-                            <a href="#address_search" class="btn btn-default btn-md" data-href="/search">
-                                Place
+                            <a href="#address_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                              >
+                                Address
                             </a>
                         </li>
                         <li>
-                            <a href="#article_search" class="btn btn-default btn-md" data-href="/search/articles">
+                            <a href="#article_search"
+                               data-toggle="tab"
+                               class="btn btn-default">
                                 Article
                             </a>
                         </li>
                         <li>
-                            <a href="#events_search" id="btn_events_search" class="btn btn-default active" data-href="/search/events">
+                            <a href="#events_search"
+                               data-toggle="tab"
+                               id="btn_events_search"
+                               class="btn btn-default active"
+                            >
                                 Events
                             </a>
                         </li>
@@ -1944,9 +1956,10 @@
     (function (window, $) {
         'use strict';
 
-        var header = document.querySelector("header");
-        var body = document.querySelector("body");
+        var header = document.getElementsByTagName("header")[0];
+        var body = document.getElementsByTagName("body")[0];
         var overlay = document.getElementById("overlay");
+        var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var search_tabs = $("#search_tabs");
 
@@ -1975,17 +1988,18 @@
             }
 
             function _header() {
-
                 //screen scroll functions
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
+                        home_search.classList.add('shrink');
                         body.classList.add("fixed-header");
 
                     } else {
                         header.classList.remove("shrink-header", "move");
                         body.classList.remove("fixed-header");
+                        home_search.classList.remove('shrink');
                     }
                 });
 

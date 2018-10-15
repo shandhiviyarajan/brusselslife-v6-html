@@ -541,6 +541,9 @@
 
 
 
+
+
+
 <div class="container bg-transparent">
    <div class="row">
        <div class="col-12">
@@ -2760,9 +2763,10 @@
     (function (window, $) {
         'use strict';
 
-        var header = document.querySelector("header");
-        var body = document.querySelector("body");
+        var header = document.getElementsByTagName("header")[0];
+        var body = document.getElementsByTagName("body")[0];
         var overlay = document.getElementById("overlay");
+        var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var search_tabs = $("#search_tabs");
 
@@ -2791,17 +2795,18 @@
             }
 
             function _header() {
-
                 //screen scroll functions
                 screen.scroll(function () {
                     if ($(document).scrollTop() > 180) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
+                        home_search.classList.add('shrink');
                         body.classList.add("fixed-header");
 
                     } else {
                         header.classList.remove("shrink-header", "move");
                         body.classList.remove("fixed-header");
+                        home_search.classList.remove('shrink');
                     }
                 });
 

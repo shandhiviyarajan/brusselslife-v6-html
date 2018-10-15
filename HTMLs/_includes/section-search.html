@@ -1,104 +1,382 @@
 <blife-block>
-    <div id="section-search"
-         style="background:#fff;" class="mb-4">
-        <section class="container form-wrapper bg-transparent ">
+    <div id="home_search" class="section-search"
+         style="background:url('{{assets}}images/home.jpg') bottom center no-repeat; background-size:cover;">
+        <section class="container form-wrapper bg-transparent">
             <div class="row align-items-center justify-content-center no-gutters">
                 <div class="col-12 col-lg-12">
+                    <div class="tag-line">
+                        Find best restaurants around Brussels.
+                    </div>
+                    <ul class="nav nav-tabs" id="search_tabs">
+                        <li>
+                            <a href="#all_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                               data-href="/search">
+                                All
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#address_search"
+                               data-toggle="tab"
+                               class="active btn btn-default active"
+                               data-href="/search">
+                                Address
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#article_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                               data-href="/search/articles">
+                                Article
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#event_search"
+                               id="btn_events_search"
+                               data-toggle="tab"
+                               class="btn btn-default"
+                               data-href="/search/events">
+                                Events
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="all_search">
+                            <form id="all_search_form" action="/search">
+                                <label class="sr-only">
+                                    {{__.search_input}}</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="{{assets}}svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off"
+                                           class="form-control search_input"
+                                           placeholder="Discover Brussels">
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
 
-                    <h1 class="search-tag-line">
-                        Find best restaurants, places <br>
-                        to eat & drink.
-                    </h1>
+                                        <a href="#" class="btn btn-default get_user_location">
 
-                    <form id="search-form" class="d-flex position-relative">
-                        <label class="sr-only" for="search_input">{{__.search_input}}</label>
-                        <div class="category-dropdown">
-                            <img src="{{assets}}svg/eat-drink-white.svg" alt="">
-                            <div class="dropdown" data-toggle="dropdown">
-<span>
-    Eat and Drink <i class="fa fa-caret-down"></i>
-</span>
-                                <ul class="dropdown-menu">
-                                    <li class="">
-                                        <a href="/fr/restaurants">
-                                            Restaurants
+                                            <img src="{{assets}}svg/my-location-marker.svg" alt=""> Choose location
                                         </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/fr/friteries">
-                                            Friteries
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/fr/sur-le-pouce">
-                                            Sur le Pouce
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/fr/food-trucks">
-                                            Food Trucks
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/fr/bars-cafes">
-                                            Bars &amp; Cafés
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/fr/tea-coffee-time">
-                                            Tea &amp; Coffee Time
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/fr/Traiteurs">
-                                            Traiteurs
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend d-none d-sm-block">
-                                <div class="input-group-text">
-                                    <img src="{{assets}}svg/bl-icon-search.svg" alt="">
-                                </div>
-                            </div>
-                            <input type="text" class="form-control" id="search_input"
-                                   placeholder="{{__.search_placeholder}}">
+                                        <div class="dropdown-menu p-4 stop-closing">
 
-                            <div class="input-group-btn">
-                                <button class="btn btn-lg btn-primary">
+                                            <div class="l-title">
+                                                <img src="{{assets}}svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
                                <span class="d-none d-sm-inline">
                                     {{__.search}}
                                </span>
 
-                                    <i class="fa fa-search d-inline d-sm-none"></i>
+                                            <i class="fa fa-search d-inline d-sm-none"></i>
 
-                                </button>
-                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="your-location"
-                             data-toggle="tooltip"
-                             data-placement="top"
-                             title="{{__.choose_your_location}}">
-                            <a href="#" class="btn btn-dark">
-                                <img src="{{assets}}svg/bl-icon-your-location.svg" alt="">
-                            </a>
+                        <div class="tab-pane active" id="address_search">
+                            <form id="address_search_form" action="/search">
+
+                                <label class="sr-only">
+                                    {{__.search_input}}</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="dropdown category-dropdown"
+                                         id="cat_id_1">
+                                <a href="#" class="dropdown-toggle"  data-toggle="dropdown">
+                                <img src="{{assets}}svg/eat-drink-white.svg" alt=""> Eat and Drink
+                                    <!--<i-->
+                                        <!--class="fa fa-caret-down"></i>-->
+                                </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="">
+                                                <a href="/fr/restaurants">
+                                                    Restaurants
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/fr/friteries">
+                                                    Friteries
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/fr/sur-le-pouce">
+                                                    Sur le Pouce
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/fr/food-trucks">
+                                                    Food Trucks
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/fr/bars-cafes">
+                                                    Bars &amp; Cafés
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/fr/tea-coffee-time">
+                                                    Tea &amp; Coffee Time
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/fr/Traiteurs">
+                                                    Traiteurs
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="{{assets}}svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off"
+                                           class="form-control search_input"
+                                           placeholder="Search address">
+                                    <div class="dropdown search_location">
+
+                                        <a href="#" class="btn btn-default get_user_location" data-toggle="dropdown">
+
+                                            <img src="{{assets}}svg/my-location-marker.svg" alt=""> Choose location
+                                        </a>
+                                        <div class="dropdown-menu p-4 stop-closing">
+
+                                            <div class="l-title">
+                                                <img src="{{assets}}svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="input-group-btn">
+   <button class="btn btn-lg btn-primary btn_submit"
+           >
+                               <span class="d-none d-sm-inline">{{__.search}}</span><i class="fa fa-search d-inline d-sm-none"></i></button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                        <div class="tab-pane" id="article_search">
+                            <form id="article_search_form" action="/search/article">
+                                <label class="sr-only">
+                                    {{__.search_input}}</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="{{assets}}svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off"
+                                           class="form-control search_input"
+                                           placeholder="Search articles">
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
+
+                                        <a href="#" class="btn btn-default get_user_location">
+
+                                            <img src="{{assets}}svg/my-location-marker.svg" alt=""> Choose location
+                                        </a>
+                                        <div class="dropdown-menu p-4 stop-closing">
+
+                                            <div class="l-title">
+                                                <img src="{{assets}}svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
 
 
-                    </form>
+                                        </div>
 
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
+                               <span class="d-none d-sm-inline">
+                                    {{__.search}}
+                               </span><i class="fa fa-search d-inline d-sm-none"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="event_search">
+                            <form id="events_search_form" action="/search/events">
+                                <label class="sr-only">
+                                    Search events</label>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend d-none d-sm-block">
+                                        <div class="input-group-text">
+                                            <img src="{{assets}}svg/bl-icon-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="text" autofocus="true" autocomplete="off"
+                                           class="form-control search_input"
+                                           placeholder="Search events">
+                                    <div id="when">
+                                        <button id="date_range_picker" class="btn btn-default stop-closing"
+                                                data-toggle="tooltip"
+                                                data-placement="top"
+                                                data-original-title="Choose date or date range">
+                                            When <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </div>
+                                    <div id="what">
+                                        <select name="" id="event_categories" class="event-category form-control">
+                                            <option value="-1">What</option>
+                                            <option value="1">All</option>
+                                            <option value="1">Concerts</option>
+                                            <option value="1">Shows</option>
+                                            <option value="1">Exhibition</option>
+                                            <option value="1">Theater</option>
+                                            <option value="1">Nightlife</option>
+                                            <option value="1">Cinema</option>
+                                            <option value="1">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="dropdown search_location"
+                                         data-toggle="dropdown">
+
+                                        <a href="#" class="btn btn-default get_user_location"><img
+                                                src="{{assets}}svg/my-location-marker.svg" alt=""> Where ?</a>
+                                        <div class="dropdown-menu p-4 stop-closing">
+                                            <div class="l-title">
+                                                <img src="{{assets}}svg/my-location-active.svg" alt=""> My location
+                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
+                                            </div>
+
+                                            <div class="l-input py-4">
+                                                <input type="text" placeholder="Choose location"
+                                                       class="form-control pac-input">
+                                            </div>
+
+                                            <div class="l_current">
+
+                                                <p><i class="fa fa-map-marker"></i> <span>
+                                            Belgium Brussels
+                                        </span>
+                                                    <small>Current location</small>
+                                                </p>
+                                                <div class="alert alert-warning"></div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-primary btn_submit">
+                               <span class="d-none d-sm-inline">
+                                    {{__.search}}
+                               </span>
+
+                                            <i class="fa fa-search d-inline d-sm-none"></i>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--<div class="category-icons mt-4">-->
+                    <!--<div>-->
+                    <!--<a href="/section">-->
+                    <!--<img src="{{assets}}svg/categories/restaurant.svg" alt="">-->
+                    <!--Eat & Drink-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--<a href="/section">-->
+                    <!--<img src="{{assets}}svg/categories/sports.svg" alt="">-->
+                    <!--Sports-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--<a href="/section">-->
+                    <!--<img src="{{assets}}svg/categories/beauty.svg" alt="">-->
+                    <!--Beauty-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--<a href="/section">-->
+                    <!--<img src="{{assets}}svg/categories/shopping.svg" alt="">-->
+                    <!--Shopping-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--<a href="/section">-->
+                    <!--<img src="{{assets}}svg/categories/night_life.svg" alt="">-->
+                    <!--Night Life-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
         </section>
     </div>
-    <!--<div class="container-fluid">-->
-        <!--<div class="row no-gutter colour-bars">-->
-            <!--<div class="col-4 bg-orange"></div>-->
-            <!--<div class="col-4 bg-blue"></div>-->
-            <!--<div class="col-4 bg-light-blue"></div>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="container-fluid">
+        <div class="row no-gutter colour-bars">
+            <div class="col-4 bg-orange"></div>
+            <div class="col-4 bg-blue"></div>
+            <div class="col-4 bg-light-blue"></div>
+        </div>
+    </div>
 </blife-block>
-

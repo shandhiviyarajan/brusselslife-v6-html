@@ -1,5 +1,20 @@
 #block-13 {
 
+  .block-content {
+    background: $primary-green;
+    padding: 0px 20px 0px 20px;
+    margin: 0px -20px;
+
+    .block-title-full {
+      background: darken($primary-green,15%);
+      padding: 20px 0px;
+      margin-bottom:20px;
+      h3 {
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+  }
   .section-content-carousel {
     .carousel-cell {
       width: 280px;
@@ -13,15 +28,16 @@
 
         &:hover {
           h4 {
-            color: red;
+            color: #a0a0a0;
           }
         }
       }
 
       h4 {
         font-family: $secondary-title-font;
-        font-size: $h3;
-        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
 
       }
 
