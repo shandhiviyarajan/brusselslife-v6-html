@@ -36,7 +36,7 @@
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
 
     &:hover {
-      border: thin solid #d8d8d8;
+      border: thin solid #000;
       box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
       -webkit-transform: translateY(-10px);
       -moz-transform: translateY(-10px);
@@ -74,6 +74,22 @@
 }
 
 #ag_block_3 {
+
+  div.card {
+    border: thin solid transparent;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+
+    &:hover {
+      border: thin solid #000;
+      -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
 
   .event-date-lg a,
   h3.event-title {
@@ -166,12 +182,29 @@
 
   div.card {
     background-color: #fff;
-    width: 275px;
-    margin-right: $gutter;
+    width: 270px;
+    margin-right: $gutter/2;
+    padding: 5px;
+    border: thin solid #fff;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
 
     &:hover {
+      border: thin solid #000;
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+      transform: translateY(-5px);
+      -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+
       h3 {
-        color: #252525;
+        color: #000;
       }
     }
 
@@ -181,7 +214,7 @@
 
     h3 {
       font-family: $content-font;
-      color: #000;
+      color: #495057;
       line-height: 1.5em;
       font-size: 14px;
       font-weight: bold;
@@ -253,6 +286,7 @@
       -ms-transition: 0.2s ease;
       -o-transition: 0.2s ease;
       transition: 0.2s ease;
+      border: thin solid #fff;
 
       &:active {
         -webkit-transition: 0s ease;
@@ -271,6 +305,7 @@
         -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
         -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+        border: thin solid #000;
 
         h3.event-title {
           color: #000;
@@ -281,3 +316,120 @@
 
 }
 
+#agenda_other_events {
+
+  ul.list-unstyled {
+    margin-top: -5px;
+    margin-left: -5px;
+  }
+
+  div.media {
+    margin-bottom: 15px !important;
+    border: thin solid transparent;
+    padding: 5px;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+
+    &:hover {
+      padding: 5px;
+      border: thin solid #000;
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+      transform: translateY(-5px);
+      -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    }
+
+  }
+}
+
+#agenda_week {
+  padding: 20px 0px;
+
+  div.week-date {
+    display: inline-block;
+    margin: 0px 0px 0px 24px;
+    border-radius: 4px;
+    background: #eee;
+    text-align: center;
+    width: 120px;
+    height: 136px;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    &:active {
+      background: #eee;
+      -webkit-transform: translateY(-0px);
+      -moz-transform: translateY(-0px);
+      -ms-transform: translateY(-0px);
+      -o-transform: translateY(-0px);
+      transform: translateY(-0px);
+      -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    &:hover {
+      background: #EA9C1E;
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+      transform: translateY(-5px);
+      -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+      span, h2, p {
+        color: #000;
+      }
+    }
+    > a {
+
+      height: 136px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    span {
+      font-size: 12px;
+    }
+    p {
+      font-size: 16px;
+      margin: 0px;
+    }
+    h2 {
+      font-size: 42px;
+      font-weight: bold;
+    }
+    span, p, h2 {
+      color: #5e5e5e;
+      font-family: $base-font-family;
+    }
+  }
+  div.week-date:first-child {
+    margin-left: 0px;
+    background: #EA9C1E;
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+    span, h2, p {
+      color: #000;
+    }
+  }
+}

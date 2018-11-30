@@ -1,0 +1,903 @@
+<div class="modal" id="promotional_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    <img src="{{assets}}svg/menu-icon-promotion.svg" alt=""> Create an Offer, Discount or Deal
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-element">
+                    <label for="">Select a photo for your offer. For best results, use images that clearly represent
+                        your
+                        product or service.</label>
+
+                    <div class="promotion-preview">
+                        <p class="px-2 pt-2">
+                            <small>
+                                <i class="fa fa-clock-o"></i> 22 October, 2018 (20 mins ago)
+                            </small>
+                            Description will go here
+                        </p>
+                        <div class="preview-upload-image">
+                            <button>
+                                <i class="fa fa-photo"></i> Image
+                                <input type="file">
+                            </button>
+                        </div>
+
+                        <div class="promotion-title">
+                            <div class="p-date">
+                                Valid till November 1st
+                            </div>
+                            <div class="p-title">
+                                <img src="{{assets}}/svg/bl-icon-tag.svg" alt="">
+                                40% off on cup cakes
+                            </div>
+                            <button disabled class="btn" data-toggle="tooltip" data-placement="top" title=""
+                                    data-original-title="Save promotion">
+                                <i class="fa fa-bookmark-o" aria-hidden="true"></i> Save
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="bg-grey-alpha py-2 px-4">
+                    <div class="form-element">
+                        <label>
+                            Offer Type
+                        </label>
+                        <select id="select_offer_type" class="form-control form-control-sm">
+                            <option value="6">Offer type</option>
+                            <option value="0">Discount percent</option>
+                            <option value="1">Discount amount</option>
+                            <option value="2">Free shipping</option>
+                            <option value="3">Buy X Get Y Discount</option>
+                            <option value="4">Spend X Get Y Discount</option>
+                            <option value="5">Customized</option>
+                        </select>
+                    </div>
+                    <div class="form-element offer-form">
+                        <label>
+                            Discount Amount
+                        </label>
+                        <select class="form-control form-control-sm">
+                            <option value="-1">-10% off</option>
+                            <option value="-1">-15% off</option>
+                            <option value="-1">-20% off</option>
+                            <option value="-1">-25% off</option>
+                            <option value="-1">-30% off</option>
+                            <option value="-1">-35% off</option>
+                            <option value="-1">-40% off</option>
+                            <option value="-1">-45% off</option>
+                            <option value="-1">-50% off</option>
+                            <option value="-1">-55% off</option>
+                            <option value="-1">-60% off</option>
+                            <option value="-1">-65% off</option>
+                            <option value="-1">-70% off</option>
+                            <option value="-1">-75% off</option>
+                        </select>
+                    </div>
+                    <div class="form-element offer-form">
+                        <label>
+                            Enter discount amount eg - 10 &euro;
+                        </label>
+                        <input type="text" placeholder="Discount amount">
+                    </div>
+                    <div class="form-element offer-form">
+                        <span class="badge badge-success">
+                            Free Shipping
+                        </span>
+                    </div>
+                    <div class="form-element offer-form">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="">Buy</label>
+                                <input type="number" value="2">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="">Get</label>
+                                <input type="number" value="1">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Discount %</label>
+                                <select class="form-control form-control-sm">
+                                    <option value="-1">-10% off</option>
+                                    <option value="-1">-15% off</option>
+                                    <option value="-1">-20% off</option>
+                                    <option value="-1">-25% off</option>
+                                    <option value="-1">-30% off</option>
+                                    <option value="-1">-35% off</option>
+                                    <option value="-1">-40% off</option>
+                                    <option value="-1">-45% off</option>
+                                    <option value="-1">-50% off</option>
+                                    <option value="-1">-55% off</option>
+                                    <option value="-1">-60% off</option>
+                                    <option value="-1">-65% off</option>
+                                    <option value="-1">-70% off</option>
+                                    <option value="-1">-75% off</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-element offer-form">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="">Spend</label>
+                                <input type="text" value="$200">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Amount off</label>
+                                <input type="text" value="$50">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-element offer-form">
+                        <p>
+                            Customized
+                        </p>
+                        <textarea class="form-control" placeholder="Customize your offer" cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label for="">Offer title</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Offer title ">
+                    <small>
+                        eg Coffee, tea, Food, Hair cutting...
+                    </small>
+                </div>
+                <div class="form-element">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Expires on</label>
+                            <div class="input-group">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="date"
+                                           class="form-element"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Time</label>
+                            <div class="input-group">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-element"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label for="">
+                        Where can people redeem this ?
+                    </label>
+
+                    <div class="checkbox">
+                        <input name="redeem" value="0" type="radio" id="in-store">
+                        &nbsp; <label for="in-store">In-Store</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input name="redeem" value="1" type="radio" id="online">
+                        &nbsp; <label for="online">Online</label>
+                    </div>
+                    <div class="online-url">
+                        <input type="text" placeholder="Online URL" class="form-control">
+                    </div>
+
+
+                </div>
+
+                <div class="form-element">
+                    <label for="">Add promo code (optional) </label>
+                    <input maxlength="20" class="form-control" type="text" placeholder="Promo code">
+                </div>
+
+                <div class="form-element">
+                    <label for="">Add description (optional) </label>
+                    <textarea class="form-control" placeholder="Description"></textarea>
+                </div>
+                <div class="form-element">
+                    <label for="">Add terms & conditions (optional) </label>
+                    <textarea class="form-control" placeholder="Terms & conditions"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer d-block">
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-right">
+                        <div class="form-element">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="add_menu_modal">
+    <div class="modal-dialog add-menu" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    <img src="../../public/svg/menu-icon-menu.svg" alt=""> Add new menu item
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-element">
+                    <label for="">Create a new category</label>
+                    <button class="btn btn-primary btn-sm"
+                            data-toggle="modal" data-target="#create_new_menu_category">
+                        New category
+                    </button>
+                </div>
+                <div class="form-element">
+                    <label for="">Choose from existing category</label>
+                    <select name="" id="" class="form-control">
+                        <option value="-1">Menu category</option>
+                        <option value="-1">Break fast</option>
+                        <option value="-1">Lunch</option>
+                        <option value="-1">Dinner</option>
+                        <option value="-1">Salads</option>
+                        <option value="-1">Soups</option>
+                    </select>
+                </div>
+
+
+                <div class="form-element">
+                    <label class="hide">Menu title</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-element">
+                    <label for="">Price</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">&euro;</div>
+                        </div>
+                        <input type="number" placeholder="Price only on euro" class="form-control">
+                    </div>
+                </div>
+                <div class="form-element image_upload">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Upload images
+                            <small>(Optional)</small>
+                        </div>
+                        <div class="col-md-4">
+                            <div>
+                                <i class="fa fa-photo"></i>
+                                <input type="file">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div>
+                                <i class="fa fa-photo"></i>
+                                <input type="file">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div>
+                                <i class="fa fa-photo"></i>
+                                <input type="file">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label class="hide">Menu description (Optional)</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal sub-modal" id="create_new_menu_category">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    <img src="../../public/svg/menu-icon-menu.svg" alt=""> Add new menu category
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-element">
+                    <label for="">New category name </label>
+                    <input type="text" class="form-control" placeholder="Category name">
+                    <p>
+                        <small>eg Dinner, Lunch, Sandwiches</small>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="add_event_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    <img src="{{assets}}svg/bl-icon-calendar.svg" alt=""> Create new event
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+
+                <!--<div class="dropdown dropdown-toggle"-->
+                <!--data-toggle="dropdown">-->
+                <!--Your language is - <strong>English</strong>-->
+                <!--<button class="btn">-->
+                <!--Change language ?-->
+                <!--</button>-->
+                <!--<ul class="dropdown-menu">-->
+                <!--<li>-->
+                <!--<a href="#">-->
+                <!--English (EN)-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#">-->
+                <!--French (FR)-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#">-->
+                <!--Dutch (NL)-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+
+                <p class="m-0">
+                    <strong>
+                        Basic Info
+                    </strong>
+                    <small>This info will also appear in News Feed and any ads created for this event</small>
+                </p>
+                <div class="form-element">
+                    <label for="">Event photo </label>
+                    <div class="event-preview">
+                        <div class="preview-upload-image">
+                            <button>
+                                <i class="fa fa-photo"></i> Image
+                                <input type="file">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="m-0">
+                        <strong>
+                            Details
+                        </strong>
+                        <small>
+                            Let people know what type of event you're hosting and what to expect
+                        </small>
+                    </p>
+                    <div class="form-element">
+                        <label for="">Event title</label>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Add a short name of your event">
+                    </div>
+                    <div class="form-element">
+                        <label for="">Event location</label>
+                        <input type="text" class="form-element" placeholder="Include a place or address">
+                    </div>
+                    <div class="form-element">
+                        <label for="">Category</label>
+                        <select name="" id="">
+                            <option value="">Exhibition</option>
+                            <option value="">Cinema</option>
+                            <option value="">Dance</option>
+                            <option value="">Music</option>
+                            <option value="">Travel</option>
+                            <option value="">Theater</option>
+                            <option value="">Comedy</option>
+                            <option value="">Stage shows</option>
+                            <option value="">Seminar</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-element">
+                        <label for="">Event description (optional) </label>
+                        <textarea class="form-control" placeholder="Description"></textarea>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p class="m-0">
+                        <strong>
+                            Contact
+                        </strong>
+                        <small>
+                            Let people know how to contact the event organizer.
+                        </small>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-element">
+                                <label for="">Telephone</label>
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-element">
+                                <label for="">Website</label>
+                                <input type="text" placeholder="http://www.google.com">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-element">
+                                <label for="">Email address</label>
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-element">
+                                <label for="">Mobile number</label>
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p class="m-0">
+                        <strong>
+                            Keywords
+                        </strong>
+                        <small>
+                        </small>
+                    </p>
+                    <div class="form-element">
+                        <label for="">Key words</label>
+                        <input type="text" placeholder="Add keywords, seperate by comma ','">
+                    </div>
+                    <div class="form-element">
+                        <div class="checkbox">
+                            <input id="kid_friendly" type="checkbox">
+                            <label for="kid_friendly">Kid friendly</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p class="m-0">
+                        <strong>
+                            Date & time - (Occurs once)
+                        </strong>
+                        <small>
+                            Let people know whether this event repeats & how often it happens
+                        </small>
+                    </p>
+
+                    <div class="date-time-form">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-element">
+                                            <label for="">Start date</label>
+                                            <div class="input-group">
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                                    </div>
+                                                    <input type="date"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-element">
+                                            <label for="">Start time</label>
+                                            <div class="input-group">
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                                    </div>
+                                                    <input type="date"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-element">
+                                            <label for="">End date</label>
+                                            <div class="input-group">
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                                    </div>
+                                                    <input type="date"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-element">
+                                            <label for="">End time</label>
+                                            <div class="input-group">
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                                    </div>
+                                                    <input type="date"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p class="m-0">
+                        <strong>
+                            Frequency
+                        </strong>
+                        <small>
+                            Let people know whether this events repeats & how often it occurs.
+                        </small>
+                    </p>
+                    <div class="form-element">
+                        <button class="btn btn-secondary btn-sm"
+                                data-toggle="modal" data-target="#add_more_event_time">
+                            <i class="fa fa-list-ul" aria-hidden="true"></i> Schedule
+                        </button>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p class="m-0">
+                        <strong>
+                            Tickets
+                        </strong>
+                        <small>
+                            Let people know where they can get tickets for your event
+                        </small>
+                    </p>
+
+                    <div class="form-element">
+                        <label for="">Tickets URL</label>
+                        <input type="text" placeholder="Add a link to your tickets website">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-block">
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-right">
+                        <div class="form-element">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Save Draft</button>
+                            <button type="button" class="btn btn-primary">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="add_more_event_time">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    <i class="fa fa-clock-o"></i> Schedule your event
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-element m-0">
+                    <label for="">Frequency</label>
+                    <select class="form-control">
+                        <option value="-1">Choose</option>
+                        <option value="1">Repeat daily</option>
+                        <option value="2">Repeat Weekly</option>
+                        <option value="3">Custom dates</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-element">
+                            <label for="">Start date</label>
+                            <div class="input-group">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="date"
+                                           class="form-element"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-element">
+                            <label for="">End date</label>
+                            <div class="input-group">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="date"
+                                           class="form-element"
+                                           placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-element">
+                            <label for="">Start time</label>
+                            <div class="input-group time">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                </div>
+                                <input type="time"
+                                       class="form-element"
+                                       placeholder="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-element">
+                            <label for="">End time</label>
+                            <div class="input-group time">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                </div>
+                                <input type="time"
+                                       class="form-element"
+                                       placeholder="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="m-0">
+                            <strong>
+                                Customize date & time
+                            </strong>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-element">
+                                    <label for="">Choose dates</label>
+                                    <div class="schedule_date"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="m-0">
+                                    <strong>
+                                        12-Dec-2018
+                                    </strong>
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-element">
+                                            <label for="">Start time</label>
+                                            <div class="input-group time">
+                                                <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                                </div>
+                                                <input type="time"
+                                                       class="form-element"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-element">
+                                            <label for="">Start time</label>
+                                            <div class="input-group time">
+                                                <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                                </div>
+                                                <input type="time"
+                                                       class="form-element"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer d-block text-right">
+                <button type="button" class="btn btn-primary">Save</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="add_article_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    <img src="{{assets}}svg/menu-icon-article.svg" alt="">
+                    Add new business article
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <strong>Create a business article</strong>
+                    <small>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur at, doloremque
+                        doloribus ea expedita illum perspiciatis quaerat recusandae velit? Cum distinctio dolorem fugit
+                        harum laborum perferendis quidem sint voluptates.
+                    </small>
+                </p>
+                <div class="form-element">
+                    <label for="">Article title</label>
+                    <input type="text" placeholder="Add a title">
+                </div>
+                <div class="form-element">
+                    <label for="">Article main image </label>
+                    <div class="event-preview">
+                        <div class="preview-upload-image">
+                            <button>
+                                <i class="fa fa-photo"></i> Image
+                                <input type="file">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label for="">Article body</label>
+                    <textarea name="" id="" cols="30" rows="10"
+                              placeholder="Article description"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer d-block">
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-right">
+                        <div class="form-element">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal highlight-modal" id="highlight_modal"
+     tabindex="-1"
+     role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="active"></span>
+                <span></span>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="highlight-content">
+                    <div class="p-4 pb-2">
+                        <p>
+                            <span class="tag">
+                            #promotion
+                        </span> When an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. </p>
+                    </div>
+                    <figure>
+                        <img class="sombal" data-src="{{assets}}images/promo.jpg" alt="">
+                    </figure>
+                    <div>
+                        <p>
+                            Valid till November 1st
+                        </p>
+                        <h2>
+                            <img src="{{assets}}svg/bl-icon-tag.svg" alt="">
+                            40% off on cup cakes
+                        </h2>
+                    </div>
+                    <a href="#" class="btn btn-link">
+                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer d-flex">
+
+            </div>
+        </div>
+    </div>
+</div>
+

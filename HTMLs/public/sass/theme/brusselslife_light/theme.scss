@@ -128,7 +128,7 @@ a, .btn-link {
 }
 
 .bg-warning-2 {
-  background-color: #EA9C1E;
+  background-color: #EA9C1E !important;
 }
 
 .row-20 {
@@ -149,6 +149,11 @@ a, .btn-link {
 
 .bg-primary {
   background-color: $primary-blue !important;
+}
+
+.bg-white{
+  background:#fff !important;
+
 }
 
 .bg-cayan {
@@ -751,14 +756,22 @@ div.checkbox.custom-checkbox {
     left: 0px;
     top: 5px;
   }
+  
+  &:active{
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+  }
 
   &.active {
     &:before {
       content: "\f00c";
       font-size: 11px;
       text-align: center;
-      padding-top: 1px;
-      background: $primary-green;
+      padding-top: 2px;
+      background: $blue-info-dark;
       color: #fff;
       border: none;
     }
@@ -890,9 +903,9 @@ p.event-date-sm {
 }
 
 h3.event-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 1.5em;
+  line-height: 1.3em;
   color: #fff;
   span {
     float: left;

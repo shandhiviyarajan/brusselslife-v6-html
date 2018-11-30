@@ -1,0 +1,135 @@
+---
+layout : default.html
+title : Place | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events & happenings.
+---
+
+{{> home-search }}
+<!-- leader board advertisement -->
+{{> leader-board }}
+
+{{> breadcrumb}}
+
+{{> modal }}
+<div class="container place-container">
+
+    <div class="row">
+        {{> left-side-block}}
+        <div class="col-md-7 place-col-center">
+            {{> post-form}}
+            <div class="address-gallery p-4 mb-4 bg-white shadow-sm">
+                <div class="address-logo-title d-flex ">
+                    <figure>
+                        <img data-src="{{assets}}images/logo.jpg" class="sombal" alt="By Chef Michel à l'italienne">
+                    </figure>
+                    <div>
+                        <h1>
+                            By Chef Michel à l'italienne
+                        </h1>
+                        <p class="tag_line">
+                            Une authentique brasserie belge dans la chaleur de l’Art Déco
+                        </p>
+                        <address>
+                            <i class="fa fa-map-marker"></i>
+                            Place Fernand Cocq, 21 - 1050 Bruxelles
+                        </address>
+                    </div>
+                </div>
+                <div class="main-image">
+                    <figure>
+                        <img data-src="{{assets}}images/gallery/1.png" class="sombal" alt="">
+                    </figure>
+                </div>
+                <div class="gallery-thumbs">
+                    <a href="#">
+                        <img data-src="{{assets}}images/gallery/2.png" class="sombal" alt="">
+                    </a>
+                    <a href="#">
+                        <img data-src="{{assets}}images/gallery/3.png" class="sombal" alt="">
+                    </a>
+                    <a href="#">
+                        <img data-src="{{assets}}images/gallery/4.png" class="sombal" alt="">
+                    </a>
+                    <a href="#">
+                        <img data-src="{{assets}}images/gallery/5.png" class="sombal" alt="">
+                    </a>
+                    <a href="#">
+                        <img data-src="{{assets}}images/gallery/6.png" class="sombal" alt="">
+                    </a>
+                    <a href="#">
+                        <img data-src="{{assets}}images/gallery/7.png" class="sombal" alt="">
+                    </a>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+94779773225"
+                       class="btn btn-default"
+                       data-number="+94779773225">
+                        <i class="fa fa-phone"></i>
+                        Telephone</a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/bl-icon-message.svg" alt="">
+                        Send message
+                    </a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/reservation.svg" alt="">
+                        Reservations
+                    </a>
+                </div>
+            </div>
+            <div class="address-container shadow-sm"
+                 name="about">
+                <div id="tagline">
+                    TAN est un magasin, un restaurant et un centre de cours dédié à une cuisine révolutionnaire.
+                </div>
+                <div id="content-body">
+                    <p>
+                        C’est une cuisine de plaisir mais aussi écologique, éthique et santé. En un mot : se faire
+                        plaisir sans faire de mal à soi ou à l’environnement.  La moitié de la carte du restaurant est
+                        végétarienne, l’autre moitié est composée de poissons, viande et crustacés. Tout cela dans un
+                        contexte particulier : les plats sont crus ou cuits en dessous de 100° et les ingrédients
+                        utilisés sont à 99% issus de l’ <a href="http://www.brusselslife.be">agriculture biologique.
+
+                        <span class="hint-content">
+                             <img src="{{assets}}images/content_img_2.jpg" alt="some caption about image">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium assumenda aut beatae
+                        consequuntur cupiditate debitis deserunt dolores eius illo laudantium officia optio pariatur
+                        perspiciatis quisquam ratione repellat sed, ullam.
+                    </span>
+
+                    </a>
+
+                    Une alimentation vivante, donc. Et le
+                    résultat est stupéfiant ! Des saveurs inédites, des associations nouvelles, des produits
+                    provenant de toutes les cultures culinaires du globe. Des asiatiques aux américains
+                    avant-gardistes, le monde entier apprécie cette synthèse culinaire sans précédent. C’est ce qui
+                    a permis à TAN d’être le seul restaurant alternatif coté dans les grands guides gastronomiques.
+                    <img class="sombal"
+                         title="image caption here"
+                         data-src="{{assets}}images/group.jpg"
+                         alt="image-caption-here"/>
+                    <br>
+                    Les cours de cuisine permettent à tout un chacun d’apprendre à la maîtriser. Ils couvrent les
+                    aspects théoriques mais aussi pratiques de ce mode culinaire et permettent d’apprendre à faire
+                    les recettes chez soi tout en prenant conscience des enjeux alimentaires d’aujourd’hui. Un bon
+                    moyen de retrouver une hygiène de vie.
+                    <br><br>
+                    Au magasin, on retrouve tous les produits et ingrédients alimentaires mais aussi les accessoires
+                    (extracteurs de jus, déshydrateurs, blenders, etc) qui permettent de réaliser les recettes chez
+                    soi. C’est d’ailleurs l’un des seuls magasins qui propose un choix alimentaire biologique digne
+                    d’une épicerie fine. <br><br>
+
+                    Malgré la pression financière, TAN n’a jamais cédé sur quoi que ce soit.
+                    Ni sur la qualité de ses ingrédients, ni sur son authenticité (tout est fait dans la maison,
+                    même les graines germées). Les plats sont préparés « minute » et sans compromis moderniste
+                    (surgélation, micro-ondes).
+                    </p>
+
+
+                </div>
+            </div>
+            {{> review}}
+        </div>
+        {{> right-side-block}}
+    </div>
+</div>
+
+<script type="text/javascript" src="{{assets}}build/place.js"></script>

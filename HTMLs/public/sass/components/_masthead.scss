@@ -14,10 +14,26 @@ header {
     width: 44px;
     height: 44px;
 
+    img.menu_1 {
+      display: block;
+    }
+    img.close_1 {
+      display: none;
+    }
+
     &:hover {
       background-color: $primary-blue !important;
     }
 
+  }
+
+  .side-menu-trigger.menu-open {
+    img.menu_1 {
+      display: none;
+    }
+    img.close_1 {
+      display: block;
+    }
   }
   .nav-right {
     padding: 20px 30px 0px 0px;
@@ -31,7 +47,7 @@ header {
       display: block;
       flex-shrink: 0;
       border-radius: 4px;
-      box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     }
 
     div#lan-dropdown {
@@ -88,7 +104,7 @@ header {
           width: 40px;
           height: 40px;
           border-radius: 4px;
-          box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
         }
       }
     }
@@ -297,7 +313,7 @@ header {
     padding: 10px;
     z-index: 3001;
     cursor: pointer;
-    top: 45px;
+    top: 97px;
     right: 0px;
     height: 72px;
     opacity: 0;
@@ -385,7 +401,7 @@ header.shrink-header {
   }
 }
 
-header.header-search {
+header.header_search {
   position: relative;
   width: 100%;
   top: 0px;
@@ -473,6 +489,12 @@ header.header-search {
     @extend .blur;
   }
 
+  a.submit_event {
+    &:hover {
+      background: darken($secondary-orange, 5%) !important;
+    }
+  }
+
 }
 
 header.move {
@@ -487,15 +509,15 @@ header.move {
 }
 
 body.fixed-header {
-  padding-top: 183px;
+  padding-top: 468px;
 }
 
 .form-title {
   background: $blue-info-dark;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 20px 30px;
+  padding: 10px 20px;
   margin: -30px -30px 0px -30px;
 }
 
@@ -660,12 +682,22 @@ div.error-message {
   width: 280px;
   z-index: 1049;
   height: 100vh;
-  overflow-y: scroll;
+  left: -280px;
   -webkit-overflow-scrolling: touch;
-  display: none;
+  display: block;
+  background: darken($primary-blue, 5%);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+
+  &.active {
+    left: 0px !important;
+  }
   ul li {
     list-style: none;
-    background: #fff;
+
     position: relative;
 
     a {
@@ -676,11 +708,15 @@ div.error-message {
       font-weight: bold;
       padding: 10px 20px;
       text-transform: uppercase;
-      background: #ffffff;
-      color: #25475F;
+      //background: darken($primary-blue, 5%);
+      color: #fff;
       line-height: 25px;
       letter-spacing: -0.03em;
-      border-bottom: thin solid #d8d8d8;
+      border-bottom: lighten($primary-blue, 5%);
+
+      &:hover {
+        color: #d8d8d8;
+      }
 
     }
 
@@ -694,11 +730,13 @@ div.error-message {
       font-size: 24px;
       padding-top: 10px;
       cursor: pointer;
+      color: #fff;
 
     }
     ul.left-menu-level-1 {
-      padding-left: 30px;
+      padding-left: 20px;
       display: none;
+      background: darken($primary-blue, 15%);
       li {
       }
     }

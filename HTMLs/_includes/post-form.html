@@ -1,0 +1,144 @@
+<div id="place_post_form">
+                <span class="close-status">
+                    <img src="{{assets}}svg/close-bar.svg" alt="">
+                </span>
+    <form action="!#">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <a href="#" class="input-group-text" data-toggle="tooltip" data-placement="top"
+                    data-title="Tell someting about your business">
+                        +
+                    </a>
+                </div>
+                <div class="textarea form-control"
+                     contenteditable="true"
+                >Share photo, promotion, events...
+                </div>
+
+            </div>
+        </div>
+        <p class="text-muted">
+            <small>
+
+            </small>
+        </p>
+
+        <div class="image_array">
+            <div class="img_uploaded">
+                <figure>
+                    <i class="fa fa-times"
+                       data-placement="top"
+                       data-toggle="tooltip"
+                       data-title="Remove"></i>
+                    <img src="{{assets}}images/gallery/2.png" alt="">
+                </figure>
+            </div>
+            <div class="img_uploaded">
+                <figure>
+                    <i class="fa fa-times"
+                       data-placement="top"
+                       data-toggle="tooltip"
+                       data-title="Remove"></i>
+                    <img src="{{assets}}images/gallery/3.png" alt="">
+                </figure>
+            </div>
+
+            <div class="img_upload" title="Choose image">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <input type="file" title="Choose image">
+            </div>
+        </div>
+
+        <div class="expanded-form">
+            <div class="status-actions">
+                <div class="row">
+                    <!--<div class="col-md-3">-->
+                    <!--<button type="button" class="btn btn-default btn-post-status active">-->
+                    <!--<img src="{{assets}}svg/menu-icon-status.svg" alt=""> Status-->
+                    <!--</button>-->
+                    <!--</div>-->
+                    <div class="col-md-3">
+                        <button type="button" data-toggle="modal" data-target="#promotional_modal"
+                                class="btn btn-default btn-post-promotion">
+                            <img src="{{assets}}svg/menu-icon-promotion.svg" alt="">Promotion
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" data-toggle="modal" data-target="#add_event_modal"
+                                class="btn btn-default btn-post-events">
+                            <img src="{{assets}}svg/menu-icon-events.svg" alt=""> Events
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button"
+                                data-toggle="modal" data-target="#add_article_modal"
+                                class="btn btn-default btn-post-article">
+                            <img src="{{assets}}svg/menu-icon-article.svg" alt=""> Article
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button"
+                                data-target="#add_image_modal"
+                                data-toggle="modal"
+                                class="btn btn-default btn-post-image">
+                            <img src="{{assets}}svg/menu-icon-image.svg" alt=""> Image
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled data-target="#add_product_modal"
+                                class="btn btn-default btn-post-products">
+                            <img src="{{assets}}svg/menu-icon-products.svg" alt=""> Products
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled class="btn btn-default btn-post-video">
+                            <img src="{{assets}}svg/menu-icon-video.svg" alt=""> Video
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled data-toggle="modal" data-target="#add_menu_modal"
+                                class="btn btn-default btn-post-menu">
+                            <img src="{{assets}}svg/menu-icon-menu.svg" alt=""> Menu
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="post-on-fb-tw">
+                <div class="row m-0 pt-2">
+                    <div class="col-md-4 col-sm-6 pl-0">
+                        <div class="form-element">
+                            <div class="checkbox custom-checkbox">
+                                <input id="post_on_fb"
+                                       type="checkbox"
+                                       value="post_on_fb">
+                                <label for="post_on_fb">Post on facebook</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 pl-0">
+                        <div class="form-element">
+                            <div class="checkbox custom-checkbox">
+                                <input id="post_on_tw"
+                                       type="checkbox" value="post_on_fb">
+                                <label for="post_on_tw">Post on twitter</label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+
+                <div class="col-md-6 d-flex justify-content-end post-submit-btns">
+                    <button type="reset" class="mr-4 btn btn-primary btn-clear">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fa fa-share" aria-hidden="true"></i> Post
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

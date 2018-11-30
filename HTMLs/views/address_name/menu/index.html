@@ -1,0 +1,1142 @@
+---
+layout : default.html
+title : Place | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events & happenings.
+---
+
+{{> home-search }}
+<!-- leader board advertisement -->
+{{> leader-board }}
+
+{{> breadcrumb}}
+
+{{> modal }}
+<div class="container place-container">
+    <div class="row">
+        {{> left-side-block}}
+        <div class="col-md-7 place-col-center">
+            {{> post-form}}
+
+            <div class="address-gallery p-4 mb-4 bg-white shadow-sm">
+                <div class="address-logo-title d-flex ">
+                    <figure>
+                        <img data-src="{{assets}}images/logo.jpg" class="sombal" alt="By Chef Michel à l'italienne">
+                    </figure>
+                    <div>
+                        <h1>
+                            By Chef Michel à l'italienne
+                        </h1>
+                        <p class="tag_line">
+                            Une authentique brasserie belge dans la chaleur de l’Art Déco
+                        </p>
+                        <address>
+                            <i class="fa fa-map-marker"></i>
+                            Place Fernand Cocq, 21 - 1050 Bruxelles
+                        </address>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+94779773225"
+                       class="btn btn-default"
+                       data-number="+94779773225">
+                        <i class="fa fa-phone"></i>
+                        Telephone</a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/bl-icon-message.svg" alt="">
+                        Send message
+                    </a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/reservation.svg" alt="">
+                        Reservations
+                    </a>
+                </div>
+            </div>
+            <div class="empty-post bg-white shadow-sm py-4">
+                <img src="{{assets}}svg/menu-icon-menu.svg" alt="">
+                <p class="my-4">
+                    <strong>
+                        Add your restaurant menu
+                    </strong>
+                </p>
+                <button class="btn btn-default btn-post-menu mb-2"
+                        data-toggle="modal"
+                        data-target="#add_menu_modal">
+                    <img src="{{assets}}svg/menu-icon-menu.svg" alt="">
+                    Add menu
+                </button>
+                <p>
+                    <span>
+                        Let people know about your restaurant menu and food.
+                    </span>
+                </p>
+            </div>
+            <section class="restaurant-food-menu">
+
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Dinner Appetizers
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+
+                                            <span>
+                                        4 likes   &nbsp; &nbsp; 3 comments
+                                    </span>
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Lunch Appetizers
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Supper Appetizers
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Dinner Entrees
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Chilled Seafood
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Lunch Sandwiches & Burger
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Fresh Wild Fish of The Day
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Soups and Salads
+                        </h3>
+                        <a href="#" class="btn btn-link btn-edit">
+                            <i class="fa fa-pencil"></i> Edit
+                        </a>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{assets}}images/gallery/2.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                                        </p>
+                                    </div>
+                                    <div class="price">
+                                        15.00 &euro;
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        {{> right-side-block}}
+    </div>
+</div>
+
+<script type="text/javascript" src="{{assets}}build/place.js"></script>

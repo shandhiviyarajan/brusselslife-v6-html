@@ -1,0 +1,75 @@
+---
+layout : default.html
+title : Place | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events & happenings.
+---
+
+{{> home-search }}
+<!-- leader board advertisement -->
+{{> leader-board }}
+
+{{> breadcrumb}}
+
+{{> modal }}
+<div class="container place-container">
+    <div class="row">
+        {{> left-side-block}}
+        <div class="col-md-7 place-col-center">
+            {{> post-form}}
+            <div class="address-gallery p-4 mb-4 bg-white shadow-sm">
+                <div class="address-logo-title d-flex ">
+                    <figure>
+                        <img data-src="{{assets}}images/logo.jpg" class="sombal" alt="By Chef Michel à l'italienne">
+                    </figure>
+                    <div>
+                        <h1>
+                            By Chef Michel à l'italienne
+                        </h1>
+                        <p class="tag_line">
+                            Une authentique brasserie belge dans la chaleur de l’Art Déco
+                        </p>
+                        <address>
+                            <i class="fa fa-map-marker"></i>
+                            Place Fernand Cocq, 21 - 1050 Bruxelles
+                        </address>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+94779773225"
+                       class="btn btn-default"
+                       data-number="+94779773225">
+                        <i class="fa fa-phone"></i>
+                        Telephone</a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/bl-icon-message.svg" alt="">
+                        Send message
+                    </a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/reservation.svg" alt="">
+                        Reservations
+                    </a>
+                </div>
+            </div>
+
+            <div class="empty-post bg-white shadow-sm py-4">
+                <img src="{{assets}}svg/menu-icon-products.svg" alt="">
+                <p class="my-4">
+                    <strong>
+                        Let people know about your products.
+                    </strong>
+                </p>
+                <button class="btn btn-default btn-post-products mb-2">
+                    <img src="{{assets}}svg/menu-icon-products.svg" alt="">
+                    Add Products
+                </button>
+                <p>
+                    <span>
+                        Let people know about your products.
+                    </span>
+                </p>
+            </div>
+        </div>
+        {{> right-side-block}}
+    </div>
+</div>
+
+<script type="text/javascript" src="{{assets}}build/place.js"></script>

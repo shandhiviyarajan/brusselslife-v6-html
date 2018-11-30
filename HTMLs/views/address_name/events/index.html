@@ -1,0 +1,512 @@
+---
+layout : default.html
+title : Address timeline | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events & happenings.
+---
+{{> home-search }}
+{{> breadcrumb}}
+{{> modal }}
+
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+<div class="container place-container">
+    <div class="row">
+        {{> left-side-block}}
+        <div class="col-md-7 place-col-center">
+            <div class="address-gallery p-4 mb-4 bg-white shadow-sm">
+                <div class="address-logo-title d-flex ">
+                    <figure>
+                        <img data-src="{{assets}}images/logo.jpg" class="sombal" alt="By Chef Michel à l'italienne">
+                    </figure>
+                    <div>
+                        <h1>
+                            By Chef Michel à l'italienne
+                        </h1>
+                        <p class="tag_line">
+                            Une authentique brasserie belge dans la chaleur de l’Art Déco
+                        </p>
+                        <address>
+                            <i class="fa fa-map-marker"></i>
+                            Place Fernand Cocq, 21 - 1050 Bruxelles
+                        </address>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+94779773225"
+                       class="btn btn-default"
+                       data-number="+94779773225">
+                        <i class="fa fa-phone"></i>
+                        Telephone</a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/bl-icon-message.svg" alt="">
+                        Send message
+                    </a>
+                    <a href="#" class="btn btn-default">
+                        <img src="{{assets}}svg/reservation.svg" alt="">
+                        Reservations
+                    </a>
+                </div>
+            </div>
+            <div class="empty-post bg-white shadow-sm py-4">
+                <img src="{{assets}}svg/menu-icon-events.svg" alt="">
+                <p class="my-4">
+                    <strong>
+                        Get More People to Your Events
+                    </strong>
+                </p>
+                <button data-toggle="modal" data-target="#add_event_modal" class="btn btn-default btn-post-events mb-2">
+                    <img src="{{assets}}svg/menu-icon-events.svg" alt="">
+                    Create event
+                </button>
+                <p>
+                    <span>
+                       Let people know what you have coming up. Publish an event on Brusselslife.
+                    </span>
+                </p>
+            </div>
+            <div class="upcoming-events shadow-sm bg-white mt-4">
+                <div class="place-title">
+                    <h3>
+                        Upcoming events
+                    </h3>
+                </div>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="upcoming-events past-events shadow-sm bg-white mt-4">
+                <div class="place-title">
+                    <h3>
+                        Past events
+                    </h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex">
+                            <figure>
+                                <img src="{{assets}}/images/other_e_1.jpg" alt="">
+                            </figure>
+                            <div class="d-flex">
+                                <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                    22
+                                </div>
+                                <div>
+                                    <div class="event-title">
+                                        The point of this article is to help you grasp the big picture of getting six pack
+                                        abs.
+                                    </div>
+                                    <div class="event-date-sm">
+                                        14 April 2018 - 14 Jun 2018
+                                    </div>
+                                    <div>
+                                    <span class="event-cat">
+                                        SPORTS
+                                    </span>
+                                        <span class="event-location">
+                                        | Ixelles
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                {{> add-to-calendar}}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {{> review}}
+        </div>
+        {{> right-side-block}}
+    </div>
+</div>
+<script type="text/javascript" src="{{assets}}libs/bootstrap-datepicker/js/bootstrap.datepicker.min.js"></script>
+<script type="text/javascript" src="{{assets}}build/place.js"></script>

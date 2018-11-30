@@ -1,0 +1,20 @@
+
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="0 0 10.6363636 0 10.6363636 8.18181818 0 8.18181818"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval" transform="translate(-5.000000, -2.000000)">
+            <g transform="translate(5.000000, 2.000000)">
+                <circle fill="#74C351" fill-rule="nonzero" cx="9" cy="9" r="9"></circle>
+                <g id="checked" stroke-width="1" fill-rule="evenodd" transform="translate(4.090909, 4.909091)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M3.82667631,8.18181818 C3.61086771,8.18181818 3.39483475,8.09379293 3.23020498,7.91766247 L0.247150327,4.72863247 C-0.0823834423,4.37637156 -0.0823834423,3.80534003 0.247150327,3.45307911 C0.576659167,3.10081819 1.1108085,3.10081819 1.44031734,3.45307911 L3.82667631,6.00421249 L9.19608992,0.264155716 C9.52559876,-0.0879986032 10.0598478,-0.0881052036 10.3891572,0.264155716 C10.7187658,0.616416636 10.7187658,1.18758141 10.3891572,1.53973573 L4.42327228,7.91766247 C4.25851786,8.09368633 4.04258462,8.18181818 3.82667631,8.18181818" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

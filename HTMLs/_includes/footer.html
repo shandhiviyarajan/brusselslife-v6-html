@@ -266,8 +266,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- bootstrap -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<!--<script src="{{assets}}libs/bootstrap-4/bootstrap-4-native.min.js"></script>-->
-<!-- scroll bar -->
 <script src="{{assets}}libs/flick/flick.js"></script>
 <!-- momentjs-->
 <script type="text/javascript" src="{{assets}}libs/daterangepicker/moment.min.js"></script>
@@ -293,8 +291,9 @@
         var overlay = document.getElementById("overlay");
         var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
+        var event_page = document.getElementById("event_page");
         var search_tabs = $("#search_tabs");
-
+        var agenda_week = $("#agenda_week");
         var l_current = $(".l_current ");
         var screen = $(window);
         var geocoder;
@@ -305,24 +304,27 @@
             function BrusselslifeFE() {
                 return {
                     init: function () {
+                        _get_user_location();
                         _load();
                         _header();
                         _what();
                         _when();
-
-                        _get_user_location();
+                        _scroll_event_page();
                     }
                 };
             }
 
             function _load() {
                 console.log("Brusselslife v7.0 HTML");
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                })
             }
 
             function _header() {
                 //screen scroll functions
                 screen.scroll(function () {
-                    if ($(document).scrollTop() > 180) {
+                    if ($(document).scrollTop() > 468) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
                         home_search.classList.add('shrink');
@@ -377,6 +379,7 @@
 
                 var start = moment().subtract(0, 'days');
                 var end = moment();
+
                 //set variables according to the language
 
                 function cb(start, end) {
@@ -437,9 +440,9 @@
                     }
                 }
                 var input = document.getElementsByClassName('pac-input');
-                var ip = input.length;
-                while (ip--) {
-                    var autocomplete = new google.maps.places.Autocomplete(input[ip]);
+                var ipl = input.length;
+                while (ipl--) {
+                    var autocomplete = new google.maps.places.Autocomplete(input[ipl]);
                     autocomplete.addListener('place_changed', function () {
                         var p = autocomplete.getPlace();
                         l_current.find("span").text(p.formatted_address);
@@ -478,6 +481,35 @@
                 });
 
 
+            }
+
+            function _scroll_event_page() {
+                if (event_page) {
+                    window.scrollBy(0, 500);
+                }
+                if(agenda_week){
+                    _agenda_show_week();
+                }
+            }
+
+            function _agenda_show_week() {
+                //set 7 days of week for agenda..
+                moment.locale('fr');
+                var arr_week = Array.of(0, 1, 2, 3, 4, 5, 6);
+                var current_date, d_info, content;
+                arr_week.forEach(function (i) {
+
+                        current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
+                        d_info = moment(current_date).format('dddd / MMM / D').split("/");
+
+                       content = '<div class="week-date">' +
+                            '                    <a href="/search/events?date='+moment(current_date).format('D-MM-YYYY')+'"><span>' + d_info[1] + '</span>' +
+                            '                        <h2>' + d_info[2] + '</h2>' +
+                            '                        <p>' + d_info[0] + '</p>' +
+                            '                    </a>' +
+                            '                </div>';
+                        agenda_week.append(content);
+                });
             }
 
             return BrusselslifeFE;

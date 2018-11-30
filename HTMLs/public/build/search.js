@@ -10,6 +10,7 @@
     var btn_clear = document.getElementById("btn_clear");
     var logged_in = false;
     var google_map = document.getElementById("google-map");
+    var left_menu = $("#left_menu");
 
     var BrusselslifeSearch = (function ($) {
         function BrusselslifeSearch() {
@@ -102,7 +103,7 @@
 
 
         function _side_menu() {
-            $("#left_menu").find("i.fa-angle-down").on('click', function () {
+           left_menu.find("i.fa-angle-down").on('click', function () {
                 $(this).next().slideToggle(100);
                 $(".left-menu-level-1").not($(this).next()).slideUp(100);
             });
@@ -111,18 +112,19 @@
             var left_slide_out = new Slideout({
                 'panel': document.getElementById('panel'),
                 'menu': document.getElementById('left_menu'),
-                'side': 'left'
+                'side': 'left',
+                'padding': 280,
+                'easing': 'cubic-bezier(.32,2,.55,.27)'
             });
 
             document.getElementsByClassName("side-menu-trigger")[0].addEventListener('click', function () {
                 left_slide_out.toggle();
+                left_menu.toggleClass("active");
+                this.classList.toggle('menu-open');
             });
-
             left_slide_out.on('open', function () {
                 console.log(0);
             });
-
-
         }
 
 
@@ -148,7 +150,8 @@
                 $(this).datepicker({
                     autoclose: true,
                     multidate: true,
-                    todayHighlight: true
+                    todayHighlight: true,
+
                 });
             });
         }
