@@ -1,0 +1,23 @@
+---
+layout : default.html
+title : Address timeline | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events & happenings.
+---
+{{> home-search }}
+{{> breadcrumb}}
+{{> modal }}
+<div class="container place-container">
+    <div class="row">
+        {{> left-side-block}}
+        <div class="col-md-7 place-col-center">
+            {{> post-form}}
+
+            <section class="business-article">
+
+            </section>
+
+            {{> review}}
+        </div>
+        {{> right-side-block}}
+    </div>
+</div>
+<script type="text/javascript" src="{{assets}}build/place.js"></script>

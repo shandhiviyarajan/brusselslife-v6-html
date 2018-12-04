@@ -1,5 +1,13 @@
-#article-page {
+#article_page {
 
+  .container{
+    position: relative;
+  }
+  .action_btns {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
   .col-md-7,
   .col-md-5 {
     padding-left: $gutter;

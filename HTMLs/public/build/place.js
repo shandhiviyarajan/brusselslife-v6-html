@@ -11,10 +11,8 @@
     var overlay = $("#overlay");
 
     var BrusselslifePlace = (function ($) {
-
         function BrusselslifePlace() {
             return {
-
                 init: function () {
 
                     _load();
@@ -24,13 +22,13 @@
 
                     _promotion_modal();
                     _events_modal();
+                    _article_modal();
+                    _address_edit_modal();
 
                     _keep_modal_open();
                     _star_rating();
 
                     _show_hint();
-
-
                 }
             }
         }
@@ -62,6 +60,12 @@
             });
         }
 
+        function _article_modal() {
+            CKEDITOR.replace('article_modal_desc', {
+                language: 'en'
+            });
+        }
+
         function _events_modal() {
             // var schedule_date = $(".schedule_date");
             // schedule_date.datepicker({
@@ -75,6 +79,45 @@
             //         schedule_date.datepicker('getFormattedDate')
             //     );
             // });
+
+
+            $('#keywords-select').dropdown({
+                placeholder: "Select keywords"
+            });
+
+
+            CKEDITOR.replace('event_editor', {
+                language: 'en'
+            });
+
+            var sel_category = $("#event_modal_category");
+
+            // $('#event_modal_keywords').dropdown({
+            //     clearable:true,
+            //     placeholder:'Select key words',
+            //     allowAdditions:true
+            //
+            // });
+
+            $("#add_event_modal").on('show.bs.modal', function () {
+
+            });
+        }
+
+        function _address_edit_modal() {
+            CKEDITOR.replace('edit_address_body', {
+                language: 'en'
+            });
+
+            $( ".edit-address-drag-container" ).sortable();
+
+            $("#sel-address-category").dropdown({
+                placeholder: "Select sub categories"
+            });
+
+            $("#sel-address-branch").dropdown({
+                placeholder: "Select a branch"
+            });
         }
 
         function _keep_modal_open() {
@@ -143,10 +186,10 @@
                 }
             });
 
-            $("a.show-hint").hover(function(){
+            $("a.show-hint").hover(function () {
 
                 $(this).find(".hint-content").fadeIn(0).addClass('active');
-            },function(){
+            }, function () {
                 $(this).find(".hint-content").fadeOut(0).removeClass('active');
 
             });

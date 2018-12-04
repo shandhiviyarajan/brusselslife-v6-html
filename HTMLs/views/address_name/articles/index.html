@@ -10,268 +10,144 @@ title : Address timeline | Brusselslife.be | Belgium life style site | Brussels 
         {{> left-side-block}}
         <div class="col-md-7 place-col-center">
             {{> post-form}}
-            <div class="address-gallery p-4 mb-4 bg-white shadow-sm">
-                <div class="address-logo-title d-flex ">
-                    <figure>
-                        <img data-src="{{assets}}images/logo.jpg" class="sombal" alt="By Chef Michel à l'italienne">
-                    </figure>
-                    <div>
-                        <h1>
-                            By Chef Michel à l'italienne
-                        </h1>
-                        <p class="tag_line">
-                            Une authentique brasserie belge dans la chaleur de l’Art Déco
-                        </p>
-                        <address>
-                            <i class="fa fa-map-marker"></i>
-                            Place Fernand Cocq, 21 - 1050 Bruxelles
-                        </address>
-                    </div>
-                </div>
-                <div class="main-image">
-                    <figure>
-                        <img data-src="{{assets}}images/gallery/1.png" class="sombal" alt="">
-                    </figure>
-                </div>
-                <div class="gallery-thumbs">
-                    <a href="#">
-                        <img data-src="{{assets}}images/gallery/2.png" class="sombal" alt="">
-                    </a>
-                    <a href="#">
-                        <img data-src="{{assets}}images/gallery/3.png" class="sombal" alt="">
-                    </a>
-                    <a href="#">
-                        <img data-src="{{assets}}images/gallery/4.png" class="sombal" alt="">
-                    </a>
-                    <a href="#">
-                        <img data-src="{{assets}}images/gallery/5.png" class="sombal" alt="">
-                    </a>
-                    <a href="#">
-                        <img data-src="{{assets}}images/gallery/6.png" class="sombal" alt="">
-                    </a>
-                    <a href="#">
-                        <img data-src="{{assets}}images/gallery/7.png" class="sombal" alt="">
-                    </a>
-                </div>
-                <div class="action-buttons">
-                    <a href="tel:+94779773225"
-                       class="btn btn-default"
-                       data-number="+94779773225">
-                        <i class="fa fa-phone"></i>
-                        Telephone</a>
-                    <a href="#" class="btn btn-default">
-                        <img src="{{assets}}svg/bl-icon-message.svg" alt="">
-                        Send message
-                    </a>
-                    <a href="#" class="btn btn-default">
-                        <img src="{{assets}}svg/reservation.svg" alt="">
-                        Reservations
-                    </a>
-                </div>
-            </div>
-            <div class="business-info  px-4 pb-4 pt-0 mb-4  bg-white shadow-sm">
-                <div class="place-title">
-                    <h3>
-                        Business information
-                    </h3>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3 available">
-                     <span>
-                         Reservations
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                        Take away
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                        Parking
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                       Kids friendly
-                     </span>
-                    </div>
 
-                    <div class="col-sm-3 available">
-                     <span>
-                        Outdoor seat
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                        Valet parking
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                         Dine
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                       WiFi Free
-                     </span>
-                    </div>
-
-                    <div class="col-sm-3 available">
-                     <span>
-                      For groups
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                       Delivery
-                     </span>
-                    </div>
-                    <div class="col-sm-3 available">
-                     <span>
-                      Credit cards
-                     </span>
-                    </div>
-                    <div class="col-sm-3 not-available">
-                     <span>
-                      Has TV
-                     </span>
-                    </div>
-
-                    <div class="col-sm-3 not-available">
-                     <span>
-                        Airconditioned
-                     </span>
-                    </div>
-                    <div class="col-sm-3 not-available">
-                     <span>
-                        Happy hour
-                     </span>
-                    </div>
-                    <div class="col-sm-3 not-available">
-                     <span>
-                       Catering
-                     </span>
-                    </div>
-                    <div class="col-sm-3 not-available">
-                     <span>
-                       Bike parking
-                     </span>
-                    </div>
-
-                    <div class="col-sm-3 not-available">
-                     <span>
-                      Alcohol
-                     </span>
-                    </div>
-                </div>
-
-            </div>
-            <section class="right-block price-range mb-4 shadow-sm">
-                <div class="place-title">
-                    <h3>
-                        Price range
-                    </h3>
-                </div>
-                <div class="block-content">
-                    <img src="{{assets}}svg/bl-icon-tag.svg" alt="">
+            <div class="empty-post bg-white shadow-sm py-4 mb-4">
+                <img src="{{assets}}svg/menu-icon-article.svg" alt="">
+                <p class="my-4">
+                    <strong>
+                        Write something about your business
+                    </strong>
+                </p>
+                <button data-toggle="modal"
+                        data-target="#add_article_modal"
+                        class="btn btn-default btn-post-article mb-2">
+                    <img src="{{assets}}svg/menu-icon-article.svg" alt="">
+                    Write an article
+                </button>
+                <p>
                     <span>
-                    &dollar;&dollar; - &dollar;&dollar;&dollar;
-                </span>
-                </div>
-            </section>
-            <section class="right-block address-categories mb-4 shadow-sm">
-                <div class="place-title">
-                    <h3>
-                        Categories
-                    </h3>
-                </div>
-
-                <div class="block-content">
-                    <a href="#">
-                        FRENCH
-                    </a>
-                    <a href="#">
-                        RESTAURANTS
-                    </a>
-                    <a href="#">
-                        CUISINE
-                    </a>
-                </div>
-
-            </section>
-            <div class="address-container shadow-sm"
-                 name="about">
-
+                       Bring more visibility to your business by writing an article and sharing with Brusselslife article feed.
+                    </span>
+                </p>
             </div>
 
-            <div class="time-line-item shadow-sm bg-white mb-4">
-                <div class="time-line-wrapper time-line-promotion">
-                    <div class="time-line-header">
-                        <div class="time-line-date"><i class="fa fa-clock-o"></i> 22 October, 2018</div>
-                        <div class="dropdown settings-dropdown">
-                            <a href="#"
-                               class="btn btn-link"
-                               data-toggle="dropdown">
-                                <i class="fa fa-cog" aria-hidden="true"></i>
+
+            <section class="business-article-list">
+                <div class="bg-white shadow-sm mt-4 px-4">
+                    <div class="place-title d-flex">
+                        <h3>
+                            Recent articles
+                        </h3>
+                        <!--<a href="#" class="btn btn-link btn-edit">-->
+                            <!--<i class="fa fa-pencil"></i> Edit-->
+                        <!--</a>-->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+
+                           <div class="action_btns">
+                                <span class="ui" data-tooltip="Edit">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                               <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                           </div>
+
+                            <a href="#">
+                                <figure>
+                                    <img src="{{assets}}images/address_block_3.jpg" alt="">
+                                </figure>
+                                <p>
+                                    <strong>
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </strong>
+                                </p>
+                                <p>
+                                    <small>Sometimes creativity flows like magic</small>
+                                </p>
                             </a>
-                            <ul class="dropdown-menu shadow-md">
-                                <li>
-                                    <a href="#">
-                                        Edit post
-                                        <span>
-                                            Update content on your post
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Unpublish
-                                        <span>
-                                            Update content on your post
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Delete
-                                        <span>
-                                            Update content on your post
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="action_btns">
+                                <span class="ui" data-tooltip="Edit">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                            </div>
+                            <a href="#">
+                                <figure>
+                                    <img src="{{assets}}images/address_block_3.jpg" alt="">
+                                </figure>
+                                <p>
+                                    <strong>
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </strong>
+                                </p>
+                                <p>
+                                    <small>Sometimes creativity flows like magic</small>
+                                </p>
+                            </a>
                         </div>
                     </div>
-                    <div class="time-line-body">
-                        <a href="#">
-                            <figure>
-                                <img src="{{assets}}images/promotion-img.jpg" alt="">
-                            </figure>
-                            <div class="time-line-content">
-                                <div class="time-line-title">
-                                    <div class="promo-valid-date">
-                                        Valid till November 1st
-                                    </div>
-                                    <div class="promo-title">
-                                        <img src="{{assets}}svg/bl-icon-tag.svg" alt="">
-                                        40% off on cup cakes
-                                    </div>
-                                    <button class="btn">
-                                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="time-line-footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
 
+                            <div class="action_btns">
+                                <span class="ui" data-tooltip="Edit">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                            </div>
+
+                            <a href="#">
+                                <figure>
+                                    <img src="{{assets}}images/address_block_3.jpg" alt="">
+                                </figure>
+                                <p>
+                                    <strong>
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </strong>
+                                </p>
+                                <p>
+                                    <small>Sometimes creativity flows like magic</small>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+
+                            <div class="action_btns">
+                                <span class="ui" data-tooltip="Edit">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                            </div>
+
+                            <a href="#">
+                                <figure>
+                                    <img src="{{assets}}images/address_block_3.jpg" alt="">
+                                </figure>
+                                <p>
+                                    <strong>
+                                        Lorem ipsum dolor sit amet, consectetur.
+                                    </strong>
+                                </p>
+                                <p>
+                                    <small>Sometimes creativity flows like magic</small>
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-
-            </div>
 
             {{> review}}
         </div>

@@ -101,7 +101,6 @@
             }
         }
 
-
         function _side_menu() {
            left_menu.find("i.fa-angle-down").on('click', function () {
                 $(this).next().slideToggle(100);
@@ -126,7 +125,6 @@
                 console.log(0);
             });
         }
-
 
         function _select_location() {
 
