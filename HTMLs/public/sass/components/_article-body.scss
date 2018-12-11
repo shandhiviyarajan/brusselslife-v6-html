@@ -1,12 +1,13 @@
 #article_page {
 
-  .container{
+  .container {
     position: relative;
   }
   .action_btns {
     position: absolute;
     right: 30px;
     top: 30px;
+    z-index: 200;
   }
   .col-md-7,
   .col-md-5 {
@@ -148,4 +149,14 @@
       }
     }
   }
+}
+
+#edit_article_modal {
+  .modal-dialog {
+    max-width: 640px !important;
+  }
+}
+
+.article_publish_options {
+  display: none;
 }

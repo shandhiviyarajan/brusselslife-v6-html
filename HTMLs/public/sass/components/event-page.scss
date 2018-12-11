@@ -1,5 +1,10 @@
 #event_page {
   .event-info-block {
+    .action_btns {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
     background: darken($primary-blue, 10%);
     h2 {
       font-weight: bold;

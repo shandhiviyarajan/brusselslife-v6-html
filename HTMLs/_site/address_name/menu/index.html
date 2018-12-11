@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Place | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events &amp; happenings. Brusselslife.be | version 5.3</title>
+    <title> Place | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events &amp; happenings. Brusselslife.be | version 7.0</title>
     <meta property="og:image" content=""/>
     <meta property="og:title" content=""/>
     <meta property="og:url" content=""/>
@@ -17,24 +17,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../../public/libs/swipebox/css/swipebox.min.css"/>
+
     <link rel="stylesheet" href="../../public/libs/select-2/css/select2.min.css"/>
     <link rel="stylesheet" href="../../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css"/>
     <link rel="stylesheet" href="../../public/libs/flick/flick.css"/>
     <link rel="stylesheet" href="../../public/libs/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" type="text/css" href="../../public/libs/semantic/semantic.css"/>
     <link rel="stylesheet" href="../../public/libs/jqueryui/jquery-ui.min.css"/>
+    <!-- swiper carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <!-- custom-css -->
     <link rel="stylesheet" href="../../public/css/app.css"/>
-    <!-- jquery-->
-    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../../public/libs/jqueryui/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../../public/libs/semantic/semantic.min.js"></script>
 
+
+    <!-- jquery v2.03-->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+
+    <!-- jquery 3.3.1 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jquery ui-->
+    <script type="text/javascript" src="../../public/libs/jqueryui/jquery-ui.min.js"></script>
+    <!-- semantic-->
+    <script type="text/javascript" src="../../public/libs/semantic/semantic.min.js"></script>
+    <!-- select2-->
     <script src="../../public/libs/select-2/select2.full.min.js"></script>
+    <!-- ckeditor -->
     <script src="https://cdn.ckeditor.com/4.11.1/basic/ckeditor.js"></script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
+    <!-- google maps -->
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
 
 </head>
 
@@ -44,9 +56,9 @@
     <section class="bg-transparent">
         <div class="row no-gutters">
             <div class="col-md-4">
+
             </div>
             <div class="col-md-4">
-
                 <a href="/" class="logo">
                     <img src="../../public/images/brusselslife_logo.png"
                          title="Brusselslife.be"
@@ -54,91 +66,177 @@
                          alt="Brusselslife.be">
                 </a>
             </div>
-            <div class="col-md-4 news-login-lan">
-                <div class="d-flex flex-row-reverse nav-right">
-                    <div id="lan-dropdown" data-toggle="dropdown">
-                        <div class="dropdown">
-                            <span>FR</span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">EN</a>
-                                </li>
-                                <li>
-                                    <a href="#">FR</a>
-                                </li>
-                                <li>
-                                    <a href="#">NL</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <span>
-                    <div class="dropdown mr-2"
-                         data-toggle="dropdown"
-                         id="login-register">
-                    <a class="btn btn-primary show-ov"
-                       href="#"><span> Sign in</span>
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </a>
-                    <div class="dropdown-menu stop-closing">
-                        <div class="form-title">
-                            Sign in to Brusselslife
-                        </div>
-                        <div class="error-message">
-                            <div class="alert alert-danger">
-                                Please enter the correct username & password
-                            </div>
-                        </div>
-                        <form action="">
-                            <div class="input-element mb-4">
-                                <label for="username">Email address </label>
-                                <input id="username"
-                                       type="text" placeholder="" class="form-control">
-                            </div>
-
-                            <div class="input-element mb-4">
-                                <label for="password">Password</label>
-                                <input id="password"
-                                       type="password" placeholder="Password" class="form-control">
-                            </div>
-
-                            <div class="input-element  mb-4">
-                                <div class="checkbox custom-checkbox">
-                                    <input type="checkbox" id="keep_logged_in">
-                                    <label for="keep_logged_in">Keep me logged in</label>
+            <div class="col-md-4">
+                <ul class="list-unstyled login-notify-profile">
+                    <li>
+                        <div class="dropdown site-notifications">
+                            <button data-toggle="dropdown">
+                                <span>
+                                    4
+                                </span>
+                                <img src="../../public/svg/bl-icon-notification.svg" alt="">
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-title">
+                                    <strong>
+                                        Notifications
+                                    </strong>
+                                    <a href="#">
+                                        Mark all as read
+                                    </a>
                                 </div>
 
-                                <a href="#" class="forgot-pass pull-left">
-                                    Forgot password ?
-                                </a>
+                                <div class="media">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <figure>
+                                                <img src="../../public/images/todo-2.jpg" alt=""/>
+                                            </figure>
+                                            <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="media read">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <figure>
+                                                <img src="../../public/images/todo-3.jpg" alt=""/>
+                                            </figure>
+                                            <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <figure>
+                                                <img src="../../public/images/todo-4.jpg" alt=""/>
+                                            </figure>
+                                            <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+
                             </div>
-                            <button class="btn btn-primary" id="login-button">
-                                Login
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown btn-create-content">
+                            <button data-toggle="dropdown">
+                                + Create
                             </button>
 
-
-                            <p class="mt-4 mb-0 text-center">Not a member ? &nbsp; <a href="#"
-                                                                                      class="btn btn-link btn-create-acc">Create
-                                a new account</a></p>
-
-                        </form>
-
-                        <div class="social-logins row pt-4">
-                            <div class="col-6">
-                                <a class="btn btn-link btn-google">Google</a>
+                            <div class="dropdown-menu">
+                                <a href="#">
+                                    <img src="/public/svg/my-location-marker.svg" alt="">
+                                    Create Address
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/svg/menu-icon-events.svg" alt="">
+                                    Create Agenda
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/svg/menu-icon-promotion.svg" alt="">
+                                    Create Promotion
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/svg/menu-icon-article.svg" alt="">
+                                    Create Article
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
                             </div>
-                           <div class="col-6">
-                                <a class="btn btn-link btn-fb">Facebook</a>
-                           </div>
                         </div>
-                    </div>
-                </div>
-              </span>
+                    </li>
+                    <li>
+                        <div class="dropdown user-profile-dropdown">
+                            <a href="!#" data-toggle="dropdown">
+                                <img src="../../public/images/profile.png" alt="">
+                            </a>
 
-                    <a class="btn btn-primary" target="_blank" href="/newsletter">Newsletter <i class="fa fa-envelope"
-                                                                                                aria-hidden="true"></i></a>
-                </div>
+                            <div class="dropdown-menu">
+                                <a href="#">
+                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Favourites
+                                    <span>
+                                           Favourite address, events, articles
+                                       </span>
+                                </a>
+                                <a href="#">
+                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Saved post
+                                    <span>
+                                          Saved promotion, events, products etc..
+                                       </span>
+                                </a>
+                                <a href="#">
+                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Activity
+                                    <span>
+                                          Find your activity eg likes, reviews, comments
+                                       </span>
+                                </a>
 
+                                <a href="#">
+                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Profile
+                                    <span>
+                                          Saved promotion, events, products etc..
+                                       </span>
+                                </a>
+                                <a href="#">
+                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Reviews
+                                    <span>
+                                         Saved promotion, events, products etc..
+                                       </span>
+                                </a>
+
+
+                                <div class="earn-points">
+                                    <img src="../../public/svg/trophy.svg" alt="">
+    You earned 1200 points - <a href="#">
+                                    Learn how
+                                </a>
+                                </div>
+
+                                <div class="invite-friend">
+                                    Invite a friend to Brusselsife
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -1069,30 +1167,65 @@
                             Let people know how to contact the event organizer.
                         </small>
                     </p>
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-element">
                                 <label for="">Telephone</label>
-                                <input type="text" placeholder="">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-phone text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" style="width: 100%;"
+                                           class="form-element special"
+                                           placeholder="Telephone">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-element">
                                 <label for="">Website</label>
-                                <input type="text" placeholder="http://www.google.com">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-globe text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" style="width: 100%;"
+                                           class="form-element special"
+                                           placeholder="Website">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-element">
                                 <label for="">Email address</label>
-                                <input type="text" placeholder="">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-envelope text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" style="width: 100%;"
+                                           class="form-element special"
+                                           placeholder="Email address">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-element">
                                 <label for="">Mobile number</label>
-                                <input type="text" placeholder="">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-mobile text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" style="width: 100%;"
+                                           class="form-element special"
+                                           placeholder="Mobile number">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1118,6 +1251,7 @@
                             <option value="Guitar">Guitar</option>
                             <option value="Rock">Rock</option>
                         </select>
+
 
                     </div>
                     <div class="form-element">
@@ -1477,51 +1611,93 @@
     </div>
 </div>
 
-<div class="modal highlight-modal" id="highlight_modal"
+<div class="modal highlight-modal"
+     id="highlight_modal"
      tabindex="-1"
+     data-backdrop="static"
      role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="active"></span>
-                <span></span>
-            </div>
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <div class="highlight-content">
-                    <div class="p-4 pb-2">
-                        <p>
-                            <span class="tag">
-                            #promotion
-                        </span> When an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. </p>
-                    </div>
-                    <figure>
-                        <img class="sombal" data-src="../../public/images/promo.jpg" alt="">
-                    </figure>
-                    <div>
-                        <p>
-                            Valid till November 1st
-                        </p>
-                        <h2>
-                            <img src="../../public/svg/bl-icon-tag.svg" alt="">
-                            40% off on cup cakes
-                        </h2>
-                    </div>
-                    <a href="#" class="btn btn-link">
-                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-                    </a>
-                </div>
             </div>
-            <div class="modal-footer d-flex">
+            <div class="modal-body">
 
+                <div class="swiper-container"
+                     id="highlights_container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="h_text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+
+                            <figure>
+                                <img src="../../public/images/h_1.jpg" alt=""/>
+
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="h_text">
+                                Lorem ipsum dolor sit amet, consectet ationem odit
+                                perferendis, tempore vero.
+                            </p>
+
+                            <figure>
+                                <img src="../../public/images/h_2.jpg" alt=""/>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>
+                                We are open on <br> 23rd Sunday !!! <br> :)
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="h_text">
+                                Lorem ipsum dolor sit amet, Animi enim exercitationem odit
+                                perferendis, tempore vero.
+                            </p>
+
+                            <figure>
+                                <img src="../../public/images/h_3.jpg" alt=""/>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="h_text">
+                                Animi enim exercitationem odit
+                                perferendis, tempore vero.
+                            </p>
+
+                            <figure>
+                                <img src="../../public/images/h_4.jpg" alt=""/>
+
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="h_text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim exercitationem odit
+                                perferendis, tempore vero.
+                            </p>
+
+                            <figure>
+                                <img src="../../public/images/h_5.jpg" alt=""/>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="modal edit-about-content"
      id="edit_about_content">
@@ -1529,155 +1705,58 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="form-title">
-                   Edit address
+                    Edit address
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="margin-top: -20px;">
                 <div class="modal-title">
-                     Logo ,title , tag-line
+                    Logo ,title , tag-line
+                </div>
+                <div class="d-flex">
+                    <div class="form-element edit-address-logo mr-2">
+                        <input type="file">
+                        <figure>
+                            <img src="../../public/images/logo.jpg" alt="">
+                        </figure>
                     </div>
-                    <div class="d-flex">
-                        <div class="form-element edit-address-logo mr-2">
-                          <input type="file">
-                          <figure>
-                              <img src="../../public/images/logo.jpg" alt="">
-                          </figure>
-                      </div>
-                        <div style="width: 100%;">
-                          <div class="form-element edit-address-title">
-                              <input type="text" class="form-control" placeholder="Title" name=""
-                                     value="By Chef Michel à l'italienne">
-                          </div>
-                          <div class="form-element edit-address-tag-line">
-                              <input type="text" class="form-control" placeholder="Tag line"
-                                     value="Une authentique brasserie belge dans la chaleur de l’Art Déco">
-                          </div>
-                          <div class="form-element edit-address-address">
-                              <div class="input-group time">
-                                  <div class="input-group-prepend">
+                    <div style="width: 100%;">
+                        <div class="form-element edit-address-title">
+                            <input type="text" class="form-control" placeholder="Title" name=""
+                                   value="By Chef Michel à l'italienne">
+                        </div>
+                        <div class="form-element edit-address-tag-line">
+                            <input type="text" class="form-control" placeholder="Tag line"
+                                   value="Une authentique brasserie belge dans la chaleur de l’Art Déco">
+                        </div>
+                        <div class="form-element edit-address-address">
+                            <div class="input-group time">
+                                <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fa fa-map-marker text-muted"></i>
                                         </span>
-                                  </div>
-                                  <input type="text"
-                                         class="form-control special"
-                                         placeholder="Business address">
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="form-element edit-address-main-image">
-
-                        <div class="action_btns">
-                                <span class="ui" data-tooltip="Choose different picture">
-                               <i class="fa fa-picture-o"></i>
-                            </span>
-                        </div>
-                        <figure>
-                            <input type="file">
-                            <img src="../../public/images/gallery/1.png" alt="">
-                        </figure>
-
-                    </div>
-                    <div class="form-element edit-address-gallery">
-                        <div class="modal-title">
-                            Gallery <br><small>Drag to change the image order</small>
-                        </div>
-                        <div class="edit-address-drag-container" >
-                            <figure>
-                                <div class="action_btns">
-                                <span class="ui" data-tooltip="Delete">
-                               <i class="fa fa-times"></i>
-                            </span>
                                 </div>
-                                <img data-src="../../public/images/gallery/2.png" class="sombal">
-                            </figure>
-                            <figure>
-                                <div class="action_btns">
+                                <input type="text"
+                                       class="form-control special"
+                                       placeholder="Business address">
+                            </div>
 
-                                <span class="ui" data-tooltip="Delete">
-                               <i class="fa fa-times"></i>
-                            </span>
-                                </div>
-                                <img data-src="../../public/images/gallery/3.png" class="sombal">
-                            </figure>
-                            <figure>
-                                <div class="action_btns">
-
-                                <span class="ui" data-tooltip="Delete">
-                                <i class="fa fa-times"></i>
-                            </span>
-                                </div>
-                                <img data-src="../../public/images/gallery/4.png" class="sombal">
-                            </figure>
-                            <figure>
-                                <div class="action_btns">
-
-                                <span class="ui" data-tooltip="Delete">
-                                <i class="fa fa-times"></i>
-                            </span>
-                                </div>
-                                <img data-src="../../public/images/gallery/5.png" class="sombal">
-                            </figure>
-                            <figure>
-                                <div class="action_btns">
-
-                                <span class="ui" data-tooltip="Delete">
-                                <i class="fa fa-times"></i>
-                            </span>
-                                </div>
-                                <img data-src="../../public/images/gallery/6.png" class="sombal">
-                            </figure>
-                            <figure>
-                                <div class="action_btns">
-
-                                <span class="ui" data-tooltip="Delete">
-                                <i class="fa fa-times"></i>
-                            </span>
-                                </div>
-                                <img data-src="../../public/images/gallery/7.png" class="sombal">
-                            </figure>
-                            <figure class="first ui" data-tooltip="Upload gallery picture">
-                                <i class="fa fa-picture-o"></i>
-                                <input type="file">
-                            </figure>
-                            <figure class="first ui" data-tooltip="Upload gallery picture">
-                                <i class="fa fa-picture-o"></i>
-                                <input type="file">
-                            </figure>
-                            <figure class="first ui" data-tooltip="Upload gallery picture">
-                                <i class="fa fa-picture-o"></i>
-                                <input type="file">
-                            </figure>
-                            <div style="clear:both;"></div>
-                        </div>
-
-                    </div>
-
-                    <div class="edit-address-contact">
-                        <div class="modal-title">
-                        Contact
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-element edit-address-phone">
+                            <div class="row mt-2">
+                                <div class="col-sm-6">
                                     <div class="input-group time">
                                         <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fa fa-phone text-muted"></i>
+                                            <i class="fa fa-thumb-tack text-muted"></i>
                                         </span>
                                         </div>
                                         <input type="text"
                                                class="form-control special"
-                                               placeholder="Phone number">
+                                               placeholder="City">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-element edit-address-email">
+                                <div class="col-sm-6">
                                     <div class="input-group time">
                                         <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -1686,199 +1765,623 @@
                                         </div>
                                         <input type="text"
                                                class="form-control special"
-                                               placeholder="Email address">
+                                               placeholder="Postal code">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-element edit-address-email">
-                                    <div class="input-group time">
-                                        <div class="input-group-prepend">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element edit-address-main-image">
+
+                    <div class="action_btns">
+                                <span class="ui" data-tooltip="Choose different picture">
+                               <i class="fa fa-picture-o"></i>
+                            </span>
+                    </div>
+                    <figure>
+                        <input type="file">
+                        <img src="../../public/images/gallery/1.png" alt="">
+                    </figure>
+
+                </div>
+                <div class="form-element edit-address-gallery" style="margin-top: 22px;">
+                    <div class="modal-title">
+                        Gallery <br>
+                        <small>Drag to change the image order</small>
+                    </div>
+                    <div class="edit-address-drag-container">
+                        <figure>
+                            <div class="action_btns">
+                                <span class="ui" data-tooltip="Delete">
+                               <i class="fa fa-times"></i>
+                            </span>
+                            </div>
+                            <img data-src="../../public/images/gallery/2.png" class="sombal">
+                        </figure>
+                        <figure>
+                            <div class="action_btns">
+
+                                <span class="ui" data-tooltip="Delete">
+                               <i class="fa fa-times"></i>
+                            </span>
+                            </div>
+                            <img data-src="../../public/images/gallery/3.png" class="sombal">
+                        </figure>
+                        <figure>
+                            <div class="action_btns">
+
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-times"></i>
+                            </span>
+                            </div>
+                            <img data-src="../../public/images/gallery/4.png" class="sombal">
+                        </figure>
+                        <figure>
+                            <div class="action_btns">
+
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-times"></i>
+                            </span>
+                            </div>
+                            <img data-src="../../public/images/gallery/5.png" class="sombal">
+                        </figure>
+                        <figure>
+                            <div class="action_btns">
+
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-times"></i>
+                            </span>
+                            </div>
+                            <img data-src="../../public/images/gallery/6.png" class="sombal">
+                        </figure>
+                        <figure>
+                            <div class="action_btns">
+
+                                <span class="ui" data-tooltip="Delete">
+                                <i class="fa fa-times"></i>
+                            </span>
+                            </div>
+                            <img data-src="../../public/images/gallery/7.png" class="sombal">
+                        </figure>
+                        <figure class="first ui" data-tooltip="Upload gallery picture">
+                            <i class="fa fa-picture-o"></i>
+                            <input type="file">
+                        </figure>
+                        <figure class="first ui" data-tooltip="Upload gallery picture">
+                            <i class="fa fa-picture-o"></i>
+                            <input type="file">
+                        </figure>
+                        <figure class="first ui" data-tooltip="Upload gallery picture">
+                            <i class="fa fa-picture-o"></i>
+                            <input type="file">
+                        </figure>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+
+                <div class="edit-address-contact">
+                    <div class="modal-title">
+                        Contact
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-element edit-address-phone">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-phone text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text"
+                                           class="form-control special"
+                                           placeholder="Phone number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-element edit-address-email">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-envelope text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text"
+                                           class="form-control special"
+                                           placeholder="Email address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-element edit-address-email">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fa fa-mobile text-muted"></i>
                                         </span>
-                                        </div>
-                                        <input type="text"
-                                               class="form-control special"
-                                               placeholder="Mobile number">
                                     </div>
+                                    <input type="text"
+                                           class="form-control special"
+                                           placeholder="Mobile number">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-element edit-address-web">
-                                    <div class="input-group time">
-                                        <div class="input-group-prepend">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-element edit-address-web">
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fa fa-globe text-muted"></i>
                                         </span>
-                                        </div>
-                                        <input type="text"
-                                               class="form-control special"
-                                               placeholder="Website link">
                                     </div>
+                                    <input type="text"
+                                           class="form-control special"
+                                           placeholder="Website link">
                                 </div>
                             </div>
-
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-element edit-address-custom-link">
 
-                                    <div class="checkbox">
-                                        <input type="checkbox">
-                                        <label for="">
-                                            Add custom link / external link
-                                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-element edit-address-custom-link">
+
+                                <div class="checkbox">
+                                    <input type="checkbox">
+                                    <label for="">
+                                        Add custom link / external link
+                                    </label>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4 ui"
+                                         data-tooltip="Eg - Booking, Online shopping, Buy products, Reservations, Food menu">
+                                        <input type="text"
+                                               class=" form-control"
+                                               placeholder="Name">
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-4 ui"
-                                             data-tooltip="Eg - Booking, Online shopping, Buy products, Reservations, Food menu">
-                                            <input type="text"
-                                                   class=" form-control"
-                                                   placeholder="Name">
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="input-group time">
-                                                <div class="input-group-prepend">
+                                    <div class="col-sm-8">
+                                        <div class="input-group time">
+                                            <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fa fa-link text-muted"></i>
                                         </span>
-                                                </div>
-                                                <input type="text"
-                                                       class="form-control special"
-                                                       placeholder="Custom URL">
                                             </div>
+                                            <input type="text"
+                                                   class="form-control special"
+                                                   placeholder="Custom URL">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="edit-address-category">
-                        <div class="modal-title">
-                            Categories
-                        </div>
-                        <div class="form-element">
-                            <label for="">
-                                Main category
-                            </label>
-                            <select id="sel-main-address-category" class="form-control">
-                                <option value="Restaurants">Restaurants</option>
-                                <option value="Restaurants">Eat & Drink</option>
-                                <option value="Restaurants">Bars & Cafes</option>
-                                <option value="Restaurants">Tea & Coffee time</option>
-                            </select>
-                        </div>
-                        <div class="form-element">
-                            <label for="">Sub category</label>
-                            <select multiple id="sel-address-category" class="ui search fluid dropdown">
-                                <option value="Restaurants">French</option>
-                                <option value="Restaurants">Fast food</option>
-                                <option value="Restaurants">Cafes</option>
-                                <option value="Restaurants">Bars</option>
-                            </select>
-                        </div>
+                <div class="edit-address-category">
+                    <div class="modal-title">
+                        Categories
                     </div>
-
-                    <div class="form-element edit-address-body">
-                        <div class="modal-title">
-                            Address body content
-                        </div>
-                        <textarea name="" id="edit_address_body" cols="30" rows="10"></textarea>
-                    </div>
-
-                    <div class="form-element edit-address-branch">
-                        <div class="modal-title">
-                            Select branch
-                        </div>
-                        <select multiple id="sel-address-branch" class="ui search fluid dropdown">
-                            <option value="Restaurants">French</option>
-                            <option value="Restaurants">Fast food</option>
-                            <option value="Restaurants">Cafes</option>
-                            <option value="Restaurants">Bars</option>
+                    <div class="form-element">
+                        <label for="">
+                            Main category
+                        </label>
+                        <select id="sel-main-address-category"
+                                placeholder="Main category"
+                                class="form-control">
+                            <option value="Restaurants">Restaurants</option>
+                            <option value="Eat & Drink">Eat & Drink</option>
+                            <option value="Bars & Cafes">Bars & Cafes</option>
+                            <option value="Tea & Coffee time">Tea & Coffee time</option>
                         </select>
+                    </div>
+                    <div class="form-element">
+                        <label for="">Sub category</label>
+                        <select multiple
+                                placeholder="Sub category"
+                                id="sel-address-category"
+                                class="ui search fluid dropdown">
+                            <option value="French">French</option>
+                            <option value="Fast food">Fast food</option>
+                            <option value="Cafes">Cafes</option>
+                            <option value="Bars">Bars</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-element edit-address-body">
+                    <div class="modal-title">
+                        Address body content
+                    </div>
+                    <textarea name="" id="edit_address_body" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-element edit-address-branch">
+                    <div class="modal-title">
+                        Select branch
+                    </div>
+                    <label for="">Type to select the address branch</label>
+                    <select multiple
+                            id="sel-address-branch"
+                            class="ui search fluid dropdown">
+                        <option value="French">French</option>
+                        <option value="Fast food">Fast food</option>
+                        <option value="Cafes">Cafes</option>
+                        <option value="Bars">Bars</option>
+                    </select>
 
 
+                </div>
+
+                <div class="form-element">
+                    <div class="modal-title">
+                        Google Maps
                     </div>
 
-                    <div class="form-element">
-                        <div class="modal-title">
-                            Google Maps
+
+                    <div id="drag_to_find_location">
+
+                    </div>
+                    <p class="m-0">
+                        &nbsp;
+                    </p>
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="longitude"
+                                   id="d_lng">
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorum,
-                            eveniet ex ipsa quam quasi vitae voluptatum. Dolores eius officia qui unde voluptas?
-                            Aspernatur beatae facere obcaecati tenetur. Excepturi!
-                        </p>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="latitude" id="d_lat">
+                        </div>
                     </div>
 
-                    <div class="form-element">
-                        <div class="modal-title">
-                            Business Hours
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eaque harum laudantium libero
-                            perferendis, ratione repudiandae. Alias aspernatur beatae consequatur enim esse minima nisi
-                            quia sed tempore vero! Atque, quibusdam.
-                        </p>
+
+                </div>
+
+                <div class="form-element">
+                    <div class="modal-title">
+                        Business Hours
                     </div>
 
-                    <div class="form-element">
-                        <div class="modal-title">
-                            Price range
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
+
+                    <table cellspacing="0" cellpadding="0" class="table p-0 m-0 business-hours-table">
+                        <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>
+                                Start time
+                            </th>
+                            <th>
+                                End time
+                            </th>
+                            <th>
+                                Closed
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
                                 <div class="input-group time">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fa fa-eur text-muted"></i>
+                                            <i class="fa fa-clock-o text-muted"></i>
                                         </span>
                                     </div>
-                                    <input type="text"
-                                           class="form-element special"
-                                           placeholder="$" value="$$">
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
+                            </td>
+                            <td>
                                 <div class="input-group time">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fa fa-eur text-muted"></i>
+                                            <i class="fa fa-clock-o text-muted"></i>
                                         </span>
                                     </div>
-                                    <input type="text"
-                                           class="form-element special"
-                                           placeholder="$" value="$$$">
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
                                 </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>
+                                    Monday
+                                </strong>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="Start time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-control"
+                                           placeholder="End time">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1">
+                                    <label for="c_1">Closed</label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+                <div class="form-element">
+                    <div class="modal-title">
+                        Price range
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group time">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-eur text-muted"></i>
+                                        </span>
+                                </div>
+                                <input type="text"
+                                       class="form-element special"
+                                       placeholder="$" value="$$">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group time">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-eur text-muted"></i>
+                                        </span>
+                                </div>
+                                <input type="text"
+                                       class="form-element special"
+                                       placeholder="$" value="$$$">
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-element edit-address-business-info">
-                        <div class="modal-title">
-                            Business Information
-                        </div>
-                        <div class="ui toggle checkbox">
-                            <input type="checkbox" name="public">
-                            <label>Parking</label>
-                        </div>
-
+                <div class="form-element edit-address-business-info">
+                    <div class="modal-title">
+                        Business Information
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="public">
+                        <label>Parking</label>
                     </div>
 
-                    <div class="form-element">
-                        <div class="modal-title">
-                            Keywords (SEO)
-                        </div>
-                        <input type="text" class="form-control" placeholder="Type your keywors">
-                        <p>
-                            <small>
-                                Enter keywords related to your business & seperate it with a comma ','
-                            </small>
-                        </p>
+                </div>
+
+                <div class="form-element">
+                    <div class="modal-title">
+                        Keywords (SEO)
                     </div>
+                    <input type="text" class="form-control" placeholder="Type your keywors">
+                    <p>
+                        <small>
+                            Enter keywords related to your business & seperate it with a comma ','
+                        </small>
+                    </p>
+                </div>
 
             </div>
             <div class="modal-footer d-block">
@@ -1894,7 +2397,112 @@
             </div>
         </div>
     </div>
+</div>
 
+<div class="modal" id="food_menu_item_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="menu-category-title">
+                    Dinner Appertizers
+                    <button class="btn btn-default"
+                            data-dismiss="modal">
+                        <img src="../../public/svg/bl-icon-close.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="menu-item-title">
+                    Buttermilk Fried Calamari, Rock Shrimp, & Fennel
+                </div>
+                <div class="menu-item-desc">
+                    White wine, garlic, rouille, fines herbs
+                </div>
+                <div class="menu-item-price">
+                    15&euro;
+                </div>
+                <div class="menu-item-images">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="#">
+                                <figure>
+                                    <img src="../../public/images/f3.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#">
+                                <figure>
+                                    <img src="../../public/images/f2.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#">
+                                <figure>
+                                    <img src="../../public/images/f1.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="likes-comment-save row">
+                    <div class="user-likes">
+                        <button>
+                            <i class="fa fa-heart"></i>
+                            10 Likes
+                        </button>
+                    </div>
+                    <div class="user-comments">
+                        <button data-toggle="modal" data-target="#write-comment-modal">
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <span>Write a comment</span>
+                        </button>
+                    </div>
+                    <div class="user-fav">
+                        <button>
+                            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="write-comment-modal">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="form-title">
+                    Write comment
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-element">
+                    <textarea class="form-control" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer d-block">
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-right">
+                        <div class="form-element">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -1919,7 +2527,7 @@
         </a>
         <div class="d-flex recent_add_post">
             <p>
-                Recent posts
+                Recent stories
             </p>
 
             <!--<div class="dropdown">-->
@@ -2236,7 +2844,7 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2255,7 +2863,8 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#"
+                                   data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2270,7 +2879,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2285,7 +2894,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2300,7 +2909,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2315,7 +2924,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2330,7 +2939,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2362,7 +2971,7 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -2377,7 +2986,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#food_menu_item_modal">
                                     <figure>
                                         <img src="../../public/images/gallery/2.png" alt="">
                                     </figure>
@@ -4096,23 +4705,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- bootstrap -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- flick agenda scroll-->
 <script src="../../public/libs/flick/flick.js"></script>
 <!-- momentjs-->
 <script type="text/javascript" src="../../public/libs/daterangepicker/moment.min.js"></script>
 <!-- date range picker-->
 <script type="text/javascript" src="../../public/libs/daterangepicker/daterangepicker.js"></script>
-<!-- select2-->
 
-<!-- slideout menu -->
+<!--slideout menu -->
 <script src="../../public/libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
 <script type="text/javascript" src="../../public/libs/sombal.js"></script>
 
-<!-- google maps -->
+<!-- swiper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
 <script type="text/javascript">
+
+    var highlight_modal = $("#highlight_modal");
+    highlight_modal.on('shown.bs.modal', function (event) {
+        var address_highlights = new Swiper('#highlights_container', {
+            speed: 0,
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            preloadImages: false,
+            lazy: true
+        });
+
+        address_highlights.on('reachEnd', function () {
+
+            highlight_modal.modal('hide');
+
+        });
+
+    });
+
+
     (function (window, $) {
         'use strict';
-
         var header = document.getElementsByTagName("header")[0];
         var body = document.getElementsByTagName("body")[0];
         var overlay = document.getElementById("overlay");
@@ -4127,25 +4764,35 @@
         var cl = localStorage.getItem('current_location');
 
         //Brusselslife Front End jQuery
-        BrusselslifeFE = (function ($) {
-            function BrusselslifeFE() {
+        var BrusselslifeFrontEnd = (function ($) {
+            function BrusselslifeFrontEnd() {
                 return {
                     init: function () {
-                        _get_user_location();
                         _load();
+                        _site_search();
                         _header();
-                        _what();
-                        _when();
                         _scroll_event_page();
+                        _keep_modal_open();
                     }
                 };
             }
 
             function _load() {
                 console.log("Brusselslife v7.0 HTML");
+                //Call tooltip
                 $(function () {
                     $('[data-toggle="tooltip"]').tooltip();
-                })
+                });
+
+                //Replace checkboxes
+                var c = document.getElementsByClassName("custom-checkbox");
+                var i = c.length;
+                while (i--) {
+                    c[i].addEventListener('click', function (e) {
+                        e.preventDefault();
+                        this.classList.toggle("active");
+                    });
+                }
             }
 
             function _header() {
@@ -4192,6 +4839,13 @@
                     overlay.classList.add("show");
                     $(".dropdown-menu").removeClass("show");
                 });
+            }
+
+            function _site_search() {
+                _what();
+                _when();
+                _user_location();
+                _get_user_location();
             }
 
             function _what() {
@@ -4311,10 +4965,12 @@
             }
 
             function _scroll_event_page() {
+
                 if (event_page) {
                     window.scrollBy(0, 500);
                 }
-                if(agenda_week){
+
+                if (agenda_week) {
                     _agenda_show_week();
                 }
             }
@@ -4326,27 +4982,38 @@
                 var current_date, d_info, content;
                 arr_week.forEach(function (i) {
 
-                        current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
-                        d_info = moment(current_date).format('dddd / MMM / D').split("/");
+                    current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
+                    d_info = moment(current_date).format('dddd / MMM / D').split("/");
 
-                       content = '<div class="week-date">' +
-                            '                    <a href="/search/events?date='+moment(current_date).format('D-MM-YYYY')+'"><span>' + d_info[1] + '</span>' +
-                            '                        <h2>' + d_info[2] + '</h2>' +
-                            '                        <p>' + d_info[0] + '</p>' +
-                            '                    </a>' +
-                            '                </div>';
-                        agenda_week.append(content);
+                    content = '<div class="week-date">' +
+                        '                    <a href="/search/events?date=' + moment(current_date).format('D-MM-YYYY') + '"><span>' + d_info[1] + '</span>' +
+                        '                        <h2>' + d_info[2] + '</h2>' +
+                        '                        <p>' + d_info[0] + '</p>' +
+                        '                    </a>' +
+                        '                </div>';
+                    agenda_week.append(content);
                 });
             }
 
-            return BrusselslifeFE;
+            function _keep_modal_open() {
+                /**
+                 * keep the modal-open class till all modal get closed
+                 */
+                $(document).on('hidden.bs.modal', function (event) {
+                    if ($('.modal:visible').length) {
+                        $('body').addClass('modal-open');
+                    }
+                });
+            }
+
+            return BrusselslifeFrontEnd;
         })(jQuery);
-        var BrusselslifeFE = new BrusselslifeFE();
+        var BrusselslifeFE = new BrusselslifeFrontEnd();
         BrusselslifeFE.init();
     })(window, jQuery);
 </script>
 
-<script type="text/javascript" src="../../public/build/app.js?v5.3.0"></script>
+<script type="text/javascript" src="../../public/build/app.js"></script>
 
 </body>
 </html>

@@ -8,6 +8,463 @@ title : Agenda single page | Brusselslife.be
 
 {{> breadcrumb}}
 <section id="event_page">
+    <div class="modal" id="add_more_event_time">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="form-title">
+                        <i class="fa fa-clock-o"></i> Schedule your event
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-element m-0">
+                        <label for="">Frequency</label>
+                        <select class="form-control">
+                            <option value="-1">Choose</option>
+                            <option value="1">Repeat daily</option>
+                            <option value="2">Repeat Weekly</option>
+                            <option value="3">Custom dates</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-element">
+                                <label for="">Start date</label>
+                                <div class="input-group">
+                                    <div class="input-group time">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                        </div>
+                                        <input type="date"
+                                               class="form-element"
+                                               placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-element">
+                                <label for="">End date</label>
+                                <div class="input-group">
+                                    <div class="input-group time">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                        </div>
+                                        <input type="date"
+                                               class="form-element"
+                                               placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-element">
+                                <label for="">Start time</label>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-element"
+                                           placeholder="">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-element">
+                                <label for="">End time</label>
+                                <div class="input-group time">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                    </div>
+                                    <input type="time"
+                                           class="form-element"
+                                           placeholder="">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="m-0">
+                                <strong>
+                                    Customize date & time
+                                </strong>
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-element">
+                                        <label for="">Choose dates</label>
+                                        <div class="schedule_date"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="m-0">
+                                        <strong>
+                                            12-Dec-2018
+                                        </strong>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-element">
+                                                <label for="">Start time</label>
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                                    </div>
+                                                    <input type="time"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-element">
+                                                <label for="">Start time</label>
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa fa-clock-o text-muted"></i></span>
+                                                    </div>
+                                                    <input type="time"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-block text-right">
+                    <button type="button" class="btn btn-primary">Save</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal edit-event-content" id="edit_event_content">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="form-title">
+                        Edit event
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <p class="m-0">
+                        <strong>
+                            Basic Info
+                        </strong>
+                        <small>This info will also appear in News Feed and any ads created for this event</small>
+                    </p>
+                    <div class="form-element">
+                        <label for="">Event photo </label>
+                        <div class="event-preview">
+                            <div class="preview-upload-image">
+                                <button>
+                                    <i class="fa fa-photo"></i> Image
+                                    <input type="file">
+                                </button>
+                            </div>
+
+                            <div class="event-preview-info">
+                                <div class="d-flex">
+                                    <div class="event-date-lg">
+                                    <span>
+                                        NOV
+                                    </span>
+                                        26
+                                    </div>
+                                    <div>
+                                        <div class="event-title">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+                                        </div>
+                                        <div class="event-date-sm">
+                                            Apr 16th 2018 - May 14 2018
+                                        </div>
+                                        <div>
+                                        <span class="event-cat">
+                                            MUSIC
+                                        </span> |
+                                            <span class="event-location">
+                                            Ixelles
+                                        </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <p class="m-0">
+                            <strong>
+                                Details
+                            </strong>
+                            <small>
+                                Let people know what type of event you're hosting and what to expect
+                            </small>
+                        </p>
+                        <div class="form-element">
+                            <label for="">Event title</label>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Add a short name of your event">
+                        </div>
+                        <div class="form-element">
+                            <label for="">Event location</label>
+                            <input type="text" class="form-element" placeholder="Include a place or address">
+                        </div>
+                        <div class="form-element">
+                            <label for="">Category</label>
+                            <select id="event_modal_category" class="form-control">
+                                <option value="">Exhibition</option>
+                                <option value="">Cinema</option>
+                                <option value="">Dance</option>
+                                <option value="">Music</option>
+                                <option value="">Travel</option>
+                                <option value="">Theater</option>
+                                <option value="">Comedy</option>
+                                <option value="">Stage shows</option>
+                                <option value="">Seminar</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label for="">Event description (optional) </label>
+                            <textarea class="form-control" id="event_editor" placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p class="m-0">
+                            <strong>
+                                Contact
+                            </strong>
+                            <small>
+                                Let people know how to contact the event organizer.
+                            </small>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-element">
+                                    <label for="">Telephone</label>
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-element">
+                                    <label for="">Website</label>
+                                    <input type="text" placeholder="http://www.google.com">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-element">
+                                    <label for="">Email address</label>
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-element">
+                                    <label for="">Mobile number</label>
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p class="m-0">
+                            <strong>
+                                Keywords
+                            </strong>
+                            <small>
+                            </small>
+                        </p>
+                        <div class="form-element">
+                            <label for="">Key words (Add keywords, separated by comma ',')</label>
+                            <select placeholder="Keywords"
+                                    name="event_keywords"
+                                    multiple
+                                    id="keywords-select-2"
+                                    class="ui search fluid dropdown">
+                                <option selected value="Music">Music</option>
+                                <option value="Jass">Jass</option>
+                                <option value="Harmoney">Harmony</option>
+                                <option value="Guitar">Guitar</option>
+                                <option value="Rock">Rock</option>
+                            </select>
+
+                        </div>
+                        <div class="form-element">
+                            <div class="checkbox">
+                                <input id="kid_friendly" type="checkbox">
+                                <label for="kid_friendly">Kid friendly</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p class="m-0">
+                            <strong>
+                                Date & time - (Occurs once)
+                            </strong>
+                            <small>
+                                Let people know whether this event repeats & how often it happens
+                            </small>
+                        </p>
+
+                        <div class="date-time-form">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-element">
+                                                <label for="">Start date</label>
+
+                                                <div class="input-group time">
+                                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                                    </div>
+                                                    <input type="date"
+                                                           class="form-element"
+                                                           placeholder="">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-element">
+                                                <label for="">Start time</label>
+                                                <div class="input-group">
+                                                    <div class="input-group time">
+                                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                                        </div>
+                                                        <input type="date"
+                                                               class="form-element"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-element">
+                                                <label for="">End date</label>
+                                                <div class="input-group">
+                                                    <div class="input-group time">
+                                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar text-muted"></i>
+                                        </span>
+                                                        </div>
+                                                        <input type="date"
+                                                               class="form-element"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-element">
+                                                <label for="">End time</label>
+                                                <div class="input-group">
+                                                    <div class="input-group time">
+                                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-clock-o text-muted"></i>
+                                        </span>
+                                                        </div>
+                                                        <input type="date"
+                                                               class="form-element"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p class="m-0">
+                            <strong>
+                                Frequency
+                            </strong>
+                            <small>
+                                Let people know whether this events repeats & how often it occurs.
+                            </small>
+                        </p>
+                        <div class="form-element">
+                            <button class="btn btn-secondary btn-sm"
+                                    data-toggle="modal" data-target="#add_more_event_time">
+                                <i class="fa fa-list-ul" aria-hidden="true"></i> Schedule
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p class="m-0">
+                            <strong>
+                                Tickets
+                            </strong>
+                            <small>
+                                Let people know where they can get tickets for your event
+                            </small>
+                        </p>
+                        <div class="form-element">
+                            <label for="">Tickets URL</label>
+                            <input type="text" placeholder="Add a link to your tickets website">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-block">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-9 text-right">
+                            <div class="form-element">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Save Draft</button>
+                                <button type="button" class="btn btn-primary">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-7 border-right pr-4 pt-4">
@@ -16,6 +473,14 @@ title : Agenda single page | Brusselslife.be
                 {{/parseJSON}}
 
                 <div class="event-info-block p-4">
+
+                    <div class="action_btns">
+                                <span class="ui" data-toggle="modal" data-target="#edit_event_content" data
+                                      data-tooltip="Edit Address">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                    </div>
+
                     <div class="d-flex">
                         <div class="event-date-lg pr-4 mr-4">
 

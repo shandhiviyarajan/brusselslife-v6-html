@@ -9,6 +9,7 @@
     var online_url = $(".online-url");
     var address_nav = $("#address-nav");
     var overlay = $("#overlay");
+    var mapOptions, center;
 
     var BrusselslifePlace = (function ($) {
         function BrusselslifePlace() {
@@ -16,19 +17,21 @@
                 init: function () {
 
                     _load();
+                    _google_maps();
                     _address_nav();
                     _content_body();
                     _places_post_form();
+
 
                     _promotion_modal();
                     _events_modal();
                     _article_modal();
                     _address_edit_modal();
 
-                    _keep_modal_open();
                     _star_rating();
 
                     _show_hint();
+
                 }
             }
         }
@@ -92,13 +95,6 @@
 
             var sel_category = $("#event_modal_category");
 
-            // $('#event_modal_keywords').dropdown({
-            //     clearable:true,
-            //     placeholder:'Select key words',
-            //     allowAdditions:true
-            //
-            // });
-
             $("#add_event_modal").on('show.bs.modal', function () {
 
             });
@@ -109,26 +105,67 @@
                 language: 'en'
             });
 
-            $( ".edit-address-drag-container" ).sortable();
+            $(".edit-address-drag-container").sortable();
 
             $("#sel-address-category").dropdown({
                 placeholder: "Select sub categories"
             });
 
+            $("#keywords-select-2").dropdown({
+                placeholder: "Keywords"
+            });
+
             $("#sel-address-branch").dropdown({
                 placeholder: "Select a branch"
             });
+
+            var d_canvas = document.getElementById("drag_to_find_location");
+            var d_map = new google.maps.Map(d_canvas, mapOptions);
+            var d_marker = new google.maps.Marker({
+                position: center,
+                map: d_map,
+                title: 'Drag this',
+                draggable: true
+
+            });
+
+
+            google.maps.event.addListener(d_marker, 'dragend', function (e) {
+                //console.log(d_marker.getPosition());
+                document.getElementById("d_lng").value = e.latLng.lat();
+                document.getElementById("d_lat").value = e.latLng.lng();
+
+            });
         }
 
-        function _keep_modal_open() {
-            /**
-             * keep the modal-open class till all modal get closed
-             */
-            $(document).on('hidden.bs.modal', function (event) {
-                if ($('.modal:visible').length) {
-                    $('body').addClass('modal-open');
-                }
+        function _google_maps() {
+
+
+            // var marker = new google.maps.Marker({
+            //     position: new google.maps.LatLng(address.latitude, address.longitude),
+            //     icon: icon
+            // });
+            center = new google.maps.LatLng(50.839383500000, 4.349299900000);
+            var r_canvas = document.getElementById("address-map-canvas");
+
+            mapOptions = {
+                center: center,
+                zoom: 9,
+                zoomControl: false,
+                navigationControl: false,
+                scaleControl: false,
+                mapTypeControl: false
+            };
+
+            var map = new google.maps.Map(r_canvas, mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: center,
+                map: map,
+                title: 'The address'
             });
+
+
         }
 
         function _content_body() {

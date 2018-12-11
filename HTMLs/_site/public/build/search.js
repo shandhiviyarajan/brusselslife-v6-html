@@ -29,14 +29,7 @@
 
         function _load() {
             console.log("Brusselslife - Search v6.0 HTML");
-            var c = document.getElementsByClassName("custom-checkbox");
-            var i = c.length;
-            while (i--) {
-                c[i].addEventListener('click', function (e) {
-                    e.preventDefault();
-                    this.classList.toggle("active");
-                });
-            }
+
 
 
             if (s_len) {

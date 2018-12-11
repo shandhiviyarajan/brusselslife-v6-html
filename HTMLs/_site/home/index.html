@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Home page | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events &amp; happenings. Brusselslife.be | version 5.3</title>
+    <title> Home page | Brusselslife.be | Belgium life style site | Brussels news, restaurants, shopping, events &amp; happenings. Brusselslife.be | version 7.0</title>
     <meta property="og:image" content=""/>
     <meta property="og:title" content=""/>
     <meta property="og:url" content=""/>
@@ -17,24 +17,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../public/libs/swipebox/css/swipebox.min.css"/>
+
     <link rel="stylesheet" href="../public/libs/select-2/css/select2.min.css"/>
     <link rel="stylesheet" href="../public/libs/bootstrap-datepicker/css/bootstrap.datepicker.min.css"/>
     <link rel="stylesheet" href="../public/libs/flick/flick.css"/>
     <link rel="stylesheet" href="../public/libs/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" type="text/css" href="../public/libs/semantic/semantic.css"/>
     <link rel="stylesheet" href="../public/libs/jqueryui/jquery-ui.min.css"/>
+    <!-- swiper carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <!-- custom-css -->
     <link rel="stylesheet" href="../public/css/app.css"/>
-    <!-- jquery-->
-    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../public/libs/jqueryui/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../public/libs/semantic/semantic.min.js"></script>
 
+
+    <!-- jquery v2.03-->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+
+    <!-- jquery 3.3.1 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jquery ui-->
+    <script type="text/javascript" src="../public/libs/jqueryui/jquery-ui.min.js"></script>
+    <!-- semantic-->
+    <script type="text/javascript" src="../public/libs/semantic/semantic.min.js"></script>
+    <!-- select2-->
     <script src="../public/libs/select-2/select2.full.min.js"></script>
+    <!-- ckeditor -->
     <script src="https://cdn.ckeditor.com/4.11.1/basic/ckeditor.js"></script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
+    <!-- google maps -->
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
 
 </head>
 
@@ -44,9 +56,9 @@
     <section class="bg-transparent">
         <div class="row no-gutters">
             <div class="col-md-4">
+
             </div>
             <div class="col-md-4">
-
                 <a href="/" class="logo">
                     <img src="../public/images/brusselslife_logo.png"
                          title="Brusselslife.be"
@@ -54,91 +66,177 @@
                          alt="Brusselslife.be">
                 </a>
             </div>
-            <div class="col-md-4 news-login-lan">
-                <div class="d-flex flex-row-reverse nav-right">
-                    <div id="lan-dropdown" data-toggle="dropdown">
-                        <div class="dropdown">
-                            <span>FR</span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">EN</a>
-                                </li>
-                                <li>
-                                    <a href="#">FR</a>
-                                </li>
-                                <li>
-                                    <a href="#">NL</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <span>
-                    <div class="dropdown mr-2"
-                         data-toggle="dropdown"
-                         id="login-register">
-                    <a class="btn btn-primary show-ov"
-                       href="#"><span> Sign in</span>
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </a>
-                    <div class="dropdown-menu stop-closing">
-                        <div class="form-title">
-                            Sign in to Brusselslife
-                        </div>
-                        <div class="error-message">
-                            <div class="alert alert-danger">
-                                Please enter the correct username & password
-                            </div>
-                        </div>
-                        <form action="">
-                            <div class="input-element mb-4">
-                                <label for="username">Email address </label>
-                                <input id="username"
-                                       type="text" placeholder="" class="form-control">
-                            </div>
-
-                            <div class="input-element mb-4">
-                                <label for="password">Password</label>
-                                <input id="password"
-                                       type="password" placeholder="Password" class="form-control">
-                            </div>
-
-                            <div class="input-element  mb-4">
-                                <div class="checkbox custom-checkbox">
-                                    <input type="checkbox" id="keep_logged_in">
-                                    <label for="keep_logged_in">Keep me logged in</label>
+            <div class="col-md-4">
+                <ul class="list-unstyled login-notify-profile">
+                    <li>
+                        <div class="dropdown site-notifications">
+                            <button data-toggle="dropdown">
+                                <span>
+                                    4
+                                </span>
+                                <img src="../public/svg/bl-icon-notification.svg" alt="">
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-title">
+                                    <strong>
+                                        Notifications
+                                    </strong>
+                                    <a href="#">
+                                        Mark all as read
+                                    </a>
                                 </div>
 
-                                <a href="#" class="forgot-pass pull-left">
-                                    Forgot password ?
-                                </a>
+                                <div class="media">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <figure>
+                                                <img src="../public/images/todo-2.jpg" alt=""/>
+                                            </figure>
+                                            <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="media read">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <figure>
+                                                <img src="../public/images/todo-3.jpg" alt=""/>
+                                            </figure>
+                                            <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <figure>
+                                                <img src="../public/images/todo-4.jpg" alt=""/>
+                                            </figure>
+                                            <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+
                             </div>
-                            <button class="btn btn-primary" id="login-button">
-                                Login
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown btn-create-content">
+                            <button data-toggle="dropdown">
+                                + Create
                             </button>
 
-
-                            <p class="mt-4 mb-0 text-center">Not a member ? &nbsp; <a href="#"
-                                                                                      class="btn btn-link btn-create-acc">Create
-                                a new account</a></p>
-
-                        </form>
-
-                        <div class="social-logins row pt-4">
-                            <div class="col-6">
-                                <a class="btn btn-link btn-google">Google</a>
+                            <div class="dropdown-menu">
+                                <a href="#">
+                                    <img src="/public/svg/my-location-marker.svg" alt="">
+                                    Create Address
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/svg/menu-icon-events.svg" alt="">
+                                    Create Agenda
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/svg/menu-icon-promotion.svg" alt="">
+                                    Create Promotion
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/svg/menu-icon-article.svg" alt="">
+                                    Create Article
+                                    <span>
+                                        Create a page for business
+                                    </span>
+                                </a>
                             </div>
-                           <div class="col-6">
-                                <a class="btn btn-link btn-fb">Facebook</a>
-                           </div>
                         </div>
-                    </div>
-                </div>
-              </span>
+                    </li>
+                    <li>
+                        <div class="dropdown user-profile-dropdown">
+                            <a href="!#" data-toggle="dropdown">
+                                <img src="../public/images/profile.png" alt="">
+                            </a>
 
-                    <a class="btn btn-primary" target="_blank" href="/newsletter">Newsletter <i class="fa fa-envelope"
-                                                                                                aria-hidden="true"></i></a>
-                </div>
+                            <div class="dropdown-menu">
+                                <a href="#">
+                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Favourites
+                                    <span>
+                                           Favourite address, events, articles
+                                       </span>
+                                </a>
+                                <a href="#">
+                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Saved post
+                                    <span>
+                                          Saved promotion, events, products etc..
+                                       </span>
+                                </a>
+                                <a href="#">
+                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Activity
+                                    <span>
+                                          Find your activity eg likes, reviews, comments
+                                       </span>
+                                </a>
 
+                                <a href="#">
+                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Profile
+                                    <span>
+                                          Saved promotion, events, products etc..
+                                       </span>
+                                </a>
+                                <a href="#">
+                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
+                                    Reviews
+                                    <span>
+                                         Saved promotion, events, products etc..
+                                       </span>
+                                </a>
+
+
+                                <div class="earn-points">
+                                    <img src="../public/svg/trophy.svg" alt="">
+    You earned 1200 points - <a href="#">
+                                    Learn how
+                                </a>
+                                </div>
+
+                                <div class="invite-friend">
+                                    Invite a friend to Brusselsife
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -2738,23 +2836,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- bootstrap -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- flick agenda scroll-->
 <script src="../public/libs/flick/flick.js"></script>
 <!-- momentjs-->
 <script type="text/javascript" src="../public/libs/daterangepicker/moment.min.js"></script>
 <!-- date range picker-->
 <script type="text/javascript" src="../public/libs/daterangepicker/daterangepicker.js"></script>
-<!-- select2-->
 
-<!-- slideout menu -->
+<!--slideout menu -->
 <script src="../public/libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
 <script type="text/javascript" src="../public/libs/sombal.js"></script>
 
-<!-- google maps -->
+<!-- swiper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
 <script type="text/javascript">
+
+    var highlight_modal = $("#highlight_modal");
+    highlight_modal.on('shown.bs.modal', function (event) {
+        var address_highlights = new Swiper('#highlights_container', {
+            speed: 0,
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            preloadImages: false,
+            lazy: true
+        });
+
+        address_highlights.on('reachEnd', function () {
+
+            highlight_modal.modal('hide');
+
+        });
+
+    });
+
+
     (function (window, $) {
         'use strict';
-
         var header = document.getElementsByTagName("header")[0];
         var body = document.getElementsByTagName("body")[0];
         var overlay = document.getElementById("overlay");
@@ -2769,25 +2895,35 @@
         var cl = localStorage.getItem('current_location');
 
         //Brusselslife Front End jQuery
-        BrusselslifeFE = (function ($) {
-            function BrusselslifeFE() {
+        var BrusselslifeFrontEnd = (function ($) {
+            function BrusselslifeFrontEnd() {
                 return {
                     init: function () {
-                        _get_user_location();
                         _load();
+                        _site_search();
                         _header();
-                        _what();
-                        _when();
                         _scroll_event_page();
+                        _keep_modal_open();
                     }
                 };
             }
 
             function _load() {
                 console.log("Brusselslife v7.0 HTML");
+                //Call tooltip
                 $(function () {
                     $('[data-toggle="tooltip"]').tooltip();
-                })
+                });
+
+                //Replace checkboxes
+                var c = document.getElementsByClassName("custom-checkbox");
+                var i = c.length;
+                while (i--) {
+                    c[i].addEventListener('click', function (e) {
+                        e.preventDefault();
+                        this.classList.toggle("active");
+                    });
+                }
             }
 
             function _header() {
@@ -2834,6 +2970,13 @@
                     overlay.classList.add("show");
                     $(".dropdown-menu").removeClass("show");
                 });
+            }
+
+            function _site_search() {
+                _what();
+                _when();
+                _user_location();
+                _get_user_location();
             }
 
             function _what() {
@@ -2953,10 +3096,12 @@
             }
 
             function _scroll_event_page() {
+
                 if (event_page) {
                     window.scrollBy(0, 500);
                 }
-                if(agenda_week){
+
+                if (agenda_week) {
                     _agenda_show_week();
                 }
             }
@@ -2968,27 +3113,38 @@
                 var current_date, d_info, content;
                 arr_week.forEach(function (i) {
 
-                        current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
-                        d_info = moment(current_date).format('dddd / MMM / D').split("/");
+                    current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
+                    d_info = moment(current_date).format('dddd / MMM / D').split("/");
 
-                       content = '<div class="week-date">' +
-                            '                    <a href="/search/events?date='+moment(current_date).format('D-MM-YYYY')+'"><span>' + d_info[1] + '</span>' +
-                            '                        <h2>' + d_info[2] + '</h2>' +
-                            '                        <p>' + d_info[0] + '</p>' +
-                            '                    </a>' +
-                            '                </div>';
-                        agenda_week.append(content);
+                    content = '<div class="week-date">' +
+                        '                    <a href="/search/events?date=' + moment(current_date).format('D-MM-YYYY') + '"><span>' + d_info[1] + '</span>' +
+                        '                        <h2>' + d_info[2] + '</h2>' +
+                        '                        <p>' + d_info[0] + '</p>' +
+                        '                    </a>' +
+                        '                </div>';
+                    agenda_week.append(content);
                 });
             }
 
-            return BrusselslifeFE;
+            function _keep_modal_open() {
+                /**
+                 * keep the modal-open class till all modal get closed
+                 */
+                $(document).on('hidden.bs.modal', function (event) {
+                    if ($('.modal:visible').length) {
+                        $('body').addClass('modal-open');
+                    }
+                });
+            }
+
+            return BrusselslifeFrontEnd;
         })(jQuery);
-        var BrusselslifeFE = new BrusselslifeFE();
+        var BrusselslifeFE = new BrusselslifeFrontEnd();
         BrusselslifeFE.init();
     })(window, jQuery);
 </script>
 
-<script type="text/javascript" src="../public/build/app.js?v5.3.0"></script>
+<script type="text/javascript" src="../public/build/app.js"></script>
 
 </body>
 </html>

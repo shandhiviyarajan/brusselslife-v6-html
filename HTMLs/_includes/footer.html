@@ -266,23 +266,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- bootstrap -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- flick agenda scroll-->
 <script src="{{assets}}libs/flick/flick.js"></script>
 <!-- momentjs-->
 <script type="text/javascript" src="{{assets}}libs/daterangepicker/moment.min.js"></script>
 <!-- date range picker-->
 <script type="text/javascript" src="{{assets}}libs/daterangepicker/daterangepicker.js"></script>
-<!-- select2-->
 
-<!-- slideout menu -->
+<!--slideout menu -->
 <script src="{{assets}}libs/slideout/slideout.min.js"></script>
 <!--sombal js-->
 <script type="text/javascript" src="{{assets}}libs/sombal.js"></script>
 
-<!-- google maps -->
+<!-- swiper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
 <script type="text/javascript">
+
+    var highlight_modal = $("#highlight_modal");
+    highlight_modal.on('shown.bs.modal', function (event) {
+        var address_highlights = new Swiper('#highlights_container', {
+            speed: 0,
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            preloadImages: false,
+            lazy: true
+        });
+
+        address_highlights.on('reachEnd', function () {
+
+            highlight_modal.modal('hide');
+
+        });
+
+    });
+
+
     (function (window, $) {
         'use strict';
-
         var header = document.getElementsByTagName("header")[0];
         var body = document.getElementsByTagName("body")[0];
         var overlay = document.getElementById("overlay");
@@ -297,25 +325,35 @@
         var cl = localStorage.getItem('current_location');
 
         //Brusselslife Front End jQuery
-        BrusselslifeFE = (function ($) {
-            function BrusselslifeFE() {
+        var BrusselslifeFrontEnd = (function ($) {
+            function BrusselslifeFrontEnd() {
                 return {
                     init: function () {
-                        _get_user_location();
                         _load();
+                        _site_search();
                         _header();
-                        _what();
-                        _when();
                         _scroll_event_page();
+                        _keep_modal_open();
                     }
                 };
             }
 
             function _load() {
                 console.log("Brusselslife v7.0 HTML");
+                //Call tooltip
                 $(function () {
                     $('[data-toggle="tooltip"]').tooltip();
-                })
+                });
+
+                //Replace checkboxes
+                var c = document.getElementsByClassName("custom-checkbox");
+                var i = c.length;
+                while (i--) {
+                    c[i].addEventListener('click', function (e) {
+                        e.preventDefault();
+                        this.classList.toggle("active");
+                    });
+                }
             }
 
             function _header() {
@@ -362,6 +400,13 @@
                     overlay.classList.add("show");
                     $(".dropdown-menu").removeClass("show");
                 });
+            }
+
+            function _site_search() {
+                _what();
+                _when();
+                _user_location();
+                _get_user_location();
             }
 
             function _what() {
@@ -481,10 +526,12 @@
             }
 
             function _scroll_event_page() {
+
                 if (event_page) {
                     window.scrollBy(0, 500);
                 }
-                if(agenda_week){
+
+                if (agenda_week) {
                     _agenda_show_week();
                 }
             }
@@ -496,24 +543,35 @@
                 var current_date, d_info, content;
                 arr_week.forEach(function (i) {
 
-                        current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
-                        d_info = moment(current_date).format('dddd / MMM / D').split("/");
+                    current_date = new Date(new Date().getTime() + i * (24 * 3600 * 1000));
+                    d_info = moment(current_date).format('dddd / MMM / D').split("/");
 
-                       content = '<div class="week-date">' +
-                            '                    <a href="/search/events?date='+moment(current_date).format('D-MM-YYYY')+'"><span>' + d_info[1] + '</span>' +
-                            '                        <h2>' + d_info[2] + '</h2>' +
-                            '                        <p>' + d_info[0] + '</p>' +
-                            '                    </a>' +
-                            '                </div>';
-                        agenda_week.append(content);
+                    content = '<div class="week-date">' +
+                        '                    <a href="/search/events?date=' + moment(current_date).format('D-MM-YYYY') + '"><span>' + d_info[1] + '</span>' +
+                        '                        <h2>' + d_info[2] + '</h2>' +
+                        '                        <p>' + d_info[0] + '</p>' +
+                        '                    </a>' +
+                        '                </div>';
+                    agenda_week.append(content);
                 });
             }
 
-            return BrusselslifeFE;
+            function _keep_modal_open() {
+                /**
+                 * keep the modal-open class till all modal get closed
+                 */
+                $(document).on('hidden.bs.modal', function (event) {
+                    if ($('.modal:visible').length) {
+                        $('body').addClass('modal-open');
+                    }
+                });
+            }
+
+            return BrusselslifeFrontEnd;
         })(jQuery);
-        var BrusselslifeFE = new BrusselslifeFE();
+        var BrusselslifeFE = new BrusselslifeFrontEnd();
         BrusselslifeFE.init();
     })(window, jQuery);
 </script>
 
-<script type="text/javascript" src="{{assets}}build/app.js?v5.3.0"></script>
+<script type="text/javascript" src="{{assets}}build/app.js"></script>

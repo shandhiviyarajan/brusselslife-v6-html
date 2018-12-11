@@ -10,11 +10,8 @@ title : Address timeline | Brusselslife.be | Belgium life style site | Brussels 
     <div class="row">
         {{> left-side-block}}
         <div class="col-md-7 place-col-center">
+            {{> post-form}}
 
-
-
-
-           {{> post-form}}
             <div class="address-gallery p-4 mb-4 bg-white shadow-sm">
                 <div class="address-logo-title d-flex ">
                     <figure>
@@ -73,6 +70,29 @@ title : Address timeline | Brusselslife.be | Belgium life style site | Brussels 
                         Reservations
                     </a>
                 </div>
+            </div>
+            <div class="brusselslife_follow px-4 py-2 mb-4 bg-white shadow-sm">
+
+                <button class="btn btn_default btn_follow">
+                    + Follow
+                </button>
+                <div class="followers_small">
+
+                    <div>
+                        <img src="{{assets}}images/f_u_1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="{{assets}}images/f_u_2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="{{assets}}images/f_u_3.png" alt="">
+                    </div>
+                    <div>
+                        <img src="{{assets}}images/f_u_4.png" alt="">
+                    </div>
+
+                </div>
+
             </div>
             <div class="business-info  px-4 pb-4 pt-0 mb-4  bg-white shadow-sm">
                 <div class="place-title">
@@ -173,6 +193,7 @@ title : Address timeline | Brusselslife.be | Belgium life style site | Brussels 
                 </div>
 
             </div>
+
             <div class="time-line-item shadow-sm bg-white mb-4 py-4">
                 <div class="time-line-wrapper time-line-promotion">
                     <div class="time-line-header">
@@ -317,58 +338,60 @@ title : Address timeline | Brusselslife.be | Belgium life style site | Brussels 
                 </div>
             </div>
             <div class="time-line-item shadow-sm bg-white mb-4 py-4">
-               <div class="time-line-wrapper time-line-image-post">
-                   <div class="time-line-header">
-                       <div class="time-line-date"><i class="fa fa-clock-o"></i> 22 October, 2018 (20 mins ago)</div>
-                       <div class="dropdown settings-dropdown">
-                           <a href="#"
-                              class="btn btn-link"
-                              data-toggle="dropdown">
-                               <i class="fa fa-cog" aria-hidden="true"></i>
-                           </a>
-                           <ul class="dropdown-menu shadow-md">
-                               <li>
-                                   <a href="#">
-                                       Edit post
-                                       <span>
+                <div class="time-line-wrapper time-line-image-post">
+                    <div class="time-line-header">
+                        <div class="time-line-date"><i class="fa fa-clock-o"></i> 22 October, 2018 (20 mins ago)</div>
+                        <div class="dropdown settings-dropdown">
+                            <a href="#"
+                               class="btn btn-link"
+                               data-toggle="dropdown">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu shadow-md">
+                                <li>
+                                    <a href="#">
+                                        Edit post
+                                        <span>
                                             Update content on your post
                                         </span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       Unpublish
-                                       <span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Unpublish
+                                        <span>
                                             Update content on your post
                                         </span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       Delete
-                                       <span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Delete
+                                        <span>
                                             Update content on your post
                                         </span>
-                                   </a>
-                               </li>
-                           </ul>
-                       </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
-                   </div>
-                   <div class="time-line-body">
-                       <a href="#">
-                           <p class="px-2 pt-2">
-                               When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                           </p>
-                           <figure>
-                               <img class="sombal" data-src="{{assets}}images/image-post.jpg" alt="">
-                           </figure>
+                    </div>
+                    <div class="time-line-body">
+                        <a href="#">
+                            <p class="px-2 pt-2">
+                                When an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. It has survived not only five centuries, but also the leap into electronic
+                                typesetting, remaining essentially unchanged.
+                            </p>
+                            <figure>
+                                <img class="sombal" data-src="{{assets}}images/image-post.jpg" alt="">
+                            </figure>
 
 
-                       </a>
-                   </div>
-                   <div class="time-line-footer">
-               </div>
+                        </a>
+                    </div>
+                    <div class="time-line-footer">
+                    </div>
 
                 </div>
             </div>
@@ -415,7 +438,8 @@ title : Address timeline | Brusselslife.be | Belgium life style site | Brussels 
 
                         <a href="#">
                             <p class="px-2 pt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at cupiditate dolorum est mollitia optio quae.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at cupiditate
+                                dolorum est mollitia optio quae.
                             </p>
                             <figure>
                                 <img class="sombal" data-src="{{assets}}images/timeline-event.jpg" alt="">
