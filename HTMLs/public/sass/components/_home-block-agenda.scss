@@ -1,0 +1,90 @@
+#home-block-agenda {
+  background: #212121;
+  margin: 0px -20px;
+
+  .block-title {
+    background-image: linear-gradient(90deg, #E147F0 1%, #8B10A4 68%);
+    padding: 10px 0px;
+    h2 {
+      color: #fff;
+      font-family: $secondary-title-font;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+
+  .agenda-items-carousel {
+    .home-agenda-item {
+      position: relative;
+      width: 24%;
+      padding: 20px;
+      display: inline-block;
+      div.tlit-wrapper {
+        transform-style: preserve-3d;
+      }
+
+      &:active {
+        -webkit-transform: scale(0.96);
+        -moz-transform: scale(0.96);
+        -ms-transform: scale(0.96);
+        -o-transform: scale(0.96);
+        transform: scale(0.96);
+      }
+
+      div.category-comments-views {
+        margin-top: -45px;
+        span.bxl-category {
+          background: #363636;
+          color: #fff;
+          margin-bottom: 7px;
+
+        }
+      }
+
+      figure {
+        overflow: hidden;
+        border-radius: 20px 20px 20px 20px;
+        -webkit-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+        img {
+          width: 100%;
+        }
+
+      }
+      div.event-date-time {
+        transform: translateZ(20px);
+      }
+      div.big-date {
+        color: #D23DE3;
+        font-family: $base-font-bold;
+        font-size: 120px;
+        line-height: 80px;
+        margin-top: -15px;
+
+      }
+      div.event-month {
+        background: #212121;
+        color: $primary-orange;
+        font-family: $base-font-bold;
+        font-size: 18px;
+        position: relative;
+        padding: 3px;
+        margin-top: -15px;
+        margin-left: 50px;
+        display: inline-block;
+
+      }
+      div.event-title {
+        color: $content-grey;
+        font-family: $secondary-title-font;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 25px;
+      }
+
+    }
+  }
+}

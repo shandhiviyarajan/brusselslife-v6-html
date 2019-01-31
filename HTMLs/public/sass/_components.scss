@@ -7,6 +7,14 @@ Brusselslife v5.3 components
 @import 'components/nav';
 @import 'components/sidebar';
 @import 'components/home-search';
+@import 'components/home-block-1';
+@import 'components/home-block-4';
+@import 'components/home-block-agenda';
+@import 'components/home-block-article';
+@import 'components/section-block-address';
+@import 'components/section-block-article-address';
+@import 'components/section-block-grid-articles';
+@import 'components/section-block-group-address';
 @import 'components/section-search';
 @import 'components/newsletter';
 @import 'components/right_imu';
@@ -47,6 +55,7 @@ Brusselslife v5.3 components
 @import 'components/search-page';
 @import 'components/agenda_first_block';
 @import 'components/event-page';
+@import 'components/promotion';
 @import 'components/footer';
 
 .block-edit {

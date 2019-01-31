@@ -1,5 +1,5 @@
 header {
-  background-color: $primary-blue !important;
+  background-color: #17303F !important;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
@@ -52,13 +52,17 @@ header {
 
   }
   .logo {
-    padding: $gutter/2;
-    width: 160px;
+    margin-top: 12px;
+    display: block;
+    width: 165px;
     img {
-      max-width: 136px;
+      max-width: 165px;
     }
   }
 
+  #blifeNavBar {
+    border-bottom: thin solid #e5e5e5;
+  }
   #blifeNavBar, nav {
     background: #fff;
   }
@@ -74,6 +78,16 @@ header {
       padding: 0px;
       overflow: hidden;
       margin: 0px;
+      li.menu-bar-black {
+
+        a {
+          width: 56px;
+        }
+        img {
+          margin-left: 0px;
+          margin-top: -4px;
+        }
+      }
     }
   }
 
@@ -238,7 +252,7 @@ header {
   }
 
   .small-logo {
-    background: $primary-blue;
+    background: #17303F;
 
     width: 108px;
     height: 45px;
@@ -301,6 +315,20 @@ $menu_prefix: #menu-item;
 
 //Agenda menu colour updates
 
+section.top-header {
+  background: #142B39;
+  height: 36px;
+
+  div.col-sm-4 {
+    a {
+      display: inline-block;
+      padding: 7px 7px 7px 0px;
+      font-size: 13px;
+      color: #64A8D1;
+    }
+  }
+}
+
 header.shrink-header {
   position: fixed;
   width: 100%;
@@ -317,24 +345,24 @@ header.shrink-header {
   }
   #blifeNavBar {
 
-    background: $primary-blue;
+    background: #17303F;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
     -ms-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
-    -webkit-box-shadow: -8px 0px 6px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: -8px 0px 6px rgba(0, 0, 0, 0.5);
-    box-shadow: -8px 0px 6px rgba(0, 0, 0, 0.5);
+    //-webkit-box-shadow: -8px 0px 6px rgba(0, 0, 0, 0.5);
+    //-moz-box-shadow: -8px 0px 6px rgba(0, 0, 0, 0.5);
+    //box-shadow: -8px 0px 6px rgba(0, 0, 0, 0.5);
   }
 
   nav {
     li a {
       font-size: $h3;
       color: #fff;
-      background: $primary-blue;
+      background: #17303F;
       &:before {
-        background: darken($primary-blue, 5%);
+        background: darken(#17303F, 5%);
       }
     }
   }
@@ -355,9 +383,11 @@ header.header_search {
   a.logo {
     outline: 0;
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 5px 5px 40px;
+    margin-top: 0px;
     img {
       width: 72px;
+
     }
   }
   form {
@@ -441,13 +471,12 @@ header.header_search {
 
 header.move {
   #blifeNavBar {
-    -webkit-transform: translateY(107px);
-    -moz-transform: translateY(107px);
-    -ms-transform: translateY(107px);
-    -o-transform: translateY(107px);
-    transform: translateY(107px);
+    -webkit-transform: translateY(54px);
+    -moz-transform: translateY(54px);
+    -ms-transform: translateY(54px);
+    -o-transform: translateY(54px);
+    transform: translateY(54px);
   }
-
 }
 
 body.fixed-header {
@@ -713,9 +742,9 @@ div.error-message {
 }
 
 .login-notify-profile {
-  padding: 24px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   float: right;
-  margin-right: 20px;
+  margin-right: 0px;
   > li {
     margin-left: 10px;
     display: inline-block;
@@ -729,41 +758,37 @@ div.error-message {
     > span {
       background: red;
       color: #fff;
-      font-size: 12px;
+      font-size: 0px;
       font-weight: bold;
-      top: -12px;
-      right: -1px;
+      top: 4px;
+      right: 4px;
       padding-top: 4px;
-      width: 20px;
-      height: 20px;
+      width: 7px;
+      height: 7px;
       text-align: center;
       border-radius: 100px;
       position: absolute;
       font-family: $base-font-family;
-
     }
     position: relative;
     color: #fff;
     border: none;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
-    background: $blue-info-dark;
-    height: 40px;
-    padding: 10px 20px;
+    background: transparent;
+    height: 36px;
+    padding: 7px 10px;
     border-radius: 4px;
-    outilne: 0;
-    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    outline: 0;
+    //-webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    //-moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    //box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     &:focus {
-      outline: 0;
-      -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+
     }
     &:hover {
-      background: darken($blue-info-dark, 5%);
+
     }
 
     &:active {
@@ -866,7 +891,7 @@ div.error-message {
 
 .site-notifications {
   > button {
-    padding: 10px 14px;
+    padding: 7px 10px;
   }
 }
 
@@ -950,20 +975,21 @@ div.error-message {
   position: relative;
   > a {
     img {
-      width: 38px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
     }
-    margin: 0px;
+    margin: 3px 0px 0px 0px;
     padding: 0px;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    background: $blue-info-dark;
+    border: 0px solid #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    //background: $blue-info-dark;
     display: block;
-    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    width: 42px;
-    height: 40px;
+    //-webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    //-moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    //box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    width: 28px;
+    height: 28px;
 
     &:active {
       transform: scale(0.95);

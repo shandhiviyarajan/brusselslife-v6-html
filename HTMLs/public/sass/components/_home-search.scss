@@ -1,8 +1,9 @@
 #home_search {
-  min-height: 200px;
+  min-height: auto;
+  background: #fff;
   .form-wrapper {
     div.row {
-      min-height: 200px;
+      min-height: auto;
     }
   }
   .input-group-prepend,
@@ -10,14 +11,15 @@
     background-color: $primary-white;
     border: none;
     border-radius: 6px 0px 0px 6px;
-    height: $form-height;
+    height: 48px;
+    padding-right: 0px;
   }
   button.btn_submit {
     background-color: $blue-info-dark;
     color: #fff;
     border: none;
-    border-radius: 0px 6px 6px 0px;
-    height: $form-height;
+    border-radius: 0px 4px 4px 0px;
+    height: 48px;
     font-size: 14px;
     font-weight: bold;
     padding: 7px 30px;
@@ -44,9 +46,9 @@
   .search_input {
     border: none;
     outline: 0;
-    height: 52px !important;
-    background: #FFFFFF;
-    padding-left: 20px;
+    height: 48px !important;
+    background: #fff;
+    padding-left: 10px;
     border-radius: 0px 0px;
     color: #000;
     font-size: 16px;
@@ -54,7 +56,7 @@
     &:focus {
       outline: 0;
       box-shadow: none;
-      background: #f1f1f1;
+      background: #fff;
     }
   }
 
@@ -63,11 +65,11 @@
     a.btn-default {
       font-weight: bold;
       background: #fff;
-      height: 52px;
+      height: 48px;
       border-radius: 0px;
-      line-height: 38px;
+      line-height: 34px;
       color: #000;
-      padding: 7px 20px;
+      padding: 7px 15px;
       border-left: thin solid #d8d8d8;
 
       img {
@@ -148,6 +150,7 @@
           bottom: -18px;
           left: 50%;
           margin-left: -8px;
+          -webkit-transition: 0.1s ease;
           -webkit-transition: 0.1s ease;
           -moz-transition: 0.1s ease;
           -ms-transition: 0.1s ease;
@@ -263,7 +266,7 @@
       font-size: 14px;
       color: #fff;
       display: block;
-      line-height: 52px;
+      line-height: 44px;
       padding: 0px 20px;
       font-family: $base-font-family;
       text-transform: uppercase;
@@ -332,7 +335,7 @@
 #when {
   button {
     border-radius: 0px;
-    height: 52px;
+    height: 44px;
     font-weight: bold;
     border-left: thin solid #d8d8d8;
     &:hover,
@@ -367,14 +370,14 @@
   }
 
   .select2-container--default .select2-selection--single .select2-selection__rendered {
-    height: 52px !important;
+    height: 44px !important;
     color: #030303;
-    line-height: 52px;
+    line-height: 44px;
     padding-left: 20px;
     font-weight: bold;
   }
   .select2-container .select2-selection--single {
-    height: 52px;
+    height: 44px;
     background: transparent;
   }
 
@@ -387,19 +390,21 @@
 #address_search_form,
 #all_search_form,
 #events_search_form {
-  border-radius: 6px;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+ // box-shadow: 0 10px 11px 0 rgba(0, 0, 0, 0.12);
+  margin: 15px 0px;
+  border: thin solid #BBB4B4;
 }
 
 #home_search.shrink {
 
   position: fixed;
-  height: 52px;
+  height: 80px;
   background: #fff !important;
-  z-index: 1000;
+  z-index: 1100;
   width: 100%;
   top: 45px;
-  min-height: 52px;
+  min-height:44px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 
   .form-wrapper {

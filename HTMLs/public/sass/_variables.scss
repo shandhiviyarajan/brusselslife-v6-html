@@ -1,0 +1,49 @@
+//Font and body colors
+@import 'fonts';
+
+$body-background-color: #d7d7d7;
+$primary-white: #ffffff;
+$primary-color: #1E3546;
+$primary-blue: #25475F;
+$primary-green: #6dac3d;
+$primary-orange: #F5A623;
+$secondary-orange: #CE6319;
+$secondary-orange: #ff732b;
+$primary-red: #D0021B;
+$primary-cayan: #4AD0E4;
+$primary-navy: #1c5f8d;
+$primary-cayan-dark: #76BBC5;
+$bg-cayan: #B6DDE3;
+$content-color: #000000;
+$content-grey: #979797;
+$blue-info-dark: #0069FF;
+
+$content-color-light: #696969;
+$content-color-dark: lighten($content-color, 25%);
+
+//Font styles
+$base-font-family:Proxima Nova,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+
+$base-font-bolder:'proxima_nova_altblack';
+$base-font-bold:'proxima_nova_altbold';
+$title-font: Merriweather, serif;
+$content-font: Merriweather, serif;
+$secondary-title-font: 'Roboto Condensed', sans-serif;
+$border-radius: 0px;
+
+//Content styles
+$font-size-14: 14px;
+$font-size-16: 16px;
+
+//Headers
+$h1: 27px;
+$h2: 28px;
+$h3: 18px;
+$h4: 16px;
+$h5: 14px;
+$h6: 12px;
+
+$zindex: 2000;
+$gutter: 20px;
+$form-height: 52px;
+$menu-width: 1024px;

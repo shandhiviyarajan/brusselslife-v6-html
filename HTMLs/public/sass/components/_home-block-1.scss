@@ -1,0 +1,139 @@
+#home-block-1 {
+
+  margin-top: 20px;
+  padding-top: 20px;
+
+  .bxl-item {
+    position: relative;
+
+    > a {
+      display: block;
+      &:hover {
+        figure .overlay {
+          opacity: 0.5;
+        }
+      }
+    }
+    h3 {
+      color: #fff;
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 50%;
+      margin-top: -65px;
+      z-index: 100;
+      font-size: 28px;
+      text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      font-size: 16px;
+      color: #000;
+    }
+    figure {
+      position: relative;
+      .overlay {
+        background: rgba(0, 0, 0, 0.35);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 80;
+        opacity: 1;
+      }
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .bxl-item.float-item {
+    width: 250px;
+    position: relative;
+    margin-right: 15px;
+    .category-comments-views {
+      margin: 0px 0px 15px 0px;
+    }
+    .float-content {
+      position: absolute;
+      z-index: 100;
+      left: 7%;
+      width: 85%;
+      bottom: 7%;
+    }
+
+    figure {
+      overflow: hidden;
+      position: relative;
+      border-radius: 0px 0px 40px 0px;
+    }
+
+    p, h3 {
+      color: #fff;
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      left: auto;
+      top: auto;
+      margin: 0px;
+    }
+    h3 {
+      font-size: 24px;
+      text-shadow: none;
+    }
+  }
+  .block-title h2 {
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 15px;
+
+    strong, em {
+      color: #25475F;
+    }
+
+  }
+
+  .single_address {
+    display: block;
+    background-image: linear-gradient(-139deg, #335E73 0%, #17303F 100%);
+
+    img {
+      width: 100%;
+    }
+    .address-title {
+      font-family: $base-font-family;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0px 20px 0px 20px;
+    }
+    .address-p-code {
+      font-family: $base-font-family;
+      font-size: 12px;
+      padding: 0px 20px 0px 20px;
+      color: #fff;
+    }
+    .address-tag-line {
+      font-family: $content-font;
+      font-size: 13px;
+      font-style: italic;
+      padding: 0px 20px 20px 20px;
+      color: #fff;
+    }
+  }
+
+  .col-md-9 {
+    .col-sm-4 {
+      border-right: thin solid #d9d9d9;
+      flex: 0 0 32.333333%;
+      max-width: 32.333333%;
+      margin-top: -20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 90px !important;
+  }
+}

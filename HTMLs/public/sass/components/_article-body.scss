@@ -35,6 +35,23 @@
       position: relative;
     }
   }
+
+  .article_filters a {
+    display: inline-block;
+    font-size: 13px;
+    background: $blue-info-dark;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 4px;
+
+    &:hover {
+      background: darken($blue-info-dark, 10%);
+    }
+
+    &:active {
+      transform: scale(0.98);     background: darken($blue-info-dark, 10%);
+    }
+  }
 }
 
 .article-title {

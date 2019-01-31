@@ -1,0 +1,52 @@
+#section-block-group-address {
+  .item-address-type {
+    display: inline-block;
+    position: relative;
+
+    div.col-md-8 {
+      div.block-title {
+        h2 {
+          font-family: $base-font-bold;
+          color: #000;
+        }
+      }
+    }
+
+    a {
+
+      display: block;
+      width: 220px;
+      height: 220px;
+      margin-right: 20px;
+
+      h3 {
+
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -ms-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        transition: 0.3s ease;
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        bottom: 20px;
+        left: 20px;
+        text-align: left;
+        span.count {
+          font-size: 28px;
+          display: block;
+        }
+        font-family: $base-font-bold;
+        font-size: 16px;
+      }
+
+      &:hover {
+        h3 {
+          bottom: 50px;
+        }
+      }
+
+    }
+  }
+}
+

@@ -12,7 +12,8 @@
         margin-bottom: 7px;
       }
       img {
-        width: 100px;
+        width: 140px;
+        height: 100px;
       }
     }
   }
@@ -23,8 +24,8 @@
     padding-top: 15px;
     margin-left: -10px;
     h2 {
-      font-family: $secondary-title-font;
-      color: #233747;
+      font-family: $base-font-bold;
+      color: #000;
       font-size: 14px;
       font-weight: bold;
       margin-right: 15px;
@@ -51,7 +52,7 @@
 
             background: $blue-info-dark;
             color: #fff;
-            border: thin solid  $blue-info-dark;
+            border: thin solid $blue-info-dark;
 
           }
         }
