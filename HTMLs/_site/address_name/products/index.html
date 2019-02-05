@@ -24,16 +24,12 @@
     <link rel="stylesheet" href="../../public/libs/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" type="text/css" href="../../public/libs/semantic/semantic.css"/>
     <link rel="stylesheet" href="../../public/libs/jqueryui/jquery-ui.min.css"/>
-    <!-- swiper carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+
+    <!-- idangerous slider -->
+    <link rel="stylesheet" href="../../public/libs/idangerous/css/swiper.min.css"/>
     <!-- custom-css -->
     <link rel="stylesheet" href="../../public/css/app.css"/>
 
-
-    <!-- jquery v2.03-->
-    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
-
-    <!-- jquery 3.3.1 -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- jquery ui-->
     <script type="text/javascript" src="../../public/libs/jqueryui/jquery-ui.min.js"></script>
@@ -43,7 +39,8 @@
     <script src="../../public/libs/select-2/select2.full.min.js"></script>
     <!-- ckeditor -->
     <script src="https://cdn.ckeditor.com/4.11.1/basic/ckeditor.js"></script>
-
+    <!--idangerous-->
+    <script src="../../public/libs/idangerous/js/swiper.min.js"></script>
     <!-- google maps -->
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
@@ -53,194 +50,230 @@
 <body>
 <main>
     <header>
-    <section class="bg-transparent">
-        <div class="row no-gutters">
-            <div class="col-md-4">
+    <section class="top-header">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-sm-4">
 
-            </div>
-            <div class="col-md-4">
-                <a href="/" class="logo">
-                    <img src="../../public/images/brusselslife_logo.png"
-                         title="Brusselslife.be"
-                         name="Brusselslife.be"
-                         alt="Brusselslife.be">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-unstyled login-notify-profile">
-                    <li>
-                        <div class="dropdown site-notifications">
-                            <button data-toggle="dropdown">
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Newsletter</a>
+
+                </div>
+                <div class="col-sm-8">
+                    <ul class="list-unstyled login-notify-profile">
+                        <li>
+                            <div class="dropdown btn-create-content">
+                                <button data-toggle="dropdown">
+                                    +
+                                </button>
+
+                                <div class="dropdown-menu">
+                                    <a href="#">
+                                        <img src="/public/svg/my-location-marker.svg" alt="">
+                                        Create Address
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-events.svg" alt="">
+                                        Create Agenda
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-promotion.svg" alt="">
+                                        Create Promotion
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-article.svg" alt="">
+                                        Create Article
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown site-notifications">
+                                <button data-toggle="dropdown">
                                 <span>
                                     4
                                 </span>
-                                <img src="../../public/svg/bl-icon-notification.svg" alt="">
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-title">
+                                    <img src="../../public/svg/bl-icon-notification.svg" alt="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-title">
+                                        <strong>
+                                            Notifications
+                                        </strong>
+                                        <a href="#">
+                                            Mark all as read
+                                        </a>
+                                    </div>
+
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../../public/images/todo-2.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media read">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../../public/images/todo-3.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../../public/images/todo-4.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown user-profile-dropdown">
+                                <a href="!#" data-toggle="dropdown">
+                                    <img src="../../public/images/profile.png" alt="">
+                                </a>
+
+                                <!--<div class="dropdown-menu">-->
+                                <!--<a href="#">-->
+                                <!--<img src="../../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Favourites-->
+                                <!--<span>-->
+                                <!--Favourite address, events, articles-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Saved post-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Activity-->
+                                <!--<span>-->
+                                <!--Find your activity eg likes, reviews, comments-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Profile-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Reviews-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<div class="earn-points">-->
+                                <!--<img src="../../public/svg/trophy.svg" alt="">-->
+                                <!--You earned 1200 points - <a href="#">-->
+                                <!--Learn how-->
+                                <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="invite-friend">-->
+                                <!--Invite a friend to Brusselsife-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown switch-language ">
+                                <a href="#"
+                                   data-toggle="dropdown">
                                     <strong>
-                                        Notifications
+                                        EN
                                     </strong>
-                                    <a href="#">
-                                        Mark all as read
-                                    </a>
-                                </div>
-
-                                <div class="media">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="../../public/images/todo-2.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="media read">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="../../public/images/todo-3.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="media">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="../../public/images/todo-4.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">EN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FR</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">NL</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown btn-create-content">
-                            <button data-toggle="dropdown">
-                                + Create
-                            </button>
-
-                            <div class="dropdown-menu">
-                                <a href="#">
-                                    <img src="/public/svg/my-location-marker.svg" alt="">
-                                    Create Address
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-events.svg" alt="">
-                                    Create Agenda
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-promotion.svg" alt="">
-                                    Create Promotion
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-article.svg" alt="">
-                                    Create Article
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown user-profile-dropdown">
-                            <a href="!#" data-toggle="dropdown">
-                                <img src="../../public/images/profile.png" alt="">
-                            </a>
-
-                            <div class="dropdown-menu">
-                                <a href="#">
-                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Favourites
-                                    <span>
-                                           Favourite address, events, articles
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Saved post
-                                    <span>
-                                          Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Activity
-                                    <span>
-                                          Find your activity eg likes, reviews, comments
-                                       </span>
-                                </a>
-
-                                <a href="#">
-                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Profile
-                                    <span>
-                                          Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="../../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Reviews
-                                    <span>
-                                         Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-
-
-                                <div class="earn-points">
-                                    <img src="../../public/svg/trophy.svg" alt="">
-    You earned 1200 points - <a href="#">
-                                    Learn how
-                                </a>
-                                </div>
-
-                                <div class="invite-friend">
-                                    Invite a friend to Brusselsife
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
     </section>
+
+    <section class="bg-transparent">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <a href="/" class="logo">
+                        <img src="../../public/images/logo.png"
+                             title="Brusselslife.be"
+                             name="Brusselslife.be"
+                             alt="Brusselslife.be">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <!-- leader board advertisement -->
+                    <div id="leader-board">
+    <a href="#">
+        <img class="img-fluid" height="90" src="../../public/images/leaderboard.jpg" alt="">
+    </a>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="main-navigation">
         <nav>
             <div class="" id="blifeNavBar">
@@ -252,10 +285,15 @@
                              alt="Brusselslife.be">
                     </a>
                     <ul class="main-menu">
+                        <li class="menu-bar-black">
+                            <a href="#">
+                                <img src="../../public/svg/menu-bar-black.svg" alt="">
+                            </a>
+                        </li>
                         <li id="menu-item-0">
                             <a href="#">BRUXELLES PRATIQUE</a>
                         </li>
-                        <li class="active" id="menu-item-1">
+                        <li id="menu-item-1">
                             <a href="#">EAT & DRINK</a>
                         </li>
                         <li class="" id="menu-item-2">
@@ -280,26 +318,26 @@
                 </div>
             </div>
         </nav>
-        <div class="sub-nav-wrapper" id="sub-menu-1">
-            <div class="sub-menu-wrapper d-lg-flex">
-                <div class="sub-menu-titles d-lg-none d-sm-block">
-                    ALL EAT & DRINK <i class="fa fa-angle-right"></i>
-                </div>
+        <!--<div class="sub-nav-wrapper" id="sub-menu-1">-->
+        <!--<div class="sub-menu-wrapper d-lg-flex">-->
+        <!--<div class="sub-menu-titles d-lg-none d-sm-block">-->
+        <!--ALL EAT & DRINK <i class="fa fa-angle-right"></i>-->
+        <!--</div>-->
 
-                <ul class="sub-level-1">
-                    <li><a href="#">Restaurants</a></li>
-                    <li><a href="#">Friteries</a></li>
-                    <li><a href="#">Sur Le Pouce</a></li>
-                    <li><a href="#">Food Trucks</a></li>
-                    <li><a href="#">Bars & Cafes</a></li>
-                    <li><a href="#">Tea & Coffee time</a></li>
-                    <li><a href="#">Traiteurs</a></li>
+        <!--<ul class="sub-level-1">-->
+        <!--<li><a href="#">Restaurants</a></li>-->
+        <!--<li><a href="#">Friteries</a></li>-->
+        <!--<li><a href="#">Sur Le Pouce</a></li>-->
+        <!--<li><a href="#">Food Trucks</a></li>-->
+        <!--<li><a href="#">Bars & Cafes</a></li>-->
+        <!--<li><a href="#">Tea & Coffee time</a></li>-->
+        <!--<li><a href="#">Traiteurs</a></li>-->
 
-                </ul>
-                <div class="clearfix"></div>
+        <!--</ul>-->
+        <!--<div class="clearfix"></div>-->
 
-            </div>
-        </div>
+        <!--</div>-->
+        <!--</div>-->
     </section>
     <div class="arrow-top bg-danger position-fixed text-center text-white">
         <i class="fa fa-arrow-up"></i>
@@ -311,52 +349,29 @@
     
 
 <blife-block>
-    <div id="home_search"
-         style="background:url('../../public/images/home.jpg') bottom center no-repeat; background-size:cover;">
+    <div id="home_search">
         <section class="container form-wrapper bg-transparent">
             <div class="row align-items-center justify-content-center no-gutters">
-                <div class="col-12 col-lg-12">
-                    <ul class="nav nav-tabs" id="search_tabs">
-                        <li>
-                            <a href="#all_search" data-toggle="tab" class="btn btn-default active " data-href="/search">
-                                All
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#address_search" data-toggle="tab" class="btn btn-default " data-href="/search">
-                                Place
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#article_search" data-toggle="tab" class="btn btn-default" data-href="/search/articles">
-                                Article
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#event_search" id="btn_events_search" data-toggle="tab" class="btn btn-default" data-href="/search/events">
-                                Events
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-8 col-lg-8">
                     <div class="tab-content">
                         <div class="tab-pane active" id="all_search">
                             <form id="all_search_form" action="/search">
                                 <label class="sr-only">
-                                    Rechercher une entrée</label>
+                                    Rechercher une entrée
+                                </label>
                                 <div class="input-group input-group-lg">
                                     <div class="input-group-prepend d-none d-sm-block">
                                         <div class="input-group-text">
                                             <img src="../../public/svg/bl-icon-search.svg" alt="">
                                         </div>
                                     </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Discover Brussels">
+                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input" placeholder="Discover Brussels">
                                     <div class="dropdown search_location"
                                          data-toggle="dropdown">
 
                                         <a href="#" class="btn btn-default get_user_location">
 
-                                            <img src="../../public/svg/my-location-marker.svg" alt=""> Choose location
+                                            <img src="../../public/svg/my-location-marker.svg" alt="">
                                         </a>
                                         <div class="dropdown-menu p-4 stop-closing">
 
@@ -397,250 +412,211 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane" id="address_search">
-                            <form id="address_search_form" action="/search">
-                                <label class="sr-only">
-                                    Rechercher une entrée</label>
-                                <div class="input-group input-group-lg">
-                                    <div class="input-group-prepend d-none d-sm-block">
-                                        <div class="input-group-text">
-                                            <img src="../../public/svg/bl-icon-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Search address">
-                                    <div class="dropdown search_location"
-                                         data-toggle="dropdown">
+                        <!--<div class="tab-pane" id="address_search">-->
+                            <!--<form id="address_search_form" action="/search">-->
+                                <!--<label class="sr-only">-->
+                                    <!--Rechercher une entrée</label>-->
+                                <!--<div class="input-group input-group-lg">-->
+                                    <!--<div class="input-group-prepend d-none d-sm-block">-->
+                                        <!--<div class="input-group-text">-->
+                                            <!--<img src="../../public/svg/bl-icon-search.svg" alt="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<input type="text" autofocus="true" autocomplete="off" class="form-control search_input"-->
+                                           <!--placeholder="Search address">-->
+                                    <!--<div class="dropdown search_location"-->
+                                         <!--data-toggle="dropdown">-->
 
-                                        <a href="#" class="btn btn-default get_user_location">
+                                        <!--<a href="#" class="btn btn-default get_user_location">-->
 
-                                            <img src="../../public/svg/my-location-marker.svg" alt=""> Choose location
-                                        </a>
-                                        <div class="dropdown-menu p-4 stop-closing">
+                                            <!--<img src="../../public/svg/my-location-marker.svg" alt=""> Choose location-->
+                                        <!--</a>-->
+                                        <!--<div class="dropdown-menu p-4 stop-closing">-->
 
-                                            <div class="l-title">
-                                                <img src="../../public/svg/my-location-active.svg" alt=""> My location
-                                                <button class="btn btn-sm btn-default btn_relocate" >Relocate</button>
-                                            </div>
+                                            <!--<div class="l-title">-->
+                                                <!--<img src="../../public/svg/my-location-active.svg" alt=""> My location-->
+                                                <!--<button class="btn btn-sm btn-default btn_relocate" >Relocate</button>-->
+                                            <!--</div>-->
 
-                                            <div class="l-input py-4">
-                                                <input type="text" placeholder="Choose location"
-                                                       class="form-control pac-input">
-                                            </div>
+                                            <!--<div class="l-input py-4">-->
+                                                <!--<input type="text" placeholder="Choose location"-->
+                                                       <!--class="form-control pac-input">-->
+                                            <!--</div>-->
 
-                                            <div class="l_current">
+                                            <!--<div class="l_current">-->
 
-                                                <p><i class="fa fa-map-marker"></i> <span>
-                                            Belgium Brussels
-                                        </span>
-                                                    <small>Current location</small>
-                                                </p>
-                                                <div class="alert alert-warning"></div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-lg btn-primary btn_submit">
-                               <span class="d-none d-sm-inline">
-                                    Rechercher
-                               </span>
-
-                                            <i class="fa fa-search d-inline d-sm-none"></i>
-
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane" id="article_search">
-                            <form id="article_search_form" action="/search/article">
-                                <label class="sr-only">
-                                    Rechercher une entrée</label>
-                                <div class="input-group input-group-lg">
-                                    <div class="input-group-prepend d-none d-sm-block">
-                                        <div class="input-group-text">
-                                            <img src="../../public/svg/bl-icon-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Search articles">
-                                    <div class="dropdown search_location"
-                                         data-toggle="dropdown">
-
-                                        <a href="#" class="btn btn-default get_user_location">
-
-                                            <img src="../../public/svg/my-location-marker.svg" alt=""> Choose location
-                                        </a>
-                                        <div class="dropdown-menu p-4 stop-closing">
-
-                                            <div class="l-title">
-                                                <img src="../../public/svg/my-location-active.svg" alt=""> My location
-                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
-                                            </div>
-
-                                            <div class="l-input py-4">
-                                                <input type="text" placeholder="Choose location"
-                                                       class="form-control pac-input">
-                                            </div>
-
-                                            <div class="l_current">
-
-                                                <p><i class="fa fa-map-marker"></i> <span>
-                                            Belgium Brussels
-                                        </span>
-                                                    <small>Current location</small>
-                                                </p>
-                                                <div class="alert alert-warning"></div>
-                                            </div>
+                                                <!--<p><i class="fa fa-map-marker"></i> <span>-->
+                                            <!--Belgium Brussels-->
+                                        <!--</span>-->
+                                                    <!--<small>Current location</small>-->
+                                                <!--</p>-->
+                                                <!--<div class="alert alert-warning"></div>-->
+                                            <!--</div>-->
 
 
-                                        </div>
+                                        <!--</div>-->
 
-                                    </div>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-lg btn-primary btn_submit">
-                               <span class="d-none d-sm-inline">
-                                    Rechercher
-                               </span><i class="fa fa-search d-inline d-sm-none"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane" id="event_search">
-                            <form id="events_search_form" action="/search/events">
-                                <label class="sr-only">
-                                    Search events</label>
-                                <div class="input-group input-group-lg">
-                                    <div class="input-group-prepend d-none d-sm-block">
-                                        <div class="input-group-text">
-                                            <img src="../../public/svg/bl-icon-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Search events">
-                                    <div id="when">
-                                        <button id="date_range_picker" class="btn btn-default stop-closing" data-toggle="tooltip"
-                                                data-placement="top"
-                                                data-original-title="Choose date or date range">
-                                            When <i class="fa fa-calendar"></i>
-                                        </button>
-                                    </div>
-                                    <div id="what">
-                                        <select name="" id="event_categories" class="event-category form-control">
-                                            <option value="-1">What</option>
-                                            <option value="1">All</option>
-                                            <option value="1">Concerts</option>
-                                            <option value="1">Shows</option>
-                                            <option value="1">Exhibition</option>
-                                            <option value="1">Theater</option>
-                                            <option value="1">Nightlife</option>
-                                            <option value="1">Cinema</option>
-                                            <option value="1">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="dropdown search_location"
-                                         data-toggle="dropdown">
+                                    <!--</div>-->
+                                    <!--<div class="input-group-btn">-->
+                                        <!--<button class="btn btn-lg btn-primary btn_submit">-->
+                               <!--<span class="d-none d-sm-inline">-->
+                                    <!--Rechercher-->
+                               <!--</span>-->
 
-                                        <a href="#" class="btn btn-default get_user_location"><img
-                                                src="../../public/svg/my-location-marker.svg" alt=""> Where ?</a>
-                                        <div class="dropdown-menu p-4 stop-closing">
-                                            <div class="l-title">
-                                                <img src="../../public/svg/my-location-active.svg" alt=""> My location
-                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
-                                            </div>
+                                            <!--<i class="fa fa-search d-inline d-sm-none"></i>-->
 
-                                            <div class="l-input py-4">
-                                                <input type="text" placeholder="Choose location"
-                                                       class="form-control pac-input">
-                                            </div>
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                        <!--<div class="tab-pane" id="article_search">-->
+                            <!--<form id="article_search_form" action="/search/article">-->
+                                <!--<label class="sr-only">-->
+                                    <!--Rechercher une entrée</label>-->
+                                <!--<div class="input-group input-group-lg">-->
+                                    <!--<div class="input-group-prepend d-none d-sm-block">-->
+                                        <!--<div class="input-group-text">-->
+                                            <!--<img src="../../public/svg/bl-icon-search.svg" alt="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<input type="text" autofocus="true" autocomplete="off" class="form-control search_input"-->
+                                           <!--placeholder="Search articles">-->
+                                    <!--<div class="dropdown search_location"-->
+                                         <!--data-toggle="dropdown">-->
 
-                                            <div class="l_current">
+                                        <!--<a href="#" class="btn btn-default get_user_location">-->
 
-                                                <p><i class="fa fa-map-marker"></i> <span>
-                                            Belgium Brussels
-                                        </span>
-                                                    <small>Current location</small>
-                                                </p>
-                                                <div class="alert alert-warning"></div>
-                                            </div>
+                                            <!--<img src="../../public/svg/my-location-marker.svg" alt=""> Choose location-->
+                                        <!--</a>-->
+                                        <!--<div class="dropdown-menu p-4 stop-closing">-->
+
+                                            <!--<div class="l-title">-->
+                                                <!--<img src="../../public/svg/my-location-active.svg" alt=""> My location-->
+                                                <!--<button class="btn btn-sm btn-default btn_relocate">Relocate</button>-->
+                                            <!--</div>-->
+
+                                            <!--<div class="l-input py-4">-->
+                                                <!--<input type="text" placeholder="Choose location"-->
+                                                       <!--class="form-control pac-input">-->
+                                            <!--</div>-->
+
+                                            <!--<div class="l_current">-->
+
+                                                <!--<p><i class="fa fa-map-marker"></i> <span>-->
+                                            <!--Belgium Brussels-->
+                                        <!--</span>-->
+                                                    <!--<small>Current location</small>-->
+                                                <!--</p>-->
+                                                <!--<div class="alert alert-warning"></div>-->
+                                            <!--</div>-->
 
 
-                                        </div>
+                                        <!--</div>-->
 
-                                    </div>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-lg btn-primary btn_submit">
-                               <span class="d-none d-sm-inline">
-                                    Rechercher
-                               </span>
+                                    <!--</div>-->
+                                    <!--<div class="input-group-btn">-->
+                                        <!--<button class="btn btn-lg btn-primary btn_submit">-->
+                               <!--<span class="d-none d-sm-inline">-->
+                                    <!--Rechercher-->
+                               <!--</span><i class="fa fa-search d-inline d-sm-none"></i>-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                        <!--<div class="tab-pane" id="event_search">-->
+                            <!--<form id="events_search_form" action="/search/events">-->
+                                <!--<label class="sr-only">-->
+                                    <!--Search events</label>-->
+                                <!--<div class="input-group input-group-lg">-->
+                                    <!--<div class="input-group-prepend d-none d-sm-block">-->
+                                        <!--<div class="input-group-text">-->
+                                            <!--<img src="../../public/svg/bl-icon-search.svg" alt="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<input type="text" autofocus="true" autocomplete="off" class="form-control search_input"-->
+                                           <!--placeholder="Search events">-->
+                                    <!--<div id="when">-->
+                                        <!--<button id="date_range_picker" class="btn btn-default stop-closing" data-toggle="tooltip"-->
+                                                <!--data-placement="top"-->
+                                                <!--data-original-title="Choose date or date range">-->
+                                            <!--When <i class="fa fa-calendar"></i>-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                    <!--<div id="what">-->
+                                        <!--<select name="" id="event_categories" class="event-category form-control">-->
+                                            <!--<option value="-1">What</option>-->
+                                            <!--<option value="1">All</option>-->
+                                            <!--<option value="1">Concerts</option>-->
+                                            <!--<option value="1">Shows</option>-->
+                                            <!--<option value="1">Exhibition</option>-->
+                                            <!--<option value="1">Theater</option>-->
+                                            <!--<option value="1">Nightlife</option>-->
+                                            <!--<option value="1">Cinema</option>-->
+                                            <!--<option value="1">Other</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                    <!--<div class="dropdown search_location"-->
+                                         <!--data-toggle="dropdown">-->
 
-                                            <i class="fa fa-search d-inline d-sm-none"></i>
+                                        <!--<a href="#" class="btn btn-default get_user_location"><img-->
+                                                <!--src="../../public/svg/my-location-marker.svg" alt=""> Where ?</a>-->
+                                        <!--<div class="dropdown-menu p-4 stop-closing">-->
+                                            <!--<div class="l-title">-->
+                                                <!--<img src="../../public/svg/my-location-active.svg" alt=""> My location-->
+                                                <!--<button class="btn btn-sm btn-default btn_relocate">Relocate</button>-->
+                                            <!--</div>-->
 
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                                            <!--<div class="l-input py-4">-->
+                                                <!--<input type="text" placeholder="Choose location"-->
+                                                       <!--class="form-control pac-input">-->
+                                            <!--</div>-->
+
+                                            <!--<div class="l_current">-->
+
+                                                <!--<p><i class="fa fa-map-marker"></i> <span>-->
+                                            <!--Belgium Brussels-->
+                                        <!--</span>-->
+                                                    <!--<small>Current location</small>-->
+                                                <!--</p>-->
+                                                <!--<div class="alert alert-warning"></div>-->
+                                            <!--</div>-->
+
+
+                                        <!--</div>-->
+
+                                    <!--</div>-->
+                                    <!--<div class="input-group-btn">-->
+                                        <!--<button class="btn btn-lg btn-primary btn_submit">-->
+                               <!--<span class="d-none d-sm-inline">-->
+                                    <!--Rechercher-->
+                               <!--</span>-->
+
+                                            <!--<i class="fa fa-search d-inline d-sm-none"></i>-->
+
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
                     </div>
-                    <!--<div class="category-icons mt-4">-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../../public/svg/categories/restaurant.svg" alt="">-->
-                                <!--Eat & Drink-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../../public/svg/categories/sports.svg" alt="">-->
-                                <!--Sports-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../../public/svg/categories/beauty.svg" alt="">-->
-                                <!--Beauty-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../../public/svg/categories/shopping.svg" alt="">-->
-                                <!--Shopping-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../../public/svg/categories/night_life.svg" alt="">-->
-                                <!--Night Life-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
                 </div>
             </div>
         </section>
     </div>
-    <div class="container-fluid">
-        <div class="row no-gutter colour-bars">
-            <div class="col-4 bg-orange"></div>
-            <div class="col-4 bg-blue"></div>
-            <div class="col-4 bg-light-blue"></div>
-        </div>
-    </div>
+    <!--<div class="container-fluid">-->
+        <!--<div class="row no-gutter colour-bars">-->
+            <!--<div class="col-4 bg-orange"></div>-->
+            <!--<div class="col-4 bg-blue"></div>-->
+            <!--<div class="col-4 bg-light-blue"></div>-->
+        <!--</div>-->
+    <!--</div>-->
 </blife-block>
-
-
-
-
-
-
-
 <!-- leader board advertisement -->
 <div id="leader-board">
     <a href="#">
-        <img class="img-fluid" src="../../public/images/leaderboard.jpg" alt="">
+        <img class="img-fluid" height="90" src="../../public/images/leaderboard.jpg" alt="">
     </a>
 </div>
 
@@ -3228,6 +3204,8 @@
     <img src="../../public/images/footer_img.png" alt="">
 </div>
 <footer>
+
+
     <section class="container">
         <div class="footer_bottom">
             <div class="footer-logo">
@@ -3468,6 +3446,220 @@
 
     </section>
 
+    <section class="container">
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="footer_article_list">
+                    <div class="block-title">
+                        <h2>
+                            Recent articles
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../../public/images/footer_article_1.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../../public/images/footer_article_2.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../../public/images/footer_article_3.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="footer_address_list">
+
+                    <div class="block-title">
+                        <h2>
+                            Most visited addresses
+                        </h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../../public/images/address_small.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../../public/images/address_small_2.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../../public/images/address_small_3.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem olor sit amet
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="footer_instagram_feed">
+                    <div class="block-title">
+                        <h2>
+                            Instagram feed
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_5.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_6.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../public/images/insta_2.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
     <div class="footer_social_links">
         <div class="social_links">
             <a href="#" class="footer_fb"> <i class="fa fa-facebook"></i></a>
@@ -3504,8 +3696,9 @@
 <!--sombal js-->
 <script type="text/javascript" src="../../public/libs/sombal.js"></script>
 
-<!-- swiper-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
+<!--&lt;!&ndash; swiper&ndash;&gt;-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>-->
 
 <script type="text/javascript">
 
@@ -3543,6 +3736,7 @@
         var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var event_page = document.getElementById("event_page");
+        var left_float_menu = document.getElementById("left_float_menu");
         var search_tabs = $("#search_tabs");
         var agenda_week = $("#agenda_week");
         var l_current = $(".l_current ");
@@ -3556,6 +3750,7 @@
                 return {
                     init: function () {
                         _load();
+                        _tlit();
                         _site_search();
                         _header();
                         _scroll_event_page();
@@ -3580,21 +3775,34 @@
                         this.classList.toggle("active");
                     });
                 }
+
+
+            }
+
+            function _tlit() {
+                $('.tlit-wrapper').tilt({
+                    reset: false,
+                    scale: 1,
+                    glare: true,
+                    maxGlare: .01
+                });
             }
 
             function _header() {
                 //screen scroll functions
                 screen.scroll(function () {
-                    if ($(document).scrollTop() > 468) {
+                    if ($(document).scrollTop() > 275) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
                         home_search.classList.add('shrink');
                         body.classList.add("fixed-header");
+                        left_float_menu.classList.add("show-menu");
 
                     } else {
                         header.classList.remove("shrink-header", "move");
                         body.classList.remove("fixed-header");
                         home_search.classList.remove('shrink');
+                        left_float_menu.classList.remove("show-menu");
                     }
                 });
 

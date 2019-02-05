@@ -24,16 +24,12 @@
     <link rel="stylesheet" href="../public/libs/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" type="text/css" href="../public/libs/semantic/semantic.css"/>
     <link rel="stylesheet" href="../public/libs/jqueryui/jquery-ui.min.css"/>
-    <!-- swiper carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+
+    <!-- idangerous slider -->
+    <link rel="stylesheet" href="../public/libs/idangerous/css/swiper.min.css"/>
     <!-- custom-css -->
     <link rel="stylesheet" href="../public/css/app.css"/>
 
-
-    <!-- jquery v2.03-->
-    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
-
-    <!-- jquery 3.3.1 -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- jquery ui-->
     <script type="text/javascript" src="../public/libs/jqueryui/jquery-ui.min.js"></script>
@@ -43,7 +39,8 @@
     <script src="../public/libs/select-2/select2.full.min.js"></script>
     <!-- ckeditor -->
     <script src="https://cdn.ckeditor.com/4.11.1/basic/ckeditor.js"></script>
-
+    <!--idangerous-->
+    <script src="../public/libs/idangerous/js/swiper.min.js"></script>
     <!-- google maps -->
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
@@ -53,194 +50,230 @@
 <body>
 <main>
     <header>
-    <section class="bg-transparent">
-        <div class="row no-gutters">
-            <div class="col-md-4">
+    <section class="top-header">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-sm-4">
 
-            </div>
-            <div class="col-md-4">
-                <a href="/" class="logo">
-                    <img src="../public/images/brusselslife_logo.png"
-                         title="Brusselslife.be"
-                         name="Brusselslife.be"
-                         alt="Brusselslife.be">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-unstyled login-notify-profile">
-                    <li>
-                        <div class="dropdown site-notifications">
-                            <button data-toggle="dropdown">
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Newsletter</a>
+
+                </div>
+                <div class="col-sm-8">
+                    <ul class="list-unstyled login-notify-profile">
+                        <li>
+                            <div class="dropdown btn-create-content">
+                                <button data-toggle="dropdown">
+                                    +
+                                </button>
+
+                                <div class="dropdown-menu">
+                                    <a href="#">
+                                        <img src="/public/svg/my-location-marker.svg" alt="">
+                                        Create Address
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-events.svg" alt="">
+                                        Create Agenda
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-promotion.svg" alt="">
+                                        Create Promotion
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-article.svg" alt="">
+                                        Create Article
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown site-notifications">
+                                <button data-toggle="dropdown">
                                 <span>
                                     4
                                 </span>
-                                <img src="../public/svg/bl-icon-notification.svg" alt="">
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-title">
+                                    <img src="../public/svg/bl-icon-notification.svg" alt="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-title">
+                                        <strong>
+                                            Notifications
+                                        </strong>
+                                        <a href="#">
+                                            Mark all as read
+                                        </a>
+                                    </div>
+
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../public/images/todo-2.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media read">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../public/images/todo-3.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../public/images/todo-4.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown user-profile-dropdown">
+                                <a href="!#" data-toggle="dropdown">
+                                    <img src="../public/images/profile.png" alt="">
+                                </a>
+
+                                <!--<div class="dropdown-menu">-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Favourites-->
+                                <!--<span>-->
+                                <!--Favourite address, events, articles-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Saved post-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Activity-->
+                                <!--<span>-->
+                                <!--Find your activity eg likes, reviews, comments-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Profile-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Reviews-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<div class="earn-points">-->
+                                <!--<img src="../public/svg/trophy.svg" alt="">-->
+                                <!--You earned 1200 points - <a href="#">-->
+                                <!--Learn how-->
+                                <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="invite-friend">-->
+                                <!--Invite a friend to Brusselsife-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown switch-language ">
+                                <a href="#"
+                                   data-toggle="dropdown">
                                     <strong>
-                                        Notifications
+                                        EN
                                     </strong>
-                                    <a href="#">
-                                        Mark all as read
-                                    </a>
-                                </div>
-
-                                <div class="media">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="../public/images/todo-2.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="media read">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="../public/images/todo-3.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="media">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="../public/images/todo-4.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">EN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FR</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">NL</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown btn-create-content">
-                            <button data-toggle="dropdown">
-                                + Create
-                            </button>
-
-                            <div class="dropdown-menu">
-                                <a href="#">
-                                    <img src="/public/svg/my-location-marker.svg" alt="">
-                                    Create Address
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-events.svg" alt="">
-                                    Create Agenda
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-promotion.svg" alt="">
-                                    Create Promotion
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-article.svg" alt="">
-                                    Create Article
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown user-profile-dropdown">
-                            <a href="!#" data-toggle="dropdown">
-                                <img src="../public/images/profile.png" alt="">
-                            </a>
-
-                            <div class="dropdown-menu">
-                                <a href="#">
-                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Favourites
-                                    <span>
-                                           Favourite address, events, articles
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Saved post
-                                    <span>
-                                          Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Activity
-                                    <span>
-                                          Find your activity eg likes, reviews, comments
-                                       </span>
-                                </a>
-
-                                <a href="#">
-                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Profile
-                                    <span>
-                                          Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="../public/svg/bl-icon-butterfly.svg" alt="">
-                                    Reviews
-                                    <span>
-                                         Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-
-
-                                <div class="earn-points">
-                                    <img src="../public/svg/trophy.svg" alt="">
-    You earned 1200 points - <a href="#">
-                                    Learn how
-                                </a>
-                                </div>
-
-                                <div class="invite-friend">
-                                    Invite a friend to Brusselsife
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
     </section>
+
+    <section class="bg-transparent">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <a href="/" class="logo">
+                        <img src="../public/images/logo.png"
+                             title="Brusselslife.be"
+                             name="Brusselslife.be"
+                             alt="Brusselslife.be">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <!-- leader board advertisement -->
+                    <div id="leader-board">
+    <a href="#">
+        <img class="img-fluid" height="90" src="../public/images/leaderboard.jpg" alt="">
+    </a>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="main-navigation">
         <nav>
             <div class="" id="blifeNavBar">
@@ -252,10 +285,15 @@
                              alt="Brusselslife.be">
                     </a>
                     <ul class="main-menu">
+                        <li class="menu-bar-black">
+                            <a href="#">
+                                <img src="../public/svg/menu-bar-black.svg" alt="">
+                            </a>
+                        </li>
                         <li id="menu-item-0">
                             <a href="#">BRUXELLES PRATIQUE</a>
                         </li>
-                        <li class="active" id="menu-item-1">
+                        <li id="menu-item-1">
                             <a href="#">EAT & DRINK</a>
                         </li>
                         <li class="" id="menu-item-2">
@@ -280,26 +318,26 @@
                 </div>
             </div>
         </nav>
-        <div class="sub-nav-wrapper" id="sub-menu-1">
-            <div class="sub-menu-wrapper d-lg-flex">
-                <div class="sub-menu-titles d-lg-none d-sm-block">
-                    ALL EAT & DRINK <i class="fa fa-angle-right"></i>
-                </div>
+        <!--<div class="sub-nav-wrapper" id="sub-menu-1">-->
+        <!--<div class="sub-menu-wrapper d-lg-flex">-->
+        <!--<div class="sub-menu-titles d-lg-none d-sm-block">-->
+        <!--ALL EAT & DRINK <i class="fa fa-angle-right"></i>-->
+        <!--</div>-->
 
-                <ul class="sub-level-1">
-                    <li><a href="#">Restaurants</a></li>
-                    <li><a href="#">Friteries</a></li>
-                    <li><a href="#">Sur Le Pouce</a></li>
-                    <li><a href="#">Food Trucks</a></li>
-                    <li><a href="#">Bars & Cafes</a></li>
-                    <li><a href="#">Tea & Coffee time</a></li>
-                    <li><a href="#">Traiteurs</a></li>
+        <!--<ul class="sub-level-1">-->
+        <!--<li><a href="#">Restaurants</a></li>-->
+        <!--<li><a href="#">Friteries</a></li>-->
+        <!--<li><a href="#">Sur Le Pouce</a></li>-->
+        <!--<li><a href="#">Food Trucks</a></li>-->
+        <!--<li><a href="#">Bars & Cafes</a></li>-->
+        <!--<li><a href="#">Tea & Coffee time</a></li>-->
+        <!--<li><a href="#">Traiteurs</a></li>-->
 
-                </ul>
-                <div class="clearfix"></div>
+        <!--</ul>-->
+        <!--<div class="clearfix"></div>-->
 
-            </div>
-        </div>
+        <!--</div>-->
+        <!--</div>-->
     </section>
     <div class="arrow-top bg-danger position-fixed text-center text-white">
         <i class="fa fa-arrow-up"></i>
@@ -313,52 +351,29 @@
 
 <!-- home search -->
 <blife-block>
-    <div id="home_search"
-         style="background:url('../public/images/home.jpg') bottom center no-repeat; background-size:cover;">
+    <div id="home_search">
         <section class="container form-wrapper bg-transparent">
             <div class="row align-items-center justify-content-center no-gutters">
-                <div class="col-12 col-lg-12">
-                    <ul class="nav nav-tabs" id="search_tabs">
-                        <li>
-                            <a href="#all_search" data-toggle="tab" class="btn btn-default active " data-href="/search">
-                                All
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#address_search" data-toggle="tab" class="btn btn-default " data-href="/search">
-                                Place
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#article_search" data-toggle="tab" class="btn btn-default" data-href="/search/articles">
-                                Article
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#event_search" id="btn_events_search" data-toggle="tab" class="btn btn-default" data-href="/search/events">
-                                Events
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-8 col-lg-8">
                     <div class="tab-content">
                         <div class="tab-pane active" id="all_search">
                             <form id="all_search_form" action="/search">
                                 <label class="sr-only">
-                                    Rechercher une entrée</label>
+                                    Rechercher une entrée
+                                </label>
                                 <div class="input-group input-group-lg">
                                     <div class="input-group-prepend d-none d-sm-block">
                                         <div class="input-group-text">
                                             <img src="../public/svg/bl-icon-search.svg" alt="">
                                         </div>
                                     </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Discover Brussels">
+                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input" placeholder="Discover Brussels">
                                     <div class="dropdown search_location"
                                          data-toggle="dropdown">
 
                                         <a href="#" class="btn btn-default get_user_location">
 
-                                            <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
+                                            <img src="../public/svg/my-location-marker.svg" alt="">
                                         </a>
                                         <div class="dropdown-menu p-4 stop-closing">
 
@@ -399,247 +414,208 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane" id="address_search">
-                            <form id="address_search_form" action="/search">
-                                <label class="sr-only">
-                                    Rechercher une entrée</label>
-                                <div class="input-group input-group-lg">
-                                    <div class="input-group-prepend d-none d-sm-block">
-                                        <div class="input-group-text">
-                                            <img src="../public/svg/bl-icon-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Search address">
-                                    <div class="dropdown search_location"
-                                         data-toggle="dropdown">
+                        <!--<div class="tab-pane" id="address_search">-->
+                            <!--<form id="address_search_form" action="/search">-->
+                                <!--<label class="sr-only">-->
+                                    <!--Rechercher une entrée</label>-->
+                                <!--<div class="input-group input-group-lg">-->
+                                    <!--<div class="input-group-prepend d-none d-sm-block">-->
+                                        <!--<div class="input-group-text">-->
+                                            <!--<img src="../public/svg/bl-icon-search.svg" alt="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<input type="text" autofocus="true" autocomplete="off" class="form-control search_input"-->
+                                           <!--placeholder="Search address">-->
+                                    <!--<div class="dropdown search_location"-->
+                                         <!--data-toggle="dropdown">-->
 
-                                        <a href="#" class="btn btn-default get_user_location">
+                                        <!--<a href="#" class="btn btn-default get_user_location">-->
 
-                                            <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
-                                        </a>
-                                        <div class="dropdown-menu p-4 stop-closing">
+                                            <!--<img src="../public/svg/my-location-marker.svg" alt=""> Choose location-->
+                                        <!--</a>-->
+                                        <!--<div class="dropdown-menu p-4 stop-closing">-->
 
-                                            <div class="l-title">
-                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
-                                                <button class="btn btn-sm btn-default btn_relocate" >Relocate</button>
-                                            </div>
+                                            <!--<div class="l-title">-->
+                                                <!--<img src="../public/svg/my-location-active.svg" alt=""> My location-->
+                                                <!--<button class="btn btn-sm btn-default btn_relocate" >Relocate</button>-->
+                                            <!--</div>-->
 
-                                            <div class="l-input py-4">
-                                                <input type="text" placeholder="Choose location"
-                                                       class="form-control pac-input">
-                                            </div>
+                                            <!--<div class="l-input py-4">-->
+                                                <!--<input type="text" placeholder="Choose location"-->
+                                                       <!--class="form-control pac-input">-->
+                                            <!--</div>-->
 
-                                            <div class="l_current">
+                                            <!--<div class="l_current">-->
 
-                                                <p><i class="fa fa-map-marker"></i> <span>
-                                            Belgium Brussels
-                                        </span>
-                                                    <small>Current location</small>
-                                                </p>
-                                                <div class="alert alert-warning"></div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-lg btn-primary btn_submit">
-                               <span class="d-none d-sm-inline">
-                                    Rechercher
-                               </span>
-
-                                            <i class="fa fa-search d-inline d-sm-none"></i>
-
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane" id="article_search">
-                            <form id="article_search_form" action="/search/article">
-                                <label class="sr-only">
-                                    Rechercher une entrée</label>
-                                <div class="input-group input-group-lg">
-                                    <div class="input-group-prepend d-none d-sm-block">
-                                        <div class="input-group-text">
-                                            <img src="../public/svg/bl-icon-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Search articles">
-                                    <div class="dropdown search_location"
-                                         data-toggle="dropdown">
-
-                                        <a href="#" class="btn btn-default get_user_location">
-
-                                            <img src="../public/svg/my-location-marker.svg" alt=""> Choose location
-                                        </a>
-                                        <div class="dropdown-menu p-4 stop-closing">
-
-                                            <div class="l-title">
-                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
-                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
-                                            </div>
-
-                                            <div class="l-input py-4">
-                                                <input type="text" placeholder="Choose location"
-                                                       class="form-control pac-input">
-                                            </div>
-
-                                            <div class="l_current">
-
-                                                <p><i class="fa fa-map-marker"></i> <span>
-                                            Belgium Brussels
-                                        </span>
-                                                    <small>Current location</small>
-                                                </p>
-                                                <div class="alert alert-warning"></div>
-                                            </div>
+                                                <!--<p><i class="fa fa-map-marker"></i> <span>-->
+                                            <!--Belgium Brussels-->
+                                        <!--</span>-->
+                                                    <!--<small>Current location</small>-->
+                                                <!--</p>-->
+                                                <!--<div class="alert alert-warning"></div>-->
+                                            <!--</div>-->
 
 
-                                        </div>
+                                        <!--</div>-->
 
-                                    </div>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-lg btn-primary btn_submit">
-                               <span class="d-none d-sm-inline">
-                                    Rechercher
-                               </span><i class="fa fa-search d-inline d-sm-none"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane" id="event_search">
-                            <form id="events_search_form" action="/search/events">
-                                <label class="sr-only">
-                                    Search events</label>
-                                <div class="input-group input-group-lg">
-                                    <div class="input-group-prepend d-none d-sm-block">
-                                        <div class="input-group-text">
-                                            <img src="../public/svg/bl-icon-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <input type="text" autofocus="true" autocomplete="off" class="form-control search_input"
-                                           placeholder="Search events">
-                                    <div id="when">
-                                        <button id="date_range_picker" class="btn btn-default stop-closing" data-toggle="tooltip"
-                                                data-placement="top"
-                                                data-original-title="Choose date or date range">
-                                            When <i class="fa fa-calendar"></i>
-                                        </button>
-                                    </div>
-                                    <div id="what">
-                                        <select name="" id="event_categories" class="event-category form-control">
-                                            <option value="-1">What</option>
-                                            <option value="1">All</option>
-                                            <option value="1">Concerts</option>
-                                            <option value="1">Shows</option>
-                                            <option value="1">Exhibition</option>
-                                            <option value="1">Theater</option>
-                                            <option value="1">Nightlife</option>
-                                            <option value="1">Cinema</option>
-                                            <option value="1">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="dropdown search_location"
-                                         data-toggle="dropdown">
+                                    <!--</div>-->
+                                    <!--<div class="input-group-btn">-->
+                                        <!--<button class="btn btn-lg btn-primary btn_submit">-->
+                               <!--<span class="d-none d-sm-inline">-->
+                                    <!--Rechercher-->
+                               <!--</span>-->
 
-                                        <a href="#" class="btn btn-default get_user_location"><img
-                                                src="../public/svg/my-location-marker.svg" alt=""> Where ?</a>
-                                        <div class="dropdown-menu p-4 stop-closing">
-                                            <div class="l-title">
-                                                <img src="../public/svg/my-location-active.svg" alt=""> My location
-                                                <button class="btn btn-sm btn-default btn_relocate">Relocate</button>
-                                            </div>
+                                            <!--<i class="fa fa-search d-inline d-sm-none"></i>-->
 
-                                            <div class="l-input py-4">
-                                                <input type="text" placeholder="Choose location"
-                                                       class="form-control pac-input">
-                                            </div>
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                        <!--<div class="tab-pane" id="article_search">-->
+                            <!--<form id="article_search_form" action="/search/article">-->
+                                <!--<label class="sr-only">-->
+                                    <!--Rechercher une entrée</label>-->
+                                <!--<div class="input-group input-group-lg">-->
+                                    <!--<div class="input-group-prepend d-none d-sm-block">-->
+                                        <!--<div class="input-group-text">-->
+                                            <!--<img src="../public/svg/bl-icon-search.svg" alt="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<input type="text" autofocus="true" autocomplete="off" class="form-control search_input"-->
+                                           <!--placeholder="Search articles">-->
+                                    <!--<div class="dropdown search_location"-->
+                                         <!--data-toggle="dropdown">-->
 
-                                            <div class="l_current">
+                                        <!--<a href="#" class="btn btn-default get_user_location">-->
 
-                                                <p><i class="fa fa-map-marker"></i> <span>
-                                            Belgium Brussels
-                                        </span>
-                                                    <small>Current location</small>
-                                                </p>
-                                                <div class="alert alert-warning"></div>
-                                            </div>
+                                            <!--<img src="../public/svg/my-location-marker.svg" alt=""> Choose location-->
+                                        <!--</a>-->
+                                        <!--<div class="dropdown-menu p-4 stop-closing">-->
+
+                                            <!--<div class="l-title">-->
+                                                <!--<img src="../public/svg/my-location-active.svg" alt=""> My location-->
+                                                <!--<button class="btn btn-sm btn-default btn_relocate">Relocate</button>-->
+                                            <!--</div>-->
+
+                                            <!--<div class="l-input py-4">-->
+                                                <!--<input type="text" placeholder="Choose location"-->
+                                                       <!--class="form-control pac-input">-->
+                                            <!--</div>-->
+
+                                            <!--<div class="l_current">-->
+
+                                                <!--<p><i class="fa fa-map-marker"></i> <span>-->
+                                            <!--Belgium Brussels-->
+                                        <!--</span>-->
+                                                    <!--<small>Current location</small>-->
+                                                <!--</p>-->
+                                                <!--<div class="alert alert-warning"></div>-->
+                                            <!--</div>-->
 
 
-                                        </div>
+                                        <!--</div>-->
 
-                                    </div>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-lg btn-primary btn_submit">
-                               <span class="d-none d-sm-inline">
-                                    Rechercher
-                               </span>
+                                    <!--</div>-->
+                                    <!--<div class="input-group-btn">-->
+                                        <!--<button class="btn btn-lg btn-primary btn_submit">-->
+                               <!--<span class="d-none d-sm-inline">-->
+                                    <!--Rechercher-->
+                               <!--</span><i class="fa fa-search d-inline d-sm-none"></i>-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                        <!--<div class="tab-pane" id="event_search">-->
+                            <!--<form id="events_search_form" action="/search/events">-->
+                                <!--<label class="sr-only">-->
+                                    <!--Search events</label>-->
+                                <!--<div class="input-group input-group-lg">-->
+                                    <!--<div class="input-group-prepend d-none d-sm-block">-->
+                                        <!--<div class="input-group-text">-->
+                                            <!--<img src="../public/svg/bl-icon-search.svg" alt="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<input type="text" autofocus="true" autocomplete="off" class="form-control search_input"-->
+                                           <!--placeholder="Search events">-->
+                                    <!--<div id="when">-->
+                                        <!--<button id="date_range_picker" class="btn btn-default stop-closing" data-toggle="tooltip"-->
+                                                <!--data-placement="top"-->
+                                                <!--data-original-title="Choose date or date range">-->
+                                            <!--When <i class="fa fa-calendar"></i>-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                    <!--<div id="what">-->
+                                        <!--<select name="" id="event_categories" class="event-category form-control">-->
+                                            <!--<option value="-1">What</option>-->
+                                            <!--<option value="1">All</option>-->
+                                            <!--<option value="1">Concerts</option>-->
+                                            <!--<option value="1">Shows</option>-->
+                                            <!--<option value="1">Exhibition</option>-->
+                                            <!--<option value="1">Theater</option>-->
+                                            <!--<option value="1">Nightlife</option>-->
+                                            <!--<option value="1">Cinema</option>-->
+                                            <!--<option value="1">Other</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                    <!--<div class="dropdown search_location"-->
+                                         <!--data-toggle="dropdown">-->
 
-                                            <i class="fa fa-search d-inline d-sm-none"></i>
+                                        <!--<a href="#" class="btn btn-default get_user_location"><img-->
+                                                <!--src="../public/svg/my-location-marker.svg" alt=""> Where ?</a>-->
+                                        <!--<div class="dropdown-menu p-4 stop-closing">-->
+                                            <!--<div class="l-title">-->
+                                                <!--<img src="../public/svg/my-location-active.svg" alt=""> My location-->
+                                                <!--<button class="btn btn-sm btn-default btn_relocate">Relocate</button>-->
+                                            <!--</div>-->
 
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                                            <!--<div class="l-input py-4">-->
+                                                <!--<input type="text" placeholder="Choose location"-->
+                                                       <!--class="form-control pac-input">-->
+                                            <!--</div>-->
+
+                                            <!--<div class="l_current">-->
+
+                                                <!--<p><i class="fa fa-map-marker"></i> <span>-->
+                                            <!--Belgium Brussels-->
+                                        <!--</span>-->
+                                                    <!--<small>Current location</small>-->
+                                                <!--</p>-->
+                                                <!--<div class="alert alert-warning"></div>-->
+                                            <!--</div>-->
+
+
+                                        <!--</div>-->
+
+                                    <!--</div>-->
+                                    <!--<div class="input-group-btn">-->
+                                        <!--<button class="btn btn-lg btn-primary btn_submit">-->
+                               <!--<span class="d-none d-sm-inline">-->
+                                    <!--Rechercher-->
+                               <!--</span>-->
+
+                                            <!--<i class="fa fa-search d-inline d-sm-none"></i>-->
+
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
                     </div>
-                    <!--<div class="category-icons mt-4">-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../public/svg/categories/restaurant.svg" alt="">-->
-                                <!--Eat & Drink-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../public/svg/categories/sports.svg" alt="">-->
-                                <!--Sports-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../public/svg/categories/beauty.svg" alt="">-->
-                                <!--Beauty-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../public/svg/categories/shopping.svg" alt="">-->
-                                <!--Shopping-->
-                            <!--</a>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<a href="/section">-->
-                                <!--<img src="../public/svg/categories/night_life.svg" alt="">-->
-                                <!--Night Life-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
                 </div>
             </div>
         </section>
     </div>
-    <div class="container-fluid">
-        <div class="row no-gutter colour-bars">
-            <div class="col-4 bg-orange"></div>
-            <div class="col-4 bg-blue"></div>
-            <div class="col-4 bg-light-blue"></div>
-        </div>
-    </div>
+    <!--<div class="container-fluid">-->
+        <!--<div class="row no-gutter colour-bars">-->
+            <!--<div class="col-4 bg-orange"></div>-->
+            <!--<div class="col-4 bg-blue"></div>-->
+            <!--<div class="col-4 bg-light-blue"></div>-->
+        <!--</div>-->
+    <!--</div>-->
 </blife-block>
-
-
-
-
-
-
-
-<div class="container bg-transparent">
+<!--<div class="container bg-transparent">
    <div class="row">
        <div class="col-12">
            <blife-block>
@@ -731,18 +707,325 @@
        </div>
    </div>
 </div>
-
-<!-- leader board advertisement -->
-<div id="leader-board">
-    <a href="#">
-        <img class="img-fluid" src="../public/images/leaderboard.jpg" alt="">
-    </a>
-</div>
-
+-->
 <article class="page-home">
-    <section class="container">
 
-        <full-news-block>
+    <div id="left_float_menu">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <span>
+                About
+            </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <span>
+                    Contact Us
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <span>
+                Newsletter
+            </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <span>
+                    Create
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <span>
+                   Notifications
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <span>
+                    Profile
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>
+                    EN
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+    <blife-block>
+    <section class="container mb-4 shadow-lg" id="home-block-1">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="block-title">
+                            <h2>
+                                Today <strong>
+                                <em>
+                                    at Brussels
+                                </em>
+                            </strong>
+                            </h2>
+                        </div>
+                        <div class="block-content">
+                            <div class="carousel-next-prev">
+                                <button class="prev">
+                                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                </button>
+                                <button class="next">
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="today-brussels-carousel swiper-wrapper">
+                                    <div class="bxl-item swiper-slide">
+
+                                        <a href="#">
+                                            <h3>
+                                                LES 14 MEILLEURES ÉPICERIES FINES DE BRUXELLES
+                                            </h3>
+                                            <figure>
+                                                <div class="overlay"></div>
+                                                <img class="sombal"
+                                                     data-src="../public/images/home_block_1_img.jpg"
+                                                     alt="">
+                                            </figure>
+                                        </a>
+                                        <div class="category-comments-views">
+                                            <a href="#" class="bxl-category">
+                                                SPORTS
+                                            </a>
+                                            <a href="#" class="bxl-comments">
+                                                03 <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="#" class="bxl-views">
+                                                180 <i class="fa fa-eye"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#">
+                                            <p>
+                                                Brusselslife vous invite à un voyage culinaire en 14 étapes à travers
+                                                l'offre
+                                                bruxelloise.
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="bxl-item swiper-slide">
+
+                                        <a href="#">
+                                            <h3>
+                                                LES 14 MEILLEURES ÉPICERIES FINES DE BRUXELLES
+                                            </h3>
+                                            <figure>
+                                                <div class="overlay"></div>
+                                                <img class="sombal"
+                                                     data-src="../public/images/home_block_2_img.jpg"
+                                                     alt="">
+                                            </figure>
+                                        </a>
+                                        <div class="category-comments-views">
+                                            <a href="#" class="bxl-category">
+                                                SPORTS
+                                            </a>
+                                            <a href="#" class="bxl-comments">
+                                                03 <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="#" class="bxl-views">
+                                                180 <i class="fa fa-eye"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#">
+                                            <p>
+                                                Brusselslife vous invite à un voyage culinaire en 14 étapes à travers
+                                                l'offre
+                                                bruxelloise.
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="block-title">
+                            <h2>
+                                Brussels <strong>
+                                <em>spotlight</em>
+                            </strong>
+                            </h2>
+                        </div>
+                        <div class="block-content">
+                            <div class="block-address">
+                                <div class="bxl-item float-item">
+                                    <a href="#">
+                                        <div class="float-content">
+                                            <div class="category-comments-views">
+                                        <span href="#" class="bxl-category">
+                                        SPORTS
+                                    </span>
+                                                <span href="#" class="bxl-comments">
+                                        03 <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                    </span>
+                                                <span href="#" class="bxl-views">
+                                        180 <i class="fa fa-eye"></i>
+                                    </span>
+                                            </div>
+
+                                            <h3>
+                                                Best cooking tips
+                                                for couples
+                                            </h3>
+                                            <p>
+                                                Brusselslife vous invite à un voyage culinaire en 14 étapes à
+                                                travers l'offre
+                                                bruxelloise.
+                                            </p>
+
+                                        </div>
+                                        <figure>
+                                            <div class="overlay"></div>
+                                            <img class="sombal"
+                                                 data-src="../public/images/kitchen.jpg" alt="">
+                                        </figure>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+                <div class="position-relative">
+                    
+                    <block-edit class="block-edit hide position-absolute">
+    <div class="row">
+        <div class="col">
+            <div class="block-info">
+                <span class="badge badge-dark block-name rounded-0"></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="edit-block float-right">
+                <div class="dropdown">
+                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Address</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Agenda</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
+                            Folder</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
+                                                             aria-hidden="true"></i> Article</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block-edit>
+                    
+                    <div class="block-title">
+                        <h2>
+                            Popular <strong>
+                            <em>
+                                Addresses
+                            </em>
+                        </strong>
+                        </h2>
+                    </div>
+                    <div class="block-content">
+                        <div class="block-address">
+                            <a class="single_address mb-4" href="#">
+                                <figure>
+                                    <img src="../public/images/address-home-1.jpg" alt="">
+                                </figure>
+                                <div class="category-comments-views">
+                    <span class="bxl-category" cat_id="cat_23">
+                        RESTAURANT
+                    </span>
+                                </div>
+
+                                <div class="address-title">
+                                    Taverne du Passage
+                                </div>
+                                <div class="address-p-code">
+                                    1000 Bruxelles
+                                </div>
+                                <div class="address-tag-line">
+                                    La Taverne du Passage à Bruxelles vous ouvre ses portes pour vous faire.
+                                </div>
+
+
+                            </a>
+                            <a class="single_address" href="#">
+                                <figure>
+                                    <img src="../public/images/address-home-2.jpg" alt="">
+                                </figure>
+                                <div class="category-comments-views">
+                    <span class="bxl-category" cat_id="cat_23">
+                        RESTAURANT
+                    </span>
+                                </div>
+
+                                <div class="address-title">
+                                    Taverne du Passage
+                                </div>
+                                <div class="address-postal-code">
+                                    1000 Bruxelles
+                                </div>
+                                <div class="address-tag-line">
+                                    La Taverne du Passage à Bruxelles vous ouvre ses portes pour vous faire.
+                                </div>
+
+
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+    </section>
+</blife-block>
+
+
+    <!--<full-news-block>
     <div class="row no-gutters">
         <div id="full-news-block" class="position-relative border-bottom mb-3">
             
@@ -835,14 +1118,127 @@
         </div>
     </div>
 </full-news-block>
+-->
+    <section class="container">
+        <div id="home-block-agenda" class="mb-4 shadow-lg position-relative">
+    <div class="block-title">
+        <h2>
+            EVENTS AROUND BRUSSELS
+        </h2>
+    </div>
 
-        <!-- Block 1 | 16  -->
+    <div class="agenda-items-carousel">
+        <div class="home-agenda-item" data-tlit>
+            <a href="#">
+                <div class="tlit-wrapper">
+                    <figure>
+                        <img src="../public/images/agenda_home.jpg" alt="">
+                    </figure>
+                    <div class="category-comments-views">
+                        <span class="bxl-category">
+                            MUSIC
+                        </span>
+                    </div>
+                    <div class="event-date-time">
+                        <div class="big-date">
+                            15
+                        </div>
+                        <div class="event-month">
+                            november 2018
+                        </div>
+                    </div>
+                </div>
+                <div class="event-title">
+                    DeLaReussiteParmiVous : l'exposition
+                </div>
+            </a>
+        </div>
+        <div class="home-agenda-item" data-tlit>
+            <a href="#">
+                <div class="tlit-wrapper">
+                    <figure>
+                        <img src="../public/images/agenda_home_2.jpg" alt="">
+                    </figure>
+                    <div class="category-comments-views">
+                        <span class="bxl-category">
+                            MUSIC
+                        </span>
+                    </div>
+                    <div class="event-date-time">
+                        <div class="big-date">
+                            22
+                        </div>
+                        <div class="event-month">
+                            november 2018
+                        </div>
+                    </div>
+                </div>
+                <div class="event-title">
+                    DeLaReussiteParmiVous : l'exposition
+                </div>
+            </a>
+        </div>
+        <div class="home-agenda-item">
+            <a href="#">
+                <div class="tlit-wrapper">
+                    <figure>
+                        <img src="../public/images/agenda_home_3.jpg" alt="">
+                    </figure>
+                    <div class="category-comments-views">
+                        <span class="bxl-category">
+                            MUSIC
+                        </span>
+                    </div>
+                    <div class="event-date-time">
+                        <div class="big-date">
+                            21
+                        </div>
+                        <div class="event-month">
+                            december 2018
+                        </div>
+                    </div>
+                </div>
+                <div class="event-title">
+                    DeLaReussiteParmiVous : l'exposition
+                </div>
+            </a>
+        </div>
+        <div class="home-agenda-item" data-tlit>
+            <a href="#">
+                <div class="tlit-wrapper">
+                    <figure>
+                        <img src="../public/images/agenda_home_4.jpg" alt="">
+                    </figure>
+                    <div class="category-comments-views">
+                        <span class="bxl-category">
+                            CONCERT
+                        </span>
+                    </div>
+                    <div class="event-date-time">
+                        <div class="big-date">
+                            06
+                        </div>
+                        <div class="event-month">
+                            january 2019
+                        </div>
+                    </div>
+                </div>
+                <div class="event-title">
+                    DeLaReussiteParmiVous : l'exposition
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
-        <div class="col-12">
-    <blife-block>
-        <div id="block-22" class="position-relative mb-4">
-            
-            <!--<block-edit class="block-edit hide position-absolute">
+    </section>
+
+        <section class="container">
+    <div class="col-12">
+        <blife-block>
+            <div id="block-22" class="position-relative mb-4">
+                
+                <!--<block-edit class="block-edit hide position-absolute">
     <div class="row">
         <div class="col">
             <div class="block-info">
@@ -884,1148 +1280,714 @@
         </div>
     </div>
 </block-edit>-->
-            
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="block-title-full">
+                            <h3 class="text-left py-2 px-2">
+                                <strong>
+                                    THINGS TODO AROUND BRUSSELS
+                                </strong>
+                                <i class="fa fa-angle-right"></i>
+                            </h3>
+                        </div>
+                        <div class="article-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="media py-2 ">
+                                        <a href="#">
+                                            <figure class="mr-4">
+                                                <img class="sombal"
+                                                     data-src="../public/images/todo-1.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <div class="category p-0">
+                                                <a href="#">
+                                                    NATURE
+                                                </a>
+                                            </div>
+                                            <a href="#">
+                                                <h3>
+                                                    <strong>
+                                                        What to See, Hear, Watch, and Read
+                                                    </strong>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="media py-2">
+                                        <a href="#">
+                                            <figure class="mr-4">
+                                                <img class="sombal"
+                                                     data-src="../public/images/todo-2.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <div class="category p-0">
+                                                <a href="#">
+                                                    AGENDA
+                                                </a>
+                                            </div>
+                                            <a href="#">
+                                                <h3>
+                                                    <strong>
+                                                        What to See, Hear, Watch, and Read
+                                                    </strong>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-6">
+                                    <div class="media py-2">
+                                        <a href="#">
+                                            <figure class="mr-4">
+                                                <img class="sombal"
+                                                     data-src="../public/images/todo-3.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <div class="category p-0">
+                                                <a href="#">
+                                                    FASHION
+                                                </a>
+                                            </div>
+                                            <a href="#">
+                                                <h3>
+                                                    <strong>
+                                                        What to See, Hear, Watch, and Read
+                                                    </strong>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="media py-2">
+                                        <a href="#">
+                                            <figure class="mr-4">
+                                                <img class="sombal"
+                                                     data-src="../public/images/todo-4.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <div class="category p-0">
+                                                <a href="#">
+                                                    SHOPPING
+                                                </a>
+                                            </div>
+                                            <a href="#">
+                                                <h3>
+                                                    <strong>
+                                                        What to See, Hear, Watch, and Read
+                                                    </strong>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-options">
+                            <h2>
+                                OTHER CATEGORIES
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Restaurants
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Bars
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Stores</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Spas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Movies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Music
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="imu-block">
+                            <a href="#">
+                                <img class="sombal"
+                                     data-src="../public/images/tag.jpg" alt="Advertisement Block">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </blife-block>
+    </div>
+
+</section>
+
+
+    <section class="container bg-transparent mb-4 p-0" id="home_block_4">
+    <div class="row no-gutters">
+        <div class="col-md-8 bg-white shadow-lg">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="block-title-full">
-                        <h3 class="text-left py-2 px-2">
-                            <strong>
-                                THINGS TODO AROUND BRUSSELS
-                            </strong>
-                            <i class="fa fa-angle-right"></i>
-                        </h3>
-                    </div>
-                    <div class="article-content">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="media py-2 ">
-                                    <a href="#">
-                                        <figure class="mr-4">
-                                            <img class="sombal"
-                                                 data-src="../public/images/todo-1.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                    <div>
-                                        <div class="category p-0">
-                                            <a href="#">
-                                                NATURE
-                                            </a>
-                                        </div>
-                                        <a href="#">
-                                            <h3>
-                                                <strong>
-                                                    What to See, Hear, Watch, and Read
-                                                </strong>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="media py-2">
-                                    <a href="#">
-                                        <figure class="mr-4">
-                                            <img class="sombal"
-                                                 data-src="../public/images/todo-2.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                    <div>
-                                        <div class="category p-0">
-                                            <a href="#">
-                                                AGENDA
-                                            </a>
-                                        </div>
-                                        <a href="#">
-                                            <h3>
-                                                <strong>
-                                                    What to See, Hear, Watch, and Read
-                                                </strong>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-md-6">
-                                <div class="media py-2">
-                                    <a href="#">
-                                        <figure class="mr-4">
-                                            <img class="sombal"
-                                                 data-src="../public/images/todo-3.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                    <div>
-                                        <div class="category p-0">
-                                            <a href="#">
-                                                FASHION
-                                            </a>
-                                        </div>
-                                        <a href="#">
-                                            <h3>
-                                                <strong>
-                                                    What to See, Hear, Watch, and Read
-                                                </strong>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="media py-2">
-                                    <a href="#">
-                                        <figure class="mr-4">
-                                            <img class="sombal"
-                                                 data-src="../public/images/todo-4.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                    <div>
-                                        <div class="category p-0">
-                                            <a href="#">
-                                                SHOPPING
-                                            </a>
-                                        </div>
-                                        <a href="#">
-                                            <h3>
-                                                <strong>
-                                                    What to See, Hear, Watch, and Read
-                                                </strong>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-options">
-                        <h2>
-                            OTHER CATEGORIES
-                        </h2>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    Restaurants
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Bars
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Stores</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Spas
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Movies
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Music
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="imu-block">
-                        <a href="#">
-                            <img class="sombal"
-                                 data-src="../public/images/tag.jpg" alt="Advertisement Block">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </blife-block>
-</div>
-
-
-        
-        <div class="row">
-    <div class="col-12 col-md-7">
-        <div id="block-1" class="position-relative">
-            
-            <block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK 1</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>
-            
-            <div class="block-content">
-                <div class="block-article">
-                    <div class="card border-0 rounded-0 mb-3 bg-grey-alpha">
+                <div class="col-md-6">
+                    <div>
                         <a href="#">
                             <figure>
-                                <img src="images/blur.jpg" class="sombal rounded-0 card-img-top"
-                                     data-src="/public/images/article_b1.jpg" title="Article block 01" alt="Article block 1">
+                                <img src="../public/images/article_block_4.jpg" alt="">
                             </figure>
+                            <div class="category-comments-views">
+                                <span class="bxl-category">CATERING</span>
+                                <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                            </div>
+                            <h3>
+                                Découvrez le Parlement européen sous un nouvel angle
+                            </h3>
+                            <p>
+                                Le Parlamentarium, Centre des visiteurs du Parlement européen, est le plus grand centre
+                                dédié
+                                aux visiteurs édifié par un parlement en Europe.
+                            </p>
                         </a>
-                        <div class="card-body">
 
-                            <a href="#">
-                                <h2 class="mb-2">
-                                    <strong>
-                                        UNE TOILE SOUS LES ÉTOILES : CINÉMA PLEIN AIR À WOLUBILIS
-                                    </strong>
-                                </h2>
-                                <p class="m-0">
-                                    L'Abbaye de Villers-la-Ville accueille le magnifique spectacle "Nuit Des Chœurs"
-                                    les
-                                    24 et 25
-                                    août. Découvrez le très beau programme de l'événement:
+                        <div class="info_author">
+                            <a href="#author_profile">
+                                <img src="../public/images/author_1.png" alt="">
+                                <p>
+                                    Brijamohan Mallick
                                 </p>
                             </a>
-                            <div class="category pt-2">
-                                <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                    SPORTS INDIVIDUALS <i class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_4_1.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Belgique - Angleterre : en route pour la petite finale de la Coupe du monde 2018
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">
+                                                RESTAURANT
+                                            </span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+
                                 </a>
-                                <a href="#" class="float-right btn btn-link text-muted p-0"><i class="fa fa-comment"
-                                                                                               aria-hidden="true"></i><span
-                                        class="comments-count">10</span></a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="../public/images/article_4_2.jpg" alt="">
+                                </figure>
+
+                                <div>
+                                    <h3>
+                                        Découvrez le Parlement européen sous un nouvel angle
+                                    </h3>
+                                    <div class="category-comments-views">
+                                            <span class="bxl-category">
+                                                RESTAURANT
+                                            </span>
+                                        <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-md-5">
-    <div id="block-16" class="position-relative">
-        
-        <block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK 16</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>
-        
-        <div class="block-content">
-            <div class="block-article">
-                <ul class="list-unstyled">
-                    <li class="flex-wrap media mb-3 border-bottom ">
-                        <div class="media-image">
-                            <a href="#">
-
-                                <img
-                                        src="../public/images/blur.jpg"
-                                        data-src="../public/images/thumb_img_1.jpg" alt=""
-                                     class="sombal mr-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">
-                                <h5>
-                                    Gérard Depardieu en « guest star » du Brussels International Film Festival ce lundi ffsfsf
-                                </h5>
-                            </a>
-                        </div>
-                        <div class="category">
-                            <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                SPORTS  <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" class="float-right btn btn-link text-muted"><i class="fa fa-comment"
-                                                                                       aria-hidden="true"></i><span
-                                    class="comments-count">10</span></a>
-                        </div>
-                    </li>
-                    <li class="flex-wrap media mb-3 border-bottom ">
-                        <div class="media-image">
-                            <a href="#">
-                                <img src="../public/images/blur.jpg"
-                                     data-src="../public/images/article_small_1.jpg" alt=""
-                                     class="sombal mr-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">
-                                <h5>
-                                    La Foire du Midi 2018: découvrez le programme
-                                </h5>
-                            </a>
-                        </div>
-                        <div class="category">
-                            <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                SPORTS  <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" class="float-right btn btn-link text-muted"><i class="fa fa-comment"
-                                                                                       aria-hidden="true"></i><span
-                                    class="comments-count">10</span></a>
-                        </div>
-                    </li>
-                    <li class="flex-wrap media mb-3 border-bottom ">
-                        <div class="media-image">
-                            <a href="#">
-                                <img src="../public/images/blur.jpg" data-src="../public/images/article_small_2.jpg" alt="" class="sombal mr-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">
-                                <h5>
-                                    Le plateau du Heysel va pétiller avec "Les Feux de Laeken"
-
-
-                                </h5>
-                            </a>
-                        </div>
-                        <div class="category">
-                            <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                SPORTS  <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" class="float-right btn btn-link text-muted"><i class="fa fa-comment"
-                                                                                       aria-hidden="true"></i><span
-                                    class="comments-count">10</span></a>
-                        </div>
-                    </li>
-                    <li class="flex-wrap media mb-3 border-bottom ">
-                        <div class="media-image">
-                            <a href="#">
-                                <img src="../public/images/blur.jpg"
-                                     data-src="../public/images/article_small_3.jpg" alt="" class="sombal mr-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">
-                                <h5>
-                                    Brussels Summer Festival 2018 : demandez le programme
-                                </h5>
-                            </a>
-                        </div>
-                        <div class="category">
-                            <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                SPORTS  <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" class="float-right btn btn-link text-muted">
-                                <i class="fa fa-comment"
-                                                                                       aria-hidden="true"></i><span
-                                    class="comments-count">10</span></a>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-        
-
-        <!-- Block 2 | Agenda -->
-        <div class="col-12 col-md-12">
-    <div id="block-2" class="position-relative mb-4">
-        <div class="row">
-            <div class="col-12 col-md-12 bg-warning  block-title-full">
-                <h3 class="text-center py-3">
-                    ÉVÉNEMENTS AUTOUR DE BRUXELLES
-                    <a href="#" class="btn btn-link">
-                        Voir plus <i class="fa fa-angle-right"></i>
-                    </a>
-                </h3>
-
-            </div>
-        </div>
-        <div class="clearfix"></div>
-
-        
-        <block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK AGENDA</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>
-        
-        <div class="block-content">
-            <div class="home-carousel-agenda">
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="card-img-top rounded-0"
-                                 data-flickity-lazyload="../public/images/event_5.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    ON STAGE
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Video Games Playing With Imagination
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="sombal card-img-top rounded-0"
-                                 data-src="../public/images/event_4.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    MUSIC
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Vinyl Banners With Its Different Types Kinds And Applications
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="sombal card-img-top rounded-0"
-                                 data-src="../public/images/event_3.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    CONCERT
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Promotional Advertising Specialty You Ve Waited Long Enough
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="sombal card-img-top rounded-0"
-                                 data-src="../public/images/event_2.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    THEATER
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Adwords Keyword Research For Beginners
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="card-img-top rounded-0"
-                                 data-flickity-lazyload="../public/images/event_1.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    SPORTS
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Promotional Advertising Specialty You Ve Waited Long Enough
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="card-img-top rounded-0"
-                                 data-flickity-lazyload="../public/images/event_2.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    EXHIBITION
-                                </div>
-                            </a>
-
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Adwords Keyword Research For Beginners
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="card-img-top rounded-0"
-                                 data-flickity-lazyload="../public/images/event_3.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    SPORTS / FORMULE 1
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Vinyl Banners With Its Different Types Kinds And Applications
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card border-0 rounded-0">
-                        <a href="#">
-                            <img class="card-img-top rounded-0"
-                                 data-flickity-lazyload="../public/images/event_4.jpg" alt="">
-                        </a>
-
-                        <div class="card-body position-relative">
-                            <a href="#">
-                                <div class="category-event">
-                                    SPORTS / FORMULE 1
-                                </div>
-                            </a>
-                            <a href="#">
-                                <h3 class="my-2">
-                                    Video Games Playing With Imagination
-                                </h3>
-                                <div class="date-time">
-                                    <i class="fa fa-clock-o"></i> &nbsp; 20 Mar 2018
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-        <!-- Block 17  -->
-        <div class="row">
-
-    <div class="col-12 col-md-7">
-        <div id="block-17" class="position-relative">
-            
-            <block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK 2</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>
-            
-            <div class="block-content">
-                <div class="block-article">
-                    <div class="card border-0 rounded-0 mb-4 bg-grey-alpha">
+                <div class="col-md-6">
+                    <div>
                         <a href="#">
                             <figure>
-                                <img class="sombal rounded-0 card-img-top"
-                                     data-src="../public/images/article_b1.jpg" alt="Article block 1">
+                                <img src="../public/images/article_block_4_2.jpg" alt="">
                             </figure>
+                            <div class="category-comments-views">
+                                <span class="bxl-category">CATERING</span>
+                                <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                            </div>
+                            <h3>
+                                Découvrez le Parlement européen sous un nouvel angle
+                            </h3>
+                            <p>
+                                Le Parlamentarium, Centre des visiteurs du Parlement européen, est le plus grand centre
+                                dédié
+                                aux visiteurs édifié par un parlement en Europe.
+                            </p>
                         </a>
-                        <div class="card-body">
-                            <a href="#">
-                                <h2 class="mb-2">
-                                    <strong>
-                                        Les cafés bruxellois pour étudier
-                                    </strong>
-                                </h2>
-                                <p class="mb-0">
-                                    L'Abbaye de Villers-la-Ville accueille le magnifique spectacle "Nuit Des Chœurs"
-                                    les
-                                    24 et 25
-                                    août. Découvrez le très beau programme de l'événement:
+                        <div class="info_author">
+                            <a href="#author_profile">
+                                <img src="../public/images/author_2.png" alt="">
+                                <p>
+                                    Xing Zheng
+
                                 </p>
                             </a>
-                            <div class="category pb-0 pt-2">
-                                <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                    SPORTS INDIVIDUELS <i class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_4_3.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Découvrez le Parlement européen sous un nouvel angle
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">
+                                                RESTAURANT
+                                            </span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+
                                 </a>
-                                <a href="#" class="float-right btn btn-link text-muted p-0"><i class="fa fa-comment"
-                                                                                               aria-hidden="true"></i><span
-                                        class="comments-count ">10</span></a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="../public/images/article_4_4.jpg" alt="">
+                                </figure>
+
+                                <div>
+                                    <h3>
+                                        Découvrez le Parlement européen sous un nouvel angle
+                                    </h3>
+                                    <div class="category-comments-views">
+                                            <span class="bxl-category">
+                                                RESTAURANT
+                                            </span>
+                                        <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-12 col-md-5">
-    <div id="block-20" class="position-relative">
-        <!---->
-        <!--<block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK 20</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>-->
-        <!---->
-        <div class="block-content">
-
-
-            <div class="block-address">
-                <div class="block-title-mini">
-                    <h2 class="py-2 text-center">
-                        <strong>
-                            <i class="fa fa-map-marker"></i> NEW ADDRESS
-                        </strong>
-                    </h2>
-                </div>
-                <section>
-                    <a href="#">
-                        <figure>
-                            <img class="img-fluid" src="../public/images/article_1.jpg" alt="">
-                        </figure>
-                    </a>
-                    <a href="#" class="address-info">
-                        <h5 class="my-2">
-                            Gonuts Donuts
-                        </h5>
-                        <address class="m-0 pr-4 pl-4">
-                            Rue Washington, 174 - 1050 Ixelles
-                            Châtelain
-                        </address>
-
-                        <!--<p class="address-tag-line m-0 mb-2 pr-4 pl-4 pb-4">-->
-                            <!--L’endroit idéal où confectionner un costume sur-mesure pour homme-->
-                        <!--</p>-->
-
-                    </a>
-                </section>
-            </div>
-
-            <div class="block-article">
-                <ul class="list-unstyled">
-                    <li class="flex-wrap media mb-3 border-bottom ">
-                        <div class="media-image">
-                            <a href="#">
-                                <img src="../public/images/article_small_2.jpg" alt="" class="mr-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">
-                                <h5>
-                                    <strong>
-                                        Le plateau du Heysel va pétiller avec "Les Feux de Laeken"
-                                    </strong>
-
-
-                                </h5>
-                            </a>
-                        </div>
-                        <div class="category">
-                            <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                SPORTS  <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" class="float-right btn btn-link text-muted"><i class="fa fa-comment" aria-hidden="true"></i><span
-                                    class="comments-count">10</span></a>
-                        </div>
-                    </li>
-                    <li class="flex-wrap media mb-3">
-                        <div class="media-image">
-                            <a href="#">
-                                <img src="../public/images/article_small_3.jpg" alt="" class="mr-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">
-                                <h5>
-                                    <strong>
-                                        Brussels Summer Festival 2018 : demandez le programme
-                                    </strong>
-                                </h5>
-                            </a>
-                        </div>
-                        <div class="category">
-                            <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                EAT & DRINK  <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" class="float-right btn btn-link text-muted">
-                                <i class="fa fa-comment" aria-hidden="true"></i><span
-                                    class="comments-count">10</span></a>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-</div>
-
-
-        <!-- Block 3 section  -->
-        <blife-block>
-    <div class="row bg-success block-title-full mb-4">
-        <div class="col-12">
-            <a href="#">
-                <h3 class="text-center text-white py-2">
-
-                    <img src="../public/svg/eat-drink-white.svg" alt="">
-                    <strong>
+        <div class="col-md-4 home-block-4-2">
+    <div class="block-content">
+        <div class="block-address bg-white shadow-lg">
+            <div class="block-title">
+                <h2>
+                    Near by addresses
+                </h2>
+                <a href="#" class="active">
                     RESTAURANTS
-                    </strong>
-                    <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="#">
+                    BARS
+                </a>
+                <a href="#">
+                    FAST FOOD
+                </a>
+                <a href="#">
+                    COFFEE SHOPS
+                </a>
+            </div>
+            <ul class="list-unstyled">
+                <li>
+                    <div class="media">
+                        <a href="#">
 
-                </h3>
+                            <img src="../public/images/address_small.jpg" alt="">
+                           <div>
+                               <h3>
+                                   Ezequiel Dengra
+                               </h3>
+                               <p>
+                                   La Taverne du Passage à Bruxelles vous ouvre ses portes pour vous faire.
+                               </p>
+                           </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+
+                        <img src="../public/images/address_small_2.jpg" alt="">
+                       <div>
+                           <h3>
+                               Ezequiel Dengra
+                           </h3>
+                           <p>
+                               La Taverne du Passage à Bruxelles vous ouvre ses portes pour vous faire.
+                           </p>
+                       </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+
+                        <img src="../public/images/address_small_3.jpg" alt="">
+                        <div>
+                            <h3>
+                                Ezequiel Dengra
+                            </h3>
+                            <p>
+                                La Taverne du Passage à Bruxelles vous ouvre ses portes pour vous faire.
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+
+            <a href="#">
+                <img src="../public/images/imu.jpg" alt="">
             </a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-md-7">
-            <div id="block-3" class="position-relative">
-                
-                <block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK 3</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>
-                
-                <div class="block-content">
-                    <div class="block-article">
-                        <div class="card border-0 rounded-0 mb-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="sombal rounded-0 card-img-top"
-                                         data-src="https://www.thesun.co.uk/wp-content/uploads/2018/09/AD-COMPOSITE-Chris-2.jpg?strip=all&w=620&h=413&crop=1"
-                                         alt="Article block 1">
-                                </figure>
-                            </a>
-                            <div class="card-body pb-0 pl-0 pr-0">
-                                <a href="#">
-                                    <h2 class="m-0 mb-2">
-                                        <strong>
-                                            Les cafés bruxellois pour étudier
-                                        </strong>
-                                    </h2>
-                                    <p class="mb-0">
-                                        L'Abbaye de Villers-la-Ville accueille le magnifique spectacle "Nuit Des Chœurs"
-                                        les
-                                        24 et 25
-                                        août. Découvrez le très beau programme de l'événement:
-                                    </p>
-                                </a>
-                                <div class="category py-2">
-                                    <a href="#" class="btn btn-link p-0" title="SPORTS INDIVIDUELS">
-                                        EAT & DRINK <i class="fa fa-angle-right"></i>
-                                    </a>
-                                    <a href="#" class="blife-filter">ITALIAN</a>
-                                    <a href="#" class="float-right btn btn-link text-muted p-0"><i class="fa fa-comment" aria-hidden="true"></i><span class="comments-count ">10</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-5">
-    <blife-block>
-        <div id="block-18" class="position-relative">
-            
-            <!--<block-edit class="block-edit hide position-absolute">
-    <div class="row">
-        <div class="col">
-            <div class="block-info">
-                <span class="badge badge-dark block-name rounded-0">BLOCK 18</span>
-            </div>
-        </div>
-        <div class="col">
-            <div class="edit-block float-right">
-                <div class="dropdown">
-                    <button class="btn  btn-info btn-sm" data-toggle="dropdown">
-                        <i class="fa fa-cog"></i>
-                    </button>
-                    <div class="dropdown-menu">
-
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-sliders" aria-hidden="true"></i> Configure
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> Schedule
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-eye-slash" aria-hidden="true"></i> Hide
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Address</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Agenda</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-circle-o" aria-hidden="true"></i>
-                            Folder</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-check-circle-o"
-                                                             aria-hidden="true"></i> Article</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</block-edit>-->
-            
-            <div class="block-content">
-                <div class="block-address-list">
-                    <!--<div class="block-title">-->
-                    <!--<h2 class="my-3">-->
-                    <!--Nouveaux restaurants-->
-                    <!--<em>-->
-                    <!--<strong>-->
-                    <!--à Bruxelles-->
-                    <!--</strong>-->
-                    <!--</em>-->
-                    <!--</h2>-->
-                    <!--</div>-->
-                    <ul class="list-unstyled">
-                        <li class="flex-wrap media mb-3 border-bottom ">
-                            <div class="media-image position-relative">
-                                <a href="#">
-                                    <img src="../public/images/address_1.jpg" alt="" class="mr-3">
-                                </a>
-
-                                <a href="#" class="blife-filter btn btn-light">Uccle</a>
-                            </div>
-                            <div class="media-body">
-                                <a href="#">
-                                    <h5>
-                                        Lanieri <span class="badge badge-primary">
-                                    New
-                                </span>
-                                    </h5>
-                                    <p>
-                                        L’endroit idéal où confectionner un costume sur-mesure pour homme
-                                        <span>- Restaurant</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex-wrap media mb-3 border-bottom ">
-                            <div class="media-image position-relative">
-                                <a href="#">
-                                    <img src="../public/images/address_2.jpg" alt="" class="mr-3">
-                                </a>
-
-                                <a href="#" class="blife-filter btn btn-light">Ixelle</a>
-                            </div>
-                            <div class="media-body">
-                                <a href="#">
-                                    <h5>
-                                        Musée des Instruments de Musique <span class="badge badge-primary">
-                                    New
-                                </span>
-                                    </h5>
-                                    <p>
-                                        L’endroit idéal où confectionner un costume sur-mesure pour homme
-                                        <span>- Restaurant</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex-wrap media mb-3 border-bottom ">
-                            <div class="media-image position-relative">
-                                <a href="#">
-                                    <img src="../public/images/address_3.jpg" alt="" class="mr-3">
-                                </a>
-
-                                <a href="#" class="blife-filter btn btn-light">Uccle</a>
-                            </div>
-                            <div class="media-body">
-                                <a href="#">
-                                    <h5>
-                                        Gil Galway
-                                    </h5>
-                                    <p>
-                                        L’endroit idéal où confectionner un costume sur-mesure pour homme
-                                        <span>- Restaurant</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="more-addresses"
-                       style="background:url('../public/images/more-restaurants.jpg') center center no-repeat;background-size: cover;">
-                        <p class="btn btn-light text-center">
-                            Find more Italian restaurants <i class="fa fa-angle-right"></i>
-                        </p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </blife-block>
 </div>
 
     </div>
-</blife-block>
+</section>
+
+    <section class="container bg-white shadow-lg mb-4"
+         id="home-block-article">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="block-content">
+                <div class="block-article py-4">
+                    <a href="#">
+                       <figure>
+                           <img src="../public/images/article_img_5.jpg" alt="">
+                       </figure>
+                        <div class="category-comments-views">
+                            <span class="bxl-category">CATERING</span>
+                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                        </div>
+                        <h3>
+                            Découvrez le Parlement européen sous un nouvel angle
+                        </h3>
+                        <p class="pt-2">
+                            Le Parlamentarium, Centre des visiteurs du Parlement européen, est le plus grand centre
+                            dédié aux
+                            visiteurs édifié par un parlement en Europe.
+                        </p>
+                    </a>
+                    <div class="info_author pt-2">
+                        <a href="#author_profile">
+                            <img src="../public/images/author_1.png" alt="">
+                            <p>
+                                Brijamohan Mallick
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div class="block-content">
+                <div class="block-article-list">
+
+                    <div class="block-title">
+                        <h2>
+                            Most popular articles
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_img_5_1.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Découvrez le Parlement européen sous un nouvel angle
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">CATERING</span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_img_5_2.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Découvrez le Parlement européen sous un nouvel angle
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">CATERING</span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_img_5_3.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Découvrez le Parlement européen sous un nouvel angle
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">CATERING</span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_img_5_4.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Découvrez le Parlement européen sous un nouvel angle
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">CATERING</span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="container bg-white shadow-lg mb-4"
+         id="home-block-article-address">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="block-content">
+                <div class="block-article py-4">
+                    <a href="#">
+                        <figure>
+                            <img src="../public/images/article_img_5.jpg" alt="">
+                        </figure>
+                        <div class="category-comments-views">
+                            <span class="bxl-category">CATERING</span>
+                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                        </div>
+                        <h3>
+                            Découvrez le Parlement européen sous un nouvel angle
+                        </h3>
+                        <p class="pt-2">
+                            Le Parlamentarium, Centre des visiteurs du Parlement européen, est le plus grand centre
+                            dédié aux
+                            visiteurs édifié par un parlement en Europe.
+                        </p>
+                    </a>
+                    <div class="info_author pt-2">
+                        <a href="#author_profile">
+                            <img src="../public/images/author_1.png" alt="">
+                            <p>
+                                Brijamohan Mallick
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            <div class="block-content">
+
+                <div class="block-new-address">
+                    <div class="block-title">
+                       <h2>
+                           New address
+                       </h2>
+                    </div>
+                    <div class="block-address">
+
+                        <a href="#">
+                            <figure>
+                                <img src="../public/images/address-home-2.jpg" alt="">
+                            </figure>
+
+                            <div class="category-comments-views">
+                                <span class="bxl-category">
+                                    RESTAURANT
+                                </span>
+                            </div>
+
+                            <h3>
+                                Bijirawo Restaurant
+                            </h3>
+                            <p>
+                                <small>
+                                    1050 Ixells
+                                </small>
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto
+                                atque autem.
+                            </p>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-content">
+                <div class="block-article-list">
+
+                    <div class="block-title">
+                        <h2>
+                            Most read articles
+                        </h2>
+                    </div>
+
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <div class="media">
+                                <a href="#">
+                                    <figure>
+                                        <img src="../public/images/article_img_5_3.jpg" alt="">
+                                    </figure>
+
+                                    <div>
+                                        <h3>
+                                            Découvrez le Parlement européen sous un nouvel angle
+                                        </h3>
+                                        <div class="category-comments-views">
+                                            <span class="bxl-category">CATERING</span>
+                                            <span class="bxl-comments">
+                            03
+                            <i class="fa fa-commenting-o"></i>
+                        </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <!--<li>-->
+                            <!--<div class="media">-->
+                                <!--<a href="#">-->
+                                    <!--<figure>-->
+                                        <!--<img src="../public/images/article_img_5_4.jpg" alt="">-->
+                                    <!--</figure>-->
+
+                                    <!--<div>-->
+                                        <!--<h3>-->
+                                            <!--Découvrez le Parlement européen sous un nouvel angle-->
+                                        <!--</h3>-->
+                                        <!--<div class="category-comments-views">-->
+                                            <!--<span class="bxl-category">CATERING</span>-->
+                                            <!--<span class="bxl-comments">-->
+                            <!--03-->
+                            <!--<i class="fa fa-commenting-o"></i>-->
+                        <!--</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="container">
 
 
         <!-- Block 4 | Full block image  -->
@@ -2567,11 +2529,15 @@
     </section>
 </article>
 
+<script src="../public/build/home.js"></script>
+
 </main>
 <div class="footer-img">
     <img src="../public/images/footer_img.png" alt="">
 </div>
 <footer>
+
+
     <section class="container">
         <div class="footer_bottom">
             <div class="footer-logo">
@@ -2812,6 +2778,220 @@
 
     </section>
 
+    <section class="container">
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="footer_article_list">
+                    <div class="block-title">
+                        <h2>
+                            Recent articles
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/footer_article_1.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/footer_article_2.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/footer_article_3.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="footer_address_list">
+
+                    <div class="block-title">
+                        <h2>
+                            Most visited addresses
+                        </h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/address_small.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/address_small_2.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/address_small_3.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem olor sit amet
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="footer_instagram_feed">
+                    <div class="block-title">
+                        <h2>
+                            Instagram feed
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_5.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_6.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_2.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
     <div class="footer_social_links">
         <div class="social_links">
             <a href="#" class="footer_fb"> <i class="fa fa-facebook"></i></a>
@@ -2848,8 +3028,9 @@
 <!--sombal js-->
 <script type="text/javascript" src="../public/libs/sombal.js"></script>
 
-<!-- swiper-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
+<!--&lt;!&ndash; swiper&ndash;&gt;-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>-->
 
 <script type="text/javascript">
 
@@ -2887,6 +3068,7 @@
         var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var event_page = document.getElementById("event_page");
+        var left_float_menu = document.getElementById("left_float_menu");
         var search_tabs = $("#search_tabs");
         var agenda_week = $("#agenda_week");
         var l_current = $(".l_current ");
@@ -2900,6 +3082,7 @@
                 return {
                     init: function () {
                         _load();
+                        _tlit();
                         _site_search();
                         _header();
                         _scroll_event_page();
@@ -2924,21 +3107,34 @@
                         this.classList.toggle("active");
                     });
                 }
+
+
+            }
+
+            function _tlit() {
+                $('.tlit-wrapper').tilt({
+                    reset: false,
+                    scale: 1,
+                    glare: true,
+                    maxGlare: .01
+                });
             }
 
             function _header() {
                 //screen scroll functions
                 screen.scroll(function () {
-                    if ($(document).scrollTop() > 468) {
+                    if ($(document).scrollTop() > 275) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
                         home_search.classList.add('shrink');
                         body.classList.add("fixed-header");
+                        left_float_menu.classList.add("show-menu");
 
                     } else {
                         header.classList.remove("shrink-header", "move");
                         body.classList.remove("fixed-header");
                         home_search.classList.remove('shrink');
+                        left_float_menu.classList.remove("show-menu");
                     }
                 });
 

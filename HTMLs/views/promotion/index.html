@@ -1,13 +1,401 @@
 ---
-layout : default_agenda.html
+layout : default.html
 title : Single promotion page | Brusselslife.be
 ---
 
-
 {{> leader-board }}
 
-{{> breadcrumb}}
-<section id="promotion_page">
+<!--{{> breadcrumb}}-->
+<section id="promotion_page" class="bg-transparent">
+    <div class="container place-container bg-transparent">
+        <div class="row">
+            <div class="col-md-2 promo-col-left">
+                <div class="filter">
+                    <h4>
+                        Categories
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="fa fa-angle-left"></i>
+                                All Deals
+                            </a>
+                        </li>
 
+
+                        <li>
+                            <a href="#">Easy Brussels</a>
+                        </li>
+                        <li>
+                            <a href="#">Eat & Drink</a>
+                        </li>
+                        <li>
+                            <a href="#">Bars</a>
+                        </li>
+                        <li class="" id="menu-item-3">
+                            <a href="#">Shopping</a>
+                        </li>
+                        <li class="" id="menu-item-5">
+                            <a href="#">Beauty </a>
+                        </li>
+                        <li class="" id="menu-item-6">
+                            <a href="#">Medical </a>
+                        </li>
+                        <li>
+                            <a>Events </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="filter">
+                    <h4>
+                        Boire & Manger <i class="fa fa-angle-down"></i>
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="active">
+                                Food & Drink <span>(150)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Restaurants <span>(350)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Friteries <span>(112)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Sur Le Pouce <span>(4)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Food Trucks <span>(52)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Wine <span>(87)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Bars <span>(122)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Cafes <span>(255)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Tea & Coffee time <span>(44)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Traiteurs <span>(14)</span> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 promo-col-right">
+                <div class="promo-info-banner bg-white">
+                    <img src="{{assets}}svg/menu-icon-promotion.svg" alt="">
+                    Get business by publishing a promotion or deal
+                    <span>Let people know about your promotions and % off. Publish a promotion on Brusselslife.</span>
+
+                    <button class="btn">
+                        + Post a promotion
+                    </button>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8 promo-col-in-left">
+
+                        <div class="promo-breadcrumb shadow-sm px-4 py-2 mb-4 bg-white">
+                            <a href="#">
+                                Boire & Manger
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <a href="#">
+                                Food & Drink
+                            </a>
+                        </div>
+                        <div class="shadow-sm px-4 py-4 mb-4 bg-white">
+                            <div class="d-flex promo-title-logo">
+                                <figure>
+                                    <img src="{{assets}}images/logo.jpg" alt="">
+                                </figure>
+                                <div>
+                                    <div class="promo-address-title">
+                                        By Chef Michel à l'italienne
+                                    </div>
+                                    <div class="promo-address-loc">
+                                        <p>
+                                            <i class="fa fa-map-marker"></i>
+                                            Place Fernand Cocq, 21 - 1050 Bruxelles
+                                        </p>
+                                        <a href="#">
+                                            See all promotions
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-header">
+                                <p>
+                                    <i class="fa fa-clock-o"></i>
+                                    Posted on 22 October, 2018 |
+                                    <span>Valid till November 1st 2018</span>
+                                </p>
+                            </div>
+                            <div class="promo-body">
+                                <div class="promo-title">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                              <span class="promo-percentage">
+                                    40% OFF
+                                </span>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <h2>
+                                                Spend on Chocolate at Lindt Chocolate Shops Belgium. Valid In-Store Only
+                                                <a href="#" data-tooltip="Save promotion">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <span class="promo-real-price">
+                                    $20
+                                </span>
+                                        <span class="promo-discount-price">
+                                    $12
+                                </span>
+                                        <span class="promo-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                        <span>
+                                    <a href="#"><small>| 3 Reviews</small></a>
+                                </span>
+                                    </div>
+                                </div>
+                                <figure>
+                                    <img src="{{assets}}images/promo-img.jpg">
+                                </figure>
+                                <div class="promo-desc">
+                                    <h3>
+                                        What you will get
+                                    </h3>
+                                    <p>
+                                        Malted Milkshakes: The Whiskey Cocktail’s G-Rated Counterpart
+                                        Here, you can get your milkshake regular or malted. To find out just what the
+                                        latter
+                                        style involves, read on.
+                                        Although its flavor may be a little hard to place—mellow and nutty, not quite
+                                        like
+                                        anything else in the world of desserts—a malted milkshake has a simple recipe:
+                                        milk,
+                                        vanilla ice cream, and malted milk powder. On its own, malted milk powder is
+                                        light
+                                        yellow in color and naturally sweet (from evaporated whole milk) and slightly
+                                        gritty
+                                        (from wheat flour). The key ingredient, however, is malted barley—the same stuff
+                                        that’s
+                                        used to make beer and whiskey, which is created when barley is allowed to sprout
+                                        before
+                                        being oven-dried.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-feedback-form bg-white shadow-sm mb-4 p-4">
+                            <div class="promo-rating-stars">
+                                Rate it
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <input type="text" placeholder="Hello Yves, write a review">
+                        </div>
+                        <div class="promo-user-reviews bg-white shadow-sm mb-4">
+                            <div class="place-title">
+                                <h3>
+                                    Customer reviews
+                                </h3>
+                            </div>
+                            <div class="promo-review">
+                                <div class="d-flex mt-2">
+                                    <figure>
+                                        <img src="{{assets}}images/user.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p class="mt-2">
+                                            <strong>
+                                                Lida Johnson
+                                            </strong>
+                                        </p>
+                                        <div class="promo-user-rating py-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            Posted on 12/ 21 / 2018
+                                        </div>
+                                        <p>
+                                            This was my first time at Ladle & Leaf and I was happy with my experience.
+                                            The staff
+                                            greeted me when I walked in and they provided excellent customer service
+                                            throughout
+                                            my time here.
+                                        </p>
+                                        <div class="promo-useful mt-2">
+                                            <p>
+                                                Was this review helpful?
+                                            </p>
+                                            <div class="promo-yes">
+                                                <button class="btn btn-success">
+                                                    10
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    0
+                                                </button>
+                                            </div>
+                                            <div class="alert alert-default">
+                                                Thank you! You have successfully submitted feedback for this review.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 promo-col-in-right">
+
+                        <div class="alert promo-alert mt-4">
+                            <p>
+                                <strong>
+                                    Currently 3 people watching this deal
+                                </strong>
+                            </p>
+                        </div>
+                        <p class="text-danger text-center my-2">
+                            <strong>
+                                Deal ends in 3 days
+                            </strong>
+                        </p>
+                        <button class="btn promo-buy-voucher">
+                            Buy voucher
+
+                            <span>
+                                100 Vouchers sold
+                            </span>
+                        </button>
+
+                        <button class="btn promo-send-gift ">
+                            <img src="{{assets}}svg/bl-icon-giftbox.svg" alt="">
+                            Send this as a gift
+                        </button>
+
+                        <div class="promo-social-share">
+                            <a href="#">
+                                <i class="fa facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa twitter"></i>
+                            </a>
+                        </div>
+
+                        <div class="promo-other-promotions">
+                            <div class="place-title">
+                                <h3>
+                                    Other promotions
+                                </h3>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="{{assets}}images/p_1.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="{{assets}}images/p_2.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="{{assets}}images/p_3.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="{{assets}}images/p_4.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="{{assets}}images/p_1.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-

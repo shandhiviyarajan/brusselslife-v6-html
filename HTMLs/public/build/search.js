@@ -55,12 +55,12 @@
         }
 
         function _search_results() {
-            $(".paid-gallery").swipebox({
-                initialIndexOnArray: 0,
-                afterOpen: function () {
-                    console.log("swipebox opened - get review and recent comments");
-                }
-            });
+            // $(".paid-gallery").swipebox({
+            //     initialIndexOnArray: 0,
+            //     afterOpen: function () {
+            //         console.log("swipebox opened - get review and recent comments");
+            //     }
+            // });
         }
 
         function _loadmap() {

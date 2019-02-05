@@ -6,30 +6,29 @@ title : Home page | Brusselslife.be | Belgium life style site | Brussels news, r
 
 <!-- home search -->
 {{> home-search }}
-{{> quick-3-blocks}}
-<!-- leader board advertisement -->
-{{> leader-board }}
-
+<!--{{> quick-3-blocks}}-->
 <article class="page-home">
-    <section class="container">
 
-        {{> full-news-block}}
-        <!-- Block 1 | 16  -->
+    {{> left-float-menu }}
+    {{> home-block-1 }}
+
+
+    <!--{{> full-news-block}}-->
+    <section class="container">
+        {{> home-block-agenda }}
+    </section>
 
         {{> block-22 }}
 
-        {{#parseJSON '{"image": "/public/images/article_b1.jpg"}'}}
-        {{> block-1}}
-        {{/parseJSON}}
 
-        <!-- Block 2 | Agenda -->
-        {{> block-2}}
+    {{> home-block-4-1 }}
 
-        <!-- Block 17  -->
-        {{> block-17}}
+    {{> home-block-article }}
 
-        <!-- Block 3 section  -->
-        {{> block-3}}
+    {{> home-block-article-address }}
+
+    <section class="container">
+
 
         <!-- Block 4 | Full block image  -->
         {{> block-4}}
@@ -42,3 +41,5 @@ title : Home page | Brusselslife.be | Belgium life style site | Brussels news, r
         {{> block-7}}
     </section>
 </article>
+
+<script src="{{assets}}build/home.js"></script>

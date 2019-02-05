@@ -290,19 +290,24 @@ title : Article page | Brusselslife.be
                     La Ville de Bruxelles met à l'honneur les marchés bruxellois avec la Fête internationale des
                     Marchés. De nombreuses activités sont organisées en mai.
                 </h2>
-                <div class="d-flex flex-row">
-                    <div class="category">
-                        <a href="#">RESTAURANTS <i class="fa fa-angle-right"></i></a>
+                <div class="flex-row">
+                    <div class="article_filters">
+                        <a href="#">RESTAURANTS</a>
+                        <a href="#">TERRASSE</a>
+                        <a href="#">STEAK HOUSE</a>
                     </div>
-                    <p class="publish-date">
-                        Créé le 28/03/2018 - Dernière mise à jour le 03/07/2018
-                    </p>
-                    <p class="author-name">
-                        | Par <a href="#">Donatienne de Vleeschauwer</a>
-                    </p>
+                    <div class="d-flex">
+                        <p class="publish-date">
+                            Créé le 28/03/2018 - Dernière mise à jour le 03/07/2018
+                        </p>
+                        <p class="author-name">
+                            | Par <a href="#">Donatienne de Vleeschauwer</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="d-flex flex-row pb-2">
-                    <div class="addthis_inline_share_toolbox"></div>
+                    <div class="sharethis-inline-share-buttons"></div>
+                    <!--<div class="addthis_inline_share_toolbox"></div>-->
                     <div class="write-comments-count d-flex">
                         <p>
                             Write Comments
@@ -358,6 +363,8 @@ title : Article page | Brusselslife.be
                         réutilisables « J’aime mon marché ».
                     </p>
 
+
+                    <div class="sharethis-inline-reaction-buttons"></div>
                 </div>
                 {{> block-8}}
                 {{> article-comments}}
@@ -376,3 +383,4 @@ title : Article page | Brusselslife.be
 <script type="text/javascript" src="{{assets}}build/article.js"></script>
 <!--add this social sharing tool -->
 <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8d05b1d7183391"></script>-->
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c34767dad0b1400119dbac9&product=inline-share-buttons' async='async'></script>

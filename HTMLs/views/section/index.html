@@ -2,37 +2,34 @@
 layout : default.html
 title : Address Paid | Brusselslife.be
 ---
-<!-- home search -->
-{{> section-search }}
 
-<!--&lt;!&ndash; leader board advertisement &ndash;&gt;-->
-<!--{{> leader-board }}-->
 
+{{> home-search }}
 <!-- address page paid-->
 <section id="section-page">
-    <div class="container">
-        {{> block-12}}
-
-        {{> block-22 }}
-
-        {{> block-3-1}}
 
 
-        {{> block-13}}
+    <!-- if address count minimum 5 -->
+    {{> section-block-address }}
+    <!-- optional-->
+    {{> home-block-article }}
+    <!-- optional-->
+    {{> home-block-article-address }}
+    <!-- optional-->
+    {{> section-block-article-address }}
+    <!-- optional-->
+    {{> section-block-grid-articles }}
+    <!-- group address -->
+    {{> section-block-group-address }}
 
-        {{> block-14}}
-
-        {{#parseJSON '{"image": "/public/images/article_17.jpg"}'}}
-        {{> block-1}}
-        {{/parseJSON}}
-
-        {{> block-17}}
-
-        {{> block-15}}
-
-    </div>
 </section>
 
 <script type="text/javascript">
-
+    /*<div class="container">
+     {{> block-3-1}}
+     {{> block-13}}
+     {{> block-14}}
+     {{> block-15}}
+ </div>
+         */
 </script>

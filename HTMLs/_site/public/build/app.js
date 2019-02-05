@@ -11,7 +11,6 @@ var Brusselslife = function () {
 
     //Create custom HTML elements
 
-
     _createClass(Brusselslife, [{
         key: 'createCustomElements',
         value: function createCustomElements() {

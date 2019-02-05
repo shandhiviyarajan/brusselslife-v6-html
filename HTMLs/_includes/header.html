@@ -1,192 +1,224 @@
 <header>
-    <section class="bg-transparent">
-        <div class="row no-gutters">
-            <div class="col-md-4">
+    <section class="top-header">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-sm-4">
 
-            </div>
-            <div class="col-md-4">
-                <a href="/" class="logo">
-                    <img src="{{assets}}images/brusselslife_logo.png"
-                         title="Brusselslife.be"
-                         name="Brusselslife.be"
-                         alt="Brusselslife.be">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-unstyled login-notify-profile">
-                    <li>
-                        <div class="dropdown site-notifications">
-                            <button data-toggle="dropdown">
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Newsletter</a>
+
+                </div>
+                <div class="col-sm-8">
+                    <ul class="list-unstyled login-notify-profile">
+                        <li>
+                            <div class="dropdown btn-create-content">
+                                <button data-toggle="dropdown">
+                                    +
+                                </button>
+
+                                <div class="dropdown-menu">
+                                    <a href="#">
+                                        <img src="/public/svg/my-location-marker.svg" alt="">
+                                        Create Address
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-events.svg" alt="">
+                                        Create Agenda
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-promotion.svg" alt="">
+                                        Create Promotion
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-article.svg" alt="">
+                                        Create Article
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown site-notifications">
+                                <button data-toggle="dropdown">
                                 <span>
                                     4
                                 </span>
-                                <img src="{{assets}}svg/bl-icon-notification.svg" alt="">
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-title">
+                                    <img src="{{assets}}svg/bl-icon-notification.svg" alt="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-title">
+                                        <strong>
+                                            Notifications
+                                        </strong>
+                                        <a href="#">
+                                            Mark all as read
+                                        </a>
+                                    </div>
+
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="{{assets}}images/todo-2.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media read">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="{{assets}}images/todo-3.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="{{assets}}images/todo-4.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown user-profile-dropdown">
+                                <a href="!#" data-toggle="dropdown">
+                                    <img src="{{assets}}images/profile.png" alt="">
+                                </a>
+
+                                <!--<div class="dropdown-menu">-->
+                                <!--<a href="#">-->
+                                <!--<img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Favourites-->
+                                <!--<span>-->
+                                <!--Favourite address, events, articles-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Saved post-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Activity-->
+                                <!--<span>-->
+                                <!--Find your activity eg likes, reviews, comments-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Profile-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Reviews-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<div class="earn-points">-->
+                                <!--<img src="{{assets}}svg/trophy.svg" alt="">-->
+                                <!--You earned 1200 points - <a href="#">-->
+                                <!--Learn how-->
+                                <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="invite-friend">-->
+                                <!--Invite a friend to Brusselsife-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown switch-language ">
+                                <a href="#"
+                                   data-toggle="dropdown">
                                     <strong>
-                                        Notifications
+                                        EN
                                     </strong>
-                                    <a href="#">
-                                        Mark all as read
-                                    </a>
-                                </div>
-
-                                <div class="media">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="{{assets}}images/todo-2.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="media read">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="{{assets}}images/todo-3.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="media">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <figure>
-                                                <img src="{{assets}}images/todo-4.jpg" alt=""/>
-                                            </figure>
-                                            <p>
-                                 <span class="name">
-                                                    Nirupa
-                                                </span>wrote a review on<span class="content-type">
-                                                    By Check Michel ilaienne
-                                                </span>address
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">EN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FR</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">NL</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown btn-create-content">
-                            <button data-toggle="dropdown">
-                                + Create
-                            </button>
-
-                            <div class="dropdown-menu">
-                                <a href="#">
-                                    <img src="/public/svg/my-location-marker.svg" alt="">
-                                    Create Address
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-events.svg" alt="">
-                                    Create Agenda
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-promotion.svg" alt="">
-                                    Create Promotion
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <img src="/public/svg/menu-icon-article.svg" alt="">
-                                    Create Article
-                                    <span>
-                                        Create a page for business
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown user-profile-dropdown">
-                            <a href="!#" data-toggle="dropdown">
-                                <img src="{{assets}}images/profile.png" alt="">
-                            </a>
-
-                            <div class="dropdown-menu">
-                                <a href="#">
-                                    <img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">
-                                    Favourites
-                                    <span>
-                                           Favourite address, events, articles
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">
-                                    Saved post
-                                    <span>
-                                          Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">
-                                    Activity
-                                    <span>
-                                          Find your activity eg likes, reviews, comments
-                                       </span>
-                                </a>
-
-                                <a href="#">
-                                    <img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">
-                                    Profile
-                                    <span>
-                                          Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-                                <a href="#">
-                                    <img src="{{assets}}svg/bl-icon-butterfly.svg" alt="">
-                                    Reviews
-                                    <span>
-                                         Saved promotion, events, products etc..
-                                       </span>
-                                </a>
-
-
-                                <div class="earn-points">
-                                    <img src="{{assets}}svg/trophy.svg" alt="">
-    You earned 1200 points - <a href="#">
-                                    Learn how
-                                </a>
-                                </div>
-
-                                <div class="invite-friend">
-                                    Invite a friend to Brusselsife
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
     </section>
+
+    <section class="bg-transparent">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <a href="/" class="logo">
+                        <img src="{{assets}}images/logo.png"
+                             title="Brusselslife.be"
+                             name="Brusselslife.be"
+                             alt="Brusselslife.be">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <!-- leader board advertisement -->
+                    {{> leader-board }}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="main-navigation">
         <nav>
             <div class="" id="blifeNavBar">
@@ -198,10 +230,15 @@
                              alt="Brusselslife.be">
                     </a>
                     <ul class="main-menu">
+                        <li class="menu-bar-black">
+                            <a href="#">
+                                <img src="{{assets}}svg/menu-bar-black.svg" alt="">
+                            </a>
+                        </li>
                         <li id="menu-item-0">
                             <a href="#">BRUXELLES PRATIQUE</a>
                         </li>
-                        <li class="active" id="menu-item-1">
+                        <li id="menu-item-1">
                             <a href="#">EAT & DRINK</a>
                         </li>
                         <li class="" id="menu-item-2">
@@ -226,26 +263,26 @@
                 </div>
             </div>
         </nav>
-        <div class="sub-nav-wrapper" id="sub-menu-1">
-            <div class="sub-menu-wrapper d-lg-flex">
-                <div class="sub-menu-titles d-lg-none d-sm-block">
-                    ALL EAT & DRINK <i class="fa fa-angle-right"></i>
-                </div>
+        <!--<div class="sub-nav-wrapper" id="sub-menu-1">-->
+        <!--<div class="sub-menu-wrapper d-lg-flex">-->
+        <!--<div class="sub-menu-titles d-lg-none d-sm-block">-->
+        <!--ALL EAT & DRINK <i class="fa fa-angle-right"></i>-->
+        <!--</div>-->
 
-                <ul class="sub-level-1">
-                    <li><a href="#">Restaurants</a></li>
-                    <li><a href="#">Friteries</a></li>
-                    <li><a href="#">Sur Le Pouce</a></li>
-                    <li><a href="#">Food Trucks</a></li>
-                    <li><a href="#">Bars & Cafes</a></li>
-                    <li><a href="#">Tea & Coffee time</a></li>
-                    <li><a href="#">Traiteurs</a></li>
+        <!--<ul class="sub-level-1">-->
+        <!--<li><a href="#">Restaurants</a></li>-->
+        <!--<li><a href="#">Friteries</a></li>-->
+        <!--<li><a href="#">Sur Le Pouce</a></li>-->
+        <!--<li><a href="#">Food Trucks</a></li>-->
+        <!--<li><a href="#">Bars & Cafes</a></li>-->
+        <!--<li><a href="#">Tea & Coffee time</a></li>-->
+        <!--<li><a href="#">Traiteurs</a></li>-->
 
-                </ul>
-                <div class="clearfix"></div>
+        <!--</ul>-->
+        <!--<div class="clearfix"></div>-->
 
-            </div>
-        </div>
+        <!--</div>-->
+        <!--</div>-->
     </section>
     <div class="arrow-top bg-danger position-fixed text-center text-white">
         <i class="fa fa-arrow-up"></i>

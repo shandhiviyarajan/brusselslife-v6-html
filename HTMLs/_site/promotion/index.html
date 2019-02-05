@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="fr">
+<html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
     <title> Single promotion page | Brusselslife.be Brusselslife.be | version 7.0</title>
@@ -24,16 +24,12 @@
     <link rel="stylesheet" href="../public/libs/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" type="text/css" href="../public/libs/semantic/semantic.css"/>
     <link rel="stylesheet" href="../public/libs/jqueryui/jquery-ui.min.css"/>
-    <!-- swiper carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+
+    <!-- idangerous slider -->
+    <link rel="stylesheet" href="../public/libs/idangerous/css/swiper.min.css"/>
     <!-- custom-css -->
     <link rel="stylesheet" href="../public/css/app.css"/>
 
-
-    <!-- jquery v2.03-->
-    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
-
-    <!-- jquery 3.3.1 -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- jquery ui-->
     <script type="text/javascript" src="../public/libs/jqueryui/jquery-ui.min.js"></script>
@@ -43,7 +39,8 @@
     <script src="../public/libs/select-2/select2.full.min.js"></script>
     <!-- ckeditor -->
     <script src="https://cdn.ckeditor.com/4.11.1/basic/ckeditor.js"></script>
-
+    <!--idangerous-->
+    <script src="../public/libs/idangerous/js/swiper.min.js"></script>
     <!-- google maps -->
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANIg-GgobIKa95MgdD4_WwreBVpregN6c&libraries=places&v=3.31"></script>
@@ -53,27 +50,188 @@
 <body>
 <main>
     <header>
-        <section class="bg-transparent">
+    <section class="top-header">
+        <div class="container bg-transparent">
             <div class="row no-gutters">
-                <div class="col-md-4">
-                    <!--<button class="side-menu-trigger btn btn-dark bg-transparent rounded-0 border-0 p-0">-->
-                    <!--<img src="../public/svg/menu-bar.svg" alt="">-->
-                    <!--</button>-->
-                </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
 
-                    <a href="/" class="logo">
-                        <img src="../public/images/brusselslife_logo.png"
-                             title="Brusselslife.be"
-                             name="Brusselslife.be"
-                             alt="Brusselslife.be">
-                    </a>
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Newsletter</a>
+
                 </div>
-                <div class="col-md-4 news-login-lan">
-                    <div class="d-flex flex-row-reverse nav-right">
-                        <div id="lan-dropdown" data-toggle="dropdown">
-                            <div class="dropdown">
-                                <span>FR</span>
+                <div class="col-sm-8">
+                    <ul class="list-unstyled login-notify-profile">
+                        <li>
+                            <div class="dropdown btn-create-content">
+                                <button data-toggle="dropdown">
+                                    +
+                                </button>
+
+                                <div class="dropdown-menu">
+                                    <a href="#">
+                                        <img src="/public/svg/my-location-marker.svg" alt="">
+                                        Create Address
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-events.svg" alt="">
+                                        Create Agenda
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-promotion.svg" alt="">
+                                        Create Promotion
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/public/svg/menu-icon-article.svg" alt="">
+                                        Create Article
+                                        <span>
+                                        Create a page for business
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown site-notifications">
+                                <button data-toggle="dropdown">
+                                <span>
+                                    4
+                                </span>
+                                    <img src="../public/svg/bl-icon-notification.svg" alt="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-title">
+                                        <strong>
+                                            Notifications
+                                        </strong>
+                                        <a href="#">
+                                            Mark all as read
+                                        </a>
+                                    </div>
+
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../public/images/todo-2.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media read">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../public/images/todo-3.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="media">
+                                        <a href="#">
+                                            <div class="d-flex">
+                                                <figure>
+                                                    <img src="../public/images/todo-4.jpg" alt=""/>
+                                                </figure>
+                                                <p>
+                                 <span class="name">
+                                                    Nirupa
+                                                </span>wrote a review on<span class="content-type">
+                                                    By Check Michel ilaienne
+                                                </span>address
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown user-profile-dropdown">
+                                <a href="!#" data-toggle="dropdown">
+                                    <img src="../public/images/profile.png" alt="">
+                                </a>
+
+                                <!--<div class="dropdown-menu">-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Favourites-->
+                                <!--<span>-->
+                                <!--Favourite address, events, articles-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Saved post-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Activity-->
+                                <!--<span>-->
+                                <!--Find your activity eg likes, reviews, comments-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Profile-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<a href="#">-->
+                                <!--<img src="../public/svg/bl-icon-butterfly.svg" alt="">-->
+                                <!--Reviews-->
+                                <!--<span>-->
+                                <!--Saved promotion, events, products etc..-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--<div class="earn-points">-->
+                                <!--<img src="../public/svg/trophy.svg" alt="">-->
+                                <!--You earned 1200 points - <a href="#">-->
+                                <!--Learn how-->
+                                <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="invite-friend">-->
+                                <!--Invite a friend to Brusselsife-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown switch-language ">
+                                <a href="#"
+                                   data-toggle="dropdown">
+                                    <strong>
+                                        EN
+                                    </strong>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="#">EN</a>
@@ -86,164 +244,117 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <span>
-                    <div class="dropdown mr-2"
-                         data-toggle="dropdown"
-                         id="login-register">
-                    <a class="btn btn-primary show-ov"
-                       href="#"><span> Sign in</span>
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </a>
-                    <div class="dropdown-menu stop-closing">
-                        <div class="form-title">
-                            Sign in to Brusselslife
-                        </div>
-                        <div class="error-message">
-                            <div class="alert alert-danger">
-                                Please enter the correct username & password
-                            </div>
-                        </div>
-                        <form action="">
-                            <div class="input-element mb-4">
-                                <label for="username">Email address </label>
-                                <input id="username"
-                                       type="text" placeholder="" class="form-control">
-                            </div>
-
-                            <div class="input-element mb-4">
-                                <label for="password">Password</label>
-                                <input id="password"
-                                       type="password" placeholder="Password" class="form-control">
-                            </div>
-
-                            <div class="input-element  mb-4">
-                                <div class="checkbox custom-checkbox">
-                                    <input type="checkbox" id="keep_logged_in">
-                                    <label for="keep_logged_in">Keep me logged in</label>
-                                </div>
-
-                                <a href="#" class="forgot-pass pull-left">
-                                    Forgot password ?
-                                </a>
-                            </div>
-                            <button class="btn btn-primary" id="login-button">
-                                Login
-                            </button>
-
-
-                            <p class="mt-4 mb-0 text-center">Not a member ? &nbsp; <a href="#"
-                                                                                      class="btn btn-link btn-create-acc">Create
-                                a new account</a></p>
-
-                        </form>
-
-                        <div class="social-logins row pt-4">
-                            <div class="col-6">
-                                <a class="btn btn-link btn-google">Google</a>
-                            </div>
-                           <div class="col-6">
-                                <a class="btn btn-link btn-fb">Facebook</a>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-              </span>
-
-
-
-
-                        <a class="btn btn-primary" target="_blank" href="/newsletter">Newsletter <i
-                                class="fa fa-envelope"
-                                aria-hidden="true"></i></a>
-                        <a href="/submit-agenda" class="btn btn-primary bg-warning-2 submit_event">
-                          <strong>
-                              Submit event
-                          </strong> <img src="../public/svg/arrow-right.svg" alt="">
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="main-navigation">
-            <nav>
-                <div class="" id="blifeNavBar">
-                    <div class="main-menu-wrapper d-flex">
-                        <a href="/" class="small-logo">
-                            <img src="../public/images/brusselslife_logo.png"
-                                 title="Brusselslife.be"
-                                 name="Brusselslife.be"
-                                 alt="Brusselslife.be">
-                        </a>
-                        <ul class="main-menu">
-                            <li id="menu-item-0">
-                                <a href="#">BRUXELLES PRATIQUE</a>
-                            </li>
-                            <li id="menu-item-1">
-                                <a href="#">EAT & DRINK</a>
-                            </li>
-                            <li class="" id="menu-item-2">
-                                <a href="#">BARS</a>
-                            </li>
-                            <li class="" id="menu-item-3">
-                                <a href="#">SPORTS</a>
-                            </li>
-                            <li class="" id="menu-item-4">
-                                <a href="#">LOISIRS </a>
-                            </li>
-                            <li class="" id="menu-item-5">
-                                <a href="#">BEAUTÉ </a>
-                            </li>
-                            <li class="" id="menu-item-6">
-                                <a href="#">MEDICAL </a>
-                            </li>
-                            <li class="item-agenda active" id="menu-item-7">
-                                <a href="/agenda"><i class="fa fa-calendar"></i> AGENDA </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="sub-nav-wrapper" id="sub-menu-7">
-                <div class="sub-menu-wrapper d-lg-flex">
-                    <div class="sub-menu-titles d-lg-none d-sm-block">
-                        AGENDA <i class="fa fa-angle-right"></i>
-                    </div>
-
-                    <ul class="sub-level-1">
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Concerts</a></li>
-                        <li><a href="#">Shows</a></li>
-                        <li><a href="#">Exhibitions</a></li>
-                        <li><a href="#">Theater</a></li>
-                        <li><a href="#">Nightlife</a></li>
-                        <li><a href="#">Cinema</a></li>
-                        <li><a href="#">Traiteurs</a></li>
+                        </li>
                     </ul>
-                    <div class="clearfix"></div>
-
                 </div>
             </div>
-        </section>
-        <div class="arrow-top bg-danger position-fixed text-center text-white">
-            <i class="fa fa-arrow-up"></i>
-            <span>
+        </div>
+    </section>
+
+    <section class="bg-transparent">
+        <div class="container bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <a href="/" class="logo">
+                        <img src="../public/images/logo.png"
+                             title="Brusselslife.be"
+                             name="Brusselslife.be"
+                             alt="Brusselslife.be">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <!-- leader board advertisement -->
+                    <div id="leader-board">
+    <a href="#">
+        <img class="img-fluid" height="90" src="../public/images/leaderboard.jpg" alt="">
+    </a>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-navigation">
+        <nav>
+            <div class="" id="blifeNavBar">
+                <div class="main-menu-wrapper d-flex">
+                    <a href="/" class="small-logo">
+                        <img src="../public/images/brusselslife_logo.png"
+                             title="Brusselslife.be"
+                             name="Brusselslife.be"
+                             alt="Brusselslife.be">
+                    </a>
+                    <ul class="main-menu">
+                        <li class="menu-bar-black">
+                            <a href="#">
+                                <img src="../public/svg/menu-bar-black.svg" alt="">
+                            </a>
+                        </li>
+                        <li id="menu-item-0">
+                            <a href="#">BRUXELLES PRATIQUE</a>
+                        </li>
+                        <li id="menu-item-1">
+                            <a href="#">EAT & DRINK</a>
+                        </li>
+                        <li class="" id="menu-item-2">
+                            <a href="#">BARS</a>
+                        </li>
+                        <li class="" id="menu-item-3">
+                            <a href="#">SPORTS</a>
+                        </li>
+                        <li class="" id="menu-item-4">
+                            <a href="#">LOISIRS </a>
+                        </li>
+                        <li class="" id="menu-item-5">
+                            <a href="#">BEAUTÉ </a>
+                        </li>
+                        <li class="" id="menu-item-6">
+                            <a href="#">MEDICAL </a>
+                        </li>
+                        <li class=" item-agenda" id="menu-item-7">
+                            <a href="/agenda"><i class="fa fa-calendar"></i> AGENDA </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--<div class="sub-nav-wrapper" id="sub-menu-1">-->
+        <!--<div class="sub-menu-wrapper d-lg-flex">-->
+        <!--<div class="sub-menu-titles d-lg-none d-sm-block">-->
+        <!--ALL EAT & DRINK <i class="fa fa-angle-right"></i>-->
+        <!--</div>-->
+
+        <!--<ul class="sub-level-1">-->
+        <!--<li><a href="#">Restaurants</a></li>-->
+        <!--<li><a href="#">Friteries</a></li>-->
+        <!--<li><a href="#">Sur Le Pouce</a></li>-->
+        <!--<li><a href="#">Food Trucks</a></li>-->
+        <!--<li><a href="#">Bars & Cafes</a></li>-->
+        <!--<li><a href="#">Tea & Coffee time</a></li>-->
+        <!--<li><a href="#">Traiteurs</a></li>-->
+
+        <!--</ul>-->
+        <!--<div class="clearfix"></div>-->
+
+        <!--</div>-->
+        <!--</div>-->
+    </section>
+    <div class="arrow-top bg-danger position-fixed text-center text-white">
+        <i class="fa fa-arrow-up"></i>
+        <span>
            <strong>TOP</strong>
       </span>
-        </div>
-    </header>
-
+    </div>
+</header>
     
-
 
 <div id="leader-board">
     <a href="#">
-        <img class="img-fluid" src="../public/images/leaderboard.jpg" alt="">
+        <img class="img-fluid" height="90" src="../public/images/leaderboard.jpg" alt="">
     </a>
 </div>
 
-<div class="clearfix"></div>
+<!--<div class="clearfix"></div>
 <div class="container border-bottom breadcrumb_wrapper">
     <div class="row">
         <div class="col-sm-6">
@@ -300,17 +411,407 @@
         </div>
     </div>
 </div>
-<div class="clearfix"></div>
-<section id="promotion_page">
+<div class="clearfix"></div>-->
+<section id="promotion_page" class="bg-transparent">
+    <div class="container place-container bg-transparent">
+        <div class="row">
+            <div class="col-md-2 promo-col-left">
+                <div class="filter">
+                    <h4>
+                        Categories
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="fa fa-angle-left"></i>
+                                All Deals
+                            </a>
+                        </li>
 
+
+                        <li>
+                            <a href="#">Easy Brussels</a>
+                        </li>
+                        <li>
+                            <a href="#">Eat & Drink</a>
+                        </li>
+                        <li>
+                            <a href="#">Bars</a>
+                        </li>
+                        <li class="" id="menu-item-3">
+                            <a href="#">Shopping</a>
+                        </li>
+                        <li class="" id="menu-item-5">
+                            <a href="#">Beauty </a>
+                        </li>
+                        <li class="" id="menu-item-6">
+                            <a href="#">Medical </a>
+                        </li>
+                        <li>
+                            <a>Events </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="filter">
+                    <h4>
+                        Boire & Manger <i class="fa fa-angle-down"></i>
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="active">
+                                Food & Drink <span>(150)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Restaurants <span>(350)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Friteries <span>(112)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Sur Le Pouce <span>(4)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Food Trucks <span>(52)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Wine <span>(87)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Bars <span>(122)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Cafes <span>(255)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Tea & Coffee time <span>(44)</span> </a>
+                        </li>
+                        <li>
+                            <a href="#">Traiteurs <span>(14)</span> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 promo-col-right">
+                <div class="promo-info-banner bg-white">
+                    <img src="../public/svg/menu-icon-promotion.svg" alt="">
+                    Get business by publishing a promotion or deal
+                    <span>Let people know about your promotions and % off. Publish a promotion on Brusselslife.</span>
+
+                    <button class="btn">
+                        + Post a promotion
+                    </button>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8 promo-col-in-left">
+
+                        <div class="promo-breadcrumb shadow-sm px-4 py-2 mb-4 bg-white">
+                            <a href="#">
+                                Boire & Manger
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <a href="#">
+                                Food & Drink
+                            </a>
+                        </div>
+                        <div class="shadow-sm px-4 py-4 mb-4 bg-white">
+                            <div class="d-flex promo-title-logo">
+                                <figure>
+                                    <img src="../public/images/logo.jpg" alt="">
+                                </figure>
+                                <div>
+                                    <div class="promo-address-title">
+                                        By Chef Michel à l'italienne
+                                    </div>
+                                    <div class="promo-address-loc">
+                                        <p>
+                                            <i class="fa fa-map-marker"></i>
+                                            Place Fernand Cocq, 21 - 1050 Bruxelles
+                                        </p>
+                                        <a href="#">
+                                            See all promotions
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-header">
+                                <p>
+                                    <i class="fa fa-clock-o"></i>
+                                    Posted on 22 October, 2018 |
+                                    <span>Valid till November 1st 2018</span>
+                                </p>
+                            </div>
+                            <div class="promo-body">
+                                <div class="promo-title">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                              <span class="promo-percentage">
+                                    40% OFF
+                                </span>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <h2>
+                                                Spend on Chocolate at Lindt Chocolate Shops Belgium. Valid In-Store Only
+                                                <a href="#" data-tooltip="Save promotion">
+                                                    <i class="fa fa-bookmark-o"></i>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <span class="promo-real-price">
+                                    $20
+                                </span>
+                                        <span class="promo-discount-price">
+                                    $12
+                                </span>
+                                        <span class="promo-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                        <span>
+                                    <a href="#"><small>| 3 Reviews</small></a>
+                                </span>
+                                    </div>
+                                </div>
+                                <figure>
+                                    <img src="../public/images/promo-img.jpg">
+                                </figure>
+                                <div class="promo-desc">
+                                    <h3>
+                                        What you will get
+                                    </h3>
+                                    <p>
+                                        Malted Milkshakes: The Whiskey Cocktail’s G-Rated Counterpart
+                                        Here, you can get your milkshake regular or malted. To find out just what the
+                                        latter
+                                        style involves, read on.
+                                        Although its flavor may be a little hard to place—mellow and nutty, not quite
+                                        like
+                                        anything else in the world of desserts—a malted milkshake has a simple recipe:
+                                        milk,
+                                        vanilla ice cream, and malted milk powder. On its own, malted milk powder is
+                                        light
+                                        yellow in color and naturally sweet (from evaporated whole milk) and slightly
+                                        gritty
+                                        (from wheat flour). The key ingredient, however, is malted barley—the same stuff
+                                        that’s
+                                        used to make beer and whiskey, which is created when barley is allowed to sprout
+                                        before
+                                        being oven-dried.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-feedback-form bg-white shadow-sm mb-4 p-4">
+                            <div class="promo-rating-stars">
+                                Rate it
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <input type="text" placeholder="Hello Yves, write a review">
+                        </div>
+                        <div class="promo-user-reviews bg-white shadow-sm mb-4">
+                            <div class="place-title">
+                                <h3>
+                                    Customer reviews
+                                </h3>
+                            </div>
+                            <div class="promo-review">
+                                <div class="d-flex mt-2">
+                                    <figure>
+                                        <img src="../public/images/user.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <p class="mt-2">
+                                            <strong>
+                                                Lida Johnson
+                                            </strong>
+                                        </p>
+                                        <div class="promo-user-rating py-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            Posted on 12/ 21 / 2018
+                                        </div>
+                                        <p>
+                                            This was my first time at Ladle & Leaf and I was happy with my experience.
+                                            The staff
+                                            greeted me when I walked in and they provided excellent customer service
+                                            throughout
+                                            my time here.
+                                        </p>
+                                        <div class="promo-useful mt-2">
+                                            <p>
+                                                Was this review helpful?
+                                            </p>
+                                            <div class="promo-yes">
+                                                <button class="btn btn-success">
+                                                    10
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    0
+                                                </button>
+                                            </div>
+                                            <div class="alert alert-default">
+                                                Thank you! You have successfully submitted feedback for this review.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 promo-col-in-right">
+
+                        <div class="alert promo-alert mt-4">
+                            <p>
+                                <strong>
+                                    Currently 3 people watching this deal
+                                </strong>
+                            </p>
+                        </div>
+                        <p class="text-danger text-center my-2">
+                            <strong>
+                                Deal ends in 3 days
+                            </strong>
+                        </p>
+                        <button class="btn promo-buy-voucher">
+                            Buy voucher
+
+                            <span>
+                                100 Vouchers sold
+                            </span>
+                        </button>
+
+                        <button class="btn promo-send-gift ">
+                            <img src="../public/svg/bl-icon-giftbox.svg" alt="">
+                            Send this as a gift
+                        </button>
+
+                        <div class="promo-social-share">
+                            <a href="#">
+                                <i class="fa facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa twitter"></i>
+                            </a>
+                        </div>
+
+                        <div class="promo-other-promotions">
+                            <div class="place-title">
+                                <h3>
+                                    Other promotions
+                                </h3>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../public/images/p_1.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../public/images/p_2.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../public/images/p_3.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../public/images/p_4.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../public/images/p_1.png" alt="">
+                                        </figure>
+                                        <p>
+                                            <i class="fa fa-tag"></i>
+                                            40% Spend on chocolate at lind chocolate shops USA (50% off). Valid in-Store
+                                            only.
+                                            <span>
+                                    Valid till November 1st
+                                </span>
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
-
 </main>
 <div class="footer-img">
     <img src="../public/images/footer_img.png" alt="">
 </div>
 <footer>
+
+
     <section class="container">
         <div class="footer_bottom">
             <div class="footer-logo">
@@ -551,6 +1052,220 @@
 
     </section>
 
+    <section class="container">
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="footer_article_list">
+                    <div class="block-title">
+                        <h2>
+                            Recent articles
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/footer_article_1.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/footer_article_2.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/footer_article_3.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque
+                                            cumque.
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                OCTOBER 26
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="footer_address_list">
+
+                    <div class="block-title">
+                        <h2>
+                            Most visited addresses
+                        </h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/address_small.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor sit amet
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/address_small_2.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem ipsum dolor
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="media">
+                                    <figure>
+                                        <img src="../public/images/address_small_3.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>
+                                            Lorem olor sit amet
+                                        </h3>
+                                        <p>
+                                            <small>
+                                                1000 Brussels
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="footer_instagram_feed">
+                    <div class="block-title">
+                        <h2>
+                            Instagram feed
+                        </h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_5.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_6.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../public/images/insta_2.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
     <div class="footer_social_links">
         <div class="social_links">
             <a href="#" class="footer_fb"> <i class="fa fa-facebook"></i></a>
@@ -587,8 +1302,9 @@
 <!--sombal js-->
 <script type="text/javascript" src="../public/libs/sombal.js"></script>
 
-<!-- swiper-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
+<!--&lt;!&ndash; swiper&ndash;&gt;-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>-->
 
 <script type="text/javascript">
 
@@ -626,6 +1342,7 @@
         var home_search = document.getElementById("home_search");
         var arrow = document.getElementsByClassName("arrow-top")[0];
         var event_page = document.getElementById("event_page");
+        var left_float_menu = document.getElementById("left_float_menu");
         var search_tabs = $("#search_tabs");
         var agenda_week = $("#agenda_week");
         var l_current = $(".l_current ");
@@ -639,6 +1356,7 @@
                 return {
                     init: function () {
                         _load();
+                        _tlit();
                         _site_search();
                         _header();
                         _scroll_event_page();
@@ -663,21 +1381,34 @@
                         this.classList.toggle("active");
                     });
                 }
+
+
+            }
+
+            function _tlit() {
+                $('.tlit-wrapper').tilt({
+                    reset: false,
+                    scale: 1,
+                    glare: true,
+                    maxGlare: .01
+                });
             }
 
             function _header() {
                 //screen scroll functions
                 screen.scroll(function () {
-                    if ($(document).scrollTop() > 468) {
+                    if ($(document).scrollTop() > 275) {
                         header.classList.add("shrink-header");
                         header.classList.add("move");
                         home_search.classList.add('shrink');
                         body.classList.add("fixed-header");
+                        left_float_menu.classList.add("show-menu");
 
                     } else {
                         header.classList.remove("shrink-header", "move");
                         body.classList.remove("fixed-header");
                         home_search.classList.remove('shrink');
+                        left_float_menu.classList.remove("show-menu");
                     }
                 });
 
@@ -887,3 +1618,4 @@
 
 </body>
 </html>
+
