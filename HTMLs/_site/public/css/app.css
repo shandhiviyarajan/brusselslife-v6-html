@@ -1114,6 +1114,13 @@ ul.pagination {
         -o-transform: scale(0.95);
         transform: scale(0.95); }
 
+.ui.compact.message,
+.ui.message {
+  font-family: Proxima Nova, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; }
+  .ui.compact.message p,
+  .ui.message p {
+    font-family: Proxima Nova, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif !important; }
+
 /*
 Brusselslife v5.3 components
 --------------------------------------------
@@ -1227,6 +1234,19 @@ header {
       padding: 0px;
       overflow: hidden;
       margin: 0px; }
+      header div.main-menu-wrapper ul.main-menu li > span {
+        display: block;
+        height: 2px;
+        width: 0%;
+        background: #fff;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transition: 0.1s ease;
+        -moz-transition: 0.1s ease;
+        -ms-transition: 0.1s ease;
+        -o-transition: 0.1s ease;
+        transition: 0.1s ease; }
       header div.main-menu-wrapper ul.main-menu li.menu-bar-black a {
         width: 56px; }
       header div.main-menu-wrapper ul.main-menu li.menu-bar-black img {
@@ -1238,7 +1258,8 @@ header {
     header nav ul.main-menu li, header .sub-level-1 ul.main-menu li {
       display: inline-block;
       margin-left: -5px;
-      word-wrap: normal; }
+      word-wrap: normal;
+      position: relative; }
     header nav li a, header nav li a.nav-link, header .sub-level-1 li a, header .sub-level-1 li a.nav-link {
       word-wrap: normal;
       font-family: "Roboto Condensed", sans-serif;
@@ -1376,6 +1397,10 @@ header {
         -o-transform: translateY(-5px);
         transform: translateY(-5px); }
 
+header #menu-item-0:hover > span {
+  background: #0069ff;
+  width: 100%;
+  left: 0px; }
 header #menu-item-0 a:hover {
   color: #0069ff;
   background: #fff; }
@@ -1412,6 +1437,10 @@ div#news-letter-0 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-1:hover > span {
+  background: #6dac3d;
+  width: 100%;
+  left: 0px; }
 header #menu-item-1 a:hover {
   color: #6dac3d;
   background: #fff; }
@@ -1448,6 +1477,10 @@ div#news-letter-1 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-2:hover > span {
+  background: #222;
+  width: 100%;
+  left: 0px; }
 header #menu-item-2 a:hover {
   color: #222;
   background: #fff; }
@@ -1484,6 +1517,10 @@ div#news-letter-2 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-3:hover > span {
+  background: #D0021B;
+  width: 100%;
+  left: 0px; }
 header #menu-item-3 a:hover {
   color: #D0021B;
   background: #fff; }
@@ -1520,6 +1557,10 @@ div#news-letter-3 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-4:hover > span {
+  background: #4AD0E4;
+  width: 100%;
+  left: 0px; }
 header #menu-item-4 a:hover {
   color: #4AD0E4;
   background: #fff; }
@@ -1556,6 +1597,10 @@ div#news-letter-4 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-5:hover > span {
+  background: #EA9C1E;
+  width: 100%;
+  left: 0px; }
 header #menu-item-5 a:hover {
   color: #EA9C1E;
   background: #fff; }
@@ -1592,6 +1637,10 @@ div#news-letter-5 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-6:hover > span {
+  background: #359c86;
+  width: 100%;
+  left: 0px; }
 header #menu-item-6 a:hover {
   color: #359c86;
   background: #fff; }
@@ -1628,6 +1677,10 @@ div#news-letter-6 button {
   font-weight: bold;
   width: 120px; }
 
+header #menu-item-7:hover > span {
+  background: #ff732b;
+  width: 100%;
+  left: 0px; }
 header #menu-item-7 a:hover {
   color: #ff732b;
   background: #fff; }
@@ -2205,13 +2258,28 @@ div.error-message {
       background: #fff;
       transform: rotate(45deg); }
 
+.site-global-search {
+  width: 36px;
+  height: 36px; }
+  .site-global-search a {
+    display: block;
+    color: #fff;
+    padding: 7px 0px;
+    text-align: Center; }
+    .site-global-search a:active {
+      -webkit-transform: scale(0.98);
+      -moz-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      -o-transform: scale(0.98);
+      transform: scale(0.98); }
+
 #left_float_menu {
   position: fixed;
   left: -60px;
   opacity: 0;
   top: 0px;
-  background: #142B39;
-  width: 60px;
+  background: #17303F;
+  width: 72px;
   height: 100vh;
   z-index: 3000;
   -webkit-transition: 0.2s ease;
@@ -2221,34 +2289,31 @@ div.error-message {
   transition: 0.2s ease; }
   #left_float_menu ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
-    height: 500px;
-    margin-top: 145px; }
+    margin: 126px 0px 0px 0px;
+    padding: 0px; }
     #left_float_menu ul li a {
       display: block;
-      padding: 14px 0px; }
+      padding: 14px 0px;
+      color: #fff; }
       #left_float_menu ul li a:hover {
-        background: #0d1d26; }
+        color: #d9d9d9; }
       #left_float_menu ul li a:active {
-        background: #0d1d26;
+        background: #10222c;
         -webkit-transform: scale(0.98);
         -moz-transform: scale(0.98);
         -ms-transform: scale(0.98);
         -o-transform: scale(0.98);
         transform: scale(0.98); }
-      #left_float_menu ul li a img {
-        display: block;
-        margin: 0 auto;
-        background: #0d1d26;
-        width: 32px;
-        height: 32px;
-        border-radius: 44px; }
+      #left_float_menu ul li a div.icon-img {
+        text-align: center; }
+        #left_float_menu ul li a div.icon-img i.fa {
+          text-align: center;
+          font-size: 16px; }
       #left_float_menu ul li a span {
         color: #fff;
         font-size: 10px;
         text-align: center;
-        display: none; }
+        display: block; }
   #left_float_menu.show-menu {
     left: 0px;
     opacity: 1; }
@@ -5696,7 +5761,10 @@ i.icon.delete {
 #address_list div.gallery a {
   display: block; }
 #address_list div.gallery figure {
-  position: relative; }
+  position: relative;
+  margin: 1px; }
+  #address_list div.gallery figure img {
+    width: 100%; }
 #address_list div.gallery div.col-sm-4:last-child figure p {
   margin: 0px;
   top: 50%;

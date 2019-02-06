@@ -78,8 +78,24 @@ header {
       padding: 0px;
       overflow: hidden;
       margin: 0px;
-      li.menu-bar-black {
 
+      li > span {
+        display: block;
+        height: 2px;
+        width: 0%;
+        background: #fff;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transition: 0.1s ease;
+        -moz-transition: 0.1s ease;
+        -ms-transition: 0.1s ease;
+        -o-transition: 0.1s ease;
+        transition: 0.1s ease;
+
+      }
+
+      li.menu-bar-black {
         a {
           width: 56px;
         }
@@ -99,15 +115,12 @@ header {
       li {
         display: inline-block;
         margin-left: -5px;
-        //-webkit-flex-shrink: 0;
-        //-ms-flex: 0 0 auto;
-        //flex-shrink: 0;
         word-wrap: normal;
+        position: relative;
       }
 
     }
     li a, li a.nav-link {
-
       word-wrap: normal;
       font-family: $secondary-title-font;
       font-size: ($h3);
@@ -909,7 +922,6 @@ div.error-message {
 .btn-create-content,
 .user-profile-dropdown {
   div.dropdown-menu {
-
     > a {
       display: block;
       text-decoration: none;
@@ -1027,6 +1039,25 @@ div.error-message {
     }
   }
 
+}
+
+.site-global-search {
+  width: 36px;
+  height: 36px;
+  a {
+    display: block;
+    color: #fff;
+    padding: 7px 0px;
+    text-align: Center;
+
+    &:active {
+      -webkit-transform: scale(0.98);
+      -moz-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      -o-transform: scale(0.98);
+      transform: scale(0.98);
+    }
+  }
 }
 
 

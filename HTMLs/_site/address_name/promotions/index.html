@@ -171,6 +171,20 @@
                             </div>
                         </li>
                         <li>
+                            <div class="dropdown site-global-search">
+                                <a href="#">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="form-element">
+                                        <input type="text"
+                                               class="form-control"
+                                               placeholder="Search">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
                             <div class="dropdown user-profile-dropdown">
                                 <a href="!#" data-toggle="dropdown">
                                     <img src="../../public/images/profile.png" alt="">
@@ -285,34 +299,37 @@
                              alt="Brusselslife.be">
                     </a>
                     <ul class="main-menu">
-                        <li class="menu-bar-black">
-                            <a href="#">
-                                <img src="../../public/svg/menu-bar-black.svg" alt="">
-                            </a>
-                        </li>
                         <li id="menu-item-0">
                             <a href="#">BRUXELLES PRATIQUE</a>
+                            <span></span>
                         </li>
                         <li id="menu-item-1">
                             <a href="#">EAT & DRINK</a>
+                            <span></span>
                         </li>
                         <li class="" id="menu-item-2">
                             <a href="#">BARS</a>
+                            <span></span>
                         </li>
                         <li class="" id="menu-item-3">
                             <a href="#">SPORTS</a>
+                            <span></span>
                         </li>
                         <li class="" id="menu-item-4">
                             <a href="#">LOISIRS </a>
+                            <span></span>
                         </li>
                         <li class="" id="menu-item-5">
                             <a href="#">BEAUTÉ </a>
+                            <span></span>
                         </li>
                         <li class="" id="menu-item-6">
                             <a href="#">MEDICAL </a>
+                            <span></span>
                         </li>
-                        <li class=" item-agenda" id="menu-item-7">
+                        <li class="item-agenda" id="menu-item-7">
                             <a href="/agenda"><i class="fa fa-calendar"></i> AGENDA </a>
+                            <span></span>
                         </li>
                     </ul>
                 </div>
@@ -339,13 +356,14 @@
         <!--</div>-->
         <!--</div>-->
     </section>
-    <div class="arrow-top bg-danger position-fixed text-center text-white">
-        <i class="fa fa-arrow-up"></i>
-        <span>
-           <strong>TOP</strong>
-      </span>
-    </div>
+    <!--<div class="arrow-top bg-danger position-fixed text-center text-white">-->
+    <!--<i class="fa fa-arrow-up"></i>-->
+    <!--<span>-->
+    <!--<strong>TOP</strong>-->
+    <!--</span>-->
+    <!--</div>-->
 </header>
+
     
 
 <blife-block>
@@ -3776,6 +3794,15 @@
                         this.classList.toggle("active");
                     });
                 }
+
+
+                $('.message .close')
+                    .on('click', function() {
+                        $(this)
+                            .closest('.message')
+                            .transition('fade')
+                        ;
+                    });
 
 
             }

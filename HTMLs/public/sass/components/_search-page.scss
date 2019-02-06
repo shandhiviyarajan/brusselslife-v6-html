@@ -183,6 +183,12 @@
     }
     figure {
       position: relative;
+      margin: 1px;
+
+      img {
+        width: 100%;
+
+      }
     }
 
     div.col-sm-4:last-child {

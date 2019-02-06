@@ -122,6 +122,13 @@ $i: -1;
     $i: $i+1;
     header {
       #{$menu_prefix}-#{$i} {
+
+        &:hover > span {
+          background: $menu_color;
+          width: 100%;
+          left: 0px;
+        }
+
         a {
           &:hover {
             color: $menu_color;
@@ -185,8 +192,6 @@ $i: -1;
   }
 
 }
-
-
 
 //@each $author in $list {
 //  .photo-#{$author} {
